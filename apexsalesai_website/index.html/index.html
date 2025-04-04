@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ApexSalesAI - AI-powered sales analytics platform with Microsoft 365 integration">
+    <title>ApexSalesAI | AI-Powered Sales Analytics</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Microsoft Fabric UI -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css">
+</head>
+<body>
+    <!-- Microsoft Teams SSO Loader -->
+    <div id="teams-sso-loader" class="sso-loader">
+        <div class="sso-spinner"></div>
+    </div>
+
+    <header class="fabric-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/logos/apex-logo.svg" alt="ApexSalesAI" class="logo">
+                <span class="product-name">ApexSalesAI</span>
+            </div>
+            <nav class="fabric-nav">
+                <ul class="nav-list">
+                    <li class="nav-item active"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a href="about.html"><i class="fas fa-shield-alt"></i> Security</a></li>
+                    <li class="nav-item"><a href="contact.html"><i class="fas fa-calendar-check"></i> Book Demo</a></li>
+                    <li class="nav-item"><a href="demo/"><i class="fas fa-play-circle"></i> Interactive Demo</a></li>
+                    <li class="nav-item"><a href="dashboard/" class="cta-nav"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-switcher" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section fabric-card">
+            <div class="hero-content">
+                <h1 class="hero-title">Transform Your Sales with <span class="ai-highlight">AI Analytics</span></h1>
+                <p class="hero-subtitle">Seamless Microsoft 365 integration with real-time insights and predictive forecasting</p>
+                <div class="hero-actions">
+                    <a href="dashboard/" class="fabric-button fabric-button--primary hero-cta">
+                        <i class="fas fa-rocket"></i> Launch Dashboard
+                    </a>
+                    <a href="demo/" class="fabric-button fabric-button--secondary">
+                        <i class="fas fa-play"></i> View Demo
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/demo/screenshot1.webp" alt="ApexSalesAI Dashboard Preview" class="dashboard-preview">
+                <div class="preview-badge">Live Preview</div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="features-section">
+            <h2 class="section-title">Enterprise-Grade Sales Intelligence</h2>
+            <div class="features-grid">
+                <div class="feature-card fabric-card">
+                    <div class="feature-icon ms-bg-color-sharedCyanBlue10">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>MS365 Integration</h3>
+                    <p>Direct connection with Outlook, Teams, and SharePoint for unified analytics</p>
+                </div>
+                <!-- Additional feature cards... -->
+            </div>
+        </section>
+
+        <!-- Security Badges -->
+        <section class="security-section">
+            <div class="security-badges">
+                <img src="assets/logos/soc2-certified.svg" alt="SOC2 Certified" class="security-badge">
+                <img src="assets/logos/microsoft-partner.svg" alt="Microsoft Gold Partner" class="security-badge">
+                <img src="assets/logos/gdpr-compliant.svg" alt="GDPR Compliant" class="security-badge">
+            </div>
+        </section>
+    </main>
+
+    <footer class="fabric-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logos/apex-logo-white.svg" alt="ApexSalesAI">
+            </div>
+            <div class="footer-links">
+                <!-- Footer navigation... -->
+            </div>
+            <div class="footer-legal">
+                <p>&copy; 2023 ApexSalesAI. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Microsoft Teams"><i class="fab fa-microsoft"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Microsoft Teams JavaScript SDK -->
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.11.0/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+    <script src="js/auth.js" type="module"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>
