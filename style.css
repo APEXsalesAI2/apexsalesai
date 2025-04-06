@@ -1,3 +1,9 @@
+.logo img {
+  max-width: 200px; /* Adjust the value as needed */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
 /* Header Styles */
 header {
   background-color: #f8f9fa;
