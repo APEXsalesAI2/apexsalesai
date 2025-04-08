@@ -143,3 +143,28 @@
   </footer>
 </body>
 </html>
+<nav class="navbar">
+  <div class="nav-container">
+    <img src="/images/apex-logo.png" alt="Apex Icon" class="nav-logo" />
+    <span class="brand-name">APEXsalesAI</span>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/platform.html">Platform</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="/demo.html">Demo</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/reseller.html">Reseller</a></li>
+      <li><a href="/onboarding.html">Onboarding</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("navLinks");
+    links.classList.toggle("active");
+  }
+</script>
+
