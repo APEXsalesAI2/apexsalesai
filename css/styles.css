@@ -208,8 +208,25 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0b0f1a;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 200px;
+    border: 1px solid #1a1f2c;
+    padding: 1rem;
+  }
+  .nav-links.show {
+    display: flex;
+  }
   .menu-toggle {
-    display: block;
+    display: flex;
+  }
+}
+
   }
 
   .nav-links {
