@@ -1,25 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - APEXsalesAI</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/favicon.ico" />
+  <meta charset="UTF-8">
+  <title>About | APEXsalesAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <img src="images/apex-logo.png" alt="Apex Icon" class="nav-logo" />
+      <img src="images/apex-logo.png" alt="Apex Icon" class="nav-logo">
       <span class="brand-name">APEXsalesAI</span>
-      <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      <div class="menu-toggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html">Platform</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="demo.html">Demo</a></li>
         <li><a href="reseller.html">Reseller</a></li>
         <li><a href="onboarding.html">Onboarding</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -28,17 +30,26 @@
     </div>
   </nav>
 
-<main class="section">
-  <h2>About APEXsalesAI</h2>
-  <p><strong>ApexSalesAI is your AI Business Partner — Built to Execute. Powered to Scale.</strong></p>
-  <p>We’re not just building another tool — we’re building the future of sales execution. For SMBs, consultants, and tech providers who don’t have time to hire, train, and manage full sales teams, Apex delivers autonomous growth at a fraction of the cost.</p>
-  <p>We combine AI, automation, and real-world strategy into a single platform that doesn’t just advise you — it acts for you. Trained on your business, Apex becomes your always-on execution engine.</p>
-  <p><strong>This is software with a soul — and a strategy.</strong> Whether you’re sending outbound, launching campaigns, responding to inbound leads, or tracking performance, Apex handles the heavy lifting, 24/7.</p>
-</main>
+  <main class="section">
+    <h1>Who We Are</h1>
+    <p><strong>APEXsalesAI is more than just a software platform — we’re your business partner in AI-powered execution.</strong></p>
+    <p>Our mission is to transform how small and mid-sized businesses grow. We help eliminate overhead, reduce time-to-market, and create real pipeline traction using intelligent automation and revenue science.</p>
+    <p>We were built for founders, sales leaders, and execution-minded operators who want more than just dashboards — they want results, visibility, and velocity without adding headcount or complexity.</p>
+
+    <h2>Our Belief</h2>
+    <p>We believe the future of business belongs to those who can execute faster and smarter than their competition. That’s why we created a platform that blends human strategy with autonomous AI sales action — all designed to scale with you.</p>
+
+    <h2>Backed by Experience</h2>
+    <p>Founded by experts in sales, marketing, and product leadership, we’re operators who understand the grind of growth. ApexSalesAI is the culmination of decades of experience wrapped into a powerful digital business partner.</p>
+
+    <h2>Compliance, Security & Trust</h2>
+    <p>As a Microsoft 365 Business customer and Partner, we align with enterprise-grade standards and best practices. Future SOC 2 and HIPAA-ready modules will allow us to serve compliance-heavy industries.</p>
+  </main>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved. | <a href="mailto:info@apexsalesai.com" style="color:#00c2cb;">info@apexsalesai.com</a></p>
+    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
+
   <script src="js/menu.js"></script>
 </body>
 </html>
