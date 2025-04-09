@@ -207,32 +207,34 @@ body {
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #0b0f1a;
-    position: absolute;
-    top: 72px;
-    right: 2rem;
-    width: 200px;
-    border: 1px solid #1a1f2c;
-    padding: 1rem;
-    z-index: 999;
-  }
-
-  .nav-links.show {
+  .menu-toggle {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    z-index: 1001;
   }
 
- .menu-toggle {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  position: absolute;
-  right: 2rem;
-  top: 1.5rem;
-  z-index: 1001;
+  .menu-toggle span {
+    height: 4px;
+    width: 30px;
+    background-color: #ffffff !important;
+    border-radius: 4px;
+    opacity: 1;
+    box-shadow: 0 0 2px #fff;
+    transition: background-color 0.3s ease;
+  }
+
+  /* ✅ Add this below it */
+  .menu-toggle:active span {
+    background-color: #00c2cb; /* Brief teal glow when tapped */
+  }
+}
+
+
 }
 
   }
