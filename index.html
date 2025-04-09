@@ -10,9 +10,12 @@
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <img src="images/apex-logo-transparent.png" alt="Apex Icon" class="nav-logo">
+      <img src="images/apex-logo.png" alt="Apex Icon" class="nav-logo">
       <span class="brand-name">APEXsalesAI</span>
-      <ul class="nav-links">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html">Platform</a></li>
@@ -23,72 +26,68 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </div>
     </div>
   </nav>
 
-  
-<main class="section">
-  <div class="hero-content">
-   <img src="images/apex-logo-transparent.png" alt="ApexSalesAI Logo" class="hero-logo">
-    <h1>Your AI Business Partner</h1>
-    <p>Built to Execute. Powered to Scale.</p>
-    <a href="contact.html" class="cta-button">Join the Waitlist</a>
-  </div>
-</main>
+  <main class="section">
+    <div class="hero-content">
+      <img src="images/apex-logo.png" alt="ApexSalesAI Logo" class="hero-logo">
+      <h1>Your AI Business Partner</h1>
+      <p>Built to Execute. Powered to Scale.</p>
+      <a href="contact.html" class="cta-button">Join the Waitlist</a>
+    </div>
+  </main>
 
-<section class="section overview">
-  <h2>We’re Not Another Tool — We’re the Future of Execution</h2>
-  <p>ApexSalesAI is your AI Business Partner. It plans your growth, launches campaigns, handles outreach, qualifies leads, and books meetings. Automatically. 24/7.</p>
-</section>
+  <section class="section overview">
+    <h2>We’re Not Another Tool — We’re the Future of Execution</h2>
+    <p>ApexSalesAI is your AI Business Partner. It plans your growth, launches campaigns, handles outreach, qualifies leads, and books meetings. Automatically. 24/7.</p>
+  </section>
 
-<section class="section modules">
-  <h2>Product Modules</h2>
-  <div class="module-grid">
-    <div class="module-card">
-      <h3>🧠 Growth Strategy Engine</h3>
-      <p>AI-analyzes your business, goals, and customer data to build strategic plays.</p>
+  <section class="section modules">
+    <h2>Product Modules</h2>
+    <div class="module-grid">
+      <div class="module-card">
+        <h3>🧠 Growth Strategy Engine</h3>
+        <p>AI-analyzes your business, goals, and customer data to build strategic plays.</p>
+      </div>
+      <div class="module-card">
+        <h3>🤖 AI Outreach Agent</h3>
+        <p>Sends cold emails, SMS, DMs — qualifies leads, handles objections, books meetings.</p>
+      </div>
+      <div class="module-card">
+        <h3>✉️ Campaign Builder</h3>
+        <p>Auto-generates and deploys email/SMS nurturing, ads, and landing pages.</p>
+      </div>
+      <div class="module-card">
+        <h3>💬 Inbound Chat + Qualifier</h3>
+        <p>Engages inbound leads, answers questions, qualifies, and routes.</p>
+      </div>
+      <div class="module-card">
+        <h3>📊 Analytics & Forecasting</h3>
+        <p>Tracks pipeline growth, campaign ROI, and engagement metrics.</p>
+      </div>
+      <div class="module-card">
+        <h3>🤝 Growth Partner Network</h3>
+        <p>MSPs and consultants can resell and customize Apex for their clients (coming soon).</p>
+      </div>
     </div>
-    <div class="module-card">
-      <h3>🤖 AI Outreach Agent</h3>
-      <p>Sends cold emails, SMS, DMs — qualifies leads, handles objections, books meetings.</p>
-    </div>
-    <div class="module-card">
-      <h3>✉️ Campaign Builder</h3>
-      <p>Auto-generates and deploys email/SMS nurturing, ads, and landing pages.</p>
-    </div>
-    <div class="module-card">
-      <h3>💬 Inbound Chat + Qualifier</h3>
-      <p>Engages inbound leads, answers questions, qualifies, and routes.</p>
-    </div>
-    <div class="module-card">
-      <h3>📊 Analytics & Forecasting</h3>
-      <p>Tracks pipeline growth, campaign ROI, and engagement metrics.</p>
-    </div>
-    <div class="module-card">
-      <h3>🤝 Growth Partner Network</h3>
-      <p>MSPs and consultants can resell and customize Apex for their clients (coming soon).</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section comparison">
-  <h2>Why ApexSalesAI?</h2>
-  <table class="comparison-table">
-    <tr><th>Traditional Tools</th><th>ApexSalesAI</th></tr>
-    <tr><td>Dashboard you manage</td><td>Executes for you 24/7</td></tr>
-    <tr><td>Sales reps you hire</td><td>AI agent that never sleeps</td></tr>
-    <tr><td>Advice you act on</td><td>Growth plays that launch themselves</td></tr>
-    <tr><td>Software you learn</td><td>A business partner you simply activate</td></tr>
-  </table>
-</section>
-
+  <section class="section comparison">
+    <h2>Why ApexSalesAI?</h2>
+    <table class="comparison-table">
+      <tr><th>Traditional Tools</th><th>ApexSalesAI</th></tr>
+      <tr><td>Dashboard you manage</td><td>Executes for you 24/7</td></tr>
+      <tr><td>Sales reps you hire</td><td>AI agent that never sleeps</td></tr>
+      <tr><td>Advice you act on</td><td>Growth plays that launch themselves</td></tr>
+      <tr><td>Software you learn</td><td>A business partner you simply activate</td></tr>
+    </table>
+  </section>
 
   <footer class="footer">
     <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
+
   <script src="js/menu.js"></script>
 </body>
 </html>
