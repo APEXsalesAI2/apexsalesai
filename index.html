@@ -1,37 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>APEXsalesAI - Your AI Business Partner</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ApexSalesAI is your 24/7 AI Business Partner. From planning to outreach to execution, we help SMBs close more deals with less overhead.">
-  <meta property="og:title" content="APEXsalesAI - Your AI Business Partner">
-  <meta property="og:description" content="Built to Execute. Powered to Scale.">
-  <meta property="og:image" content="images/apex-preview.webp">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="APEXsalesAI - Your AI Business Partner">
-  <meta name="twitter:description" content="Built to Execute. Powered to Scale.">
-  <meta name="twitter:image" content="images/apex-preview.webp">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/hero.js"></script>
 </head>
 <body>
-  <nav class="navbar" id="navbar">
+  <nav class="navbar">
     <div class="nav-container">
       <div class="logo-group">
-        <img src="images/apex-logo.webp" alt="Apex Icon" class="nav-logo" loading="eager">
+        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" />
         <span class="brand-name">APEXsalesAI</span>
       </div>
-      <div class="nav-actions">
-        <div class="menu-toggle" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
       </div>
       <div class="nav-overlay" onclick="toggleMenu()"></div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html">Platform</a></li>
         <li><a href="pricing.html">Pricing</a></li>
@@ -44,93 +33,90 @@
     </div>
   </nav>
 
-  <section class="hero" data-aos="fade-up">
+  <header class="hero">
+    <div class="hero-animation">
+      <svg class="circuit-animation" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+    </div>
     <div class="hero-content">
-      <img src="images/apex-logo.webp" alt="ApexSalesAI Logo" class="hero-logo">
+      <div class="logo-container">
+        <img src="images/apex-logo.webp" alt="ApexSalesAI Logo" class="hero-logo" loading="eager" />
+        <div class="logo-glow"></div>
+      </div>
       <h1 class="hero-title">Your AI Business Partner</h1>
       <p class="hero-subtitle" id="rotating-headline">Built to Execute. Powered to Scale.</p>
       <a href="contact.html" class="cta-button pulse">Join the Waitlist</a>
     </div>
-  </section>
+  </header>
 
   <main>
-    <section class="section overview" data-aos="fade-up">
-      <h2>We’re Not Another Tool — We’re the Future of Execution</h2>
-      <p>ApexSalesAI is your AI Business Partner. It plans your growth, launches campaigns, handles outreach, qualifies leads, and books meetings. Automatically. 24/7.</p>
+    <section class="section overview">
+      <h2>Built for Growth-Obsessed Teams</h2>
+      <p>ApexSalesAI isn’t another tool — it’s the operating system for modern sales. We convert strategy into action and pipeline into predictable growth, automatically.</p>
     </section>
 
     <section class="section modules">
-      <h2 class="section-title" data-aos="fade-up">Platform Capabilities</h2>
+      <h2>Meet Your AI Growth Team</h2>
       <div class="module-grid">
-        <div class="module-card gradient" data-aos="fade-up">
-          <h3>🧠 Strategy Engine</h3>
-          <p>AI-analyzes your business, ICP, and goals to craft data-driven playbooks that scale.</p>
+        <div class="module-card">
+          <h3>🧠 Growth Strategy Engine</h3>
+          <p>AI-analyzes your goals, market, and ICP to generate quarterly GTM playbooks on autopilot.</p>
         </div>
-        <div class="module-card gradient" data-aos="fade-up" data-aos-delay="100">
-          <h3>🤖 AI Sales Partner</h3>
-          <p>Engages outbound 24/7 via email, text, social — qualifies leads, books calls, and nurtures cold prospects.</p>
+        <div class="module-card">
+          <h3>🤖 AI Outreach Agent</h3>
+          <p>Sends emails, SMS, and DMs 24/7. Qualifies leads, handles objections, and books meetings.</p>
         </div>
-        <div class="module-card gradient" data-aos="fade-up" data-aos-delay="200">
-          <h3>📩 Omni-Campaign Builder</h3>
-          <p>Launch integrated SMS/email/ads instantly using proven, pre-built high-converting templates.</p>
+        <div class="module-card">
+          <h3>✉️ Campaign Builder</h3>
+          <p>Launches email/SMS nurture flows and ad-ready landing pages with zero dev work.</p>
         </div>
-        <div class="module-card gradient" data-aos="fade-up" data-aos-delay="300">
-          <h3>💬 Inbound Conversion AI</h3>
-          <p>Turns your website traffic and chat into qualified pipeline with automated lead scoring and routing.</p>
+        <div class="module-card">
+          <h3>💬 Inbound Chat + Qualifier</h3>
+          <p>Turns site visitors into prospects with automated chat, forms, and conversion logic.</p>
         </div>
-        <div class="module-card gradient" data-aos="fade-up" data-aos-delay="400">
-          <h3>📊 Forecast & ROI Insights</h3>
-          <p>Visualize revenue impact from every motion. Attribute leads, optimize performance, and course correct.</p>
+        <div class="module-card">
+          <h3>📊 Analytics & Forecasting</h3>
+          <p>Live dashboards show pipeline health, campaign ROI, and deal velocity.</p>
         </div>
-        <div class="module-card gradient" data-aos="fade-up" data-aos-delay="500">
-          <h3>🛠️ Partner Customization Suite</h3>
-          <p>MSPs and consultants can white-label the platform, configure modules, and support SMB clients at scale.</p>
+        <div class="module-card">
+          <h3>🤝 Partner Network (Coming Soon)</h3>
+          <p>MSPs and consultants can white-label and resell Apex to their clients.</p>
         </div>
       </div>
     </section>
 
-    <section class="section comparison" data-aos="fade-up">
-      <h2>Why ApexSalesAI?</h2>
+    <section class="section comparison">
+      <h2>Why Teams Choose Apex</h2>
       <table class="comparison-table">
-        <tr><th>Traditional Tools</th><th>ApexSalesAI</th></tr>
-        <tr><td>Dashboard you manage</td><td>Executes for you 24/7</td></tr>
-        <tr><td>Sales reps you hire</td><td>AI agent that never sleeps</td></tr>
-        <tr><td>Marketing advice you act on</td><td>Growth plays that launch themselves</td></tr>
-        <tr><td>Software you learn</td><td>A business partner you simply activate</td></tr>
+        <thead>
+          <tr>
+            <th>Legacy Tools</th>
+            <th>ApexSalesAI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dashboards you have to manage</td>
+            <td>Executes for you automatically</td>
+          </tr>
+          <tr>
+            <td>Reps you have to train and monitor</td>
+            <td>Agents that scale 24/7</td>
+          </tr>
+          <tr>
+            <td>Advice you still need to act on</td>
+            <td>GTM plays that launch themselves</td>
+          </tr>
+          <tr>
+            <td>Software you have to learn</td>
+            <td>A business partner you simply activate</td>
+          </tr>
+        </tbody>
       </table>
     </section>
   </main>
 
-  <footer class="footer" data-aos="fade-in">
+  <footer class="footer">
     <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
-
-  <a href="contact.html" class="cta-float">Join Waitlist</a>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      const toggle = document.querySelector(".menu-toggle");
-      const overlay = document.querySelector(".nav-overlay");
-      nav.classList.toggle("show");
-      toggle.classList.toggle("show");
-      overlay.classList.toggle("show");
-      document.body.style.overflow = nav.classList.contains("show") ? "hidden" : "";
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const currentPage = location.pathname.split('/').pop();
-      const navLinks = document.querySelectorAll('.nav-links a');
-      navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
-  <script src="js/hero.js"></script>
 </body>
 </html>
