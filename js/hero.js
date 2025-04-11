@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const messages = [
     "Built to Execute. Powered to Scale.",
