@@ -1,247 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>APEXsalesAI - Your AI Business Partner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ApexSalesAI is your 24/7 AI Business Partner. From planning to outreach to execution, we help SMBs close more deals with less overhead.">
+  <meta property="og:title" content="APEXsalesAI - Your AI Business Partner">
+  <meta property="og:description" content="Built to Execute. Powered to Scale.">
+  <meta property="og:image" content="images/apex-preview.webp">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="APEXsalesAI - Your AI Business Partner">
+  <meta name="twitter:description" content="Built to Execute. Powered to Scale.">
+  <meta name="twitter:image" content="images/apex-preview.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-group">
+        <img src="images/apex-logo.webp" alt="Apex Icon" class="nav-logo" loading="eager">
+        <span class="brand-name">APEXsalesAI</span>
+      </div>
+      <div class="nav-actions">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="nav-overlay" onclick="toggleMenu()"></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="platform.html">Platform</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="reseller.html">Reseller</a></li>
+        <li><a href="onboarding.html">Onboarding</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0b0f1a;
-  color: #ffffff;
-}
-.navbar {
-  background-color: #0b0f1a;
-  border-bottom: 1px solid #1a1f2c;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.nav-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.nav-logo {
-  height: 36px;
-}
-.brand-name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #00c2cb;
-}
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
-.nav-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #00c2cb;
-}
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-.menu-toggle span {
-  background: white;
-  height: 3px;
-  margin: 3px 0;
-  width: 25px;
-}
-.hero {
-  position: relative;
-  padding: 6rem 2rem;
-  text-align: center;
-  background: linear-gradient(to bottom right, #01010a, #0b1a3a);
-  color: white;
-  overflow: hidden;
-}
-.hero-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 0.15;
-}
-.circuit-animation {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: teal;
-  stroke-width: 0.5;
-  stroke-dasharray: 3;
-  animation: dash 5s linear infinite;
-}
-@keyframes dash {
-  to {
-    stroke-dashoffset: -100;
-  }
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-.logo-container {
-  position: relative;
-  display: inline-block;
-}
-.logo-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 0%, transparent 70%);
-  border-radius: 50%;
-  z-index: -1;
-  animation: glow 3s infinite alternate;
-}
-@keyframes glow {
-  from {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  to {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-}
-.hero-logo {
-  height: 100px;
-}
-.hero-title {
-  font-size: 2.75rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-.hero-subtitle {
-  font-size: 1.25rem;
-  color: #c9d4e0;
-  margin-bottom: 2rem;
-}
-.cta-button {
-  padding: 0.75rem 2rem;
-  background-color: #4dd0e1;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s;
-}
-.cta-button:hover {
-  background-color: #26c6da;
-}
-.pulse {
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(77, 208, 225, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(77, 208, 225, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(77, 208, 225, 0);
-  }
-}
-.section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-.comparison-table {
-  width: 100%;
-  max-width: 800px;
-  margin: 2rem auto 0;
-  border-collapse: collapse;
-}
-.comparison-table th,
-.comparison-table td {
-  border: 1px solid #1a1f2c;
-  padding: 1rem;
-  text-align: left;
-}
-.comparison-table th {
-  background-color: #1e2331;
-  color: #00c2cb;
-}
-.comparison-table td {
-  background-color: #111522;
-  color: #dddddd;
-}
-.footer {
-  background-color: #0b0f1a;
-  color: #888;
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid #1a1f2c;
-}
-/* Updated Hamburger & Nav Styles */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 8px;
-  z-index: 1001;
-}
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <img src="images/apex-logo.webp" alt="ApexSalesAI Logo" class="hero-logo">
+      <h1 class="hero-title">Your AI Business Partner</h1>
+      <p class="hero-subtitle" id="rotating-headline">Built to Execute. Powered to Scale.</p>
+      <a href="contact.html" class="cta-button pulse">Join the Waitlist</a>
+    </div>
+  </section>
 
-.menu-toggle span {
-  height: 3px;
-  background: #fff;
-  margin: 4px 0;
-  width: 25px;
-  transition: all 0.3s ease;
-}
+  <main>
+    <section class="section overview" data-aos="fade-up">
+      <h2>We’re Not Another Tool — We’re the Future of Execution</h2>
+      <p>ApexSalesAI is your AI Business Partner. It plans your growth, launches campaigns, handles outreach, qualifies leads, and books meetings. Automatically. 24/7.</p>
+    </section>
 
-.nav-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 999;
-  display: none;
-}
+    <section class="section modules">
+      <h2 class="section-title" data-aos="fade-up">Product Modules</h2>
+      <div class="module-grid">
+        <div class="module-card module-style" data-aos="zoom-in">
+          <h3>🧠 Growth Strategy Engine</h3>
+          <p>AI-analyzes your business, goals, and customer data to build strategic plays.</p>
+        </div>
+        <div class="module-card module-style" data-aos="zoom-in" data-aos-delay="100">
+          <h3>🤖 AI Outreach Agent</h3>
+          <p>Sends cold emails, SMS, DMs — qualifies leads, handles objections, books meetings.</p>
+        </div>
+        <div class="module-card module-style" data-aos="zoom-in" data-aos-delay="200">
+          <h3>✉️ Campaign Builder</h3>
+          <p>Auto-generates and deploys email/SMS nurturing, ads, and landing pages.</p>
+        </div>
+        <div class="module-card module-style" data-aos="zoom-in" data-aos-delay="300">
+          <h3>💬 Inbound Chat + Qualifier</h3>
+          <p>Engages inbound leads, answers questions, qualifies, and routes.</p>
+        </div>
+        <div class="module-card module-style" data-aos="zoom-in" data-aos-delay="400">
+          <h3>📊 Analytics & Forecasting</h3>
+          <p>Tracks pipeline growth, campaign ROI, and engagement metrics.</p>
+        </div>
+        <div class="module-card module-style" data-aos="zoom-in" data-aos-delay="500">
+          <h3>🤝 Growth Partner Network</h3>
+          <p>MSPs and consultants can resell and customize Apex for their clients (coming soon).</p>
+        </div>
+      </div>
+    </section>
 
-.nav-overlay.show {
-  display: block;
-}
+    <section class="section comparison" data-aos="fade-up">
+      <h2>Why ApexSalesAI?</h2>
+      <table class="comparison-table">
+        <tr><th>Traditional Tools</th><th>ApexSalesAI</th></tr>
+        <tr><td>Dashboard you manage</td><td>Executes for you 24/7</td></tr>
+        <tr><td>Sales reps you hire</td><td>AI agent that never sleeps</td></tr>
+        <tr><td>Marketing advice you act on</td><td>Growth plays that launch themselves</td></tr>
+        <tr><td>Software you learn</td><td>A business partner you simply activate</td></tr>
+      </table>
+    </section>
+  </main>
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  z-index: 1000;
-}
+  <footer class="footer" data-aos="fade-in">
+    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
+  </footer>
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
+  <a href="contact.html" class="cta-float">Join Waitlist</a>
 
-  .nav-links {
-    flex-direction: column;
-    background-color: #0f172a;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 80%;
-    padding-top: 6rem;
-    transition: right 0.3s ease;
-  }
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
-  .nav-links.show {
-    right: 0;
-  }
-}
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      const toggle = document.querySelector(".menu-toggle");
+      const overlay = document.querySelector(".nav-overlay");
+      nav.classList.toggle("show");
+      toggle.classList.toggle("show");
+      overlay.classList.toggle("show");
+      document.body.style.overflow = nav.classList.contains("show") ? "hidden" : "";
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+  <script src="js/hero.js"></script>
+</body>
+</html>
