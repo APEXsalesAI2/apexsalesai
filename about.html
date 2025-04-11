@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - APEXsalesAI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/menu.js"></script>
 </head>
 <body>
-
   <nav class="navbar">
     <div class="nav-container">
-      <img src="images/apex-logo.png" alt="Apex Icon" class="nav-logo">
-      <span class="brand-name">APEXsalesAI</span>
+      <div class="logo-group">
+        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo">
+        <span class="brand-name">APEXsalesAI</span>
+      </div>
       <div class="menu-toggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
+      <div class="nav-overlay" onclick="toggleMenu()"></div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="platform.html">Platform</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="demo.html">Demo</a></li>
@@ -30,32 +32,37 @@
     </div>
   </nav>
 
-  <main class="section">
-    <h2>Who We Are</h2>
-    <p>
-      APEXsalesAI is redefining what it means to grow your business with technology. We’re not building tools, dashboards, or data panels — we’re building a partner. An AI partner that executes your go-to-market strategy with relentless speed, insight, and autonomy.
-    </p>
+  <main>
+    <section class="section">
+      <h1>Who We Are</h1>
+      <p>APEXsalesAI was founded to bridge the gap between insight and execution. We believe every business, regardless of size, deserves enterprise-grade sales acceleration and AI-powered revenue enablement without hiring a massive team or bolting together a dozen tools.</p>
+    </section>
 
-    <h2>Our Mission</h2>
-    <p>
-      We believe that every founder, consultant, MSP, and small business deserves enterprise-grade execution — without needing a massive team or budget. Our mission is to make real growth effortless by blending automation, personalization, and intelligence into one platform.
-    </p>
+    <section class="section">
+      <h2>Our Advantage</h2>
+      <ul>
+        <li>🚀 Built by sales leaders for modern GTM teams</li>
+        <li>🤝 Microsoft 365-integrated and Partner-aligned</li>
+        <li>🔐 Designed with SOC 2 and HIPAA-aligned standards</li>
+        <li>🌐 Modular. Scalable. Secure. Yours to command.</li>
+      </ul>
+    </section>
 
-    <h2>Leadership</h2>
-    <p>
-      APEXsalesAI was founded by operators, not theorists. Our team comes from the trenches of tech sales, marketing, and channel development. We’ve lived the friction — now we’ve eliminated it.
-    </p>
+    <section class="section">
+      <h2>Certifications & Partnerships</h2>
+      <img src="images/soc2-certified.svg" alt="SOC 2 Certified" style="height: 60px; margin-right: 1rem;">
+      <img src="images/microsoft-partner.svg" alt="Microsoft Partner" style="height: 60px;">
+    </section>
 
-    <h2>Built on Trust</h2>
-    <p>
-      We align with top partners like Microsoft to ensure our platform is scalable, secure, and future-proof. From compliance to performance, we’re built to serve businesses that demand excellence.
-    </p>
+    <section class="section">
+      <h2>The Future</h2>
+      <p>We’re building more than a product — we’re building a movement around smart growth, intelligent sales execution, and AI agents that get it done. Join us and lead the charge.</p>
+      <a href="contact.html" class="cta-button">Partner With Us</a>
+    </section>
   </main>
 
   <footer class="footer">
     <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
-
-  <script src="js/menu.js"></script>
 </body>
 </html>
