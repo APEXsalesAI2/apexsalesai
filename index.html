@@ -64,13 +64,17 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
       flex: 1;
     }
     .menu-toggle {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      margin-left: auto;
     }
     .menu-toggle span {
       height: 3px;
@@ -105,6 +109,7 @@
       }
       .menu-toggle {
         display: flex;
+        margin-left: auto;
       }
     }
     .module-grid {
@@ -134,8 +139,10 @@
         <img src="images/apex-logo.webp" alt="Apex Icon" class="nav-logo" loading="eager">
         <span class="brand-name">APEXsalesAI</span>
       </div>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
+      <div class="nav-actions">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
