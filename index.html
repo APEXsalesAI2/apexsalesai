@@ -15,120 +15,63 @@
   <meta name="twitter:image" content="images/apex-preview.webp">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
   <style>
     .hero {
-      padding: 2rem 1rem;
-      background: #0f172a;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6rem 2rem 3rem;
       text-align: center;
+      background: linear-gradient(145deg, #001f3f, #001426);
+      min-height: 90vh;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/circuit-overlay.svg') center/cover no-repeat;
+      opacity: 0.15;
+      z-index: 0;
     }
     .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
     }
     .hero-logo {
-      max-height: 640px;
+      width: 120px;
       margin-bottom: 1.5rem;
     }
     .hero-title {
-      font-size: 2.75rem;
+      font-size: 3rem;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
     .hero-subtitle {
-      font-size: 1.5rem;
-      color: #d1d5db;
-      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      color: #d0f0f7;
+      margin-bottom: 2.5rem;
+      min-height: 32px;
     }
     .cta-button {
       background-color: #00c2cb;
       color: #0b0f1a;
-      padding: 0.9rem 1.75rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
+      padding: 1rem 2rem;
       border-radius: 8px;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
       transition: background-color 0.3s ease;
     }
     .cta-button:hover {
       background-color: #00a8b3;
-    }
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-    }
-    .logo-group {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex: 1;
-    }
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .menu-toggle span {
-      height: 3px;
-      background: #fff;
-      margin: 4px 0;
-      width: 25px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-    }
-    @media (max-width: 768px) {
-      .nav-container {
-        flex-wrap: wrap;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: flex-end;
-        background: rgba(15, 23, 42, 0.95);
-        position: absolute;
-        top: 70px;
-        right: 0;
-        padding: 1rem;
-        width: 70%;
-        z-index: 1000;
-        box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-        border-radius: 0 0 0 10px;
-      }
-      .nav-links.show {
-        display: flex;
-      }
-      .menu-toggle {
-        display: flex;
-        margin-left: auto;
-      }
-    }
-    .module-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .module-card {
-      background-color: #111522;
-      border: 1px solid #1a1f2c;
-      border-radius: 12px;
-      padding: 2rem;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .module-card:hover {
-      transform: translateY(-5px);
-      border-color: #00c2cb;
     }
   </style>
 </head>
@@ -144,6 +87,7 @@
           <span></span><span></span><span></span>
         </div>
       </div>
+      <div class="nav-overlay" onclick="toggleMenu()"></div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -219,11 +163,28 @@
     <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
 
+  <a href="contact.html" class="cta-float">Join Waitlist</a>
+
   <script>
     function toggleMenu() {
       const nav = document.getElementById("navLinks");
+      const toggle = document.querySelector(".menu-toggle");
+      const overlay = document.querySelector(".nav-overlay");
       nav.classList.toggle("show");
+      toggle.classList.toggle("show");
+      overlay.classList.toggle("show");
+      document.body.style.overflow = nav.classList.contains("show") ? "hidden" : "";
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
   </script>
   <script src="js/hero.js"></script>
 </body>
