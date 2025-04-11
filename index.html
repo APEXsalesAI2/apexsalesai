@@ -54,6 +54,21 @@
     .cta-button:hover {
       background-color: #00a8b3;
     }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -64,16 +79,6 @@
       background: #fff;
       margin: 4px 0;
       width: 25px;
-    }
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1rem;
     }
     @media (max-width: 768px) {
       .nav-container {
@@ -96,6 +101,7 @@
       }
       .menu-toggle {
         display: flex;
+        margin-left: auto;
       }
     }
     .module-grid {
@@ -121,8 +127,10 @@
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <img src="images/apex-logo.webp" alt="Apex Icon" class="nav-logo" loading="eager">
-      <span class="brand-name">APEXsalesAI</span>
+      <div class="logo-group">
+        <img src="images/apex-logo.webp" alt="Apex Icon" class="nav-logo" loading="eager">
+        <span class="brand-name">APEXsalesAI</span>
+      </div>
       <div class="menu-toggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
