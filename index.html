@@ -17,50 +17,51 @@
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .hero {
-      padding: 0; /* eliminate extra spacing */
-      min-height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 2rem 1rem;
       background: #0f172a;
-    }
-    .hero-content {
-      margin: 0;
-      padding: 2rem 1rem 1rem;
       text-align: center;
     }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
     .hero-logo {
-      max-height: 160px;
-      width: auto;
-      margin-bottom: 1rem;
+      max-height: 180px;
+      margin-bottom: 1.5rem;
     }
-    .module-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
     }
-    .module-card {
-      background: linear-gradient(145deg, #0f172a, #1e293b);
-      border-radius: 16px;
-      padding: 2rem;
-      color: #fff;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .module-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-    }
-    .module-card h3 {
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
-      color: #00f6ff;
-    }
-    .module-card p {
-      font-size: 1rem;
+    .hero-subtitle {
+      font-size: 1.5rem;
       color: #d1d5db;
+      margin-bottom: 1.5rem;
+    }
+    .cta-button {
+      background-color: #00c2cb;
+      color: #0b0f1a;
+      padding: 0.9rem 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #00a8b3;
     }
   </style>
 </head>
 <body>
+  <section class="hero">
+    <div class="hero-content">
+      <img src="images/apex-logo.webp" alt="ApexSalesAI Logo" class="hero-logo">
+      <h1 class="hero-title">Your AI Business Partner</h1>
+      <p class="hero-subtitle">Built to Execute. Powered to Scale.</p>
+      <a href="contact.html" class="cta-button">Join the Waitlist</a>
+    </div>
+  </section>
