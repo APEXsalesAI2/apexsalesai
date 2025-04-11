@@ -15,68 +15,10 @@
   <meta name="twitter:image" content="images/apex-preview.webp">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <style>
-    .hero {
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 6rem 2rem 3rem;
-      text-align: center;
-      background: linear-gradient(145deg, #001f3f, #001426);
-      min-height: 90vh;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('images/circuit-overlay.svg') center/cover no-repeat;
-      opacity: 0.15;
-      z-index: 0;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-    }
-    .hero-logo {
-      width: 120px;
-      margin-bottom: 1.5rem;
-    }
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 1rem;
-    }
-    .hero-subtitle {
-      font-size: 1.4rem;
-      color: #d0f0f7;
-      margin-bottom: 2.5rem;
-      min-height: 32px;
-    }
-    .cta-button {
-      background-color: #00c2cb;
-      color: #0b0f1a;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-    .cta-button:hover {
-      background-color: #00a8b3;
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="logo-group">
         <img src="images/apex-logo.webp" alt="Apex Icon" class="nav-logo" loading="eager">
@@ -102,52 +44,52 @@
     </div>
   </nav>
 
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <div class="hero-content">
       <img src="images/apex-logo.webp" alt="ApexSalesAI Logo" class="hero-logo">
       <h1 class="hero-title">Your AI Business Partner</h1>
       <p class="hero-subtitle" id="rotating-headline">Built to Execute. Powered to Scale.</p>
-      <a href="contact.html" class="cta-button">Join the Waitlist</a>
+      <a href="contact.html" class="cta-button pulse">Join the Waitlist</a>
     </div>
   </section>
 
   <main>
-    <section class="section overview">
+    <section class="section overview" data-aos="fade-up">
       <h2>We’re Not Another Tool — We’re the Future of Execution</h2>
       <p>ApexSalesAI is your AI Business Partner. It plans your growth, launches campaigns, handles outreach, qualifies leads, and books meetings. Automatically. 24/7.</p>
     </section>
 
     <section class="section modules">
-      <h2 class="section-title">Product Modules</h2>
+      <h2 class="section-title" data-aos="fade-up">Product Modules</h2>
       <div class="module-grid">
-        <div class="module-card">
+        <div class="module-card" data-aos="zoom-in">
           <h3>🧠 Growth Strategy Engine</h3>
           <p>Analyzes your goals and customer data to generate high-impact plays.</p>
         </div>
-        <div class="module-card">
+        <div class="module-card" data-aos="zoom-in" data-aos-delay="100">
           <h3>🤖 AI Outreach Agent</h3>
           <p>Executes outbound via cold email, SMS, LinkedIn, and books meetings.</p>
         </div>
-        <div class="module-card">
+        <div class="module-card" data-aos="zoom-in" data-aos-delay="200">
           <h3>✉️ Campaign Builder</h3>
           <p>Auto-creates nurture campaigns, landing pages, and smart flows.</p>
         </div>
-        <div class="module-card">
+        <div class="module-card" data-aos="zoom-in" data-aos-delay="300">
           <h3>💬 Inbound Qualifier</h3>
           <p>Handles inbound leads, qualifies them instantly, and routes them.</p>
         </div>
-        <div class="module-card">
+        <div class="module-card" data-aos="zoom-in" data-aos-delay="400">
           <h3>📊 Analytics Engine</h3>
           <p>Tracks pipeline growth, campaign ROI, and conversion forecasting.</p>
         </div>
-        <div class="module-card">
+        <div class="module-card" data-aos="zoom-in" data-aos-delay="500">
           <h3>🤝 Partner Network</h3>
           <p>Empowers MSPs, consultants, and VARs to scale Apex under their brand.</p>
         </div>
       </div>
     </section>
 
-    <section class="section comparison">
+    <section class="section comparison" data-aos="fade-up">
       <h2>Why ApexSalesAI?</h2>
       <table class="comparison-table">
         <tr><th>Traditional Tools</th><th>ApexSalesAI</th></tr>
@@ -159,13 +101,16 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" data-aos="fade-in">
     <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
 
   <a href="contact.html" class="cta-float">Join Waitlist</a>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
+
     function toggleMenu() {
       const nav = document.getElementById("navLinks");
       const toggle = document.querySelector(".menu-toggle");
