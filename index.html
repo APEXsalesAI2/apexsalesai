@@ -17,10 +17,37 @@
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .hero {
-      padding: 4rem 1rem 2rem; /* reduced top padding */
+      padding: 2rem 1rem 2rem; /* tighter vertical spacing */
     }
     .hero-content {
-      margin-top: 0; /* ensure content is at top of section */
+      margin-top: 0;
+    }
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .module-card {
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      border-radius: 16px;
+      padding: 2rem;
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .module-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+    }
+    .module-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      color: #00f6ff;
+    }
+    .module-card p {
+      font-size: 1rem;
+      color: #d1d5db;
     }
   </style>
 </head>
