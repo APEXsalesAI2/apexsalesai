@@ -2,25 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - APEXsalesAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reseller Program - APEXsalesAI</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/favicon.ico" />
+  <script defer src="js/menu.js"></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <img src="images/apex-logo.png" alt="Apex Icon" class="nav-logo" />
-      <span class="brand-name">APEXsalesAI</span>
-      <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      <div class="logo-group">
+        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" />
+        <span class="brand-name">APEXsalesAI</span>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
-      <ul class="nav-links">
+      <div class="nav-overlay" onclick="toggleMenu()"></div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html">Platform</a></li>
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="reseller.html">Reseller</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="reseller.html" class="active">Reseller</a></li>
         <li><a href="onboarding.html">Onboarding</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -28,41 +32,44 @@
     </div>
   </nav>
 
-<main class="section">
-  <h2>Partner With Us — The Growth Partner Program</h2>
-  <p>The ApexSalesAI Growth Partner Program empowers MSPs, consultants, agencies, and VARs to resell or white-label our AI execution platform. Deliver high-impact growth services to your clients — without scaling overhead.</p>
-
-  <div class="module-grid">
-    <div class="module-card">
-      <h4>🤝 Reseller Access</h4>
-      <p>Offer ApexSalesAI as a value-added solution to your clients with full partner margins and technical enablement.</p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Partner With Us</h1>
+      <p class="hero-subtitle">Expand your business. Empower your clients. Join the AI-powered reseller revolution.</p>
     </div>
-    <div class="module-card">
-      <h4>🎯 White-Label Edition</h4>
-      <p>Customize the Apex interface and agent prompts with your brand, pricing, and onboarding workflows.</p>
-    </div>
-    <div class="module-card">
-      <h4>📈 Recurring Revenue</h4>
-      <p>Earn monthly recurring income by enabling your clients to adopt an AI-powered sales execution model.</p>
-    </div>
-  </div>
+  </header>
 
-  <h3 style="margin-top: 3rem;">Who It’s For</h3>
-  <ul style="text-align: left; max-width: 700px; margin: 2rem auto;">
-    <li>✅ MSPs who want to add AI-powered tools to their service stack</li>
-    <li>✅ Sales and marketing consultants ready to automate execution</li>
-    <li>✅ Tech advisors, coaches, or fractional leaders</li>
-    <li>✅ Agencies building AI-focused service offerings</li>
-  </ul>
+  <section class="section">
+    <h2>Why Resell APEXsalesAI?</h2>
+    <p>Our platform isn't just built for customers — it's built for partners. Generate new revenue streams by offering your clients cutting-edge AI sales automation and strategic execution tools.</p>
+    <div class="module-grid">
+      <div class="module-card">
+        <h3>Recurring Revenue</h3>
+        <p>Earn monthly commissions on every license you sell — with lifetime value share.</p>
+      </div>
+      <div class="module-card">
+        <h3>Customizable Deployments</h3>
+        <p>White-label or co-brand APEXsalesAI to align with your brand and client needs.</p>
+      </div>
+      <div class="module-card">
+        <h3>Sales Enablement Toolkit</h3>
+        <p>We equip you with slide decks, demo scripts, and co-selling support.</p>
+      </div>
+      <div class="module-card">
+        <h3>MSP & VAR Ready</h3>
+        <p>Ideal for managed service providers, system integrators, and consultants.</p>
+      </div>
+    </div>
+  </section>
 
-  <div style="margin-top: 2rem;">
-    <a href="contact.html" class="cta-button">Apply to Be a Partner</a>
-  </div>
-</main>
+  <section class="section callout">
+    <h2>Built to Scale With You</h2>
+    <p>Start fast with zero upfront investment. Expand as your client base grows. Let our AI do the heavy lifting — you deliver the outcomes.</p>
+    <a href="contact.html" class="cta-button pulse">Become a Reseller</a>
+  </section>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved. | <a href="mailto:info@apexsalesai.com" style="color:#00c2cb;">info@apexsalesai.com</a></p>
+    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
-  <script src="js/menu.js"></script>
 </body>
 </html>
