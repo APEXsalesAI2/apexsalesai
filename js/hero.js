@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const messages = [
-    "Built to Execute. Powered to Scale.",
-    "Your AI Business Partner, 24/7.",
-    "No dashboards. Just results.",
-    "Activate growth. Instantly."
+    "Built for action, not distraction.",
+    "No guesswork. Just growth.",
+    "The execution layer between strategy and results.",
+    "Your AI Business Partner. 24/7."
   ];
   const headline = document.getElementById("rotating-headline");
   let index = 0;
