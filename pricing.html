@@ -2,24 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - APEXsalesAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing - APEXsalesAI</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/favicon.ico" />
+  <script defer src="js/menu.js"></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <img src="images/apex-logo.png" alt="Apex Icon" class="nav-logo" />
-      <span class="brand-name">APEXsalesAI</span>
-      <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      <div class="logo-group">
+        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" />
+        <span class="brand-name">APEXsalesAI</span>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
-      <ul class="nav-links">
+      <div class="nav-overlay" onclick="toggleMenu()"></div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html">Platform</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="demo.html">Demo</a></li>
         <li><a href="reseller.html">Reseller</a></li>
         <li><a href="onboarding.html">Onboarding</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -28,76 +32,58 @@
     </div>
   </nav>
 
-<main class="section">
-  <h2>Simple, Scalable Pricing</h2>
-  <p>All Apex plans are designed to replace expensive headcount and disconnected tools. You get a 24/7 AI growth engine that plans, launches, executes, and reports — without the overhead.</p>
-
-  <div class="pricing-table">
-    <div class="plan">
-      <h3>Starter</h3>
-      <p>$99/mo</p>
-      <ul>
-        <li>1 campaign/month</li>
-        <li>Basic AI outreach</li>
-        <li>Email/SMS only</li>
-        <li>Perfect for solo founders</li>
-      </ul>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Pricing Built for Every Stage of Growth</h1>
+      <p class="hero-subtitle">Flexible. Transparent. Value-driven.</p>
     </div>
-    <div class="plan featured">
-      <h3>Growth</h3>
-      <p>$299/mo</p>
-      <ul>
-        <li>3 campaigns/month</li>
-        <li>Custom agent training</li>
-        <li>Stripe, Calendly, Zapier integrations</li>
-        <li>Built for SMBs and consultants</li>
-      </ul>
-    </div>
-    <div class="plan">
-      <h3>Pro</h3>
-      <p>$499/mo</p>
-      <ul>
-        <li>Unlimited campaigns</li>
-        <li>Inbound chat agent</li>
-        <li>Analytics dashboard</li>
-        <li>Designed for MSPs and scale-ups</li>
-      </ul>
-    </div>
-  </div>
+  </header>
 
-  <h3 style="margin-top: 3rem;">Concierge Add-On</h3>
-  <p><strong>+ $199/mo</strong> — Our team adds a human layer of QA and strategy. Get curated campaign reviews, agent feedback, and performance reports every month.</p>
-
-  <section class="section comparison">
-    <h2>Why Choose Apex?</h2>
-    <table class="comparison-table">
-      <tr>
-        <th>Traditional Tools</th>
-        <th>ApexSalesAI</th>
-      </tr>
-      <tr>
-        <td>Dashboard you have to manage</td>
-        <td>Executes for you 24/7</td>
-      </tr>
-      <tr>
-        <td>Sales rep you have to hire</td>
-        <td>AI agent that never sleeps</td>
-      </tr>
-      <tr>
-        <td>Marketing advice you have to act on</td>
-        <td>Growth plays that launch themselves</td>
-      </tr>
-      <tr>
-        <td>Software you have to learn</td>
-        <td>A business partner you simply activate</td>
-      </tr>
-    </table>
+  <section class="section">
+    <h2>We Scale With You</h2>
+    <p>From solo founders to global enterprises, APEXsalesAI adapts to your business model, goals, and growth timeline.</p>
+    <div class="module-grid">
+      <div class="module-card">
+        <h3>Emerging Teams</h3>
+        <p>Automate outreach and streamline your pipeline without adding headcount. Perfect for small GTM teams.</p>
+        <ul>
+          <li>✓ AI SDR Agents</li>
+          <li>✓ Smart playbooks</li>
+          <li>✓ CRM syncing</li>
+        </ul>
+        <a href="contact.html" class="cta-button">Request Pricing</a>
+      </div>
+      <div class="module-card">
+        <h3>Growth Organizations</h3>
+        <p>Increase revenue velocity with coordinated GTM automation, real-time insights, and executional AI.</p>
+        <ul>
+          <li>✓ Modular platform access</li>
+          <li>✓ In-call coaching + alerts</li>
+          <li>✓ Unified campaign orchestration</li>
+        </ul>
+        <a href="contact.html" class="cta-button">Request Pricing</a>
+      </div>
+      <div class="module-card">
+        <h3>Enterprise & Strategic</h3>
+        <p>Integrate APEXsalesAI with your sales tech stack and unlock consulting, customization, and SLAs.</p>
+        <ul>
+          <li>✓ White-glove onboarding</li>
+          <li>✓ Admin and data APIs</li>
+          <li>✓ Dedicated customer success</li>
+        </ul>
+        <a href="contact.html" class="cta-button">Talk to Sales</a>
+      </div>
+    </div>
   </section>
-</main>
+
+  <section class="section callout">
+    <h2>Modular Pricing, Predictable Costs</h2>
+    <p>Choose the modules you need. Add users as you grow. No overages. No surprises. Only impact.</p>
+    <a href="contact.html" class="cta-button pulse">Get a Custom Quote</a>
+  </section>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved. | <a href="mailto:info@apexsalesai.com" style="color:#00c2cb;">info@apexsalesai.com</a></p>
+    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
-  <script src="js/menu.js"></script>
 </body>
 </html>
