@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Platform - APEXsalesAI</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/menu.js"></script>
+  <script defer src="js/hero.js"></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo-group">
-        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo">
+        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" />
         <span class="brand-name">APEXsalesAI</span>
       </div>
       <div class="menu-toggle" onclick="toggleMenu()">
@@ -32,46 +33,89 @@
     </div>
   </nav>
 
-  <main>
-    <section class="section">
-      <h1 class="hero-title">Your Agentic AI Execution Platform</h1>
-      <p class="hero-subtitle">APEXsalesAI transforms how modern organizations grow. Built as a digital execution layer, it’s not just intelligent — it acts. Modular, proactive, and fully autonomous.</p>
-    </section>
+  <header class="hero">
+    <div class="hero-animation">
+      <svg class="circuit-animation" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+    </div>
+    <div class="hero-content">
+      <div class="logo-container">
+        <img src="images/apex-logo.webp" alt="ApexSalesAI Logo" class="hero-logo" />
+        <div class="logo-glow"></div>
+      </div>
+      <h1 class="hero-title">More than software. Your execution engine.</h1>
+      <p class="hero-subtitle">Orchestrate pipeline, automate outreach, and scale execution with APEXsalesAI.</p>
+      <a href="#modules" class="cta-button pulse">Explore the Platform</a>
+    </div>
+  </header>
 
-    <section class="section">
-      <h2>Platform Modules</h2>
+  <section class="section callout">
+    <h2>Modular. Intelligent. Fully Autonomous.</h2>
+    <p>From AI SDRs to real-time pipeline intelligence, APEXsalesAI turns strategy into action — automatically. Designed for scale, trusted by revenue leaders, and ready to execute from day one.</p>
+  </section>
+
+  <main>
+    <section class="section" id="modules">
+      <h2>Drive Pipeline with AI</h2>
       <div class="module-grid">
         <div class="module-card">
-          <h3>🧠 GTM Intelligence Partner</h3>
-          <p>Analyzes goals, audience data, and sales patterns to continuously update your go-to-market strategy.</p>
+          <h3>🤖 AI SDR Agent</h3>
+          <p>Multi-channel outreach, objection handling, and lead qualification on autopilot.</p>
         </div>
         <div class="module-card">
-          <h3>🤖 Autonomous SDR</h3>
-          <p>Cold emails, qualifies leads, handles objections — and books meetings. Trained on your ICP and product playbook.</p>
+          <h3>📩 Campaign Orchestrator</h3>
+          <p>Drag-and-drop automation for emails, SMS, and retargeting. No separate tools needed.</p>
         </div>
         <div class="module-card">
-          <h3>✉️ Engagement Designer</h3>
-          <p>Auto-generates and schedules campaigns across email, SMS, and ads — with landing pages and CTAs optimized to convert.</p>
-        </div>
-        <div class="module-card">
-          <h3>💬 AI Concierge</h3>
-          <p>Answers inbound questions, qualifies website traffic, routes leads, and collects booking details in real-time.</p>
-        </div>
-        <div class="module-card">
-          <h3>📊 Growth Ops Brain</h3>
-          <p>Visual dashboards + predictive forecasting for campaigns, rep performance, revenue, and conversion flows.</p>
-        </div>
-        <div class="module-card">
-          <h3>🤝 Growth Partner Network</h3>
-          <p>Allow MSPs, VARs, and consultants to resell and extend APEX with industry-specific templates and services.</p>
+          <h3>💬 Lead Concierge</h3>
+          <p>Real-time engagement via chat, voice, and smart routing. Converts while you sleep.</p>
         </div>
       </div>
     </section>
 
-    <section class="section callout">
-      <h2>Agentic by Design. Built for Execution.</h2>
-      <p>Every module in APEX is autonomous, trained, and ready to act — not just advise. That’s what separates automation from execution.</p>
-      <a href="demo.html" class="cta-button pulse">See the Demo</a>
+    <section class="section">
+      <h2>Turn Signals into Sales</h2>
+      <div class="module-grid">
+        <div class="module-card">
+          <h3>📊 Intelligence Dashboard</h3>
+          <p>Pipeline analytics + AI-powered play recommendations in one dashboard.</p>
+        </div>
+        <div class="module-card">
+          <h3>🔔 Revenue Risk Alerts</h3>
+          <p>Get ahead of deal slippage, stage gaps, and inactivity with predictive alerts.</p>
+        </div>
+        <div class="module-card">
+          <h3>⚡️ Real-Time Coaching</h3>
+          <p>Dynamic in-call guidance, pitch tuning, and feedback loops across the team.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Built to Flex and Scale</h2>
+      <div class="module-grid">
+        <div class="module-card">
+          <h3>🧠 Strategy Engine</h3>
+          <p>Auto-generates GTM plays based on your ICP, vertical, and performance signals.</p>
+        </div>
+        <div class="module-card">
+          <h3>📥 CRM Integration</h3>
+          <p>Syncs bi-directionally with Salesforce, HubSpot, Zoho, and more.</p>
+        </div>
+        <div class="module-card">
+          <h3>🧩 Modular Architecture</h3>
+          <p>Pick your modules. Add what you need. No extra noise. Fully composable.</p>
+        </div>
+        <div class="module-card">
+          <h3>🤝 Reseller Hub</h3>
+          <p>Built for partners, MSPs, and consultants to deploy branded solutions at scale.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-bottom">
+      <h2>Talk to Sales Engineering</h2>
+      <p>Need to customize your stack or integrate with your enterprise tools? Our sales engineers are ready.</p>
+      <a href="contact.html" class="cta-button pulse">Request a Custom Stack</a>
     </section>
   </main>
 
