@@ -3,61 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - APEXsalesAI</title>
+  <title>Insights & Articles - APEXsalesAI</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/favicon.ico" />
+  <script defer src="js/menu.js"></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <img src="images/apex-logo.png" alt="Apex Icon" class="nav-logo" />
-      <span class="brand-name">APEXsalesAI</span>
-      <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      <div class="logo-group">
+        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" />
+        <span class="brand-name">APEXsalesAI</span>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
-      <ul class="nav-links">
+      <div class="nav-overlay" onclick="toggleMenu()"></div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html">Platform</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="demo.html">Demo</a></li>
         <li><a href="reseller.html">Reseller</a></li>
         <li><a href="onboarding.html">Onboarding</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-<main class="section">
-  <h2>Insights, Updates & Execution Strategies</h2>
-  <p>Explore how ApexSalesAI is reshaping how businesses grow. Browse articles, founder insights, platform updates, and AI-driven growth strategies.</p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">AI Sales Strategy Insights</h1>
+      <p class="hero-subtitle">Explore playbooks, frameworks, and expert insights shaping the future of GTM execution.</p>
+    </div>
+  </header>
 
-  <div class="module-grid">
-    <div class="module-card">
-      <h4>📢 Product Update: Inbound Agent Beta</h4>
-      <p>We’ve launched Apex’s inbound chat + qualifier in beta. Learn how it works and how to activate it on your plan.</p>
-      <a href="#" style="color:#00c2cb;">Read More →</a>
+  <section class="section">
+    <h2>Featured Articles</h2>
+    <div class="module-grid">
+      <div class="module-card">
+        <h3>The Rise of AI-Powered Sales Teams</h3>
+        <p>Why autonomous agents are outperforming traditional SDRs — and what it means for your team in 2025.</p>
+        <a href="#" class="cta-button">Read More</a>
+      </div>
+      <div class="module-card">
+        <h3>How to Automate Your Funnel in 7 Days</h3>
+        <p>A tactical breakdown of turning cold data into booked meetings using APEXsalesAI's outreach engine.</p>
+        <a href="#" class="cta-button">Read More</a>
+      </div>
+      <div class="module-card">
+        <h3>The Future of GTM Is Modular</h3>
+        <p>See why sales leaders are ditching rigid CRMs and building execution stacks around plug-and-play AI.</p>
+        <a href="#" class="cta-button">Read More</a>
+      </div>
+      <div class="module-card">
+        <h3>Buying Signals That Close Deals</h3>
+        <p>Learn how to detect pipeline intent and convert engagement into qualified pipeline before your competitors.</p>
+        <a href="#" class="cta-button">Read More</a>
+      </div>
     </div>
-    <div class="module-card">
-      <h4>📈 Execution Over Advice: Why Apex Works</h4>
-      <p>Stop buying tools you don’t use. Here’s why our philosophy — strategy that executes itself — delivers ROI within weeks.</p>
-      <a href="#" style="color:#00c2cb;">Read More →</a>
-    </div>
-    <div class="module-card">
-      <h4>🧠 Building Agents That Actually Sell</h4>
-      <p>What makes an AI sales agent effective? We share what we’ve learned training hundreds of agents across industries.</p>
-      <a href="#" style="color:#00c2cb;">Read More →</a>
-    </div>
-  </div>
+  </section>
 
-  <div style="margin-top: 3rem;">
-    <a href="contact.html" class="cta-button">Join the Newsletter</a>
-  </div>
-</main>
+  <section class="section callout">
+    <h2>Want These Insights Delivered?</h2>
+    <p>Join our executive newsletter for one weekly idea that can shift your entire GTM strategy — no spam, just signal.</p>
+    <a href="contact.html" class="cta-button pulse">Subscribe to APEX Insights</a>
+  </section>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved. | <a href="mailto:info@apexsalesai.com" style="color:#00c2cb;">info@apexsalesai.com</a></p>
+    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
-  <script src="js/menu.js"></script>
 </body>
 </html>
