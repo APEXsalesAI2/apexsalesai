@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - APEXsalesAI</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platform - APEXsalesAI</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/menu.js"></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <img src="images/apex-logo.png" alt="Apex Icon" class="nav-logo" />
-      <span class="brand-name">APEXsalesAI</span>
-      <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      <div class="logo-group">
+        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo">
+        <span class="brand-name">APEXsalesAI</span>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
-      <ul class="nav-links">
+      <div class="nav-overlay" onclick="toggleMenu()"></div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="platform.html">Platform</a></li>
+        <li><a href="platform.html" class="active">Platform</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="demo.html">Demo</a></li>
         <li><a href="reseller.html">Reseller</a></li>
         <li><a href="onboarding.html">Onboarding</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -28,40 +32,51 @@
     </div>
   </nav>
 
-<main class="section">
-  <h2>AI Execution, Not Just Analytics</h2>
-  <p>ApexSalesAI is more than a dashboard or CRM plugin — it's a modular execution engine for small business growth. Every part of the platform is designed to take real action, automatically.</p>
+  <main>
+    <section class="section">
+      <h1 class="hero-title">Your Agentic AI Execution Platform</h1>
+      <p class="hero-subtitle">APEXsalesAI transforms how modern organizations grow. Built as a digital execution layer, it’s not just intelligent — it acts. Modular, proactive, and fully autonomous.</p>
+    </section>
 
-  <h3>Modular Architecture</h3>
-  <div class="module-grid">
-    <div class="module-card">
-      <h4>🧠 Growth Strategy Engine</h4>
-      <p>Analyzes your market, customers, and performance to build actionable growth plays and campaign strategies.</p>
-    </div>
-    <div class="module-card">
-      <h4>🤖 AI Outreach Agent</h4>
-      <p>Handles outbound messaging — cold emails, texts, DMs — and dynamically adjusts based on lead behavior and replies.</p>
-    </div>
-    <div class="module-card">
-      <h4>✉️ Campaign Builder</h4>
-      <p>Launches entire email/SMS campaigns from a single input — complete with landing pages and forms.</p>
-    </div>
-    <div class="module-card">
-      <h4>💬 Inbound Chat + Qualifier</h4>
-      <p>Autonomously responds to inbound leads, answers questions, qualifies them, and books meetings based on your rules.</p>
-    </div>
-    <div class="module-card">
-      <h4>📊 Analytics & Forecasting</h4>
-      <p>Provides real-time visibility into pipeline performance, conversion rates, campaign ROI, and more.</p>
-    </div>
-  </div>
+    <section class="section">
+      <h2>Platform Modules</h2>
+      <div class="module-grid">
+        <div class="module-card">
+          <h3>🧠 GTM Intelligence Partner</h3>
+          <p>Analyzes goals, audience data, and sales patterns to continuously update your go-to-market strategy.</p>
+        </div>
+        <div class="module-card">
+          <h3>🤖 Autonomous SDR</h3>
+          <p>Cold emails, qualifies leads, handles objections — and books meetings. Trained on your ICP and product playbook.</p>
+        </div>
+        <div class="module-card">
+          <h3>✉️ Engagement Designer</h3>
+          <p>Auto-generates and schedules campaigns across email, SMS, and ads — with landing pages and CTAs optimized to convert.</p>
+        </div>
+        <div class="module-card">
+          <h3>💬 AI Concierge</h3>
+          <p>Answers inbound questions, qualifies website traffic, routes leads, and collects booking details in real-time.</p>
+        </div>
+        <div class="module-card">
+          <h3>📊 Growth Ops Brain</h3>
+          <p>Visual dashboards + predictive forecasting for campaigns, rep performance, revenue, and conversion flows.</p>
+        </div>
+        <div class="module-card">
+          <h3>🤝 Growth Partner Network</h3>
+          <p>Allow MSPs, VARs, and consultants to resell and extend APEX with industry-specific templates and services.</p>
+        </div>
+      </div>
+    </section>
 
-  <p>Every module is trained on your ICP and GTM motion. Whether you're launching your first campaign or scaling up a reseller model, Apex adapts to you.</p>
-</main>
+    <section class="section callout">
+      <h2>Agentic by Design. Built for Execution.</h2>
+      <p>Every module in APEX is autonomous, trained, and ready to act — not just advise. That’s what separates automation from execution.</p>
+      <a href="demo.html" class="cta-button pulse">See the Demo</a>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved. | <a href="mailto:info@apexsalesai.com" style="color:#00c2cb;">info@apexsalesai.com</a></p>
+    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
-  <script src="js/menu.js"></script>
 </body>
 </html>
