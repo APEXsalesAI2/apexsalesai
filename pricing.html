@@ -42,77 +42,84 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-content">
+    <div class="hero-content container">
       <h1 class="hero-title">Pricing Built for Every Stage of Growth</h1>
-      <p class="hero-subtitle">Plans that flex with your business. Value that compounds with execution.</p>
+      <p class="hero-subtitle">Outcome-focused plans designed to scale with you.</p>
     </div>
   </header>
 
   <main>
     <section class="section pricing-showcase">
-      <div class="pricing-intro">
-        <h2>Flexible Tiers. Unified Execution.</h2>
-        <p>Whether you're just launching or optimizing an enterprise stack, our platform adapts to your GTM stage — and grows with you.</p>
-      </div>
+      <div class="container">
+        <div class="pricing-intro">
+          <h2>Value at Every Level</h2>
+          <p>Our AI-powered platform adapts to your goals — whether you're launching, scaling, or transforming GTM execution across departments.</p>
+        </div>
 
-      <div class="pricing-tier-wrapper">
-        <div class="tier-card">
-          <div class="tier-header">
+        <div class="module-grid">
+          <div class="module-card">
             <h3>🚀 Launch</h3>
             <p>Solopreneurs & Early Builders</p>
-          </div>
-          <div class="tier-body">
             <ul>
-              <li>✓ 1 AI GTM motion</li>
-              <li>✓ Email/SMS automation</li>
-              <li>✓ Core analytics & dashboard</li>
-              <li>✓ Guided self-onboarding</li>
+              <li>1 AI GTM motion</li>
+              <li>Email & SMS automation</li>
+              <li>Performance dashboard</li>
+              <li>Self-onboarding flows</li>
             </ul>
+            <a href="contact.html" class="cta-button">Get Started</a>
           </div>
-        </div>
 
-        <div class="tier-card featured">
-          <div class="tier-header">
+          <div class="module-card highlight">
             <h3>📈 Growth <span class="badge">Most Popular</span></h3>
-            <p>Scaling SMBs & RevOps Teams</p>
-          </div>
-          <div class="tier-body">
+            <p>For Scaling Teams & RevOps</p>
             <ul>
-              <li>✓ Up to 5 autonomous agents</li>
-              <li>✓ Multichannel (email, SMS, chat)</li>
-              <li>✓ CRM, Stripe, calendar integration</li>
-              <li>✓ Coaching & campaign optimization</li>
+              <li>Up to 5 AI agents</li>
+              <li>Multichannel GTM automation</li>
+              <li>CRM, calendar, Stripe integration</li>
+              <li>Real-time sales intelligence</li>
             </ul>
+            <a href="contact.html" class="cta-button">Choose Plan</a>
+          </div>
+
+          <div class="module-card">
+            <h3>🏢 Scale</h3>
+            <p>Enterprise & Partners</p>
+            <ul>
+              <li>Unlimited agents & workflows</li>
+              <li>Private-label AI instances</li>
+              <li>API & integration access</li>
+              <li>Dedicated success team</li>
+            </ul>
+            <a href="contact.html" class="cta-button">Request Quote</a>
           </div>
         </div>
 
-        <div class="tier-card">
-          <div class="tier-header">
-            <h3>🏢 Scale</h3>
-            <p>Enterprises & Partner Resellers</p>
-          </div>
-          <div class="tier-body">
-            <ul>
-              <li>✓ Unlimited workflows & automations</li>
-              <li>✓ Custom-branded AI agents</li>
-              <li>✓ Full API access + sandbox</li>
-              <li>✓ Dedicated account strategist</li>
-            </ul>
-          </div>
-        </div>
+        <p class="centered highlight">Need something custom? <a href="contact.html">Talk to Sales Engineering</a></p>
       </div>
-      <p class="centered highlight">Looking for a tailored stack? <a href="contact.html">Talk to Sales Engineering</a></p>
     </section>
 
     <section class="section cta-bottom">
-      <h2>Every Plan. One Outcome: Growth.</h2>
-      <p>From prospecting to onboarding — APEXsalesAI turns strategy into execution at scale.</p>
-      <a href="contact.html" class="cta-button pulse">Get Started</a>
+      <div class="container">
+        <h2>Designed to Grow. Engineered to Execute.</h2>
+        <p>Everything you need — from outbound to onboarding — in one intelligent GTM engine. Start small. Scale fast.</p>
+        <a href="contact.html" class="cta-button pulse">Request Access</a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
+    <p class="container">&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navLinks');
+      const toggle = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.nav-overlay');
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
