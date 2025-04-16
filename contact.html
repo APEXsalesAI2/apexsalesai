@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - APEXsalesAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact APEXsalesAI | Talk to Our AI GTM Experts</title>
+  <meta name="description" content="Connect with APEXsalesAI for personalized demos, support, or sales inquiries. Book a session or request more info about our AI-powered GTM platform." />
+  <meta name="keywords" content="AI sales contact, book demo, GTM assistant, sales automation help, contact APEXsalesAI" />
+  <meta name="author" content="APEXsalesAI" />
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/images/site.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/menu.js"></script>
 </head>
@@ -33,39 +40,59 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Talk to the Team</h1>
-      <p class="hero-subtitle">Whether you're ready to scale or just exploring options — we’re here to help.</p>
+    <div class="hero-content container">
+      <h1 class="hero-title">Talk to APEXsalesAI</h1>
+      <p class="hero-subtitle">Let us show you how AI can execute your go-to-market motion better, faster, and smarter.</p>
     </div>
   </header>
 
-  <section class="section">
-    <h2>Book a Consultation</h2>
-    <p>Schedule time directly with our team. Let’s explore how APEXsalesAI can drive measurable outcomes for your business.</p>
-    <div style="margin-top: 2rem; display: flex; justify-content: center;">
-      <iframe src="https://outlook.office365.com/owa/calendar/APEXsalesAIcom@APEXsalesAI.com/bookings/"
-        style="width: 100%; max-width: 900px; height: 650px; border: none;" 
-        loading="lazy">
-      </iframe>
-    </div>
-  </section>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>We’re Ready When You Are</h2>
+        <p>Whether you're looking to explore the product, need integration support, or want to co-design a custom stack, we're here to help.</p>
+        <div class="module-grid">
+          <div class="module-card">
+            <h3>📅 Book a Live Demo</h3>
+            <p>See our platform in action with a walkthrough tailored to your use case.</p>
+            <a href="https://outlook.office365.com/owa/calendar/APEXsalesAIcom@APEXsalesAI.com/bookings/" class="cta-button">Schedule Now</a>
+          </div>
+          <div class="module-card">
+            <h3>🛠️ Sales Engineering</h3>
+            <p>Get technical answers or architecture guidance before you deploy.</p>
+            <a href="contact.html" class="cta-button">Talk to Experts</a>
+          </div>
+          <div class="module-card">
+            <h3>🤝 Become a Reseller</h3>
+            <p>Offer APEXsalesAI to your clients with co-branded or white-label options.</p>
+            <a href="reseller.html" class="cta-button">Join the Program</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="section">
-    <h2>Need More Info?</h2>
-    <p>Email us at <a href="mailto:info@apexsalesai.com">info@apexsalesai.com</a>. We’ll respond within 24 hours.</p>
-  </section>
-
-  <section class="section">
-    <h2>What Customers Are Saying</h2>
-    <blockquote style="font-style: italic; max-width: 700px; margin: 2rem auto;">
-      "APEXsalesAI turned our scattered sales process into a streamlined machine. More meetings, better insights, and fewer headaches."
-      <br /><br />
-      — Taylor G., Growth Lead at HTech Recruiters
-    </blockquote>
-  </section>
+    <section class="section cta-bottom">
+      <div class="container">
+        <h2>Your AI GTM Partner Is Just a Click Away</h2>
+        <p>Let’s execute together. Book a call, request a walkthrough, or submit a quick inquiry.</p>
+        <a href="https://outlook.office365.com/owa/calendar/APEXsalesAIcom@APEXsalesAI.com/bookings/" class="cta-button pulse">Book Now</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
+    <p class="container">&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navLinks');
+      const toggle = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.nav-overlay');
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
