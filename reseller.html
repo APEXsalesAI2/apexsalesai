@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reseller Program - APEXsalesAI</title>
+  <title>APEXsalesAI | Become a Reseller Partner</title>
+  <meta name="description" content="Partner with APEXsalesAI to deliver cutting-edge AI automation. Become a reseller and help businesses scale smarter with our GTM platform." />
+  <meta name="keywords" content="AI reseller program, partner with APEXsalesAI, sales automation partner, GTM reseller, SaaS reseller opportunity" />
+  <meta name="author" content="APEXsalesAI" />
+
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/images/site.webmanifest" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/menu.js"></script>
 </head>
@@ -33,43 +42,56 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-content">
+    <div class="hero-content container">
       <h1 class="hero-title">Partner With Us</h1>
-      <p class="hero-subtitle">Expand your business. Empower your clients. Join the AI-powered reseller revolution.</p>
+      <p class="hero-subtitle">Deliver the future of sales execution to your clients.</p>
     </div>
   </header>
 
-  <section class="section">
-    <h2>Why Resell APEXsalesAI?</h2>
-    <p>Our platform isn't just built for customers — it's built for partners. Generate new revenue streams by offering your clients cutting-edge AI sales automation and strategic execution tools.</p>
-    <div class="module-grid">
-      <div class="module-card">
-        <h3>Recurring Revenue</h3>
-        <p>Earn monthly commissions on every license you sell — with lifetime value share.</p>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Reseller Opportunity</h2>
+        <p>Whether you're a consultant, MSP, or system integrator — our partner program is designed to help you bring next-generation GTM execution to your network. Monetize your relationships and unlock recurring revenue with ease.</p>
+        <ul class="checklist">
+          <li>White-labeled AI agents for your clients</li>
+          <li>Turnkey campaign and workflow deployment</li>
+          <li>Recurring revenue and margin-friendly structure</li>
+          <li>Dedicated partner success support</li>
+        </ul>
+        <a href="contact.html" class="cta-button pulse">Become a Partner</a>
       </div>
-      <div class="module-card">
-        <h3>Customizable Deployments</h3>
-        <p>White-label or co-brand APEXsalesAI to align with your brand and client needs.</p>
-      </div>
-      <div class="module-card">
-        <h3>Sales Enablement Toolkit</h3>
-        <p>We equip you with slide decks, demo scripts, and co-selling support.</p>
-      </div>
-      <div class="module-card">
-        <h3>MSP & VAR Ready</h3>
-        <p>Ideal for managed service providers, system integrators, and consultants.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section callout">
-    <h2>Built to Scale With You</h2>
-    <p>Start fast with zero upfront investment. Expand as your client base grows. Let our AI do the heavy lifting — you deliver the outcomes.</p>
-    <a href="contact.html" class="cta-button pulse">Become a Reseller</a>
-  </section>
+    <section class="section callout">
+      <div class="container">
+        <h2>Why APEXsalesAI?</h2>
+        <p>Our modular, autonomous platform allows you to go to market faster with zero technical overhead. We'll handle the AI — you deliver results.</p>
+      </div>
+    </section>
+
+    <section class="section cta-bottom">
+      <div class="container">
+        <h2>Built for Scale. Ready for Resellers.</h2>
+        <p>Join the GTM revolution. Let’s co-sell, co-brand, and grow together.</p>
+        <a href="contact.html" class="cta-button pulse">Talk to Partner Enablement</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
+    <p class="container">&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navLinks');
+      const toggle = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.nav-overlay');
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
