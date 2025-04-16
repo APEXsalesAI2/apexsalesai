@@ -14,60 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/menu.js"></script>
-  <style>
-    .blog-header {
-      background-color: #f0f4f8;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .blog-header h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
-      margin-bottom: 10px;
-    }
-    .blog-header p {
-      color: #556;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .blog-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .blog-card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-5px);
-    }
-    .blog-card h2 {
-      font-size: 1.5rem;
-      color: #2c3e50;
-      margin-bottom: 10px;
-    }
-    .blog-card p {
-      color: #555;
-      font-size: 0.95rem;
-    }
-    .blog-card a {
-      display: inline-block;
-      margin-top: 15px;
-      color: #007bff;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .blog-card a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -94,33 +40,39 @@
     </div>
   </nav>
 
-  <header class="blog-header">
-    <h1>Insights That Drive Execution</h1>
-    <p>Explore practical AI use cases, GTM strategies, and automation frameworks designed to accelerate revenue outcomes.</p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Insights That Drive Execution</h1>
+      <p class="hero-subtitle">Explore practical AI use cases, GTM strategies, and automation frameworks designed to accelerate revenue outcomes.</p>
+    </div>
   </header>
 
-  <main class="blog-list">
-    <div class="blog-card">
-      <h2>The Rise of Autonomous Revenue Teams</h2>
-      <p>Discover how AI agents are reshaping go-to-market operations, helping teams do more with less — and scale without headcount.</p>
-      <a href="blog/ai-revenue-teams.html">Read Article →</a>
-    </div>
+  <main>
+    <section class="section">
+      <div class="module-grid">
+        <div class="module-card">
+          <h3>The Rise of Autonomous Revenue Teams</h3>
+          <p>Discover how AI agents are reshaping go-to-market operations, helping teams do more with less — and scale without headcount.</p>
+          <a class="cta-button" href="blog/ai-revenue-teams.html">Read Article</a>
+        </div>
 
-    <div class="blog-card">
-      <h2>AI Agents Are the New RevOps</h2>
-      <p>From pipeline management to outreach execution — learn how AI agents are evolving from assistants to full GTM operators.</p>
-      <a href="blog/ai-agent-article.html">Read Article →</a>
-    </div>
+        <div class="module-card">
+          <h3>AI Agents Are the New RevOps</h3>
+          <p>From pipeline management to outreach execution — learn how AI agents are evolving from assistants to full GTM operators.</p>
+          <a class="cta-button" href="blog/ai-agent-article.html">Read Article</a>
+        </div>
 
-    <div class="blog-card">
-      <h2>Sales Playbooks Don’t Scale — AI Does</h2>
-      <p>Playbooks age fast. AI-driven GTM engines adapt in real-time, personalize outreach, and scale your sales faster than humans ever could.</p>
-      <a href="#">Coming Soon</a>
-    </div>
+        <div class="module-card">
+          <h3>Sales Playbooks Don’t Scale — AI Does</h3>
+          <p>Playbooks age fast. AI-driven GTM engines adapt in real-time, personalize outreach, and scale faster than humans ever could.</p>
+          <a class="cta-button" href="#">Coming Soon</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <p class="container">&copy; 2025 APEXsalesAI. All rights reserved.</p>
+    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
 
   <script>
