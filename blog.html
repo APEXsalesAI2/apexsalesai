@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Insights & Articles - APEXsalesAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEXsalesAI | Insights, Trends & GTM Playbooks</title>
+  <meta name="description" content="Stay up to date with AI-powered GTM trends, sales execution strategies, and automation insights from APEXsalesAI." />
+  <meta name="keywords" content="AI sales blog, go-to-market strategies, sales automation, revenue execution, APEXsalesAI insights" />
+  <meta name="author" content="APEXsalesAI" />
+
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/images/site.webmanifest" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/menu.js"></script>
 </head>
@@ -33,46 +42,56 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">AI Sales Strategy Insights</h1>
-      <p class="hero-subtitle">Explore playbooks, frameworks, and expert insights shaping the future of GTM execution.</p>
+    <div class="hero-content container">
+      <h1 class="hero-title">Insights That Drive Execution</h1>
+      <p class="hero-subtitle">Strategy meets action — with real-time trends, tools, and playbooks.</p>
     </div>
   </header>
 
-  <section class="section">
-    <h2>Featured Articles</h2>
-    <div class="module-grid">
-      <div class="module-card">
-        <h3>The Rise of AI-Powered Sales Teams</h3>
-        <p>Why autonomous agents are outperforming traditional SDRs — and what it means for your team in 2025.</p>
-        <a href="#" class="cta-button">Read More</a>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Featured Articles</h2>
+        <div class="module-grid">
+          <div class="module-card">
+            <h3>📊 The Rise of Autonomous Revenue Teams</h3>
+            <p>Discover how AI agents are reshaping modern GTM teams and what it means for growth-stage companies.</p>
+          </div>
+          <div class="module-card">
+            <h3>🧠 Strategy to Execution in Under 48 Hours</h3>
+            <p>Learn how high-performing orgs are deploying GTM playbooks using modular AI platforms like APEXsalesAI.</p>
+          </div>
+          <div class="module-card">
+            <h3>🚀 From Leads to Meetings — Without Manual Work</h3>
+            <p>Walk through how APEX’s AI SDR agents qualify, nurture, and book meetings autonomously.</p>
+          </div>
+        </div>
+        <p class="centered highlight">Want your team featured? <a href="contact.html">Submit a Success Story</a></p>
       </div>
-      <div class="module-card">
-        <h3>How to Automate Your Funnel in 7 Days</h3>
-        <p>A tactical breakdown of turning cold data into booked meetings using APEXsalesAI's outreach engine.</p>
-        <a href="#" class="cta-button">Read More</a>
-      </div>
-      <div class="module-card">
-        <h3>The Future of GTM Is Modular</h3>
-        <p>See why sales leaders are ditching rigid CRMs and building execution stacks around plug-and-play AI.</p>
-        <a href="#" class="cta-button">Read More</a>
-      </div>
-      <div class="module-card">
-        <h3>Buying Signals That Close Deals</h3>
-        <p>Learn how to detect pipeline intent and convert engagement into qualified pipeline before your competitors.</p>
-        <a href="#" class="cta-button">Read More</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section callout">
-    <h2>Want These Insights Delivered?</h2>
-    <p>Join our executive newsletter for one weekly idea that can shift your entire GTM strategy — no spam, just signal.</p>
-    <a href="contact.html" class="cta-button pulse">Subscribe to APEX Insights</a>
-  </section>
+    <section class="section cta-bottom">
+      <div class="container">
+        <h2>Explore. Learn. Execute.</h2>
+        <p>The blog is just the beginning. Let’s turn strategy into results.</p>
+        <a href="contact.html" class="cta-button pulse">Talk to GTM Experts</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
+    <p class="container">&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navLinks');
+      const toggle = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.nav-overlay');
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
