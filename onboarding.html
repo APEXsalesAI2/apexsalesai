@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Onboarding - APEXsalesAI</title>
+  <title>APEXsalesAI | Seamless Onboarding for Rapid Results</title>
+  <meta name="description" content="Get started with APEXsalesAI. Our AI onboarding process is fast, guided, and designed to deliver GTM results quickly." />
+  <meta name="keywords" content="AI onboarding, APEXsalesAI setup, GTM launch, autonomous sales onboarding, sales automation setup" />
+  <meta name="author" content="APEXsalesAI" />
+
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/images/site.webmanifest" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/menu.js"></script>
 </head>
@@ -33,43 +42,67 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Effortless Onboarding</h1>
-      <p class="hero-subtitle">Launch faster with guided setup, expert support, and zero guesswork.</p>
+    <div class="hero-content container">
+      <h1 class="hero-title">Fast-Track Your Launch</h1>
+      <p class="hero-subtitle">Guided onboarding built for execution.</p>
     </div>
   </header>
 
-  <section class="section">
-    <h2>What to Expect</h2>
-    <p>Whether you're self-service or working with our success team, onboarding is fast, easy, and tailored to your goals.</p>
-    <div class="module-grid">
-      <div class="module-card">
-        <h3>Strategic Kickoff</h3>
-        <p>We align on your sales goals, workflows, and tool stack to tailor your deployment.</p>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>What to Expect</h2>
+        <div class="module-grid">
+          <div class="module-card">
+            <h3>⚡ 1-Hour Setup</h3>
+            <p>We’ll align your goals and launch your first AI motion in under 60 minutes.</p>
+          </div>
+          <div class="module-card">
+            <h3>📊 Playbook-Ready</h3>
+            <p>Your GTM framework, ICP, and messaging is preloaded — ready to execute instantly.</p>
+          </div>
+          <div class="module-card">
+            <h3>🧠 No Learning Curve</h3>
+            <p>Forget dashboards. Your AI knows what to do. You just approve and go.</p>
+          </div>
+          <div class="module-card">
+            <h3>🤝 Support On-Demand</h3>
+            <p>Live chat, onboarding engineers, and strategy resources at every stage.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="cta-button pulse">Book Onboarding</a>
       </div>
-      <div class="module-card">
-        <h3>AI Agent Setup</h3>
-        <p>We'll configure your autonomous agents with your ICP, messaging, and cadence preferences.</p>
-      </div>
-      <div class="module-card">
-        <h3>System Integration</h3>
-        <p>Connect APEXsalesAI to your CRM, calendar, email, and analytics tools in minutes.</p>
-      </div>
-      <div class="module-card">
-        <h3>Live Go-Live & QA</h3>
-        <p>Launch with confidence — we validate the entire flow and run a test campaign.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section callout">
-    <h2>Full-Service Onboarding Available</h2>
-    <p>Want us to do it all for you? Our concierge team offers white-glove onboarding for teams that want to get moving — fast.</p>
-    <a href="contact.html" class="cta-button pulse">Talk to Onboarding</a>
-  </section>
+    <section class="section callout">
+      <div class="container">
+        <h2>Built to Go Live Fast</h2>
+        <p>We built APEXsalesAI for teams that want momentum. No heavy lift. Just instant traction.</p>
+      </div>
+    </section>
+
+    <section class="section cta-bottom">
+      <div class="container">
+        <h2>Let’s Launch in One Hour</h2>
+        <p>Let our onboarding team handle the setup. You focus on the wins.</p>
+        <a href="contact.html" class="cta-button pulse">Schedule Your Session</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
+    <p class="container">&copy; 2025 APEXsalesAI. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navLinks');
+      const toggle = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.nav-overlay');
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
