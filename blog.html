@@ -11,10 +11,63 @@
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <link rel="manifest" href="/images/site.webmanifest" />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/menu.js"></script>
+  <style>
+    .blog-header {
+      background-color: #f0f4f8;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .blog-header h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .blog-header p {
+      color: #556;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .blog-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .blog-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+    .blog-card h2 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .blog-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .blog-card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #007bff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .blog-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -41,45 +94,29 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-content container">
-      <h1 class="hero-title">Insights That Drive Execution</h1>
-      <p class="hero-subtitle">Strategy meets action — with real-time trends, tools, and playbooks.</p>
-    </div>
+  <header class="blog-header">
+    <h1>Insights That Drive Execution</h1>
+    <p>Explore practical AI use cases, GTM strategies, and automation frameworks designed to accelerate revenue outcomes.</p>
   </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <h2>Featured Articles</h2>
-        <div class="module-grid">
-          <div class="module-card">
-            <h3>📊 The Rise of Autonomous Revenue Teams</h3>
-            <p>Discover how AI agents are reshaping modern GTM teams and what it means for growth-stage companies.</p>
-            <a href="blog/ai-revenue-teams.html" class="cta-button small">Read More</a>
-          </div>
-          <div class="module-card">
-            <h3>🧠 Strategy to Execution in Under 48 Hours</h3>
-            <p>Learn how high-performing orgs are deploying GTM playbooks using modular AI platforms like APEXsalesAI.</p>
-            <a href="blog/strategy-execution.html" class="cta-button small">Read More</a>
-          </div>
-          <div class="module-card">
-            <h3>🚀 From Leads to Meetings — Without Manual Work</h3>
-            <p>Walk through how APEX’s AI SDR agents qualify, nurture, and book meetings autonomously.</p>
-            <a href="blog/leads-to-meetings.html" class="cta-button small">Read More</a>
-          </div>
-        </div>
-        <p class="centered highlight">Want your team featured? <a href="contact.html">Submit a Success Story</a></p>
-      </div>
-    </section>
+  <main class="blog-list">
+    <div class="blog-card">
+      <h2>The Rise of Autonomous Revenue Teams</h2>
+      <p>Discover how AI agents are reshaping go-to-market operations, helping teams do more with less — and scale without headcount.</p>
+      <a href="blog/ai-revenue-teams.html">Read Article →</a>
+    </div>
 
-    <section class="section cta-bottom">
-      <div class="container">
-        <h2>Explore. Learn. Execute.</h2>
-        <p>The blog is just the beginning. Let’s turn strategy into results.</p>
-        <a href="contact.html" class="cta-button pulse">Talk to GTM Experts</a>
-      </div>
-    </section>
+    <div class="blog-card">
+      <h2>AI Agents Are the New RevOps</h2>
+      <p>From pipeline management to outreach execution — learn how AI agents are evolving from assistants to full GTM operators.</p>
+      <a href="blog/ai-agent-article.html">Read Article →</a>
+    </div>
+
+    <div class="blog-card">
+      <h2>Sales Playbooks Don’t Scale — AI Does</h2>
+      <p>Playbooks age fast. AI-driven GTM engines adapt in real-time, personalize outreach, and scale your sales faster than humans ever could.</p>
+      <a href="#">Coming Soon</a>
+    </div>
   </main>
 
   <footer class="footer">
