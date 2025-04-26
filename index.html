@@ -29,14 +29,20 @@
     .hero-bg svg { width: 100%; height: 100%; }
     .hero-bg circle { opacity: 0.2; animation: float 8s ease-in-out infinite; }
     .hero-bg circle:nth-child(2) { animation-duration: 12s; }
-    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
+    @keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-30px);} }
     .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
     .hero-metric { margin-top: 1rem; font-size: 1rem; color: #007c91; font-weight: 600; }
+
+    /* Product card icons and animations */
+    .module-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .module-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+    .module-card .card-icon { width: 48px; height: 48px; margin: 0 auto 1rem; transition: transform 0.3s ease; }
+    .module-card:hover .card-icon { transform: scale(1.1); }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html" class="logo"><img src="images/apex-logo.png" alt="ApexSalesAI" /></a>
+    <a href="index.html" class="logo"><img src="images/apex-logo.png" alt="ApexSalesAI" loading="lazy" /></a>
     <button type="button"
             class="menu-toggle"
             aria-expanded="false"
@@ -80,7 +86,10 @@
     <h2>Two Agents. One Apex. Unlimited Advantage.</h2>
     <div class="module-grid">
       <div class="module-card">
-        <h3>🎯 ApexSalesAI</h3>
+        <div class="card-icon">
+          <img src="images/icons/sales-agent.svg" alt="Sales Agent Icon" loading="lazy" />
+        </div>
+        <h3>ApexSalesAI</h3>
         <p>Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
         <ul>
           <li>24/7 smart prospecting</li>
@@ -90,7 +99,10 @@
         <a href="platform.html#sdr-agent" class="cta-button">Learn More</a>
       </div>
       <div class="module-card">
-        <h3>🤝 ApexSupportAI</h3>
+        <div class="card-icon">
+          <img src="images/icons/support-agent.svg" alt="Support Agent Icon" loading="lazy" />
+        </div>
+        <h3>ApexSupportAI</h3>
         <p>Always-on customer support with instant resolutions and smart escalations.</p>
         <ul>
           <li>Live chat & ticket automation</li>
@@ -134,7 +146,6 @@
 
       navOverlay.addEventListener('click', closeMenu);
 
-      // Focus trapping
       navLinks.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
           if (e.shiftKey && document.activeElement === firstItem) {
