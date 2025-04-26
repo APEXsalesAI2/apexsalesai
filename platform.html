@@ -3,31 +3,421 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>APEXsalesAI Platform | Automate GTM & Accelerate Revenue</title>
-  <meta name="description" content="Explore the modular APEXsalesAI platform — built to automate outbound, qualify leads, generate pipeline, and drive execution across your go-to-market motion." />
-  <meta name="keywords" content="sales AI platform, go-to-market automation, revenue AI, outbound automation, sales enablement, CRM automation, ApexSalesAI" />
-  <meta name="author" content="APEXsalesAI" />
-
+  <title>Platform | ApexSalesAI</title>
+  <meta name="description" content="Explore the ApexSalesAI platform - automate revenue motion from cold outreach to closed deal with our intelligent AI agents." />
+  <meta name="keywords" content="ApexSalesAI, ApexSupportAI, AI sales automation, AI customer support, ApexOpsAI, sales platform" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Platform | ApexSalesAI" />
+  <meta property="og:description" content="Drive your sales pipeline with AI and turn signals into sales with our intelligent agents." />
+  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta property="og:url" content="https://www.apexsalesai.com/platform.html" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Platform | ApexSalesAI" />
+  <meta name="twitter:description" content="Drive your sales pipeline with AI and turn signals into sales with our intelligent agents." />
+  <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta name="twitter:site" content="@apexsalesai" />
+  <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <link rel="manifest" href="/images/site.webmanifest" />
-
+  <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/menu.js"></script>
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0d1321;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Navigation */
+    .navbar {
+      background-color: #0d1321;
+      padding: 20px 0;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    .logo-text {
+      color: #00c2cb;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links li {
+      margin: 0 15px;
+    }
+    
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      padding: 10px 0;
+    }
+    
+    .nav-links a:hover, .nav-links a.active {
+      color: #00c2cb;
+    }
+    
+    /* Hero section */
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ffffff, #00c2cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #a0aec0;
+    }
+    
+    /* Feature sections */
+    .feature-section {
+      padding: 100px 0;
+      position: relative;
+    }
+    
+    .feature-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 70% 50%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .section-heading {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-heading h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    
+    /* Feature cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .feature-card {
+      background-color: rgba(26, 32, 44, 0.6);
+      border: 1px solid rgba(42, 67, 101, 0.3);
+      border-radius: 12px;
+      padding: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #00c2cb, rgba(0, 194, 203, 0.5));
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 194, 203, 0.1);
+    }
+    
+    .feature-card .icon {
+      font-size: 2rem;
+      color: #00c2cb;
+      margin-bottom: 20px;
+    }
+    
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+    
+    .feature-card p {
+      color: #a0aec0;
+      margin-bottom: 0;
+    }
+    
+    /* Platform components section */
+    .component-section {
+      padding: 100px 0;
+      background-color: #0f172a;
+    }
+    
+    .component-container {
+      margin-top: 60px;
+    }
+    
+    .component-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    
+    .component-tab {
+      background: none;
+      border: none;
+      color: #e2e8f0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+    }
+    
+    .component-tab.active {
+      color: #00c2cb;
+      border-bottom-color: #00c2cb;
+    }
+    
+    .component-content {
+      display: none;
+    }
+    
+    .component-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .component-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .component-image {
+      background-color: rgba(26, 32, 44, 0.6);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .component-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .component-info h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    
+    .component-info p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+    }
+    
+    .feature-list li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .feature-list li::before {
+      content: '✓';
+      color: #00c2cb;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    /* CTA section */
+    .cta-section {
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 194, 203, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    
+    .cta-section p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #a0aec0;
+      font-size: 1.2rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 194, 203, 0.3);
+    }
+    
+    .btn:hover {
+      background-color: #00a8b3;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 194, 203, 0.4);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #0d1321;
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    footer p {
+      color: #718096;
+      margin-bottom: 15px;
+    }
+    
+    footer a {
+      color: #00c2cb;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    
+    /* Emoji icons */
+    .emoji-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    /* Utility classes */
+    .text-gradient {
+      background: linear-gradient(90deg, #ffffff, #00c2cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .component-details {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-heading h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo-group">
-        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" />
-        <span class="brand-name">APEXsalesAI</span>
-      </div>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="nav-overlay" onclick="toggleMenu()"></div>
-      <ul class="nav-links" id="navLinks">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI">
+        <span class="logo-text">APEXsalesAI</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html" class="active">Platform</a></li>
@@ -41,77 +431,231 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">More Than Software. Your Execution Engine.</h1>
-      <p class="hero-subtitle">Automate revenue motion — from cold outreach to closed deal.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>More Than Software. Your Execution Engine.</h1>
+      <p>Automate revenue motion — from cold outreach to closed deal.</p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="section">
-      <h2>Drive Pipeline with AI</h2>
-      <div class="module-grid">
-        <div class="module-card">
-          <h3>🤖 Autonomous SDR Agent</h3>
+  <!-- Drive Pipeline Section -->
+  <section class="feature-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Drive Pipeline with AI</h2>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <span class="emoji-icon">🤖</span>
+          <h3>Autonomous SDR Agent</h3>
           <p>Cold emails, objections, bookings — handled 24/7 by AI.</p>
         </div>
-        <div class="module-card">
-          <h3>📩 Campaign Orchestrator</h3>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <span class="emoji-icon">📊</span>
+          <h3>Campaign Orchestrator</h3>
           <p>Multi-channel flows: email, SMS, ads, and web — no manual setup.</p>
         </div>
-        <div class="module-card">
-          <h3>🧠 AI Strategy Engine</h3>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <span class="emoji-icon">🧠</span>
+          <h3>AI Strategy Engine</h3>
           <p>Creates plays, segments leads, and adapts based on outcomes.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>Turn Signals Into Sales</h2>
-      <div class="module-grid">
-        <div class="module-card">
-          <h3>📊 Smart CRM Sync</h3>
-          <p>Bi-directional sync with Salesforce, HubSpot, and Microsoft Dynamics.</p>
+  <!-- Turn Signals Section -->
+  <section class="feature-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Turn Signals Into Sales</h2>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <span class="emoji-icon">📱</span>
+          <h3>Smart CRM Sync</h3>
+          <p>Bi-directional data flow with your existing CRM — no data islands.</p>
         </div>
-        <div class="module-card">
-          <h3>📞 Inbound Concierge</h3>
-          <p>Qualifies, responds, and routes inbound interest in real time.</p>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <span class="emoji-icon">📞</span>
+          <h3>Inbound Concierge</h3>
+          <p>Route, qualify, and book meetings from website visitors in real-time.</p>
         </div>
-        <div class="module-card">
-          <h3>🔔 Real-Time Alerts</h3>
-          <p>Notifies you of engagement spikes and key buying signals instantly.</p>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <span class="emoji-icon">⏰</span>
+          <h3>Real-Time Alerts</h3>
+          <p>Buying signals, competitor mentions, and engagement opportunities.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>Built to Flex and Scale</h2>
-      <div class="module-grid">
-        <div class="module-card">
-          <h3>🧩 Modular Architecture</h3>
-          <p>Use what you need — plug into your existing stack with zero disruption.</p>
+  <!-- Platform Components Section -->
+  <section class="component-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>The ApexOpsAI Execution Engine</h2>
+      </div>
+      
+      <div class="component-container">
+        <div class="component-tabs">
+          <button class="component-tab active" data-tab="agent">AI Agents</button>
+          <button class="component-tab" data-tab="workflow">Workflow Automation</button>
+          <button class="component-tab" data-tab="analytics">Intelligence & Analytics</button>
         </div>
-        <div class="module-card">
-          <h3>⚙️ API + Integration Ready</h3>
-          <p>Connect Slack, Zoom, Microsoft 365, Google, and dozens more.</p>
+        
+        <!-- Agent Component -->
+        <div class="component-content active" id="agent-content">
+          <div class="component-details">
+            <div class="component-image">
+              <img src="/images/ai-agent-interface.png" alt="AI Agent Interface">
+            </div>
+            <div class="component-info">
+              <h3>AI-Powered Sales Agents</h3>
+              <p>Our autonomous agents handle the tedious parts of the sales process, letting your human team focus on high-value activities.</p>
+              
+              <ul class="feature-list">
+                <li>Natural language understanding for seamless email conversations</li>
+                <li>Objection handling based on your best practices</li>
+                <li>Intelligent follow-up timing based on engagement signals</li>
+                <li>Seamless handoff to human reps at optimal moments</li>
+                <li>Continuous learning from successful interactions</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="module-card">
-          <h3>🤝 Partner Extension (Beta)</h3>
-          <p>Enable co-branded agents, custom stacks, and campaign ops.</p>
+        
+        <!-- Workflow Component -->
+        <div class="component-content" id="workflow-content">
+          <div class="component-details">
+            <div class="component-info">
+              <h3>Streamlined Workflow Automation</h3>
+              <p>Create powerful multi-channel sequences that adapt in real-time to prospect behavior.</p>
+              
+              <ul class="feature-list">
+                <li>Drag-and-drop campaign builder with AI assist</li>
+                <li>Dynamic content personalization at scale</li>
+                <li>Automated A/B testing with optimization</li>
+                <li>Trigger-based actions from any data source</li>
+                <li>Custom approval workflows for enterprise governance</li>
+              </ul>
+            </div>
+            <div class="component-image">
+              <img src="/images/workflow-automation.png" alt="Workflow Automation Interface">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Analytics Component -->
+        <div class="component-content" id="analytics-content">
+          <div class="component-details">
+            <div class="component-image">
+              <img src="/images/analytics-dashboard.png" alt="Analytics Dashboard">
+            </div>
+            <div class="component-info">
+              <h3>Revenue Intelligence</h3>
+              <p>Turn your sales data into actionable insights with our advanced analytics engine.</p>
+              
+              <ul class="feature-list">
+                <li>Real-time performance dashboards for teams and individuals</li>
+                <li>Predictive pipeline analysis with AI-powered forecasting</li>
+                <li>Behavioral insights on prospect engagement patterns</li>
+                <li>Conversation intelligence with automatic insight extraction</li>
+                <li>ROI tracking across all sales and marketing activities</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section callout">
-      <h2>The Last Platform You'll Need to Scale Revenue</h2>
-      <p>From startup hustle to enterprise execution — APEXsalesAI adapts and activates your GTM strategy without the complexity.</p>
-      <a href="demo.html" class="cta-button pulse">Request a Walkthrough</a>
-    </section>
-  </main>
+  <!-- Integration Section -->
+  <section class="feature-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Works With Your Tech Stack</h2>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Integration 1 -->
+        <div class="feature-card">
+          <span class="emoji-icon">💼</span>
+          <h3>CRM Systems</h3>
+          <p>Seamless integration with Salesforce, HubSpot, Pipedrive and more.</p>
+        </div>
+        
+        <!-- Integration 2 -->
+        <div class="feature-card">
+          <span class="emoji-icon">📨</span>
+          <h3>Email & Calendar</h3>
+          <p>Works with Google Workspace, Microsoft 365, and Exchange.</p>
+        </div>
+        
+        <!-- Integration 3 -->
+        <div class="feature-card">
+          <span class="emoji-icon">🔄</span>
+          <h3>Data Ecosystem</h3>
+          <p>Connect with Zapier, Segment, Clearbit, and custom APIs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 APEXsalesAI. All rights reserved.</p>
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Supercharge Your Sales Operations?</h2>
+      <p>See how ApexSalesAI can transform your revenue operations with our AI-powered platform.</p>
+      <a href="demo.html" class="btn">Schedule a Demo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabs = document.querySelectorAll('.component-tab');
+      const contents = document.querySelectorAll('.component-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Remove active class from all tabs
+          tabs.forEach(t => t.classList.remove('active'));
+          // Add active class to current tab
+          this.classList.add('active');
+          
+          // Hide all content
+          contents.forEach(content => content.classList.remove('active'));
+          // Show the relevant content
+          document.getElementById(`${this.dataset.tab}-content`).classList.add('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
