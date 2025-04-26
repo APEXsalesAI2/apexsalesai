@@ -18,11 +18,27 @@
   <meta name="twitter:description" content="Unleash intelligent agents designed to drive revenue and elevate customer interactions." />
   <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
   <meta name="twitter:site" content="@apexsalesai" />
+  <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/menu.js"></script>
-  <script defer src="js/hero.js"></script>
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ApexSalesAI",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Intelligent AI agents designed to drive revenue and elevate customer interactions"
+    }
+  </script>
   <style>
     /* Base typography */
     body { 
@@ -32,6 +48,7 @@
       color: #e2e8f0; 
       margin: 0;
       padding: 0;
+      background-color: #0d1321;
     }
     
     h1, h2, h3, h4 { 
@@ -53,12 +70,15 @@
       padding: 0 1rem;
     }
 
-    /* Navbar logo sizing */
+    /* Navbar */
     .navbar {
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
+      background-color: rgba(13, 19, 33, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .navbar img.logo { 
@@ -66,42 +86,87 @@
       width: auto; 
     }
     
-    @media(max-width: 768px) { 
-      .navbar img.logo { 
-        height: 40px; 
-      } 
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-
-    /* Navigation */
-    .navbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    
+    /* Desktop Navigation */
+    .desktop-nav {
       display: flex;
     }
     
-    .navbar a {
-      color: #e2e8f0;
-      text-decoration: none;
-      transition: color 0.2s ease;
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
     
-    .navbar a:hover {
+    .desktop-nav li {
+      margin: 0 0.75rem;
+    }
+    
+    .desktop-nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
+    }
+    
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
       color: #00c2cb;
     }
-
-    /* Mobile navigation */
-    #mobileNav {
+    
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-nav {
+      display: none;
       width: 100%;
       padding: 1rem 0;
+      text-align: center;
+      background-color: rgba(13, 19, 33, 0.98);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    #mobileNav a {
+    .mobile-nav a {
       display: block;
       padding: 0.75rem 0;
       color: #e2e8f0;
       text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Show mobile menu on smaller screens */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .navbar img.logo {
+        height: 40px;
+      }
     }
 
     /* CTA buttons */
@@ -112,9 +177,11 @@
       padding: .75rem 1.5rem; 
       border-radius: 8px; 
       text-decoration: none; 
-      transition: transform .2s ease;
+      transition: transform .2s ease, background-color .2s ease;
       display: inline-block;
       margin: 0.5rem;
+      border: none;
+      cursor: pointer;
     }
     
     .cta:hover { 
@@ -183,6 +250,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
     
     .module-card:hover { 
@@ -230,12 +298,26 @@
     .grid {
       display: grid;
       gap: 2rem;
+      grid-template-columns: 1fr;
     }
     
     @media (min-width: 768px) {
-      .md\:grid-cols-3 {
+      .grid-cols-3 {
         grid-template-columns: repeat(3, 1fr);
       }
+    }
+
+    /* Feature boxes */
+    .feature-box {
+      background-color: #2d3748;
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-3px);
     }
 
     /* Footer */
@@ -248,11 +330,15 @@
       color: #00c2cb;
       text-decoration: none;
       margin: 0 0.5rem;
+      transition: color 0.2s ease;
+    }
+    
+    footer a:hover {
+      color: #00a8b3;
     }
     
     /* Utility classes */
     .text-center { text-align: center; }
-    .hidden { display: none; }
     .mb-2 { margin-bottom: 0.5rem; }
     .mb-4 { margin-bottom: 1rem; }
     .mb-6 { margin-bottom: 1.5rem; }
@@ -267,8 +353,6 @@
     .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
     .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
     .px-4 { padding-left: 1rem; padding-right: 1rem; }
-    .space-x-6 > * + * { margin-left: 1.5rem; }
-    .space-y-4 > * + * { margin-top: 1rem; }
     .max-w-2xl { max-width: 42rem; }
     .bg-gray-700 { background-color: #2d3748; }
     .bg-gray-800 { background-color: #1a202c; }
@@ -285,51 +369,64 @@
     .font-bold { font-weight: 700; }
     .p-4 { padding: 1rem; }
     .p-6 { padding: 1.5rem; }
-    .border-b { border-bottom-width: 1px; }
-    .border-gray-800 { border-color: #1a202c; }
-    .items-center { align-items: center; }
-    .justify-between { justify-content: space-between; }
-    .flex { display: flex; }
     .relative { position: relative; }
     .z-10 { z-index: 10; }
     .list-disc { list-style-type: disc; }
     .list-inside { list-style-position: inside; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .flex-col { flex-direction: column; }
+    .w-full { width: 100%; }
+    .active { color: #00c2cb; }
+    .menu-open { display: block; }
   </style>
 </head>
-<body class="bg-gray-900">
+<body>
   <!-- Navigation -->
-  <nav class="navbar bg-gray-900 border-b border-gray-800">
-    <div class="container mx-auto flex items-center justify-between p-4">
-      <a href="index.html"><img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo"></a>
-      <ul class="hidden md:flex space-x-6 text-base font-semibold">
-        <li><a href="index.html" class="text-teal-400">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="platform.html">Platform</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="consulting.html">Consulting</a></li>
-        <li><a href="demo.html">Demo</a></li>
-        <li><a href="reseller.html">Reseller</a></li>
-        <li><a href="onboarding.html">Onboarding</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button class="md:hidden text-white" onclick="toggleMobileNav()" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" aria-label="ApexSalesAI Home">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="desktop-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="consulting.html">Consulting</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="reseller.html">Reseller</a></li>
+          <li><a href="onboarding.html">Onboarding</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Mobile Navigation Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
-    <div id="mobileNav" class="hidden bg-gray-900 text-center space-y-4 py-4">
-      <a href="index.html" class="block">Home</a>
-      <a href="about.html" class="block">About</a>
-      <a href="platform.html" class="block">Platform</a>
-      <a href="pricing.html" class="block">Pricing</a>
-      <a href="consulting.html" class="block">Consulting</a>
-      <a href="demo.html" class="block">Demo</a>
-      <a href="reseller.html" class="block">Reseller</a>
-      <a href="onboarding.html" class="block">Onboarding</a>
-      <a href="blog.html" class="block">Blog</a>
-      <a href="contact.html" class="block">Contact</a>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="platform.html">Platform</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="demo.html">Demo</a>
+      <a href="reseller.html">Reseller</a>
+      <a href="onboarding.html">Onboarding</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
@@ -345,7 +442,7 @@
       <h1 id="rotating-headline" class="hero-title">Sell Smarter.<br/>Support Faster.<br/>Powered by Apex.</h1>
       <p class="hero-subtitle">Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
       <div>
-        <a href="demo.html" class="cta mr-4">Schedule a Demo</a>
+        <a href="demo.html" class="cta">Schedule a Demo</a>
         <a href="platform.html" class="cta">Explore Platform</a>
       </div>
       <p class="mt-6 text-sm text-gray-400">Trusted by companies worldwide</p>
@@ -355,9 +452,9 @@
   <!-- Products Overview -->
   <section id="products" class="container mx-auto py-20 px-4">
     <h2 class="text-white text-center mb-10">Two Agents. One Apex. Unlimited Advantage.</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-3 gap-8">
       <div class="module-card text-center">
-        <img src="/images/apexsalesai-agent.png" alt="ApexSalesAI Agent" loading="lazy">
+        <img src="/images/apexsalesai-agent.png" alt="ApexSalesAI Agent" loading="lazy" width="120" height="120">
         <h3 class="mt-4">ApexSalesAI</h3>
         <p class="mb-4">Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
         <ul class="list-disc list-inside mb-6">
@@ -368,7 +465,7 @@
         <a href="platform.html#sales" class="cta">Learn More</a>
       </div>
       <div class="module-card text-center">
-        <img src="/images/apexsupportai-agent.png" alt="ApexSupportAI Agent" loading="lazy">
+        <img src="/images/apexsupportai-agent.png" alt="ApexSupportAI Agent" loading="lazy" width="120" height="120">
         <h3 class="mt-4">ApexSupportAI</h3>
         <p class="mb-4">Always-on customer support with instant resolutions and smart escalations.</p>
         <ul class="list-disc list-inside mb-6">
@@ -379,7 +476,7 @@
         <a href="platform.html#support" class="cta">Learn More</a>
       </div>
       <div class="module-card text-center">
-        <img src="/images/consulting-icon.png" alt="Consulting Service" loading="lazy">
+        <img src="/images/consulting-icon.png" alt="Consulting Service" loading="lazy" width="120" height="120">
         <h3 class="mt-4">Consulting</h3>
         <p class="mb-4">Expert GTM strategy and execution playbooks — tailored to your business goals and market.</p>
         <ul class="list-disc list-inside mb-6">
@@ -393,50 +490,101 @@
   </section>
 
   <!-- Why Apex -->
-<section id="why-apex" class="bg-gray-800 text-center py-20 px-4">
-  <div class="container mx-auto">
-    <h2>Built for Operators. Trusted by Visionaries.</h2>
-    <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Apex isn't just another AI-powered tool—it's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-700 p-6 rounded-lg">
-        <h4 class="text-white mb-2">Insight to Action</h4>
-        <p class="text-gray-300">Our AI doesn't just report. It acts—qualifying leads, booking meetings, coaching reps.</p>
-      </div>
-      <div class="bg-gray-700 p-6 rounded-lg">
-        <h4 class="text-white mb-2">Results by Design</h4>
-        <p class="text-gray-300">We don't believe in bloated tech stacks. Every feature exists to create revenue outcomes.</p>
-      </div>
-      <div class="bg-gray-700 p-6 rounded-lg">
-        <h4 class="text-white mb-2">Real Partnership</h4>
-        <p class="text-gray-300">We're your partner in growth — with onboarding, playbook creation, and ongoing optimization.</p>
+  <section id="why-apex" class="bg-gray-800 py-20 px-4">
+    <div class="container mx-auto text-center">
+      <h2 class="text-white mb-4">Built for Operators. Trusted by Visionaries.</h2>
+      <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Apex isn't just another AI-powered tool—it's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
+      <div class="grid grid-cols-3 gap-8">
+        <div class="feature-box">
+          <h4 class="text-white mb-2">Insight to Action</h4>
+          <p class="text-gray-300">Our AI doesn't just report. It acts—qualifying leads, booking meetings, coaching reps.</p>
+        </div>
+        <div class="feature-box">
+          <h4 class="text-white mb-2">Results by Design</h4>
+          <p class="text-gray-300">We don't believe in bloated tech stacks. Every feature exists to create revenue outcomes.</p>
+        </div>
+        <div class="feature-box">
+          <h4 class="text-white mb-2">Real Partnership</h4>
+          <p class="text-gray-300">We're your partner in growth — with onboarding, playbook creation, and ongoing optimization.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Final CTA -->
-<section class="text-center py-20 px-4 bg-gray-900">
-  <div class="container mx-auto">
-    <h2 class="text-white text-3xl font-bold mb-4">Ready to Transform Your Revenue Operations?</h2>
-    <p class="text-gray-400 mb-8">Book a personalized demo to see how ApexAI can help your team sell smarter and support faster.</p>
-    <a href="demo.html" class="cta">Schedule Your Demo</a>
-  </div>
-</section>
+  <!-- Final CTA -->
+  <section class="text-center py-20 px-4 bg-gray-900">
+    <div class="container mx-auto">
+      <h2 class="text-white text-3xl font-bold mb-4">Ready to Transform Your Revenue Operations?</h2>
+      <p class="text-gray-400 mb-8">Book a personalized demo to see how ApexAI can help your team sell smarter and support faster.</p>
+      <a href="demo.html" class="cta">Schedule Your Demo</a>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-gray-900 py-8">
-  <div class="container mx-auto text-center text-gray-500 text-sm">
-    <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Use</a> | 
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
 
-<script>
-  (function() {
-    window.toggleMobileNav = function() {
-      document.getElementById('mobileNav').classList.toggle('hidden');
-    };
-  })();
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileNav.classList.toggle('menu-open');
+      });
+      
+      // Optional: Rotating headline effect
+      const headlines = [
+        "Sell Smarter.<br/>Support Faster.<br/>Powered by Apex.",
+        "Close More Deals.<br/>Resolve More Tickets.<br/>Powered by Apex.",
+        "AI Sales Agents.<br/>AI Support Agents.<br/>Powered by Apex."
+      ];
+      
+      const headlineEl = document.getElementById('rotating-headline');
+      let currentIndex = 0;
+      
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % headlines.length;
+        headlineEl.innerHTML = headlines[currentIndex];
+      }, 5000);
+      
+      // Handle responsive grid for smaller screens
+      function handleResponsiveGrids() {
+        const gridElements = document.querySelectorAll('.grid');
+        
+        if (window.innerWidth < 768) {
+          gridElements.forEach(grid => {
+            if (grid.classList.contains('grid-cols-3')) {
+              grid.classList.remove('grid-cols-3');
+            }
+          });
+        } else {
+          gridElements.forEach(grid => {
+            if (!grid.classList.contains('grid-cols-3')) {
+              grid.classList.add('grid-cols-3');
+            }
+          });
+        }
+      }
+      
+      // Initial call and event listener for resize
+      handleResponsiveGrids();
+      window.addEventListener('resize', handleResponsiveGrids);
+    });
+    
+    // Smooth scrolling for anchor links
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
