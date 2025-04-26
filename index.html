@@ -3,110 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ApexSalesAI | Sales Execution Reimagined</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
+  <title>ApexSalesAI | Sell Smarter. Support Faster.</title>
+  <meta name="description" content="Accelerate sales and service with ApexSalesAI and ApexSupportAI — intelligent agents for revenue execution and customer support excellence." />
+  <meta name="keywords" content="AI sales automation, AI customer support, ApexSalesAI, ApexSupportAI, ApexOpsAI" />
+  <meta name="author" content="ApexSalesAI" />
+
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/images/site.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/hero.js"></script>
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; background: #ffffff; color: #000000; }
-    header, section, footer { padding: 2rem; text-align: center; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #ffffff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-    nav .logo { font-weight: 800; font-size: 1.5rem; color: #000000; }
-    nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
-    nav ul li a { text-decoration: none; color: #000000; font-weight: 700; font-size: 1.1rem; }
-    nav ul li a:hover { color: #00bcd4; }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; color: #000000; }
-    .hero p { font-size: 1.5rem; margin-bottom: 2rem; color: #333333; }
-    .cta { background-color: #00bcd4; color: white; padding: 1rem 2rem; border-radius: 8px; font-size: 1.1rem; text-decoration: none; display: inline-block; font-weight: 700; transition: background 0.3s; }
-    .cta:hover { background-color: #0097a7; }
-    .features, .pricing, .partners { max-width: 1000px; margin: 0 auto; text-align: left; color: #000000; }
-    .pricing-grid { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
-    .card { background: #f0f0f0; padding: 2rem; border-radius: 10px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); color: #000000; }
-    .card h3 { margin-top: 0; }
-    footer { background: #fafafa; font-size: 0.9rem; color: #666666; }
-    footer a { color: #666666; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    @media (max-width: 768px) {
-      nav ul { display: none; flex-direction: column; background: white; position: absolute; top: 60px; right: 20px; border: 1px solid #ddd; padding: 1rem; }
-      nav.active ul { display: flex; }
+    .nav-links { display: none; flex-direction: column; background: #fff; position: absolute; top: 100%; left: 0; width: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.1); z-index: 1000; }
+    .nav-links.open { display: flex; }
+    .dropdown { display: none; flex-direction: column; background: #f9f9f9; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); position: absolute; }
+    .dropdown.show { display: flex; }
+    .menu-toggle span { display: block; width: 25px; height: 3px; margin: 5px; background: #333; }
+    @media (min-width: 768px) {
+      .nav-links { display: flex !important; flex-direction: row; position: static; box-shadow: none; }
+      .dropdown { position: absolute; }
     }
+    .section { padding: 60px 0; }
+    .alt-bg { background-color: #f7f7f7; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .card { background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .cta-buttons a { margin-right: 10px; margin-top: 20px; display: inline-block; }
   </style>
 </head>
 <body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo-group">
+          <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" style="width:180px;" />
+          <span class="brand-name">ApexSalesAI</span>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+        <div class="nav-overlay" onclick="toggleMenu()"></div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Home</a></li>
+          <li>
+            <button onclick="toggleDropdown()">Products ▼</button>
+            <ul class="dropdown" id="productsDropdown">
+              <li><a href="#apexsalesai">ApexSalesAI</a></li>
+              <li><a href="#apexsupportai">ApexSupportAI</a></li>
+            </ul>
+          </li>
+          <li><a href="#consulting">Consulting</a></li>
+          <li><a href="#why-apex">About</a></li>
+          <li><a href="#cta">Demo</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-<nav>
-  <div class="logo">ApexSalesAI</div>
-  <ul>
-    <li><a href="#features">Solutions</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#partners">Partners</a></li>
-    <li><a href="#playbook">Playbook</a></li>
-  </ul>
-</nav>
-
-<section class="hero">
-  <h1>Built for Operators. Trusted by Visionaries.</h1>
-  <p>ApexSalesAI isn't another AI tool. It's your new sales execution engine — automating outreach, accelerating pipeline, and scaling revenue 24/7.</p>
-  <a href="#pricing" class="cta">See Apex In Action</a>
-</section>
-
-<section id="features" class="features">
-  <h2>What Apex Automates</h2>
-  <ul>
-    <li><strong>SaaS:</strong> Demo booking, lead nurturing</li>
-    <li><strong>Healthcare:</strong> Patient consult scheduling</li>
-    <li><strong>Agencies:</strong> Campaign follow-up and inbound call capture</li>
-    <li><strong>Real Estate:</strong> Inquiry response and appointment booking</li>
-  </ul>
-  <h3>Apex AI Agent Stack</h3>
-  <ul>
-    <li>SDR Agent</li>
-    <li>Onboarding Agent</li>
-    <li>Customer Success Agent</li>
-    <li>Billing Agent</li>
-  </ul>
-  <p><em>More than a chatbot. Modular agents that drive real business results.</em></p>
-</section>
-
-<section id="pricing" class="pricing">
-  <h2>Plans Built for Growth</h2>
-  <div class="pricing-grid">
-    <div class="card">
-      <h3>Launch</h3>
-      <p><strong>$749/mo</strong></p>
-      <p>Solo founders or lean teams automating SDR work. Includes 1 AI SDR + Concierge Agent.</p>
-    </div>
-    <div class="card">
-      <h3>Growth</h3>
-      <p><strong>$1,997/mo</strong></p>
-      <p>For SMBs scaling pipeline. Includes onboarding agent, Slack/Teams alerts, follow-up logic.</p>
-    </div>
-    <div class="card">
-      <h3>Scale</h3>
-      <p><strong>$4,997+/mo</strong></p>
-      <p>For agencies & resellers. Includes multi-agent orchestration, white-label, API, CRM integration.</p>
+  <div class="section alt-bg" id="hero">
+    <div class="container">
+      <h1>Sell Smarter. Support Faster. Powered by Apex.</h1>
+      <p>Unleash intelligent agents designed to drive revenue and elevate every customer interaction — ApexSalesAI and ApexSupportAI, built on the ApexOpsAI execution engine.</p>
+      <div class="cta-buttons">
+        <a href="#cta" class="btn-primary">Schedule a Demo</a>
+        <a href="#products" class="btn-secondary">See Apex in Action</a>
+      </div>
     </div>
   </div>
-  <p><a href="#" class="cta">Choose Your Tier</a></p>
-</section>
 
-<section id="partners" class="partners">
-  <h2>Partner With ApexSalesAI</h2>
-  <p>MSPs, VARs, and consultants — unlock new revenue streams by offering Apex under your brand.</p>
-  <a href="#" class="cta">Become a Partner</a>
-</section>
+  <main>
+    <div class="section" id="products">
+      <div class="container">
+        <h2>Two Agents. One Apex. Unlimited Advantage.</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>ApexSalesAI</h3>
+            <p>Turn prospects into pipeline with autonomous outbound engagement, precision follow-up, opportunity creation, and seamless CRM updates.</p>
+            <a href="#apexsalesai" class="btn-secondary">Meet ApexSalesAI</a>
+          </div>
+          <div class="card">
+            <h3>ApexSupportAI</h3>
+            <p>Deliver relentless, intelligent customer support at scale — instant resolutions, dynamic escalation, and always-on coverage.</p>
+            <a href="#apexsupportai" class="btn-secondary">Meet ApexSupportAI</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<section id="playbook">
-  <h2>Download the AI Sales Playbook</h2>
-  <p>Learn how top teams are using Apex agents to close more, follow up faster, and scale smarter.</p>
-  <a href="#" class="cta">Download Free Playbook</a>
-</section>
+    <div class="section alt-bg" id="why-apex">
+      <div class="container">
+        <h2>Built for Operators. Trusted by Visionaries.</h2>
+        <p>Apex isn't another "AI-powered tool." It's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
+        <p>Underpinned by ApexOpsAI — our proprietary execution engine — every interaction is faster, sharper, and more profitable.</p>
+        <div class="grid">
+          <div class="card"><h4>Mission-Driven Performance</h4><p>Execute faster with intelligent, outcome-focused agents tuned to real revenue and retention results.</p></div>
+          <div class="card"><h4>Enterprise-Grade Security</h4><p>Protect customer data with architecture built for scale, privacy, and compliance at every level.</p></div>
+          <div class="card"><h4>Seamless Integrations</h4><p>Effortless handshakes across CRM, chat, email, ticketing, and internal systems — no tech disruption required.</p></div>
+        </div>
+      </div>
+    </div>
 
-<footer>
-  <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-  <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
-</footer>
+    <div class="section" id="apexsupportai">
+      <div class="container">
+        <h2>Every Customer Moment. Captured, Elevated, Resolved.</h2>
+        <p>Meet ApexSupportAI — your always-on customer command center. Live now on apexsalesai.com and ready to redefine service expectations.</p>
+        <div class="grid">
+          <div class="card"><h4>Intelligent Conversations</h4><p>Trained on your brand's voice and policies for faster, smarter responses.</p></div>
+          <div class="card"><h4>Instant Answers, Smart Escalations</h4><p>Deliver first-contact resolutions — escalate only when necessary with precision.</p></div>
+          <div class="card"><h4>Built for Modern CX</h4><p>Integrates seamlessly across chat, email, CRM, and ticketing systems.</p></div>
+        </div>
+        <div class="cta-buttons">
+          <a href="#cta" class="btn-primary">See ApexSupportAI In Action</a>
+        </div>
+      </div>
+    </div>
 
-<!-- Placeholder for Copilot Chatbot Embed -->
-<script src="https://webchat.botframework.com/embed/your-bot-id?s=your-secret-key"></script>
+    <div class="section alt-bg" id="apexsalesai">
+      <div class="container">
+        <h2>The Outbound Machine You've Always Wanted.</h2>
+        <p>Meet ApexSalesAI — your autonomous sales execution platform.</p>
+        <div class="grid">
+          <div class="card"><h4>Prospect at Scale</h4><p>Intelligent outreach that adapts and personalizes for every prospect at speed.</p></div>
+          <div class="card"><h4>Follow Up Relentlessly</h4><p>Never miss an opportunity with intelligent sequencing and automated engagement.</p></div>
+          <div class="card"><h4>Pipeline on Autopilot</h4><p>Turn conversations into opportunities — and opportunities into closed revenue, autonomously.</p></div>
+        </div>
 
-</body>
-</html>
