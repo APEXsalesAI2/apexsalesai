@@ -1,88 +1,109 @@
-**ApexSalesAI Website Plan – Full Rebuild Based on Approved Messaging**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApexSalesAI | Sales Execution Reimagined</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; background: #ffffff; color: #1a1a1a; }
+    header, section, footer { padding: 2rem; text-align: center; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+    nav .logo { font-weight: 800; font-size: 1.25rem; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+    nav ul li a { text-decoration: none; color: #1a1a1a; font-weight: 600; }
+    .hero h1 { font-size: 2.75rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.25rem; margin-bottom: 2rem; }
+    .cta { background-color: #00bcd4; color: white; padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; text-decoration: none; display: inline-block; }
+    .features, .pricing, .partners { max-width: 1000px; margin: 0 auto; text-align: left; }
+    .pricing-grid { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .card { background: #f9f9f9; padding: 2rem; border-radius: 10px; width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .card h3 { margin-top: 0; }
+    footer { background: #fafafa; font-size: 0.875rem; color: #666; }
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; background: white; position: absolute; top: 60px; right: 20px; border: 1px solid #ddd; padding: 1rem; }
+      nav.active ul { display: flex; }
+    }
+  </style>
+</head>
+<body>
 
-✅ Confirmed Instructions from CEO:
-- Full ApexSalesAI messaging (sales execution, AI agent stack, partner invite)
-- Real product content: Launch, Growth, Scale tiers with features and pricing
-- Responsive menu for desktop and mobile
-- Hero section, Pricing, Industries served, Partner CTA, Blog CTA, AI Playbook fallback
-- Embedded Copilot Concierge AI Chatbot
+<nav>
+  <div class="logo">ApexSalesAI</div>
+  <ul>
+    <li><a href="#features">Solutions</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#playbook">Playbook</a></li>
+  </ul>
+</nav>
 
----
+<section class="hero">
+  <h1>Built for Operators. Trusted by Visionaries.</h1>
+  <p>ApexSalesAI isn't another AI tool. It's your new sales execution engine — automating outreach, accelerating pipeline, and scaling revenue 24/7.</p>
+  <a href="#pricing" class="cta">See Apex In Action</a>
+</section>
 
-# 🛠 Final Homepage Structure:
+<section id="features" class="features">
+  <h2>What Apex Automates</h2>
+  <ul>
+    <li><strong>SaaS:</strong> Demo booking, lead nurturing</li>
+    <li><strong>Healthcare:</strong> Patient consult scheduling</li>
+    <li><strong>Agencies:</strong> Campaign follow-up and inbound call capture</li>
+    <li><strong>Real Estate:</strong> Inquiry response and appointment booking</li>
+  </ul>
+  <h3>Apex AI Agent Stack</h3>
+  <ul>
+    <li>SDR Agent</li>
+    <li>Onboarding Agent</li>
+    <li>Customer Success Agent</li>
+    <li>Billing Agent</li>
+  </ul>
+  <p><em>More than a chatbot. Modular agents that drive real business results.</em></p>
+</section>
 
-### 1. Hero Section (Top Banner)
-**Headline:**
-> "Built for Operators. Trusted by Visionaries."
+<section id="pricing" class="pricing">
+  <h2>Plans Built for Growth</h2>
+  <div class="pricing-grid">
+    <div class="card">
+      <h3>Launch</h3>
+      <p><strong>$749/mo</strong></p>
+      <p>Solo founders or lean teams automating SDR work. Includes 1 AI SDR + Concierge Agent.</p>
+    </div>
+    <div class="card">
+      <h3>Growth</h3>
+      <p><strong>$1,997/mo</strong></p>
+      <p>For SMBs scaling pipeline. Includes onboarding agent, Slack/Teams alerts, follow-up logic.</p>
+    </div>
+    <div class="card">
+      <h3>Scale</h3>
+      <p><strong>$4,997+/mo</strong></p>
+      <p>For agencies & resellers. Includes multi-agent orchestration, white-label, API, CRM integration.</p>
+    </div>
+  </div>
+  <p><a href="#" class="cta">Choose Your Tier</a></p>
+</section>
 
-**Sub-headline:**
-> "ApexSalesAI isn't another AI tool. It's your new sales execution engine — automating outreach, accelerating pipeline, and scaling revenue 24/7."
+<section id="partners" class="partners">
+  <h2>Partner With ApexSalesAI</h2>
+  <p>MSPs, VARs, and consultants — unlock new revenue streams by offering Apex under your brand.</p>
+  <a href="#" class="cta">Become a Partner</a>
+</section>
 
-**CTA Button:**
-> [ See Apex In Action ]
+<section id="playbook">
+  <h2>Download the AI Sales Playbook</h2>
+  <p>Learn how top teams are using Apex agents to close more, follow up faster, and scale smarter.</p>
+  <a href="#" class="cta">Download Free Playbook</a>
+</section>
 
-### 2. How Apex Helps (Industries & Problems Solved)
-**Bullets:**
-- SaaS: Demo booking, lead nurturing
-- Healthcare: Patient consult scheduling
-- Agencies: Campaign lead follow-up
-- Real Estate: Instant inquiry response and qualification
+<footer>
+  <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
+  <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+</footer>
 
-### 3. Apex AI Agent Stack
-**Products:**
-- SDR Agent
-- Onboarding Agent
-- Customer Success Agent
-- Billing Agent
+<!-- Placeholder for Copilot Chatbot Embed -->
+<!-- Replace with your actual bot embed from Copilot Studio -->
+<script src="https://webchat.botframework.com/embed/your-bot-id?s=your-secret-key"></script>
 
-**Microcopy:**
-> "More than a chatbot. Modular agents that drive real business results."
-
-### 4. Pricing Section (Launch / Growth / Scale)
-**Tiers:**
-- Launch - $749/mo
-- Growth - $1,997/mo
-- Scale - $4,997+/mo
-
-**Features:**
-- AI SDR Agent, Concierge Website Agent, Onboarding Agent
-- Multi-agent orchestration, CRM/API integration, White-label options
-
-**CTA Button:**
-> [ Choose Your Tier ]
-
-### 5. Partner Program Invitation
-**Headline:**
-> "Partner With ApexSalesAI"
-
-**Sub-headline:**
-> "MSPs, VARs, consultants — unlock new revenue streams by offering Apex under your brand."
-
-**CTA Button:**
-> [ Become a Partner ]
-
-### 6. Blog Section Teaser
-- Latest insights on AI Sales Execution (future-ready SEO content)
-
-### 7. Download the AI Sales Playbook
-- Lead magnet CTA linked to Playbook download
-
-### 8. Footer
-- Copyright ApexSalesAI
-- Privacy Policy | Terms | Social Links
-
----
-
-# ✅ Responsive Mobile Navigation
-- Hamburger menu on mobile
-- Smooth scrolling sections
-- Fast loading, SEO-ready structure
-
-# ✅ Embedded Copilot AI Concierge Chatbot
-- Floating bottom-right widget
-- Personalized greeting
-- Live interaction + fallback to AI Sales Playbook download
-
----
-
-**⚡ Building Final Code Now…**
+</body>
+</html>
