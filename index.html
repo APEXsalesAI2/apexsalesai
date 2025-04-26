@@ -20,7 +20,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo-group">
-        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" style="width:160px;" />
+        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" style="width:180px;" />
         <span class="brand-name">ApexSalesAI</span>
       </div>
       <div class="menu-toggle" onclick="toggleMenu()">
@@ -29,8 +29,8 @@
       <div class="nav-overlay" onclick="toggleMenu()"></div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero">Home</a></li>
-        <li><a href="#products">Products</a>
-          <ul class="dropdown">
+        <li><button onclick="toggleDropdown()">Products ▼</button>
+          <ul class="dropdown" id="productsDropdown" style="display:none;">
             <li><a href="#apexsalesai">ApexSalesAI</a></li>
             <li><a href="#apexsupportai">ApexSupportAI</a></li>
           </ul>
@@ -45,166 +45,164 @@
 
   <header id="hero" class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">Sell Smarter. Support Faster. Powered by Apex.</h1>
-      <p class="hero-subtitle">Unleash intelligent agents designed to drive revenue and elevate every customer interaction — ApexSalesAI and ApexSupportAI, built on the ApexOpsAI execution engine.</p>
+      <h1>Sell Smarter. Support Faster. Powered by Apex.</h1>
+      <p>Unleash intelligent agents designed to drive revenue and elevate every customer interaction — ApexSalesAI and ApexSupportAI, built on the ApexOpsAI execution engine.</p>
       <div class="cta-buttons">
         <a href="#cta" class="btn-primary">Schedule a Demo</a>
         <a href="#products" class="btn-secondary">See Apex in Action</a>
       </div>
     </div>
   </header>
-<main>
 
-  <!-- Products Overview - Block Style -->
-  <section id="products" class="section">
-    <div class="section-content">
-      <h2 class="section-title">Two Agents. One Apex. Unlimited Advantage.</h2>
-      <div class="product-grid">
-        <div class="feature-block">
-          <h3>ApexSalesAI</h3>
-          <p>Turn prospects into pipeline with autonomous outbound engagement, precision follow-up, opportunity creation, and seamless CRM updates.</p>
-          <a href="#apexsalesai" class="cta-button">Meet ApexSalesAI</a>
-        </div>
-
-        <div class="feature-block">
-          <h3>ApexSupportAI</h3>
-          <p>Deliver relentless, intelligent customer support at scale — instant resolutions, dynamic escalation, and always-on coverage.</p>
-          <a href="#apexsupportai" class="cta-button">Meet ApexSupportAI</a>
+  <main>
+    <section id="products" class="section">
+      <div class="section-content">
+        <h2>Two Agents. One Apex. Unlimited Advantage.</h2>
+        <div class="product-grid">
+          <div class="feature-block">
+            <h3>ApexSalesAI</h3>
+            <p>Turn prospects into pipeline with autonomous outbound engagement, precision follow-up, opportunity creation, and seamless CRM updates.</p>
+            <a href="#apexsalesai" class="cta-button">Meet ApexSalesAI</a>
+          </div>
+          <div class="feature-block">
+            <h3>ApexSupportAI</h3>
+            <p>Deliver relentless, intelligent customer support at scale — instant resolutions, dynamic escalation, and always-on coverage.</p>
+            <a href="#apexsupportai" class="cta-button">Meet ApexSupportAI</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Why Apex Section - Block Style -->
-  <section id="why-apex" class="section">
-    <div class="section-content">
-      <h2 class="section-title">Built for Operators. Trusted by Visionaries.</h2>
-      <p>Apex isn't another "AI-powered tool." It's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
-      <p>Underpinned by ApexOpsAI — our proprietary execution engine — every interaction is faster, sharper, and more profitable.</p>
-      <div class="feature-grid">
-        <div class="feature-block">
-          <h4>Mission-Driven Performance</h4>
-          <p>Execute faster with intelligent, outcome-focused agents tuned to real revenue and retention results.</p>
-        </div>
-        <div class="feature-block">
-          <h4>Enterprise-Grade Security</h4>
-          <p>Protect customer data with architecture built for scale, privacy, and compliance at every level.</p>
-        </div>
-        <div class="feature-block">
-          <h4>Seamless Integrations</h4>
-          <p>Effortless handshakes across CRM, chat, email, ticketing, and internal systems — no tech disruption required.</p>
+    <section id="why-apex" class="section">
+      <div class="section-content">
+        <h2>Built for Operators. Trusted by Visionaries.</h2>
+        <p>Apex isn't another "AI-powered tool." It's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
+        <p>Underpinned by ApexOpsAI — our proprietary execution engine — every interaction is faster, sharper, and more profitable.</p>
+        <div class="feature-grid">
+          <div class="feature-block">
+            <h4>Mission-Driven Performance</h4>
+            <p>Execute faster with intelligent, outcome-focused agents tuned to real revenue and retention results.</p>
+          </div>
+          <div class="feature-block">
+            <h4>Enterprise-Grade Security</h4>
+            <p>Protect customer data with architecture built for scale, privacy, and compliance at every level.</p>
+          </div>
+          <div class="feature-block">
+            <h4>Seamless Integrations</h4>
+            <p>Effortless handshakes across CRM, chat, email, ticketing, and internal systems — no tech disruption required.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- ApexSupportAI Deep Dive -->
-  <section id="apexsupportai" class="section">
-    <div class="section-content">
-      <h2 class="section-title">Every Customer Moment. Captured, Elevated, Resolved.</h2>
-      <p>Meet ApexSupportAI — your always-on customer command center. Live now on apexsalesai.com and ready to redefine service expectations.</p>
-      <div class="feature-grid">
-        <div class="feature-block">
-          <h4>Intelligent Conversations</h4>
-          <p>Trained on your brand's voice and policies for faster, smarter responses.</p>
+    </section>
+
+    <section id="apexsupportai" class="section">
+      <div class="section-content">
+        <h2>Every Customer Moment. Captured, Elevated, Resolved.</h2>
+        <p>Meet ApexSupportAI — your always-on customer command center. Live now on apexsalesai.com and ready to redefine service expectations.</p>
+        <div class="feature-grid">
+          <div class="feature-block">
+            <h4>Intelligent Conversations</h4>
+            <p>Trained on your brand's voice and policies for faster, smarter responses.</p>
+          </div>
+          <div class="feature-block">
+            <h4>Instant Answers, Smart Escalations</h4>
+            <p>Deliver first-contact resolutions — escalate only when necessary with precision.</p>
+          </div>
+          <div class="feature-block">
+            <h4>Built for Modern CX</h4>
+            <p>Integrates seamlessly across chat, email, CRM, and ticketing systems.</p>
+          </div>
         </div>
-        <div class="feature-block">
-          <h4>Instant Answers, Smart Escalations</h4>
-          <p>Deliver first-contact resolutions — escalate only when necessary with precision.</p>
-        </div>
-        <div class="feature-block">
-          <h4>Built for Modern CX</h4>
-          <p>Integrates seamlessly across chat, email, CRM, and ticketing systems.</p>
+        <div class="cta-buttons">
+          <a href="#cta" class="btn-primary">See ApexSupportAI In Action</a>
         </div>
       </div>
-      <div class="cta-buttons">
-        <a href="#cta" class="btn-primary">See ApexSupportAI In Action</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ApexSalesAI Deep Dive -->
-  <section id="apexsalesai" class="section">
-    <div class="section-content">
-      <h2 class="section-title">The Outbound Machine You've Always Wanted.</h2>
-      <p>Meet ApexSalesAI — your autonomous sales execution platform.</p>
-      <div class="feature-grid">
-        <div class="feature-block">
-          <h4>Prospect at Scale</h4>
-          <p>Intelligent outreach that adapts and personalizes for every prospect at speed.</p>
+    <section id="apexsalesai" class="section">
+      <div class="section-content">
+        <h2>The Outbound Machine You've Always Wanted.</h2>
+        <p>Meet ApexSalesAI — your autonomous sales execution platform.</p>
+        <div class="feature-grid">
+          <div class="feature-block">
+            <h4>Prospect at Scale</h4>
+            <p>Intelligent outreach that adapts and personalizes for every prospect at speed.</p>
+          </div>
+          <div class="feature-block">
+            <h4>Follow Up Relentlessly</h4>
+            <p>Never miss an opportunity with intelligent sequencing and automated engagement.</p>
+          </div>
+          <div class="feature-block">
+            <h4>Pipeline on Autopilot</h4>
+            <p>Turn conversations into opportunities — and opportunities into closed revenue, autonomously.</p>
+          </div>
         </div>
-        <div class="feature-block">
-          <h4>Follow Up Relentlessly</h4>
-          <p>Never miss an opportunity with intelligent sequencing and automated engagement.</p>
-        </div>
-        <div class="feature-block">
-          <h4>Pipeline on Autopilot</h4>
-          <p>Turn conversations into opportunities — and opportunities into closed revenue, autonomously.</p>
-        </div>
-      </div>
-      <div class="cta-buttons">
-        <a href="#cta" class="btn-primary">See ApexSalesAI In Action</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Consulting Services -->
-  <section id="consulting" class="section">
-    <div class="section-content">
-      <h2 class="section-title">AI Strategy and Consulting Services</h2>
-      <p>Not sure how to deploy AI in your business? ApexConsultingAI helps you go from planning to execution with precision.</p>
-      <div class="feature-grid">
-        <div class="feature-block">
-          <h4>AI Readiness Assessments</h4>
-          <p>Understand where your organization stands — and what it needs to leverage AI effectively.</p>
-        </div>
-        <div class="feature-block">
-          <h4>Custom Deployment Roadmaps</h4>
-          <p>Tailored strategies that align AI investments to real operational outcomes.</p>
-        </div>
-        <div class="feature-block">
-          <h4>Post-Deployment Optimization</h4>
-          <p>Ongoing support to ensure adoption, compliance, and continuous improvement of your AI initiatives.</p>
+        <div class="cta-buttons">
+          <a href="#cta" class="btn-primary">See ApexSalesAI In Action</a>
         </div>
       </div>
-      <div class="cta-buttons">
-        <a href="/contact.html" class="btn-primary">Speak with Consulting Expert</a>
+    </section>
+
+    <section id="consulting" class="section">
+      <div class="section-content">
+        <h2>AI Strategy and Consulting Services</h2>
+        <p>Not sure how to deploy AI in your business? ApexConsultingAI helps you go from planning to execution with precision.</p>
+        <div class="feature-grid">
+          <div class="feature-block">
+            <h4>AI Readiness Assessments</h4>
+            <p>Understand where your organization stands — and what it needs to leverage AI effectively.</p>
+          </div>
+          <div class="feature-block">
+            <h4>Custom Deployment Roadmaps</h4>
+            <p>Tailored strategies that align AI investments to real operational outcomes.</p>
+          </div>
+          <div class="feature-block">
+            <h4>Post-Deployment Optimization</h4>
+            <p>Ongoing support to ensure adoption, compliance, and continuous improvement of your AI initiatives.</p>
+          </div>
+        </div>
+        <div class="cta-buttons">
+          <a href="/contact.html" class="btn-primary">Speak with Consulting Expert</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Primary CTA -->
-  <section id="cta" class="section">
-    <div class="section-content">
-      <h2 class="section-title">Take Command of Revenue and Retention.</h2>
-      <p>Schedule a live demo and see how Apex unlocks your next level of growth.</p>
-      <div class="cta-buttons">
-        <a href="/schedule-demo.html" class="btn-primary">Schedule a Demo</a>
-        <a href="/contact.html" class="btn-secondary">Talk to Apex</a>
+    <section id="cta" class="section">
+      <div class="section-content">
+        <h2>Take Command of Revenue and Retention.</h2>
+        <p>Schedule a live demo and see how Apex unlocks your next level of growth.</p>
+        <div class="cta-buttons">
+          <a href="/schedule-demo.html" class="btn-primary">Schedule a Demo</a>
+          <a href="/contact.html" class="btn-secondary">Talk to Apex</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+  </main>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>Precision Crafted by ApexOpsAI | © 2025 ApexSalesAI. All rights reserved.</p>
-  <ul class="footer-links">
-    <li><a href="/terms.html">Terms of Service</a></li>
-    <li><a href="/privacy.html">Privacy Policy</a></li>
-  </ul>
-</footer>
+  <footer class="footer">
+    <p>Precision Crafted by ApexOpsAI | © 2025 ApexSalesAI. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="/terms.html">Terms of Service</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+  </footer>
 
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('navLinks');
-    const toggle = document.querySelector('.menu-toggle');
-    const overlay = document.querySelector('.nav-overlay');
-    menu.classList.toggle('open');
-    toggle.classList.toggle('open');
-    overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navLinks');
+      const toggle = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.nav-overlay');
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+    }
 
+    function toggleDropdown() {
+      const dropdown = document.getElementById('productsDropdown');
+      dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
+
