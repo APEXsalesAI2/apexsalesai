@@ -4,167 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ApexSalesAI | Sell Smarter. Support Faster.</title>
-  <meta name="description" content="Unleash intelligent agents for revenue execution and customer support — ApexSalesAI and ApexSupportAI, built on the ApexOpsAI execution engine." />
-  <meta name="keywords" content="ApexSalesAI, ApexSupportAI, AI sales automation, AI customer support, Go-to-Market AI" />
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="ApexSalesAI | Sell Smarter. Support Faster." />
-  <meta property="og:description" content="Unleash intelligent agents designed to drive revenue and elevate customer interactions." />
-  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
-  <meta property="og:url" content="https://www.apexsalesai.com" />
-  <meta property="og:type" content="website" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ApexSalesAI | Sell Smarter. Support Faster." />
-  <meta name="twitter:description" content="Unleash intelligent agents designed to drive revenue and elevate customer interactions." />
-  <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
-  <meta name="twitter:site" content="@apexsalesai" />
-  <link rel="icon" href="/images/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/menu.js"></script>
+  <meta name="description" content="Accelerate sales and service with ApexSalesAI and ApexSupportAI — intelligent agents for revenue execution and customer support excellence." />
+  <meta name="keywords" content="AI sales automation, AI customer support, ApexSalesAI, ApexSupportAI, ApexOpsAI" />
+  <meta name="author" content="ApexSalesAI" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
   <style>
-    .logo img { height: 120px; width: auto; }
-    .hero { position: relative; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; pointer-events: none; }
-    .hero-bg svg { width: 100%; height: 100%; }
-    .hero-bg circle { opacity: 0.2; animation: float 8s ease-in-out infinite; }
-    .hero-bg circle:nth-child(2) { animation-duration: 12s; }
-    @keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-30px);} }
-    .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
-    .hero-metric { margin-top: 1rem; font-size: 1rem; color: #00c2cb; font-weight: 600; }
-    .module-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .module-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-    .module-card .card-icon { width: 64px; height: 64px; margin: 0 auto 1rem; }
+    body { font-family: 'Inter', sans-serif; margin: 0; background: #ffffff; color: #000000; }
+    header, section, footer { padding: 2rem; text-align: center; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #ffffff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+    nav .logo { font-weight: 800; font-size: 1.5rem; color: #000000; }
+    nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+    nav ul li a { text-decoration: none; color: #000000; font-weight: 700; font-size: 1.1rem; }
+    nav ul li a:hover, nav ul li a.active { color: #00bcd4; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; color: #000000; }
+    .hero p { font-size: 1.5rem; margin-bottom: 2rem; color: #333333; }
+    .cta { background-color: #00bcd4; color: white; padding: 1rem 2rem; border-radius: 8px; font-size: 1.1rem; text-decoration: none; display: inline-block; font-weight: 700; transition: background 0.3s; }
+    .cta:hover { background-color: #0097a7; }
+    .products, .partners { max-width: 1200px; margin: 0 auto; text-align: center; color: #000000; padding: 2rem 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .card { background: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px; color: #000000; }
+    footer { background: #fafafa; font-size: 0.9rem; color: #666666; padding: 2rem; }
+    footer a { color: #666666; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; background: white; position: absolute; top: 60px; right: 20px; border: 1px solid #ddd; padding: 1rem; }
+      nav.active ul { display: flex; }
+      .products, .partners { padding: 1rem 0; }
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html" class="logo"><img src="images/apex-logo.png" alt="ApexSalesAI Logo" loading="lazy" /></a>
-    <button type="button"
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="navLinks"
-            aria-label="Toggle navigation"
-            id="menuToggleBtn">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="platform.html">Platform</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="demo.html">Demo</a></li>
-      <li><a href="reseller.html">Reseller</a></li>
-      <li><a href="onboarding.html">Onboarding</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="nav-overlay" id="navOverlay"></div>
 
-  <header class="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
-        <circle cx="200" cy="200" r="150" fill="#007c91" />
-        <circle cx="600" cy="150" r="120" fill="#005f6b" />
-      </svg>
-    </div>
-    <div class="hero-content text-center py-24 px-4">
-      <h1 class="hero-title">Sell Smarter.<br>Support Faster.<br>Powered by Apex.</h1>
-      <p class="hero-subtitle">Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
-      <p class="hero-metric">Trusted by companies worldwide</p>
-      <div class="mt-6">
-        <a href="demo.html" class="cta-button">Schedule a Demo</a>
-      </div>
-    </div>
-  </header>
+<nav>
+  <div class="logo">ApexSalesAI</div>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="platform.html">Platform</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+    <li><a href="demo.html">Demo</a></li>
+    <li><a href="reseller.html">Reseller</a></li>
+    <li><a href="onboarding.html">Onboarding</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <section id="products" class="section">
+<section class="hero" id="hero">
+  <h1>Sell Smarter. Support Faster. Powered by Apex.</h1>
+  <p>Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
+  <a href="#cta" class="cta">Schedule a Demo</a>
+</section>
+
+<main>
+  <section class="products" id="products">
     <h2>Two Agents. One Apex. Unlimited Advantage.</h2>
-    <div class="module-grid">
-      <div class="module-card">
-        <div class="card-icon">
-          <img src="images/sales-agent.png" alt="ApexSalesAI Sales Agent" loading="lazy" />
-        </div>
+    <div class="grid">
+      <div class="card">
+        <img src="/images/sales-agent.png" alt="ApexSalesAI Agent" style="width:60px; margin-bottom:1rem;" />
         <h3>ApexSalesAI</h3>
         <p>Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
-        <ul>
+        <ul style="text-align:left; margin:1rem 0;">
           <li>24/7 smart prospecting</li>
           <li>Personalized multi-channel outreach</li>
           <li>Automated opportunity creation</li>
         </ul>
-        <a href="platform.html#sdr-agent" class="cta-button">Learn More</a>
+        <a href="#" class="cta">Learn More</a>
       </div>
-      <div class="module-card">
-        <div class="card-icon">
-          <img src="images/support-agent.png" alt="ApexSupportAI Support Agent" loading="lazy" />
-        </div>
+      <div class="card">
+        <img src="/images/support-agent.png" alt="ApexSupportAI Agent" style="width:60px; margin-bottom:1rem;" />
         <h3>ApexSupportAI</h3>
         <p>Always-on customer support with instant resolutions and smart escalations.</p>
-        <ul>
+        <ul style="text-align:left; margin:1rem 0;">
           <li>Live chat & ticket automation</li>
           <li>Knowledge base integration</li>
           <li>CSAT & NPS tracking</li>
         </ul>
-        <a href="platform.html#support-agent" class="cta-button">Learn More</a>
+        <a href="#" class="cta">Learn More</a>
       </div>
     </div>
   </section>
 
-  <!-- Additional sections unchanged -->
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-      <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+  <section class="partners" id="why-apex">
+    <h2>Built for Operators. Trusted by Visionaries.</h2>
+    <p>Apex isn't another "AI-powered tool." It's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
+    <div class="grid" style="padding-top:2rem;">
+      <div class="card"><h4>Mission-Driven Performance</h4><p>Execute faster with intelligent, outcome-focused agents tuned to real revenue and retention results.</p></div>
+      <div class="card"><h4>Enterprise-Grade Security</h4><p>Protect customer data with architecture built for scale, privacy, and compliance at every level.</p></div>
+      <div class="card"><h4>Seamless Integrations</h4><p>Effortless handshakes across CRM, chat, email, ticketing, and internal systems — no tech disruption required.</p></div>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script>
-    (function() {
-      const toggleBtn = document.getElementById('menuToggleBtn');
-      const navLinks = document.getElementById('navLinks');
-      const navOverlay = document.getElementById('navOverlay');
-      const focusableItems = navLinks.querySelectorAll('a');
-      const firstItem = focusableItems[0];
-      const lastItem = focusableItems[focusableItems.length - 1];
+<footer>
+  <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
+  <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+</footer>
 
-      function openMenu() {
-        toggleBtn.setAttribute('aria-expanded', 'true');
-        navLinks.classList.add('show');
-        navOverlay.classList.add('show');
-        firstItem.focus();
-      }
-
-      function closeMenu() {
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        navLinks.classList.remove('show');
-        navOverlay.classList.remove('show');
-        toggleBtn.focus();
-      }
-
-      toggleBtn.addEventListener('click', () => {
-        const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-        expanded ? closeMenu() : openMenu();
-      });
-
-      navOverlay.addEventListener('click', closeMenu);
-
-      navLinks.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey && document.activeElement === firstItem) {
-            e.preventDefault();
-            lastItem.focus();
-          } else if (!e.shiftKey && document.activeElement === lastItem) {
-            e.preventDefault();
-            firstItem.focus();
-          }
-        }
-        if (e.key === 'Escape') {
-          closeMenu();
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
