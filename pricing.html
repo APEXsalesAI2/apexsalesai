@@ -483,18 +483,67 @@
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section class="pricing-section">
+<!-- Pricing Section -->
+<section class="pricing-section">
     <div class="container">
-      <div class="pricing-toggle">
-        <span class="toggle-option active" id="monthly-option">Monthly</span>
-        <div class="toggle-slider" onclick="togglePricing()"></div>
-        <span class="toggle-option" id="annual-option">Annual <span>(20% off)</span></span>
-      </div>
-      
-      <!-- Dynamically generated pricing cards will be inserted here -->
+        <div class="pricing-toggle">
+            <span class="toggle-option active" id="monthly-option">Monthly</span>
+            <div class="toggle-slider" onclick="togglePricing()"></div>
+            <span class="toggle-option" id="annual-option">Annual <span>(20% off)</span></span>
+        </div>
+        
+        <div class="pricing-cards">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p>Perfect for small teams or startups just beginning their AI journey.</p>
+                <div class="price monthly-price">$299<span>/month</span></div>
+                <div class="price annual-price" style="display: none;">$239<span>/month</span></div>
+                <ul class="features-list">
+                    <li>Up to 10 AI agents</li>
+                    <li>1,000 customer interactions</li>
+                    <li>Email and chat support</li>
+                    <li>Basic reporting dashboard</li>
+                </ul>
+                <a href="#" class="btn">Choose Starter</a>
+            </div>
+            
+            <!-- Professional Plan -->
+            <div class="pricing-card popular">
+                <h3>Professional</h3>
+                <p>Ideal for growing businesses that need more customization and power.</p>
+                <div class="price monthly-price">$599<span>/month</span></div>
+                <div class="price annual-price" style="display: none;">$479<span>/month</span></div>
+                <ul class="features-list">
+                    <li>Up to 50 AI agents</li>
+                    <li>5,000 customer interactions</li>
+                    <li>Multi-channel support (email, chat, social media)</li>
+                    <li>Advanced analytics and reporting</li>
+                    <li>API access and integrations</li>
+                </ul>
+                <a href="#" class="btn">Choose Professional</a>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p>For large organizations requiring a full-suite, scalable AI solution.</p>
+                <div class="price monthly-price">$1,199<span>/month</span></div>
+                <div class="price annual-price" style="display: none;">$959<span>/month</span></div>
+                <ul class="features-list">
+                    <li>Unlimited AI agents</li>
+                    <li>Unlimited customer interactions</li>
+                    <li>Full multi-channel support</li>
+                    <li>Customizable dashboards and reports</li>
+                    <li>Dedicated account manager and 24/7 support</li>
+                    <li>On-premises deployment options</li>
+                </ul>
+                <a href="#" class="btn">Choose Enterprise</a>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
+
 
   <!-- Call to Action Section -->
   <section class="cta-section">
