@@ -4,182 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ApexSalesAI | Sell Smarter. Support Faster.</title>
-  <meta name="description" content="Unleash intelligent agents for revenue execution and customer support — ApexSalesAI and ApexSupportAI, built on the ApexOpsAI execution engine." />
-  <meta name="keywords" content="ApexSalesAI, ApexSupportAI, AI sales automation, AI customer support, Go-to-Market AI" />
-  <!-- Open Graph / Facebook -->
+  <meta name="description" content="Unleash intelligent agents designed to drive revenue and elevate every customer interaction on ApexOpsAI execution engine." />
+  <meta name="keywords" content="AI sales automation, AI customer support, ApexSalesAI, ApexSupportAI, ApexOpsAI" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="ApexSalesAI | Sell Smarter. Support Faster." />
-  <meta property="og:description" content="Unleash intelligent agents designed to drive revenue and elevate customer interactions." />
-  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta property="og:description" content="Unleash intelligent AI agents for revenue execution and customer support excellence." />
+  <meta property="og:image" content="/images/apex-logo-social.png" />
   <meta property="og:url" content="https://www.apexsalesai.com" />
-  <meta property="og:type" content="website" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ApexSalesAI | Sell Smarter. Support Faster." />
-  <meta name="twitter:description" content="Unleash intelligent agents designed to drive revenue and elevate customer interactions." />
-  <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
-  <meta name="twitter:site" content="@apexsalesai" />
-  <link rel="icon" href="/images/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/menu.js"></script>
-  <style>
-    /* Set a fixed logo height for better consistency */
-    .logo img { 
-      height: 40px; /* Fixed height for the logo */
-      width: auto; /* Maintain aspect ratio */
-    }
-    /* Hero animations */
-    .hero { position: relative; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; pointer-events: none; }
-    .hero-bg svg { width: 100%; height: 100%; }
-    .hero-bg circle { opacity: 0.2; animation: float 8s ease-in-out infinite; }
-    .hero-bg circle:nth-child(2) { animation-duration: 12s; }
-    @keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-30px);} }
-    .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
-    .hero-metric { margin-top: 1rem; font-size: 1rem; color: #007c91; font-weight: 600; }
-
-    /* Product card icons and animations */
-    .module-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .module-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-    .module-card .card-icon { width: 48px; height: 48px; margin: 0 auto 1rem; transition: transform 0.3s ease; }
-    .module-card:hover .card-icon { transform: scale(1.1); }
-    
-    /* Add responsive adjustments for the logo */
-    @media screen and (max-width: 768px) {
-      .logo img {
-        height: 32px; /* Slightly smaller on mobile */
-      }
-    }
-  </style>
+  <script defer src="js/hero.js"></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html" class="logo"><img src="images/apex-logo.png" alt="ApexSalesAI" loading="lazy" /></a>
-    <button type="button"
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="navLinks"
-            aria-label="Toggle navigation"
-            id="menuToggleBtn">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="platform.html">Platform</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="demo.html">Demo</a></li>
-      <li><a href="reseller.html">Reseller</a></li>
-      <li><a href="onboarding.html">Onboarding</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="nav-overlay" id="navOverlay"></div>
-
-  <header class="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
-        <circle cx="200" cy="200" r="150" fill="#007c91" />
-        <circle cx="600" cy="150" r="120" fill="#005f6b" />
-      </svg>
+<body class="bg-gray-900 text-white font-inter">
+  <!-- Navigation -->
+  <nav class="navbar bg-gray-900 border-b border-gray-800">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="h-24" />
+      </a>
+      <ul class="hidden md:flex space-x-6 text-sm font-semibold">
+        <li><a href="index.html" class="text-teal-400">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="platform.html">Platform</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="reseller.html">Reseller</a></li>
+        <li><a href="onboarding.html">Onboarding</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="md:hidden text-white" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
-    <div class="hero-content text-center py-24 px-4">
-      <h1 class="hero-title">Sell Smarter.<br>Support Faster.<br>Powered by Apex.</h1>
-      <p class="hero-subtitle">Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
-      <p class="hero-metric">Trusted by companies worldwide</p>
-      <div class="mt-6">
-        <a href="demo.html" class="cta-button">Schedule a Demo</a>
-      </div>
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="hidden md:hidden bg-gray-900 text-center space-y-4 py-4">
+      <a href="index.html" class="block">Home</a>
+      <a href="about.html" class="block">About</a>
+      <a href="platform.html" class="block">Platform</a>
+      <a href="pricing.html" class="block">Pricing</a>
+      <a href="consulting.html" class="block">Consulting</a>
+      <a href="demo.html" class="block">Demo</a>
+      <a href="reseller.html" class="block">Reseller</a>
+      <a href="onboarding.html" class="block">Onboarding</a>
+      <a href="blog.html" class="block">Blog</a>
+      <a href="contact.html" class="block">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden text-center" id="hero">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-900 opacity-75"></div>
+    <div class="absolute inset-0 hero-animation pointer-events-none">
+      <img src="/images/circuit.svg" alt="" class="circuit-animation w-full h-full" />
+    </div>
+    <div class="relative container mx-auto py-32">
+      <h1 class="text-5xl font-extrabold mb-4">Sell Smarter.<br />Support Faster.<br />Powered by Apex.</h1>
+      <p class="text-xl text-gray-300 mb-8">Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
+      <button class="bg-teal-400 hover:bg-teal-500 text-gray-900 font-bold py-3 px-6 rounded-lg mr-4" onclick="scrollTo('#products')">Schedule a Demo</button>
+      <button class="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-gray-900 font-bold py-3 px-6 rounded-lg" onclick="scrollTo('#products')">Explore Platform</button>
+      <div id="rotating-headline" class="mt-12 text-gray-400 italic"></div>
+      <p class="mt-6 text-sm text-gray-500">Trusted by companies worldwide</p>
     </div>
   </header>
 
-  <section id="products" class="section">
-    <h2>Two Agents. One Apex. Unlimited Advantage.</h2>
-    <div class="module-grid">
-      <div class="module-card">
-        <div class="card-icon">
-          <img src="images/icons/sales-agent.svg" alt="Sales Agent Icon" loading="lazy" />
+  <main>
+    <!-- Products Section -->
+        <!-- Products Section -->
+    <section id="products" class="container mx-auto py-20">
+      <h2 class="text-3xl font-bold text-center mb-12">Two Agents. One Apex. Unlimited Advantage.</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- ApexSalesAI -->
+        <div class="card bg-gray-800 p-8 rounded-lg">
+          <img src="/images/apexsalesai-agent.png" alt="ApexSalesAI Agent" class="mx-auto mb-6 h-24 object-contain" />
+          <h3 class="text-2xl font-bold mb-4">ApexSalesAI</h3>
+          <p class="mb-4">Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
+          <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
+            <li>24/7 smart prospecting</li>
+            <li>Personalized multi-channel outreach</li>
+            <li>Automated opportunity creation</li>
+          </ul>
+          <a href="platform.html#sales" class="cta">Learn More</a>
         </div>
-        <h3>ApexSalesAI</h3>
-        <p>Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
-        <ul>
-          <li>24/7 smart prospecting</li>
-          <li>Personalized multi-channel outreach</li>
-          <li>Automated opportunity creation</li>
-        </ul>
-        <a href="platform.html#sdr-agent" class="cta-button">Learn More</a>
-      </div>
-      <div class="module-card">
-        <div class="card-icon">
-          <img src="images/icons/support-agent.svg" alt="Support Agent Icon" loading="lazy" />
+        <!-- ApexSupportAI -->
+        <div class="card bg-gray-800 p-8 rounded-lg">
+          <img src="/images/apexsupportai-agent.png" alt="ApexSupportAI Agent" class="mx-auto mb-6 h-24 object-contain" />
+          <h3 class="text-2xl font-bold mb-4">ApexSupportAI</h3>
+          <p class="mb-4">Always-on customer support with instant resolutions and smart escalations.</p>
+          <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
+            <li>Live chat & ticket automation</li>
+            <li>Knowledge base integration</li>
+            <li>CSAT & NPS tracking</li>
+          </ul>
+          <a href="platform.html#support" class="cta">Learn More</a>
         </div>
-        <h3>ApexSupportAI</h3>
-        <p>Always-on customer support with instant resolutions and smart escalations.</p>
-        <ul>
-          <li>Live chat & ticket automation</li>
-          <li>Knowledge base integration</li>
-          <li>CSAT & NPS tracking</li>
-        </ul>
-        <a href="platform.html#support-agent" class="cta-button">Learn More</a>
+        <!-- Consulting -->
+        <div class="card bg-gray-800 p-8 rounded-lg">
+          <img src="/images/consulting-icon.png" alt="Consulting Service" class="mx-auto mb-6 h-24 object-contain" />
+          <h3 class="text-2xl font-bold mb-4">Consulting</h3>
+          <p class="mb-4">Expert GTM advisory and playbook creation to maximize AI agent ROI.</p>
+          <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
+            <li>Strategic GTM planning</li>
+            <li>Custom AI playbook development</li>
+            <li>Activation & optimization workshops</li>
+          </ul>
+          <a href="consulting.html" class="cta">Learn More</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Additional sections unchanged -->
+    <!-- Why Apex Section -->
+    <section id="why-apex" class="bg-gray-800 py-20">
+      <h2 class="text-3xl font-bold text-center mb-6 text-white">Built for Operators. Trusted by Visionaries.</h2>
+      <p class="text-center text-gray-400 mb-12">Apex isn't another "AI-powered tool." It's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
+      <div class="grid md:grid-cols-3 gap-8 container mx-auto">
+        <div class="card bg-gray-700 text-white p-6 rounded-lg"><h4 class="font-semibold mb-2">Mission-Driven Performance</h4><p>Execute faster with intelligent, outcome-focused agents tuned to real revenue and retention results.</p></div>
+        <div class="card bg-gray-700 text-white p-6 rounded-lg"><h4 class="font-semibold mb-2">Enterprise-Grade Security</h4><p>Protect customer data with architecture built for scale, privacy, and compliance at every level.</p></div>
+        <div class="card bg-gray-700 text-white p-6 rounded-lg"><h4 class="font-semibold mb-2">Seamless Integrations</h4><p>Effortless handshakes across CRM, chat, email, ticketing, and internal systems — no tech disruption required.</p></div>
+      </div>
+    </section>
+  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-      <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-500 py-8 text-sm">
+    <div class="container mx-auto text-center">
+      &copy; 2025 ApexSalesAI. All rights reserved. &nbsp;|&nbsp; <a href="/privacy.html" class="hover:text-white">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms.html" class="hover:text-white">Terms of Service</a>
     </div>
   </footer>
 
   <script>
-    (function() {
-      const toggleBtn = document.getElementById('menuToggleBtn');
-      const navLinks = document.getElementById('navLinks');
-      const navOverlay = document.getElementById('navOverlay');
-      const focusableItems = navLinks.querySelectorAll('a');
-      const firstItem = focusableItems[0];
-      const lastItem = focusableItems[focusableItems.length - 1];
-
-      function openMenu() {
-        toggleBtn.setAttribute('aria-expanded', 'true');
-        navLinks.classList.add('show');
-        navOverlay.classList.add('show');
-        firstItem.focus();
-      }
-
-      function closeMenu() {
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        navLinks.classList.remove('show');
-        navOverlay.classList.remove('show');
-        toggleBtn.focus();
-      }
-
-      toggleBtn.addEventListener('click', () => {
-        const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-        expanded ? closeMenu() : openMenu();
-      });
-
-      navOverlay.addEventListener('click', closeMenu);
-
-      navLinks.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey && document.activeElement === firstItem) {
-            e.preventDefault();
-            lastItem.focus();
-          } else if (!e.shiftKey && document.activeElement === lastItem) {
-            e.preventDefault();
-            firstItem.focus();
-          }
-        }
-        if (e.key === 'Escape') {
-          closeMenu();
-        }
-      });
-    })();
+    function scrollTo(id) {
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('hidden');
+    }
   </script>
 </body>
 </html>
