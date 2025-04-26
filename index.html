@@ -12,39 +12,40 @@
   <script defer src="js/menu.js"></script>
   <style>
     /* Premium Overrides */
-    nav { background: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; }
-    .logo img { height: 80px; } /* Premium larger logo */
+    body { font-family: 'Inter', sans-serif; color: #000000; background: #ffffff; margin: 0; }
+    nav { background: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+    .logo img { height: 80px; }
     .nav-links { display: flex; gap: 2rem; }
-    .nav-links a { color: #333333; font-weight: 600; font-size: 1rem; position: relative; text-decoration: none; }
+    .nav-links a { color: #000000; font-weight: 600; font-size: 1rem; position: relative; text-decoration: none; }
     .nav-links a.active, .nav-links a:hover { color: #007c91; }
     .nav-links a.active::after, .nav-links a:hover::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 3px; background: #007c91; border-radius: 2px; }
     .menu-toggle { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
-    .menu-toggle span { width: 28px; height: 3px; background: #333; }
+    .menu-toggle span { width: 28px; height: 3px; background: #000000; }
     .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); }
     @media (max-width: 768px) {
       .menu-toggle { display: flex; }
-      .nav-links { display: none; position: absolute; top: 100%; right: 2rem; background: #fff; flex-direction: column; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1rem; }
+      .nav-links { display: none; position: absolute; top: 100%; right: 2rem; background: #ffffff; flex-direction: column; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1rem; }
       .nav-links.show { display: flex; }
       .nav-overlay.show { display: block; }
     }
     header.hero { background: #f3faff; padding: 6rem 2rem; text-align: center; }
     .hero-title { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: #002f4b; }
-    .hero-subtitle { font-size: 1.25rem; color: #555555; margin-bottom: 2rem; }
+    .hero-subtitle { font-size: 1.25rem; color: #333333; margin-bottom: 2rem; }
     .cta-button { display: inline-block; background: #007c91; color: #ffffff; padding: 1rem 2rem; border-radius: 6px; font-weight: 700; font-size: 1rem; transition: background 0.3s; }
     .cta-button:hover { background: #005f6b; }
-    .subcta { display: block; margin-top: 1rem; color: #007c91; font-weight: 600; }
-    .testimonial { margin-top: 2rem; font-style: italic; color: #333333; }
     .section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
     .section-alt { background: #f9fbfe; }
     .module-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2rem; }
     .module-card { background: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 2rem; transition: transform 0.3s ease; }
     .module-card:hover { transform: translateY(-5px); }
-    .module-card h3 { margin-top: 0; font-size: 1.5rem; color: #002f4b; }
+    .module-card h3, .module-card h4 { margin-top: 0; font-size: 1.5rem; color: #002f4b; }
     .module-card p { color: #555555; }
     .module-card ul { margin: 1rem 0 0 1rem; list-style: disc; color: #555555; }
     .module-card li { margin-bottom: 0.5rem; }
     .badge { display: inline-block; background: #007c91; color: #ffffff; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 0.5rem; }
     footer { background: #ffffff; border-top: 1px solid #e0e0e0; text-align: center; padding: 2rem; font-size: 0.9rem; color: #777777; }
+    footer a { color: #007c91; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -69,8 +70,6 @@
     <h1 class="hero-title">Sell Smarter.<br>Support Faster.<br>Powered by Apex.</h1>
     <p class="hero-subtitle">Unleash intelligent agents designed to drive revenue and elevate every customer experience — built on the ApexOpsAI execution engine.</p>
     <a href="demo.html" class="cta-button">Schedule a Demo</a>
-    <a href="playbook.pdf" class="subcta">Download the AI Sales Playbook</a>
-    <p class="testimonial">“We doubled pipeline in 30 days.” &mdash; Acme SaaS</p>
   </header>
 
   <section class="section" id="products">
@@ -197,28 +196,4 @@
         <h3>AI Agents Are the New RevOps</h3>
         <p>From outreach to pipeline ops — discover the shift to AI-driven revenue execution.</p>
         <a href="blog/ai-agent-article.html" class="cta-button">Read Article</a>
-      </div>
-      <div class="module-card">
-        <h3>AI Playbooks for Smarter GTM Execution</h3>
-        <p>Why traditional playbooks fail and how AI adapts in real time for precision results.</p>
-        <a href="blog/ai-playbooks-article.html" class="cta-button">Read Article</a>
-      </div>
-    </div>
-    <a href="blog.html" class="cta-button">View All Articles</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('navLinks');
-      const overlay = document.getElementById('navOverlay');
-      menu.classList.toggle('show');
-      overlay.classList.toggle('show');
-    }
-  </script>
-</body>
-</html>
+      
