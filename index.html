@@ -10,81 +10,109 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
+    /* Base */
     body { margin: 0; font-family: 'Inter', sans-serif; background: #ffffff; color: #000000; }
+    a { text-decoration: none; }
+    ul { list-style: none; margin: 0; padding: 0; }
+    /* Nav */
     nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #ffffff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-    .logo { font-size: 1.5rem; font-weight: 800; color: #000; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
-    .nav-links a { text-decoration: none; color: #000; font-weight: 700; font-size: 1.1rem; }
-    .nav-links a:hover, .nav-links a.active { color: #00bcd4; }
+    .logo img { height: 36px; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: #000; font-weight: 700; font-size: 1.1rem; padding: 0.25rem; position: relative; }
+    .nav-links a:hover::after, .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 3px; background: #00bcd4; border-radius: 2px; }
     .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 4px; }
     .menu-toggle span { width: 25px; height: 3px; background: #000; }
+    .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); }
     @media (max-width: 768px) {
       .menu-toggle { display: flex; }
-      .nav-links { display: none; position: absolute; top: 60px; right: 20px; flex-direction: column; background: #fff; border: 1px solid #ddd; padding: 1rem; }
+      .nav-links { display: none; position: absolute; top: 60px; right: 20px; flex-direction: column; background: #fff; border: 1px solid #ddd; padding: 1rem; border-radius: 8px; }
       .nav-links.show { display: flex; }
+      .nav-overlay.show { display: block; }
     }
+    /* Hero */
     header, section { padding: 4rem 2rem; text-align: center; }
-    .hero { background: #f7f7f7; }
+    .hero { background: #f7f7f7; position: relative; }
     .hero h1 { font-size: 2.75rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.25rem; margin-bottom: 2rem; color: #333; }
-    .cta { background: #00bcd4; color: #fff; padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 700; text-decoration: none; transition: background 0.3s; }
+    .hero p { font-size: 1.25rem; margin-bottom: 1rem; color: #333; }
+    .hero .subheadline { font-size: 1rem; color: #555; margin-bottom: 2rem; }
+    .cta { background: #00bcd4; color: #fff; padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 700; transition: background 0.3s; }
     .cta:hover { background: #0097a7; }
+    /* Secondary CTA */
+    .hero .secondary { margin-top: 1rem; color: #007c91; font-weight: 600; }
+    /* Grid & Cards */
     .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
     .card { background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 2rem; text-align: left; }
     .card h3, .card h4 { margin-top: 0; }
+    .card ul { margin: 1rem 0 0 1rem; }
+    .card li { margin-bottom: 0.5rem; }
+    /* Alternating sections */
     .section-alt { background: #f9f9f9; }
+    /* Pricing highlight */
+    .highlight { border: 2px solid #00bcd4; }
+    .badge { background: #00bcd4; color: #fff; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; }
+    /* Footer */
     footer { background: #fafafa; padding: 2rem; font-size: 0.9rem; color: #666; }
-    footer a { color: #666; text-decoration: none; }
+    footer a { color: #666; }
     footer a:hover { text-decoration: underline; }
+    /* Newsletter & Social */
+    .newsletter { max-width: 400px; margin: 2rem auto; text-align: center; }
+    .newsletter input { padding: 0.5rem; width: 70%; border: 1px solid #ccc; border-radius: 4px; }
+    .newsletter button { padding: 0.6rem 1rem; background: #00bcd4; color: #fff; border: none; border-radius: 4px; margin-left: 0.5rem; cursor: pointer; }
+    .social-icons { display:flex; justify-content:center; gap:1rem; margin-top:1rem; }
+    .social-icons img { width:24px; height:24px; cursor:pointer; }
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">ApexSalesAI</div>
+  <a href="index.html" class="logo">
+    <img src="images/apex-logo.png" alt="ApexSalesAI">
+  </a>
   <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </div>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#hero" class="active">Home</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#platform">Platform</a></li>
-    <li><a href="#onboarding">Onboarding</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#partners">Partners</a></li>
-    <li><a href="#blog">Blog</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="platform.html">Platform</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="demo.html">Demo</a></li>
+    <li><a href="reseller.html">Reseller</a></li>
+    <li><a href="onboarding.html">Onboarding</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
+<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
 
 <header id="hero" class="hero">
   <h1>Sell Smarter. Support Faster. Powered by Apex.</h1>
-  <p>Unleash intelligent agents designed to drive revenue and elevate every customer interaction — ApexSalesAI and ApexSupportAI, built on the ApexOpsAI execution engine.</p>
+  <p class="subheadline">Your AI business partner automating outreach, qualification, support — 24/7.</p>
   <a href="demo.html" class="cta">Schedule a Demo</a>
+  <p class="secondary">Or <a href="playbook.pdf" class="secondary">Download the AI Sales Playbook</a></p>
+  <p><em>“We doubled pipeline in 30 days” — Acme SaaS</em></p>
 </header>
 
 <section id="products">
   <h2>Two Agents. One Apex. Unlimited Advantage.</h2>
   <div class="grid">
     <div class="card">
-      <h3>ApexSalesAI</h3>
-      <p>Autonomous outbound engagement, precision follow-up, opportunity creation, CRM sync.</p>
+      <h3>🎯 ApexSalesAI</h3>
+      <p class="benefit">Double your meetings in 30 days.</p>
       <ul>
-        <li>Cold outreach & lead qualification</li>
-        <li>Multi-channel follow-up sequences</li>
-        <li>Opportunity & pipeline updates</li>
+        <li>🚀 Cold outreach & lead qualification</li>
+        <li>🔁 Multi-channel follow-up sequences</li>
+        <li>📈 Opportunity & pipeline updates</li>
       </ul>
       <a href="platform.html#sdr-agent" class="cta">Learn More</a>
     </div>
     <div class="card">
-      <h3>ApexSupportAI</h3>
-      <p>Always-on customer support — instant resolution, smart escalations, retention automation.</p>
+      <h3>🤝 ApexSupportAI</h3>
+      <p class="benefit">Increase CSAT by 20%.</p>
       <ul>
-        <li>Live chat & ticket automation</li>
-        <li>Knowledge base & escalation logic</li>
-        <li>CSAT & feedback gathering</li>
+        <li>💬 Live chat & ticket automation</li>
+        <li>📚 Knowledge base & escalation logic</li>
+        <li>⭐ CSAT & feedback gathering</li>
       </ul>
       <a href="platform.html#support-agent" class="cta">Learn More</a>
     </div>
@@ -97,18 +125,22 @@
     <div class="card">
       <h4>🤖 Autonomous SDR Agent</h4>
       <p>Cold emails, objections, and bookings — handled 24/7 by AI.</p>
+      <a href="platform.html#sdr-agent" class="cta">Details</a>
     </div>
     <div class="card">
       <h4>📊 Smart CRM Sync</h4>
       <p>Bi-directional sync with Salesforce, HubSpot, and Microsoft Dynamics.</p>
+      <a href="platform.html#crm-sync" class="cta">Details</a>
     </div>
     <div class="card">
       <h4>💬 Inbound Concierge</h4>
       <p>Qualifies and routes inbound leads in real time.</p>
+      <a href="platform.html#inbound" class="cta">Details</a>
     </div>
     <div class="card">
       <h4>🔔 Real-Time Alerts</h4>
       <p>Notifies you of engagement spikes and key buying signals instantly.</p>
+      <a href="platform.html#alerts" class="cta">Details</a>
     </div>
   </div>
 </section>
@@ -117,15 +149,15 @@
   <h2>Go Live in 72 Hours</h2>
   <div class="grid">
     <div class="card">
-      <h4>1. Discovery</h4>
+      <h4>1. <br>Discovery</h4>
       <p>Align on ICP, goals, and campaign strategy.</p>
     </div>
     <div class="card">
-      <h4>2. Configuration</h4>
+      <h4>2. <br>Configuration</h4>
       <p>Custom setup of agents, workflows, and integrations.</p>
     </div>
     <div class="card">
-      <h4>3. Activation</h4>
+      <h4>3. <br>Activation</h4>
       <p>Launch and optimize campaigns with live analytics.</p>
     </div>
   </div>
@@ -136,7 +168,7 @@
   <h2>Plans Built for Growth</h2>
   <div class="grid">
     <div class="card">
-      <h3>Launch</h3>
+      <h3>🚀 Launch</h3>
       <p><strong>$749/mo</strong></p>
       <p>Solo founders & early teams.</p>
       <ul>
@@ -146,8 +178,8 @@
       </ul>
       <a href="pricing.html#launch" class="cta">Choose Launch</a>
     </div>
-    <div class="card">
-      <h3>Growth</h3>
+    <div class="card highlight">
+      <h3>📈 Growth <span class="badge">Most Popular</span></h3>
       <p><strong>$1,997/mo</strong></p>
       <p>SMBs & scaling sales teams.</p>
       <ul>
@@ -158,7 +190,7 @@
       <a href="pricing.html#growth" class="cta">Choose Growth</a>
     </div>
     <div class="card">
-      <h3>Scale</h3>
+      <h3>🏢 Scale</h3>
       <p><strong>$4,997+/mo</strong></p>
       <p>Agencies & enterprise.</p>
       <ul>
@@ -174,6 +206,11 @@
 <section id="partners">
   <h2>Partner With ApexSalesAI</h2>
   <p>MSPs, VARs, and consultants — unlock new revenue streams by offering Apex under your brand.</p>
+  <div class="grid">
+    <img src="images/partner1.png" alt="Partner Logo" />
+    <img src="images/partner2.png" alt="Partner Logo" />
+    <img src="images/partner3.png" alt="Partner Logo" />
+  </div>
   <a href="reseller.html" class="cta">Become a Partner</a>
 </section>
 
@@ -182,14 +219,17 @@
   <div class="grid">
     <div class="card">
       <h4>The Rise of Autonomous Revenue Teams</h4>
+      <p>Discover how AI agents are reshaping go-to-market operations and scaling without headcount.</p>
       <a href="blog/ai-revenue-teams.html" class="cta">Read Article</a>
     </div>
     <div class="card">
       <h4>AI Agents Are the New RevOps</h4>
+      <p>Learn how AI agents evolve from assistants to full GTM operators in real time.</p>
       <a href="blog/ai-agent-article.html" class="cta">Read Article</a>
     </div>
     <div class="card">
       <h4>AI Playbooks for Smarter GTM Execution</h4>
+      <p>See why traditional playbooks fail and how AI adapts on the fly for precision.</p>
       <a href="blog/ai-playbooks-article.html" class="cta">Read Article</a>
     </div>
   </div>
@@ -198,18 +238,34 @@
 
 <footer>
   <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p>
+  <div class="newsletter">
+    <p>Join our newsletter</p>
+    <input type="email" placeholder="Your email" /> <button>Subscribe</button>
+  </div>
+  <div class="social-icons">
+    <img src="images/twitter.svg" alt="Twitter" />
+    <img src="images/linkedin.svg" alt="LinkedIn" />
+    <img src="images/facebook.svg" alt="Facebook" />
+  </div>
+  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
 </footer>
 
 <script>
   function toggleMenu() {
     const menu = document.getElementById('navLinks');
+    const overlay = document.getElementById('navOverlay');
     menu.classList.toggle('show');
+    overlay.classList.toggle('show');
   }
+  // Close mobile nav on link click
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      const menu = document.getElementById('navLinks');
+      const overlay = document.getElementById('navOverlay');
+      if (menu.classList.contains('show')) toggleMenu();
+    });
+  });
 </script>
-
-<!-- Copilot Concierge Bot Embed (replace with your bot code) -->
-<script src="https://webchat.botframework.com/embed/YOUR-BOT-ID?s=YOUR-KEY"></script>
 
 </body>
 </html>
