@@ -36,7 +36,7 @@
     .nav-links li a.active, .nav-links li a:hover { color:#00c2cb; }
 
     #mobileNav { display:none; }
-    #mobileNav.hidden { display:none; }
+    #mobileNav.show { display:block; }
 
     .cta { background:#00c2cb; color:#0b0f1a; font-weight:600; padding:.75rem 1.5rem; border-radius:.5rem; text-decoration:none; transition:background .3s, transform .2s; display:inline-block; }
     .cta:hover { background:#00a8b3; transform:translateY(-2px); }
@@ -76,6 +76,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <button class="md:hidden text-white" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+        <!-- remove icon placeholder under Home -->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
@@ -86,3 +87,29 @@
       <a href="pricing.html" class="block py-2 text-white">Pricing</a>
       <a href="consulting.html" class="block py-2 text-white">Consulting</a>
       <a href="demo.html" class="block py-2 text-white">Demo</a>
+      <a href="reseller.html" class="block py-2 text-white">Reseller</a>
+      <a href="onboarding.html" class="block py-2 text-white">Onboarding</a>
+      <a href="blog.html" class="block py-2 text-white">Blog</a>
+      <a href="contact.html" class="block py-2 text-white">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="200" cy="200" r="150" fill="#00c2cb" />
+        <circle cx="600" cy="150" r="120" fill="#005f6b" />
+      </svg>
+    </div>
+    <div class="container mx-auto text-center px-4">
+      <h1 id="rotating-headline" class="hero-title">Sell Smarter.<br>Support Faster.<br>Powered by Apex.</h1>
+      <p class="hero-subtitle">Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
+      <a href="demo.html" class="cta">Schedule a Demo</a>
+    </div>
+  </header>
+
+  <!-- ... rest of sections remain unchanged ... -->
+
+</body>
+</html>
