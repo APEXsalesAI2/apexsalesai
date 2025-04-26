@@ -29,7 +29,9 @@
     p, ul, li { color:#cbd5e0; }
 
     .navbar { background:#0b0f1a; border-bottom:1px solid #1a1f2c; }
-    .navbar img.logo { height:120px; width:auto; }
+    .navbar img.logo { height: 120px; width: auto; }
+    @media (max-width: 768px) { .navbar img.logo { height: 80px; } }
+    @media(max-width:768px){ .navbar img.logo { height: 60px; } }
     @media(max-width:768px){ .navbar img.logo { height:80px; } }
     .nav-links { list-style:none; padding:0; margin:0; display:flex; }
     .nav-links li a { color:#ffffff; text-decoration:none; font-weight:600; padding:.5rem 1rem; display:block; }
