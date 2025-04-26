@@ -3,31 +3,540 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>APEXsalesAI | Flexible AI Pricing for Every GTM Stage</title>
-  <meta name="description" content="Choose a pricing tier that fits your go-to-market stage. APEXsalesAI helps SMBs and enterprises launch, scale, and dominate with AI-driven GTM execution." />
-  <meta name="keywords" content="AI pricing, GTM software pricing, sales automation, AI SaaS platform, APEXsalesAI plans, scale sales, SMB automation" />
-  <meta name="author" content="APEXsalesAI" />
-
+  <title>Pricing | ApexSalesAI</title>
+  <meta name="description" content="Explore ApexSalesAI pricing plans designed to meet the needs of businesses of all sizes. Transform your revenue operations with our AI-powered sales and support agents." />
+  <meta name="keywords" content="ApexSalesAI pricing, AI sales pricing, sales automation pricing, customer support AI pricing" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pricing | ApexSalesAI" />
+  <meta property="og:description" content="Explore ApexSalesAI pricing plans designed to meet the needs of businesses of all sizes." />
+  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta property="og:url" content="https://www.apexsalesai.com/pricing.html" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pricing | ApexSalesAI" />
+  <meta name="twitter:description" content="Explore ApexSalesAI pricing plans designed to meet the needs of businesses of all sizes." />
+  <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta name="twitter:site" content="@apexsalesai" />
+  <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <link rel="manifest" href="/images/site.webmanifest" />
-
+  <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/menu.js"></script>
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0d1321;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Navigation */
+    .navbar {
+      background-color: #0d1321;
+      padding: 20px 0;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    .logo-text {
+      color: #00c2cb;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links li {
+      margin: 0 15px;
+    }
+    
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      padding: 10px 0;
+    }
+    
+    .nav-links a:hover, .nav-links a.active {
+      color: #00c2cb;
+    }
+    
+    /* Hero section */
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ffffff, #00c2cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #a0aec0;
+    }
+    
+    /* Pricing section */
+    .pricing-section {
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .pricing-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 70% 50%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .pricing-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    
+    .toggle-option {
+      padding: 10px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .toggle-option.active {
+      color: #00c2cb;
+    }
+    
+    .toggle-slider {
+      position: relative;
+      width: 60px;
+      height: 30px;
+      background-color: #1a202c;
+      border-radius: 30px;
+      margin: 0 15px;
+      cursor: pointer;
+    }
+    
+    .toggle-slider::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-color: #00c2cb;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.3s;
+    }
+    
+    .toggle-slider.annual::after {
+      transform: translateX(30px);
+    }
+    
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+    
+    .pricing-card {
+      background-color: rgba(26, 32, 44, 0.6);
+      border: 1px solid rgba(42, 67, 101, 0.3);
+      border-radius: 12px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pricing-card.popular {
+      transform: scale(1.05);
+      border: 1px solid rgba(0, 194, 203, 0.3);
+      box-shadow: 0 10px 25px rgba(0, 194, 203, 0.1);
+    }
+    
+    .pricing-card.popular::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: 12px;
+      right: -30px;
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 5px 30px;
+      transform: rotate(45deg);
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .pricing-card.popular:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+    
+    .pricing-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+    
+    .pricing-card .subtitle {
+      color: #a0aec0;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+    }
+    
+    .price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    
+    .price span {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #a0aec0;
+    }
+    
+    .billing-period {
+      color: #a0aec0;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+    }
+    
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px;
+      text-align: left;
+    }
+    
+    .features-list li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .features-list li::before {
+      content: '✓';
+      color: #00c2cb;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    .features-list li.unavailable {
+      color: #718096;
+    }
+    
+    .features-list li.unavailable::before {
+      content: '×';
+      color: #718096;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 194, 203, 0.3);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .btn:hover {
+      background-color: #00a8b3;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 194, 203, 0.4);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid #00c2cb;
+      color: #00c2cb;
+      box-shadow: none;
+    }
+    
+    .btn-outline:hover {
+      background-color: rgba(0, 194, 203, 0.1);
+      box-shadow: none;
+    }
+    
+    /* Enterprise section */
+    .enterprise-section {
+      background-color: #1a202c;
+      padding: 100px 0;
+    }
+    
+    .enterprise-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .enterprise-info h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    
+    .enterprise-info p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    
+    .enterprise-features {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+    }
+    
+    .enterprise-features li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .enterprise-features li::before {
+      content: '✓';
+      color: #00c2cb;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    /* FAQ section */
+    .faq-section {
+      padding: 100px 0;
+    }
+    
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 20px;
+    }
+    
+    .faq-question {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-question::after {
+      content: '+';
+      color: #00c2cb;
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+    
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      display: none;
+      padding-top: 10px;
+    }
+    
+    .faq-item.active .faq-answer {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* CTA section */
+    .cta-section {
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 194, 203, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    
+    .cta-section p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #a0aec0;
+      font-size: 1.2rem;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #0d1321;
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    footer p {
+      color: #718096;
+      margin-bottom: 15px;
+    }
+    
+    footer a {
+      color: #00c2cb;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    
+    /* Utility classes */
+    .text-gradient {
+      background: linear-gradient(90deg, #ffffff, #00c2cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-heading h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    
+    .section-heading p {
+      color: #a0aec0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .pricing-cards {
+        grid-template-columns: 1fr;
+      }
+      
+      .pricing-card.popular {
+        transform: scale(1);
+      }
+      
+      .pricing-card.popular:hover {
+        transform: translateY(-10px);
+      }
+      
+      .enterprise-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-heading h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo-group">
-        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" />
-        <span class="brand-name">APEXsalesAI</span>
-      </div>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="nav-overlay" onclick="toggleMenu()"></div>
-      <ul class="nav-links" id="navLinks">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI">
+        <span class="logo-text">APEXsalesAI</span>
+      </a>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html">Platform</a></li>
@@ -41,85 +550,264 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-content container">
-      <h1 class="hero-title">Pricing Built for Every Stage of Growth</h1>
-      <p class="hero-subtitle">Outcome-focused plans designed to scale with you.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Simple, Transparent Pricing</h1>
+      <p>Choose the plan that's right for your business needs. No hidden fees or surprises.</p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="section pricing-showcase">
-      <div class="container">
-        <div class="pricing-intro">
-          <h2>Value at Every Level</h2>
-          <p>Our AI-powered platform adapts to your goals — whether you're launching, scaling, or transforming GTM execution across departments.</p>
-        </div>
-
-        <div class="module-grid">
-          <div class="module-card">
-            <h3>🚀 Launch</h3>
-            <p>Solopreneurs & Early Builders</p>
-            <ul>
-              <li>1 AI GTM motion</li>
-              <li>Email & SMS automation</li>
-              <li>Performance dashboard</li>
-              <li>Self-onboarding flows</li>
-            </ul>
-            <a href="contact.html" class="cta-button">Get Started</a>
-          </div>
-
-          <div class="module-card highlight">
-            <h3>📈 Growth <span class="badge">Most Popular</span></h3>
-            <p>For Scaling Teams & RevOps</p>
-            <ul>
-              <li>Up to 5 AI agents</li>
-              <li>Multichannel GTM automation</li>
-              <li>CRM, calendar, Stripe integration</li>
-              <li>Real-time sales intelligence</li>
-            </ul>
-            <a href="contact.html" class="cta-button">Choose Plan</a>
-          </div>
-
-          <div class="module-card">
-            <h3>🏢 Scale</h3>
-            <p>Enterprise & Partners</p>
-            <ul>
-              <li>Unlimited agents & workflows</li>
-              <li>Private-label AI instances</li>
-              <li>API & integration access</li>
-              <li>Dedicated success team</li>
-            </ul>
-            <a href="contact.html" class="cta-button">Request Quote</a>
-          </div>
-        </div>
-
-        <p class="centered highlight">Need something custom? <a href="contact.html">Talk to Sales Engineering</a></p>
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="pricing-toggle">
+        <div class="toggle-option active" id="monthly-option">Monthly</div>
+        <div class="toggle-slider" id="pricing-toggle-slider"></div>
+        <div class="toggle-option" id="annual-option">Annual <span style="color: #00c2cb">(Save 20%)</span></div>
       </div>
-    </section>
-
-    <section class="section cta-bottom">
-      <div class="container">
-        <h2>Designed to Grow. Engineered to Execute.</h2>
-        <p>Everything you need — from outbound to onboarding — in one intelligent GTM engine. Start small. Scale fast.</p>
-        <a href="contact.html" class="cta-button pulse">Request Access</a>
+      
+      <div class="pricing-cards">
+        <!-- Starter Plan -->
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <div class="subtitle">For small teams getting started</div>
+          
+          <div class="price monthly-price">$499<span>/mo</span></div>
+          <div class="price annual-price" style="display: none;">$399<span>/mo</span></div>
+          <div class="billing-period annual-billing" style="display: none;">billed annually</div>
+          
+          <ul class="features-list">
+            <li>1 AI Agent</li>
+            <li>500 Conversations/mo</li>
+            <li>Email & Chat Channels</li>
+            <li>Basic Workflow Automation</li>
+            <li>Standard Analytics</li>
+            <li class="unavailable">Custom AI Training</li>
+            <li class="unavailable">Advanced Integrations</li>
+          </ul>
+          
+          <a href="demo.html" class="btn">Get Started</a>
+        </div>
+        
+        <!-- Growth Plan -->
+        <div class="pricing-card popular">
+          <h3>Growth</h3>
+          <div class="subtitle">For scaling teams and operations</div>
+          
+          <div class="price monthly-price">$999<span>/mo</span></div>
+          <div class="price annual-price" style="display: none;">$799<span>/mo</span></div>
+          <div class="billing-period annual-billing" style="display: none;">billed annually</div>
+          
+          <ul class="features-list">
+            <li>3 AI Agents</li>
+            <li>2,000 Conversations/mo</li>
+            <li>Multi-channel Support</li>
+            <li>Advanced Workflow Automation</li>
+            <li>Advanced Analytics & Reporting</li>
+            <li>Basic Custom AI Training</li>
+            <li class="unavailable">Enterprise Integrations</li>
+          </ul>
+          
+          <a href="demo.html" class="btn">Get Started</a>
+        </div>
+        
+        <!-- Pro Plan -->
+        <div class="pricing-card">
+          <h3>Pro</h3>
+          <div class="subtitle">For high-performance teams</div>
+          
+          <div class="price monthly-price">$1,999<span>/mo</span></div>
+          <div class="price annual-price" style="display: none;">$1,599<span>/mo</span></div>
+          <div class="billing-period annual-billing" style="display: none;">billed annually</div>
+          
+          <ul class="features-list">
+            <li>10 AI Agents</li>
+            <li>5,000 Conversations/mo</li>
+            <li>All Channels + Custom Channels</li>
+            <li>Premium Workflow Automation</li>
+            <li>Real-time Analytics Dashboard</li>
+            <li>Advanced Custom AI Training</li>
+            <li>All Integrations + API Access</li>
+          </ul>
+          
+          <a href="demo.html" class="btn">Get Started</a>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <p class="container">&copy; 2025 APEXsalesAI. All rights reserved.</p>
+  <!-- Enterprise Section -->
+  <section class="enterprise-section">
+    <div class="container">
+      <div class="enterprise-container">
+        <div class="enterprise-info">
+          <h2>Enterprise</h2>
+          <p>Custom solution for organizations with complex sales processes and large teams. Get everything in Pro plus:</p>
+          
+          <ul class="enterprise-features">
+            <li>Unlimited AI Agents</li>
+            <li>Unlimited Conversations</li>
+            <li>Custom AI Model Fine-tuning</li>
+            <li>Dedicated Account Manager</li>
+            <li>Custom Integrations</li>
+            <li>On-premise Deployment Options</li>
+            <li>Advanced Security & Compliance</li>
+            <li>SLA with 99.9% Uptime Guarantee</li>
+          </ul>
+          
+          <a href="contact.html" class="btn">Contact Sales</a>
+        </div>
+        <div class="enterprise-image">
+          <img src="/images/enterprise-illustration.png" alt="Enterprise Solution" style="width: 100%; max-width: 400px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Got questions? We've got answers.</p>
+      </div>
+      
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <div class="faq-question">How does the conversation limit work?</div>
+          <div class="faq-answer">
+            <p>A conversation is defined as a complete interaction with a prospect, from initial outreach to final resolution. This can include multiple messages back and forth. We don't count individual messages, only complete conversation threads. If you're approaching your limit, we'll notify you so you can upgrade if needed.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">Can I change plans at any time?</div>
+          <div class="faq-answer">
+            <p>Yes! You can upgrade your plan at any time, and the changes will take effect immediately. If you upgrade mid-billing cycle, we'll prorate the cost. Downgrading is also possible but will take effect at the start of your next billing cycle.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <div class="faq-question">What kind of support do you offer?</div>
+          <div class="faq-answer">
+            <p>All plans include standard support via email with a 24-hour response time. Growth plans and above include priority support with faster response times. Enterprise plans get dedicated account managers and technical support with response times guaranteed by SLA.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <div class="faq-question">Do you offer a free trial?</div>
+          <div class="faq-answer">
+            <p>We don't offer a traditional free trial, but we do provide a comprehensive demo of the platform tailored to your specific use case. This allows you to see exactly how ApexSalesAI would work for your business before making a commitment.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <div class="faq-question">What integrations do you support?</div>
+          <div class="faq-answer">
+            <p>We integrate with all major CRM systems including Salesforce, HubSpot, Pipedrive, and more. We also support email platforms like Gmail and Outlook, and communication tools like Slack and Microsoft Teams. Enterprise plans include custom integrations to fit your specific tech stack.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Transform Your Sales Process?</h2>
+      <p>Schedule a demo to see how ApexSalesAI can help your team close more deals.</p>
+      <a href="demo.html" class="btn">Schedule Your Demo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById('navLinks');
-      const toggle = document.querySelector('.menu-toggle');
-      const overlay = document.querySelector('.nav-overlay');
-      menu.classList.toggle('open');
-      toggle.classList.toggle('open');
-      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+      // Pricing toggle functionality
+      const monthlyOption = document.getElementById('monthly-option');
+      const annualOption = document.getElementById('annual-option');
+      const toggleSlider = document.getElementById('pricing-toggle-slider');
+      const monthlyPrices = document.querySelectorAll('.monthly-price');
+      const annualPrices = document.querySelectorAll('.annual-price');
+      const annualBilling = document.querySelectorAll('.annual-billing');
+      
+      // Set initial state
+      let isAnnual = false;
+      
+      toggleSlider.addEventListener('click', function() {
+        isAnnual = !isAnnual;
+        updatePricingDisplay();
+      });
+      
+      monthlyOption.addEventListener('click', function() {
+        isAnnual = false;
+        updatePricingDisplay();
+      });
+      
+      annualOption.addEventListener('click', function() {
+        isAnnual = true;
+        updatePricingDisplay();
+      });
+      
+      function updatePricingDisplay() {
+        if (isAnnual) {
+          toggleSlider.classList.add('annual');
+          monthlyOption.classList.remove('active');
+          annualOption.classList.add('active');
+          
+          monthlyPrices.forEach(price => price.style.display = 'none');
+          annualPrices.forEach(price => price.style.display = 'block');
+          annualBilling.forEach(text => text.style.display = 'block');
+        } else {
+          toggleSlider.classList.remove('annual');
+          monthlyOption.classList.add('active');
+          annualOption.classList.remove('active');
+          
+          monthlyPrices.forEach(price => price.style.display = 'block');
+          annualPrices.forEach(price => price.style.display = 'none');
+          annualBilling.forEach(text => text.style.display = 'none');
+        }
+      }
+      
+      // FAQ functionality
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const faqItem = this.parentElement;
+          
+          // Check if current item is already active
+          const isActive = faqItem.classList.contains('active');
+          
+          // Close all FAQ items
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+          });
+          
+          // If current item wasn't active, open it
+          if (!isActive) {
+            faqItem.classList.add('active');
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
