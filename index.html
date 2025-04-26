@@ -1,110 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ApexSalesAI | Sell Smarter. Support Faster.</title>
-  <meta name="description" content="Accelerate sales and service with ApexSalesAI and ApexSupportAI — intelligent agents for revenue execution and customer support excellence." />
-  <meta name="keywords" content="AI sales automation, AI customer support, ApexSalesAI, ApexSupportAI, ApexOpsAI" />
-  <meta name="author" content="ApexSalesAI" />
-  <link rel="icon" href="/images/favicon.ico" />
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <link rel="manifest" href="/images/site.webmanifest" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/hero.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexSalesAI | The Future of Sales Execution</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
   <style>
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 1000;
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
     }
-    .nav-links.open {
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .cta-button {
+      background-color: #00bcd4;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .pricing {
       display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
     }
-    .dropdown {
-      display: none;
-      flex-direction: column;
-      background: #f9f9f9;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      position: absolute;
+    .price-card {
+      background-color: #f5f5f5;
+      padding: 2rem;
+      border-radius: 12px;
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
     }
-    .dropdown.show {
-      display: flex;
+    .price-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
-    .menu-toggle span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px;
-      background: #333;
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.875rem;
+      color: #666;
     }
-    @media(min-width: 768px) {
-      .nav-links {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        box-shadow: none;
-      }
-      .dropdown {
-        position: absolute;
-      }
+    .partner-section {
+      background-color: #e0f7fa;
+      padding: 4rem 2rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="logo-group">
-          <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" style="width:180px;" />
-          <span class="brand-name">ApexSalesAI</span>
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="nav-overlay" onclick="toggleMenu()"></div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#hero">Home</a></li>
-          <li>
-            <button onclick="toggleDropdown()">Products ▼</button>
-            <ul class="dropdown" id="productsDropdown">
-              <li><a href="#apexsalesai">ApexSalesAI</a></li>
-              <li><a href="#apexsupportai">ApexSupportAI</a></li>
-            </ul>
-          </li>
-          <li><a href="#consulting">Consulting</a></li>
-          <li><a href="#why-apex">About</a></li>
-          <li><a href="#cta">Demo</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+
+<header>
+  <h1>ApexSalesAI</h1>
+</header>
+
+<section class="hero">
+  <h1>The Future of Sales Execution</h1>
+  <p>AI-driven agents. Real-time revenue execution. No guesswork, just growth.</p>
+  <a href="#pricing" class="cta-button">See It In Action</a>
+</section>
+
+<section>
+  <h2>How Apex Helps Different Industries</h2>
+  <ul>
+    <li><strong>SaaS & Tech:</strong> Demo booking, follow-up sequences, churn risk alerts</li>
+    <li><strong>Healthcare:</strong> Patient inquiry triage, consult scheduling</li>
+    <li><strong>Agencies:</strong> Campaign lead follow-ups, consultation booking</li>
+    <li><strong>Real Estate:</strong> Lead capture, qualification, appointment coordination</li>
+  </ul>
+</section>
+
+<section id="pricing">
+  <h2>Plans Built for Growth</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Launch</h3>
+      <p>$749/mo</p>
+      <p>Perfect for solopreneurs and early teams.</p>
+    </div>
+    <div class="price-card">
+      <h3>Growth</h3>
+      <p>$1,997/mo</p>
+      <p>Ideal for SMBs scaling fast and needing full GTM coverage.</p>
+    </div>
+    <div class="price-card">
+      <h3>Scale</h3>
+      <p>$4,997+/mo</p>
+      <p>Multi-agent orchestration, white-label options, full enterprise support.</p>
+    </div>
   </div>
+</section>
 
-  <!-- Page content remains unchanged -->
-  <!-- All previous <main> content and footer stays the same -->
+<section class="partner-section">
+  <h2>Partner With ApexSalesAI</h2>
+  <p>MSPs, agencies, resellers: offer cutting-edge AI solutions under your brand.</p>
+  <a href="#" class="cta-button">Become a Partner</a>
+</section>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('navLinks');
-      const toggle = document.querySelector('.menu-toggle');
-      const overlay = document.querySelector('.nav-overlay');
-      menu.classList.toggle('open');
-      toggle.classList.toggle('open');
-      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
-    }
-    function toggleDropdown() {
-      const dropdown = document.getElementById('productsDropdown');
-      dropdown.classList.toggle('show');
-    }
-  </script>
+<footer>
+  &copy; 2025 ApexSalesAI. All rights reserved.
+</footer>
+
+<!-- Embed Copilot Studio Chatbot -->
+<script src="https://webchat.botframework.com/embed/your-bot-id?s=your-secret-key"></script>
+
 </body>
 </html>
