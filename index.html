@@ -6,8 +6,7 @@
   <title>ApexSalesAI | Sell Smarter. Support Faster.</title>
   <meta name="description" content="Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine." />
   <meta name="keywords" content="ApexSalesAI, ApexSupportAI, AI sales automation, AI customer support, ApexOpsAI" />
-
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:title" content="ApexSalesAI | Sell Smarter. Support Faster." />
   <meta property="og:description" content="Unleash intelligent agents designed to drive revenue and elevate customer interactions." />
   <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
@@ -19,7 +18,6 @@
   <meta name="twitter:description" content="Unleash intelligent agents designed to drive revenue and elevate customer interactions." />
   <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
   <meta name="twitter:site" content="@apexsalesai" />
-
   <link rel="icon" href="/images/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -29,12 +27,6 @@
     /* Logo sizing */
     .navbar .h-24 { height: 80px; }
     @media(max-width:768px){ .navbar .h-24 { height: 60px; } }
-    /* Hero background animation */
-    .hero-animation svg { fill: none; stroke: rgba(0,194,203,0.3); stroke-width:0.5; animation:dash 6s linear infinite; }
-    @keyframes dash { to { stroke-dashoffset: -100; } }
-    /* CTA colors */
-    .cta { display:inline-block; background:#00c2cb;color:#000;font-weight:600;padding:0.75rem 1.5rem;border-radius:0.5rem;transition:all .3s; }
-    .cta:hover{background:#00a8b3;color:#fff;}
   </style>
 </head>
 <body class="bg-gray-900 text-white font-inter">
@@ -92,47 +84,115 @@
     </div>
   </header>
 
-  <!-- Products -->
-  <main>
-    <section id="products" class="container mx-auto py-20 px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Two Agents. One Apex. Unlimited Advantage.</h2>
+  <!-- Products Overview -->
+  <section id="products" class="container mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Two Agents. One Apex. Unlimited Advantage.</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-8 rounded-lg module-card">
+        <img src="/images/apexsalesai-agent.png" alt="ApexSalesAI Agent" class="mx-auto mb-6 h-24 object-contain" />
+        <h3 class="text-2xl font-bold mb-3">ApexSalesAI</h3>
+        <p class="mb-4">Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
+        <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
+          <li>24/7 smart prospecting</li>
+          <li>Personalized multi-channel outreach</li>
+          <li>Automated opportunity creation</li>
+        </ul>
+        <a href="platform.html#sales" class="cta">Learn More</a>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-lg module-card">
+        <img src="/images/apexsupportai-agent.png" alt="ApexSupportAI Agent" class="mx-auto mb-6 h-24 object-contain" />
+        <h3 class="text-2xl font-bold mb-3">ApexSupportAI</h3>
+        <p class="mb-4">Always-on customer support with instant resolutions and smart escalations.</p>
+        <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
+          <li>Live chat & ticket automation</li>
+          <li>Knowledge base integration</li>
+          <li>CSAT & NPS tracking</li>
+        </ul>
+        <a href="platform.html#support" class="cta">Learn More</a>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-lg module-card">
+        <img src="/images/consulting-icon.png" alt="Consulting Service" class="mx-auto mb-6 h-24 object-contain" />
+        <h3 class="text-2xl font-bold mb-3">Consulting</h3>
+        <p class="mb-4">Expert GTM strategy and execution playbooks — tailored to your business goals and market.</p>
+        <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
+          <li>Custom GTM activation</li>
+          <li>Pipeline optimization</li>
+          <li>Revenue process design</li>
+        </ul>
+        <a href="consulting.html" class="cta">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Apex Section -->
+  <section id="why-apex" class="bg-gray-800 py-20 px-4">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Built for Operators. Trusted by Visionaries.</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="card bg-gray-800 p-8 rounded-lg module-card">
-          <img src="/images/apexsalesai-agent.png" alt="ApexSalesAI Agent" class="mx-auto mb-6 h-24 object-contain" />
-          <h3 class="text-2xl font-bold mb-4">ApexSalesAI</h3>
-          <p class="mb-4">Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
-          <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
-            <li>24/7 smart prospecting</li>
-            <li>Personalized multi-channel outreach</li>
-            <li>Automated opportunity creation</li>
-          </ul>
-          <a href="platform.html#sales" class="cta">Learn More</a>
+        <div class="bg-gray-900 p-6 rounded-lg module-card">
+          <h3 class="text-xl font-semibold mb-2">Mission-Driven Performance</h3>
+          <p class="text-gray-400">AI agents aligned to your revenue goals, delivering measurable outcomes every time.</p>
         </div>
-        <div class="card bg-gray-800 p-8 rounded-lg module-card">
-          <img src="/images/apexsupportai-agent.png" alt="ApexSupportAI Agent" class="mx-auto mb-6 h-24 object-contain" />
-          <h3 class="text-2xl font-bold mb-4">ApexSupportAI</h3>
-          <p class="mb-4">Always-on customer support with instant resolutions and smart escalations.</p>
-          <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
-            <li>Live chat & ticket automation</li>
-            <li>Knowledge base integration</li>
-            <li>CSAT & NPS tracking</li>
-          </ul>
-          <a href="platform.html#support" class="cta">Learn More</a>
+        <div class="bg-gray-900 p-6 rounded-lg module-card">
+          <h3 class="text-xl font-semibold mb-2">Enterprise-Grade Security</h3>
+          <p class="text-gray-400">SOC2 compliant architecture with end-to-end data encryption and access controls.</p>
         </div>
-        <div class="card bg-gray-800 p-8 rounded-lg module-card">
-          <img src="/images/consulting-icon.png" alt="Consulting Service" class="mx-auto mb-6 h-24 object-contain" />
-          <h3 class="text-2xl font-bold mb-4">Consulting</h3>
-          <p class="mb-4">Expert GTM strategy and execution playbooks — tailored to your business goals and market.</p>
-          <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
-            <li>Custom GTM activation</li>
-            <li>Pipeline optimization</li>
-            <li>Revenue process design</li>
-          </ul>
-          <a href="consulting.html" class="cta">Learn More</a>
+        <div class="bg-gray-900 p-6 rounded-lg module-card">
+          <h3 class="text-xl font-semibold mb-2">Seamless Integrations</h3>
+          <p class="text-gray-400">Plug into Salesforce, HubSpot, Microsoft Dynamics, and your entire GTM stack.</p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- ApexSupportAI Deep Dive -->
+  <section id="support-details" class="container mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold text-center mb-6">ApexSupportAI Deep Dive</h2>
+    <p class="text-center text-gray-300 mb-12">Deliver exceptional customer experiences with always-on support automation.</p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-8 rounded-lg module-card">
+        <h4 class="font-semibold mb-2">Live Chat & Tickets</h4>
+        <p class="text-gray-400">Contextual AI responses across channels, accelerating resolutions.</p>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-lg module-card">
+        <h4 class="font-semibold mb-2">Knowledge Base+</h4>
+        <p class="text-gray-400">Automated article suggestions and self-service bot powered by your docs.</p>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-lg module-card">
+        <h4 class="font-semibold mb-2">Feedback Analytics</h4>
+        <p class="text-gray-400">Real-time CSAT and NPS tracking with proactive follow-ups.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ApexSalesAI Deep Dive -->
+  <section id="sales-details" class="bg-gray-800 py-20 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-6">ApexSalesAI Deep Dive</h2>
+      <p class="text-center text-gray-300 mb-12">Scale prospecting and pipeline creation with autonomous GTM agents.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-900 p-8 rounded-lg module-card">
+          <h4 class="font-semibold mb-2">Smart Prospecting</h4>
+          <p class="text-gray-400">AI-driven segmentation and targeting to find your ideal customers.</p>
+        </div>
+        <div class="bg-gray-900 p-8 rounded-lg module-card">
+          <h4 class="font-semibold mb-2">Engagement Flows</h4>
+          <p class="text-gray-400">Multi-channel cadences adapting in real-time based on outcomes.</p>
+        </div>
+        <div class="bg-gray-900 p-8 rounded-lg module-card">
+          <h4 class="font-semibold mb-2">Opportunity Handoff</h4>
+          <p class="text-gray-400">Seamless CRM sync and lead qualification for your AEs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="cta" class="text-center bg-gradient-to-br from-teal-600 to-blue-700 py-20 px-4">
+    <h2 class="text-4xl font-bold text-white mb-4">Ready to Transform Your GTM?</h2>
+    <p class="text-teal-100 mb-8">Book a personalized demo and see the power of Apex in action.</p>
+    <a href="demo.html" class="cta bg-white text-gray-900 hover:bg-gray-100">Schedule Your Demo</a>
+  </section>
 
   <!-- Footer -->
   <footer class="footer bg-gray-900 text-gray-500 py-8 border-t border-gray-800">
