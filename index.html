@@ -4,102 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ApexSalesAI | Sell Smarter. Support Faster.</title>
-  <meta name="description" content="Accelerate sales and service with ApexSalesAI and ApexSupportAI — intelligent agents for revenue execution and customer support excellence." />
+  <meta name="description" content="Unleash intelligent agents designed to drive revenue and elevate every customer interaction on ApexOpsAI execution engine." />
   <meta name="keywords" content="AI sales automation, AI customer support, ApexSalesAI, ApexSupportAI, ApexOpsAI" />
-  <meta name="author" content="ApexSalesAI" />
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
-  <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; background: #ffffff; color: #000000; }
-    header, section, footer { padding: 2rem; text-align: center; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #ffffff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-    nav .logo { font-weight: 800; font-size: 1.5rem; color: #000000; }
-    nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
-    nav ul li a { text-decoration: none; color: #000000; font-weight: 700; font-size: 1.1rem; }
-    nav ul li a:hover, nav ul li a.active { color: #00bcd4; }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; color: #000000; }
-    .hero p { font-size: 1.5rem; margin-bottom: 2rem; color: #333333; }
-    .cta { background-color: #00bcd4; color: white; padding: 1rem 2rem; border-radius: 8px; font-size: 1.1rem; text-decoration: none; display: inline-block; font-weight: 700; transition: background 0.3s; }
-    .cta:hover { background-color: #0097a7; }
-    .products, .partners { max-width: 1200px; margin: 0 auto; text-align: center; color: #000000; padding: 2rem 0; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-    .card { background: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px; color: #000000; }
-    footer { background: #fafafa; font-size: 0.9rem; color: #666666; padding: 2rem; }
-    footer a { color: #666666; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    @media (max-width: 768px) {
-      nav ul { display: none; flex-direction: column; background: white; position: absolute; top: 60px; right: 20px; border: 1px solid #ddd; padding: 1rem; }
-      nav.active ul { display: flex; }
-      .products, .partners { padding: 1rem 0; }
-    }
-  </style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="ApexSalesAI | Sell Smarter. Support Faster." />
+  <meta property="og:description" content="Unleash intelligent AI agents for revenue execution and customer support excellence." />
+  <meta property="og:image" content="/images/apex-logo-social.png" />
+  <meta property="og:url" content="https://www.apexsalesai.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/hero.js"></script>
 </head>
-<body>
-
-<nav>
-  <div class="logo">ApexSalesAI</div>
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="platform.html">Platform</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="consulting.html">Consulting</a></li>
-    <li><a href="demo.html">Demo</a></li>
-    <li><a href="reseller.html">Reseller</a></li>
-    <li><a href="onboarding.html">Onboarding</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<section class="hero" id="hero">
-  <h1>Sell Smarter. Support Faster. Powered by Apex.</h1>
-  <p>Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
-  <a href="#cta" class="cta">Schedule a Demo</a>
-</section>
-
-<main>
-  <section class="products" id="products">
-    <h2>Two Agents. One Apex. Unlimited Advantage.</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>ApexSalesAI</h3>
-        <p>Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
-        <ul style="text-align:left; margin:1rem 0;">
-          <li>24/7 smart prospecting</li>
-          <li>Personalized multi-channel outreach</li>
-          <li>Automated opportunity creation</li>
-        </ul>
-        <a href="#" class="cta">Learn More</a>
-      </div>
-      <div class="card">
-        <h3>ApexSupportAI</h3>
-        <p>Always-on customer support with instant resolutions and smart escalations.</p>
-        <ul style="text-align:left; margin:1rem 0;">
-          <li>Live chat & ticket automation</li>
-          <li>Knowledge base integration</li>
-          <li>CSAT & NPS tracking</li>
-        </ul>
-        <a href="#" class="cta">Learn More</a>
-      </div>
+<body class="bg-gray-900 text-white font-inter">
+  <nav class="navbar bg-gray-900 border-b border-gray-800">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="h-20" />
+      </a>
+      <ul class="hidden md:flex space-x-6 text-sm font-semibold">
+        <li><a href="index.html" class="text-teal-400">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="platform.html">Platform</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="reseller.html">Reseller</a></li>
+        <li><a href="onboarding.html">Onboarding</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="md:hidden text-white" onclick="toggleMobileNav()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
-  </section>
-
-  <section class="partners" id="why-apex">
-    <h2>Built for Operators. Trusted by Visionaries.</h2>
-    <p>Apex isn't another "AI-powered tool." It's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
-    <div class="grid" style="padding-top:2rem;">
-      <div class="card"><h4>Mission-Driven Performance</h4><p>Execute faster with intelligent, outcome-focused agents tuned to real revenue and retention results.</p></div>
-      <div class="card"><h4>Enterprise-Grade Security</h4><p>Protect customer data with architecture built for scale, privacy, and compliance at every level.</p></div>
-      <div class="card"><h4>Seamless Integrations</h4><p>Effortless handshakes across CRM, chat, email, ticketing, and internal systems — no tech disruption required.</p></div>
+    <div id="mobileNav" class="hidden md:hidden bg-gray-900 text-center space-y-4 py-4">
+      <a href="index.html" class="block">Home</a>
+      <a href="consulting.html" class="block">Consulting</a>
+      <!-- rest links -->
     </div>
-  </section>
-</main>
+  </nav>
 
-<footer>
-  <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-  <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
-</footer>
+  <header class="relative overflow-hidden text-center" id="hero">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-900 opacity-75"></div>
+    <div class="absolute inset-0 animate-pan pointer-events-none" style="mask: url('/images/circuit.svg')"></div>
+    <div class="relative container mx-auto py-32">
+      <h1 class="text-5xl font-extrabold mb-4">Sell Smarter.<br />Support Faster.<br />Powered by Apex.</h1>
+      <p class="text-xl text-gray-300 mb-8">Unleash intelligent agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
+      <button class="bg-teal-400 hover:bg-teal-500 text-gray-900 font-bold py-3 px-6 rounded-lg mr-4" onclick="scrollTo('#products')">Schedule a Demo</button>
+      <button class="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-gray-900 font-bold py-3 px-6 rounded-lg" onclick="scrollTo('#products')">Explore Platform</button>
+      <div id="rotating-headline" class="mt-12 text-gray-400 italic"></div>
+      <p class="mt-6 text-sm text-gray-500">Trusted by companies worldwide</p>
+    </div>
+  </header>
 
+  <main>
+    <section id="products" class="container mx-auto py-20">
+      <h2 class="text-3xl font-bold text-center mb-12">Two Agents. One Apex. Unlimited Advantage.</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card bg-gray-800">
+          <img src="/images/apexsalesai-agent.png" alt="ApexSalesAI Agent" class="mx-auto mb-6 h-24" />
+          <h3 class="text-2xl font-bold mb-4">ApexSalesAI</h3>
+          <p class="mb-4">Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
+          <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
+            <li>24/7 smart prospecting</li>
+            <li>Personalized multi-channel outreach</li>
+            <li>Automated opportunity creation</li>
+          </ul>
+          <a href="#" class="cta">Learn More</a>
+        </div>
+        <div class="card bg-gray-800">
+          <img src="/images/apexsupportai-agent.png" alt="ApexSupportAI Agent" class="mx-auto mb-6 h-24" />
+          <h3 class="text-2xl font-bold mb-4">ApexSupportAI</h3>
+          <p class="mb-4">Always-on customer support with instant resolutions and smart escalations.</p>
+          <ul class="list-disc list-inside mb-6 text-gray-300 text-left">
+            <li>Live chat & ticket automation</li>
+            <li>Knowledge base integration</li>
+            <li>CSAT & NPS tracking</li>
+          </ul>
+          <a href="#" class="cta">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-apex" class="bg-gray-800 py-20">
+      <h2 class="text-3xl font-bold text-center mb-6 text-white">Built for Operators. Trusted by Visionaries.</h2>
+      <p class="text-center text-gray-400 mb-12">Apex isn't another "AI-powered tool." It's an operating system for action. Sales teams grow smarter. Customer experiences scale faster.</p>
+      <div class="grid md:grid-cols-3 gap-8 container mx-auto">
+        <div class="card bg-gray-700 text-white"><h4>Mission-Driven Performance</h4><p>Execute faster with intelligent, outcome-focused agents tuned to real revenue and retention results.</p></div>
+        <div class="card bg-gray-700 text-white"><h4>Enterprise-Grade Security</h4><p>Protect customer data with architecture built for scale, privacy, and compliance at every level.</p></div>
+        <div class="card bg-gray-700 text-white"><h4>Seamless Integrations</h4><p>Effortless handshakes across CRM, chat, email, ticketing, and internal systems — no tech disruption required.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-500 py-8 text-sm">
+    <div class="container mx-auto text-center">
+      &copy; 2025 ApexSalesAI. All rights reserved. &nbsp;|&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms.html">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script>
+    function scrollTo(id) {
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
