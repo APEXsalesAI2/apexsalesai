@@ -383,6 +383,144 @@
     .menu-open { display: block; }
   </style>
 </head>
+<!-- Max AI Assistant Widget -->
+<div id="max-widget">
+  <button id="max-button" onclick="toggleMaxChat()">🤖 Chat with Max</button>
+  
+  <div id="max-chat" class="hidden">
+    <div class="max-header">
+      <span>Max • ApexSalesAI</span>
+      <button onclick="toggleMaxChat()">✖️</button>
+    </div>
+    <div class="max-messages" id="max-messages">
+      <div class="message max">👋 Hi, I’m Max — ApexSalesAI’s Digital Sales Partner!</div>
+      <div class="message max">💬 How can I help you today?</div>
+      <button class="chat-option" onclick="maxReply('Learn about AI Agents')">Learn about AI Agents</button>
+      <button class="chat-option" onclick="maxReply('View Pricing Plans')">View Pricing Plans</button>
+      <button class="chat-option" onclick="maxReply('Schedule a Demo')">Schedule a Demo</button>
+      <button class="chat-option" onclick="maxReply('Talk to a Real Person')">Talk to a Real Person</button>
+    </div>
+  </div>
+</div>
+
+<!-- Max Widget Styles -->
+<style>
+#max-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#max-button {
+  background-color: #00c2cb;
+  color: #0d1321;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,194,203,0.4);
+  transition: all 0.3s;
+}
+
+#max-button:hover {
+  background-color: #00a8b3;
+}
+
+#max-chat {
+  width: 300px;
+  height: auto;
+  max-height: 450px;
+  background: #0d1321;
+  border: 2px solid #00c2cb;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0,194,203,0.4);
+}
+
+#max-chat.hidden {
+  display: none;
+}
+
+.max-header {
+  background: #00c2cb;
+  color: #0d1321;
+  font-weight: 700;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.max-messages {
+  background: #0d1321;
+  color: #e2e8f0;
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message.max {
+  background: #1a202c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.chat-option {
+  background: none;
+  border: 1px solid #00c2cb;
+  color: #00c2cb;
+  padding: 8px 10px;
+  margin-top: 5px;
+  width: 100%;
+  text-align: left;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.chat-option:hover {
+  background: rgba(0,194,203,0.1);
+}
+</style>
+
+<!-- Max Widget Script -->
+<script>
+function toggleMaxChat() {
+  document.getElementById('max-chat').classList.toggle('hidden');
+}
+
+function maxReply(option) {
+  const messages = document.getElementById('max-messages');
+  let reply = '';
+  if (option === 'Learn about AI Agents') {
+    reply = "🤖 Apex AI Agents automate outreach, qualification, and follow-ups. They close deals faster than human-only teams.";
+  } else if (option === 'View Pricing Plans') {
+    reply = "💵 Sure! Check out our Pricing Plans ➔ [Pricing Page Link]";
+  } else if (option === 'Schedule a Demo') {
+    reply = "📅 Awesome! Book your demo here ➔ [Demo Page Link]";
+  } else if (option === 'Talk to a Real Person') {
+    reply = "👤 No problem! Connect with a human here ➔ [Contact Page Link]";
+  }
+  
+  const newMessage = document.createElement('div');
+  newMessage.className = 'message max';
+  newMessage.innerText = reply;
+  messages.appendChild(newMessage);
+  
+  messages.scrollTop = messages.scrollHeight;
+}
+</script>
+
 <body>
   <!-- Navigation -->
   <nav class="navbar">
