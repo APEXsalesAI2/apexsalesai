@@ -258,14 +258,8 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, .5); 
     }
     
-    .module-card img { 
-      height: 4rem; 
-      margin-bottom: 1rem; 
-      object-fit: contain; 
-    }
-    
     .module-card h3 {
-      margin-top: 1rem;
+      margin-top: 0;
       margin-bottom: 1rem;
     }
     
@@ -393,7 +387,7 @@
       <button onclick="toggleMaxChat()">✖️</button>
     </div>
     <div class="max-messages" id="max-messages">
-      <div class="message max">👋 Hi, I’m Max — ApexSalesAI’s Digital Sales Partner!</div>
+      <div class="message max">👋 Hi, I'm Max — ApexSalesAI's Digital Sales Partner!</div>
       <div class="message max">💬 How can I help you today?</div>
       <button class="chat-option" onclick="maxReply('Learn about AI Agents')">Learn about AI Agents</button>
       <button class="chat-option" onclick="maxReply('View Pricing Plans')">View Pricing Plans</button>
@@ -526,7 +520,7 @@ function maxReply(option) {
   <nav class="navbar">
     <div class="container navbar-container">
       <a href="index.html" aria-label="ApexSalesAI Home">
-        "/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
       </a>
       
       <!-- Desktop Navigation -->
@@ -592,8 +586,7 @@ function maxReply(option) {
     <h2 class="text-white text-center mb-10">Two Agents. One Apex. Unlimited Advantage.</h2>
     <div class="grid grid-cols-3 gap-8">
       <div class="module-card text-center">
-        "/images/apexsalesai-agent.png" alt="ApexSalesAI Agent" loading="lazy" width="120" height="120">
-        <h3 class="mt-4">ApexSalesAI</h3>
+        <h3>ApexSalesAI</h3>
         <p class="mb-4">Autonomous outbound engagement, precision follow-up, and seamless CRM updates.</p>
         <ul class="list-disc list-inside mb-6">
           <li>24/7 smart prospecting</li>
@@ -603,8 +596,7 @@ function maxReply(option) {
         <a href="platform.html#sales" class="cta">Learn More</a>
       </div>
       <div class="module-card text-center">
-        "/images/apexsupportai-agent.png" alt="ApexSupportAI Agent" loading="lazy" width="120" height="120">
-        <h3 class="mt-4">ApexSupportAI</h3>
+        <h3>ApexSupportAI</h3>
         <p class="mb-4">Always-on customer support with instant resolutions and smart escalations.</p>
         <ul class="list-disc list-inside mb-6">
           <li>Live chat & ticket automation</li>
@@ -614,8 +606,7 @@ function maxReply(option) {
         <a href="platform.html#support" class="cta">Learn More</a>
       </div>
       <div class="module-card text-center">
-        "/images/consulting-icon.png" alt="Consulting Service" loading="lazy" width="120" height="120">
-        <h3 class="mt-4">Consulting</h3>
+        <h3>Consulting</h3>
         <p class="mb-4">Expert GTM strategy and execution playbooks — tailored to your business goals and market.</p>
         <ul class="list-disc list-inside mb-6">
           <li>Custom GTM activation</li>
