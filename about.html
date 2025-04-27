@@ -852,6 +852,38 @@
     .text-teal-400 { color: #00c2cb; }
   </style>
 </head>
+document.addEventListener('DOMContentLoaded', function() {
+  // Fix job links to prevent 404 errors
+  const jobLinks = document.querySelectorAll('.job-card .cta');
+  
+  jobLinks.forEach(link => {
+    // Get the job title
+    const jobTitle = link.closest('.job-card').querySelector('.job-title').textContent;
+    
+    // Create appropriate filenames based on job titles
+    let filename;
+    if (jobTitle.includes('AI/ML Engineer')) {
+      filename = 'careers/AIML-Engineer.html';
+    } else if (jobTitle.includes('NLP Specialist')) {
+      filename = 'careers/NLP-Specialist.html';
+    } else if (jobTitle.includes('Sales Engineering Lead')) {
+      filename = 'careers/Sales-Engineering-Lead.html';
+    } else if (jobTitle.includes('AI Ethics Researcher')) {
+      filename = 'careers/AI-Ethics-Researcher.html';
+    } else {
+      filename = 'careers.html'; // Default fallback
+    }
+    
+    // Update the link href
+    link.setAttribute('href', filename);
+  });
+  
+  // Fix the "View All Positions" link
+  const careersLink = document.querySelector('a[href="careers.html"]');
+  if (careersLink) {
+    careersLink.setAttribute('href', 'careers.html');
+  }
+});
 <body>
   <!-- Navigation -->
   <nav class="navbar">
