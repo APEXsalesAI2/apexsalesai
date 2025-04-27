@@ -1,0 +1,50 @@
+NLP Specialist
+Location: Remote (U.S. or Global)
+Department: Research & Product Innovation
+
+About the Role:
+We are seeking an NLP Specialist to join ApexSalesAI and shape how our platform understands, interprets, and enhances human language across sales and customer communication workflows. You will design, build, and optimize natural language processing models that power everything from AI agents to conversational intelligence features.
+
+Key Responsibilities:
+
+Develop and fine-tune NLP models for intent recognition, summarization, dialogue generation, and semantic search.
+
+Train custom language models on domain-specific datasets relevant to enterprise sales.
+
+Evaluate and integrate cutting-edge NLP research and open-source models into our platform architecture.
+
+Work closely with AI/ML engineers, product managers, and UX designers to bring language-based features to life.
+
+Address challenges related to bias mitigation, multilingual support, and domain adaptation.
+
+Requirements:
+
+Bachelor's or Master’s degree in Computer Science, Linguistics, AI, or a related discipline.
+
+3+ years of hands-on experience in NLP or computational linguistics.
+
+Strong proficiency in NLP frameworks (spaCy, Hugging Face Transformers, NLTK, etc.).
+
+Solid understanding of LLMs (e.g., GPT, BERT) and fine-tuning methods.
+
+Ability to work with unstructured data, conversational logs, and knowledge graphs.
+
+Sharp analytical skills and a passion for language-driven AI innovation.
+
+Preferred Qualifications:
+
+Experience with conversational AI systems, chatbots, or virtual assistants.
+
+Background in sales or customer service data environments.
+
+Knowledge of prompt engineering techniques for LLMs.
+
+Important Notes for All Positions:
+Work environment: Fully remote. ApexSalesAI operates as a distributed-first team across multiple time zones.
+
+Equipment: We provide company-issued laptops, access to leading AI/ML tools, and stipends for home office setups.
+
+Culture: We value autonomy, curiosity, integrity, and impact. We are builders and challengers at heart.
+
+Equal Opportunity Employer: We are committed to building a diverse and inclusive team.
+

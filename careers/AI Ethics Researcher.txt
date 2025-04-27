@@ -1,0 +1,47 @@
+AI Ethics Researcher
+Location: Remote (U.S. or Global)
+Department: Research & Responsible AI
+
+About the Role:
+We believe responsible AI is non-negotiable. ApexSalesAI is hiring an AI Ethics Researcher to help ensure our AI agents, models, and decision systems uphold the highest ethical, legal, and human-centric standards. You will design ethical frameworks, conduct impact assessments, and work closely with engineering, product, and legal teams to operationalize trust at every level of our platform.
+
+Key Responsibilities:
+
+Research and define AI ethics principles, governance frameworks, and risk mitigation strategies for ApexSalesAI.
+
+Conduct bias audits, fairness evaluations, and transparency assessments for machine learning models and conversational agents.
+
+Advise on data privacy, security, and regulatory compliance issues (GDPR, CCPA, etc.).
+
+Develop internal guidelines for responsible model training, deployment, and monitoring.
+
+Engage with customers, partners, and external stakeholders to communicate our Responsible AI commitments.
+
+Requirements:
+
+Advanced degree (Master’s or Ph.D.) in Ethics, AI/ML, Philosophy, Law, or a related field.
+
+3+ years experience in AI ethics, responsible AI, or related fields.
+
+Familiarity with global regulations and standards impacting AI (e.g., GDPR, EU AI Act, ISO/IEC AI standards).
+
+Strong writing, research, and presentation skills, with ability to translate complex issues into actionable insights.
+
+Collaborative mindset, comfortable working cross-functionally with technical and non-technical teams.
+
+Preferred Qualifications:
+
+Experience working directly with AI development teams or in AI product compliance.
+
+Background in enterprise software, SaaS, or B2B technology sectors.
+
+Familiarity with explainable AI (XAI) frameworks and bias mitigation methodologies.
+
+Important Notes for All Positions:
+Work environment: Fully remote. ApexSalesAI operates as a distributed-first team across multiple time zones.
+
+Equipment: We provide company-issued laptops, access to leading AI/ML tools, and stipends for home office setups.
+
+Culture: We value autonomy, curiosity, integrity, and impact. We are builders and challengers at heart.
+
+Equal Opportunity Employer: We are committed to building a diverse and inclusive team.

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Engineering Lead | ApexSalesAI</title>
+  <meta name="description" content="Join ApexSalesAI as a Sales Engineering Lead and bridge the gap between our AI technology and enterprise sales processes." />
+  <meta name="keywords" content="sales engineering, solution architecture, technical sales, enterprise sales, AI sales" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sales Engineering Lead | ApexSalesAI" />
+  <meta property="og:description" content="Join ApexSalesAI as a Sales Engineering Lead and bridge the gap between our AI technology and enterprise sales processes." />
+  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta property="og:url" content="https://www.apexsalesai.com/careers/Sales-Engineering-Lead.html" />
+  <meta property="og:type" content="website" />
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- Inline Styles -->
+  <style>
+    /* Base typography */
+    :root {
+      --primary: #00c2cb;
+      --primary-dark: #00a8b3;
+      --secondary: #052438;
+      --bg-dark: #0d1321;
+      --bg-card: rgba(26, 32, 44, 0.5);
+      --text: #e2e8f0;
+      --text-light: #cbd5e0;
+      --text-dimmed: #a0aec0;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      font-size: 16px; 
+      line-height: 1.6; 
+      color: #e2e8f0; 
+      margin: 0;
+      padding: 0;
+      background-color: #0d1321;
+    }
+    
+    h1, h2, h3, h4 { 
+      color: #fff; 
+      line-height: 1.2; 
+      margin-top: 0;
+    }
+    
+    p, ul, li { 
+      color: #cbd5e0; 
+      margin-bottom: 1rem;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(13, 19, 33, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar img.logo { 
+      height: 60px; 
+      width: auto; 
+    }
+    
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
+    }
+    
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .desktop-nav li {
+      margin: 0 0.75rem;
+    }
+    
+    .desktop-nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
+    }
+    
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-nav {
+      display: none;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      background-color: rgba(13, 19, 33, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem 0;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Show mobile menu on smaller screens */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .navbar img.logo {
+        height: 40px;
+      }
+    }
+
+    /* CTA buttons */
+    .cta { 
+      background-color: #00c2cb; 
+      color: #1a202c; 
+      font-weight: 600; 
+      padding: .75rem 1.5rem; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      transition: transform .2s ease, background-color .2s ease;
+      display: inline-block;
+      margin: 0.5rem;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .cta:hover { 
+      transform: translateY(-2px); 
+      background-color: #00a8b3; 
+    }
+    
+    /* Job detail page */
+    .job-detail-header {
+      background-color: #1a202c;
+      padding: 3rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .job-detail-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    
+    .job-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .job-meta-item {
+      display: flex;
+      align-items: center;
+      color: var(--text-dimmed);
+    }
+    
+    .job-meta-item svg {
+      margin-right: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .job-tag {
+      display: inline-block;
+      background-color: rgba(0, 194, 203, 0.1);
+      color: #00c2cb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .job-detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .job-section {
+      margin-bottom: 2.5rem;
+    }
+    
+    .job-section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: var(--primary);
+    }
+    
+    .job-description-list {
+      padding-left: 1.5rem;
+    }
+    
+    .job-description-list li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .application-section {
+      background-color: #1a202c;
+      padding: 3rem 0;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .application-title {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: rgba(13, 19, 33, 0.98);
+      padding: 4rem 0 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 5rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    .footer-logo {
+      width: 180px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-about {
+      margin-bottom: 1.5rem;
+      color: var(--text-dimmed);
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      border-radius: 50%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .footer-social a:hover {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+    
+    .footer-heading {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: var(--text-dimmed);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-contact-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--primary);
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    
+    .footer-contact-text {
+      color: var(--text-dimmed);
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+    
+    .footer-copyright {
+      color: var(--text-dimmed);
+    }
+    
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .footer-legal a {
+      color: var(--text-dimmed);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-legal a:hover {
+      color: var(--primary);
+    }
+
+    /* Max Chat Widget */
+    #max-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    #max-button {
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,194,203,0.4);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    #max-button:hover {
+      background-color: #00a8b3;
+      transform: translateY(-3px);
+    }
+
+    #max-button svg {
+      margin-right: 8px;
+    }
+
+    #max-chat {
+      width: 350px;
+      height: 450px;
+      background: #0d1321;
+      border: 2px solid #00c2cb;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 20px rgba(0,194,203,0.4);
+      position: absolute;
+      bottom: 80px;
+      right: 0;
+    }
+
+    #max-chat.hidden {
+      display: none;
+    }
+
+    .max-header {
+      background: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .max-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .max-title svg {
+      margin-right: 8px;
+    }
+
+    .max-close {
+      background: none;
+      border: none;
+      color: #0d1321;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .max-messages {
+      background: #0d1321;
+      color: #e2e8f0;
+      padding: 15px;
+      flex-grow: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      margin-bottom: 15px;
+      max-width: 80%;
+    }
+
+    .message.max {
+      background: #1a202c;
+      padding: 12px;
+      border-radius: 12px 12px 12px 0;
+      align-self: flex-start;
+    }
+
+    .message.user {
+      background: #00c2cb;
+      color: #0d1321;
+      padding: 12px;
+      border-radius: 12px 12px 0 12px;
+      align-self: flex-end;
+    }
+
+    .chat-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chat-option {
+      background: none;
+      border: 1px solid #00c2cb;
+      color: #00c2cb;
+      padding: 8px 12px;
+      width: 100%;
+      text-align: left;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .chat-option:hover {
+      background: rgba(0,194,203,0.1);
+      transform: translateY(-2px);
+    }
+
+    .max-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .max-input-field {
+      flex-grow: 1;
+      background-color: rgba(26, 32, 44, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 10px 15px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .max-input-field:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .max-send {
+      background-color: var(--primary);
+      color: #0d1321;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .max-send:hover {
+      background-color: var(--primary-dark);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="/index.html" aria-label="ApexSalesAI Home">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="desktop-nav">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/platform.html">Platform</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/consulting.html">Consulting</a></li>
+          <li><a href="/demo.html">Demo</a></li>
+          <li><a href="/reseller.html">Reseller</a></li>
+          <li><a href="/onboarding.html">Onboarding</a></li>
+          <li><a href="/careers.html" class="active">Careers</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Mobile Navigation Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/platform.html">Platform</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/consulting.html">Consulting</a>
+      <a href="/demo.html">Demo</a>
+      <a href="/reseller.html">Reseller</a>
+      <a href="/onboarding.html">Onboarding</a>
+      <a href="/careers.html" class="active">Careers</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Job Detail Header -->
+  <header class="job-detail-header">
+    <div class="container">
+      <a href="/careers.html" class="job-back-link" style="color: var(--primary); display: inline-block; margin-bottom: 1rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+          <path d="M19 12H5"></path>
+          <path d="M12 19l-7-7 7-7"></path>
+        </svg>
+        Back to All Jobs
+      </a>
+      
+      <h1 class="job-detail-title">Sales Engineering Lead</h1>
+      
+      <div class="job-meta">
+        <div class="job-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Remote (U.S. or Global)</span>
+        </div>
+        
+        <div class="job-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span>Sales & Solutions Engineering</span>
+        </div>
+        
+        <div class="job-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>Full-Time</span>
+        </div>
+      </div>
+      
+      <div>
+        <span class="job-tag">Sales Engineering</span>
+        <span class="job-tag">Solution Architecture</span>
+        <span class="job-tag">Enterprise Sales</span>
+        <span class="job-tag">Leadership</span>
+        <span class="job-tag">CRM</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Job Detail Content -->
+  <div class="container">
+    <div class="job-detail-content">
+      <div class="job-section">
+        <h2 class="job-section-title">About the Role</h2>
+        <p>ApexSalesAI is looking for a dynamic Sales Engineering Lead to serve as a technical bridge between our product and our customers. You will lead pre-sales technical engagements, design AI-driven solutions tailored to customer needs, and collaborate with sales, product, and customer success teams to ensure world-class experiences. This role is critical to translating the value of ApexSalesAI into measurable outcomes for enterprise clients.</p>
+      </div>
+      
+      <div class="job-section">
+        <h2 class="job-section-title">Key Responsibilities</h2>
+        <ul class="job-description-list">
+          <li>Own and deliver technical presentations, demos, and proof-of-concept initiatives for prospective clients.</li>
+          <li>Architect customized AI sales enablement solutions based on customer objectives and infrastructure.</li>
+          <li>Partner with Sales leadership to drive pipeline growth and support enterprise sales cycles.</li>
+          <li>Create technical documentation, solution architectures, and competitive positioning materials.</li>
+          <li>Serve as a trusted advisor on AI capabilities, integration strategies, and security/compliance requirements.</li>
+          <li>Build and lead a growing team of sales engineers as we scale.</li>
+        </ul>
+      </div>
+      
+      <div class="job-section">
+        <h2 class="job-section-title">Requirements</h2>
+        <ul class="job-description-list">
+          <li>5+ years of experience in a sales engineering, solutions architect, or pre-sales technical consulting role.</li>
+          <li>Strong knowledge of SaaS solutions, CRM platforms (Salesforce, HubSpot, Dynamics 365), and enterprise sales workflows.</li>
+          <li>Familiarity with AI/ML technologies and ability to articulate technical concepts to non-technical audiences.</li>
+          <li>Exceptional client-facing communication skills and executive presence.</li>
+          <li>Experience supporting six-figure and seven-figure enterprise deals.</li>
+        </ul>
+      </div>
+      
+      <div class="job-section">
+        <h2 class="job-section-title">Preferred Qualifications</h2>
+        <ul class="job-description-list">
+          <li>Background in sales enablement technology, AI platforms, or revenue intelligence solutions.</li>
+          <li>Technical certifications (AWS Solutions Architect, Microsoft Azure, Salesforce, etc.).</li>
+          <li>Prior leadership experience managing or mentoring technical teams.</li>
+        </ul>
+      </div>
+      
+      <div class="job-section">
+        <h2 class="job-section-title">Work Environment & Benefits</h2>
+        <ul class="job-description-list">
+          <li><strong>Work environment:</strong> Fully remote. ApexSalesAI operates as a distributed-first team across multiple time zones.</li>
+          <li><strong>Equipment:</strong> We provide company-issued laptops, access to leading AI/ML tools, and stipends for home office setups.</li>
+          <li><strong>Culture:</strong> We value autonomy, curiosity, integrity, and impact. We are builders and challengers at heart.</li>
+          <li><strong>Equal Opportunity Employer:</strong> We are committed to building a diverse and inclusive team.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application CTA -->
+  <section class="application-section">
+    <div class="container">
+      <h2 class="application-title">Ready to Join Our Team?</h2>
+      <p>Apply now to help us build the future of AI-powered sales.</p>
+      <a href="/contact.html?subject=Sales Engineering Lead Application" class="cta">Apply for This Position</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="footer-logo">
+          
+          <p class="footer-about">Intelligent AI agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
+          
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Product</h4>
+          <ul class="footer-links">
+            <li><a href="/platform.html">Platform</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/demo.html">Request Demo</a></li>
+            <li><a href="/documentation.html">Documentation</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="footer-contact-text">+1 (800) 123-4567</div>
+          </div>
+          <div class="footer-contact">
+            <div class="footer-contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="footer-contact-text">info@apexsalesai.com</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 ApexSalesAI. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Max AI Chat Widget -->
+  <div id="max-widget">
+    <button id="max-button" onclick="toggleMaxChat()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+      </svg>
+      Chat with Max
+    </button>
+    
+    <div id="max-chat" class="hidden">
+      <div class="max-header">
+        <div class="max-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+          Max • ApexSalesAI
+        </div>
+        <button class="max-close" onclick="toggleMaxChat()">×</button>
+      </div>
+      <div class="max-messages" id="max-messages">
+        <div class="message max">👋 Hi there! I'm Max, your AI assistant!</div>
+        <div class="message max">Interested in the Sales Engineering Lead position? I'd be happy to answer any questions about the role, our team, or the application process.</div>
+        <div class="chat-options">
+          <button class="chat-option" onclick="maxReply('What does a typical deal cycle look like?')">What does a typical deal cycle look like?</button>
+          <button class="chat-option" onclick="maxReply('Tell me about the sales team structure')">Tell me about the sales team structure</button>
+          <button class="chat-option" onclick="maxReply('What kind of customers do you work with?')">What kind of customers do you work with?</button>
+          <button class="chat-option" onclick="maxReply('How can I apply?')">How can I apply?</button>
+        </div>
+      </div>
+      <div class="max-input">
+        <input type="text" class="max-input-field" placeholder="Type your message..." onkeypress="if(event.key === 'Enter') maxReply(this.value)">
+        <button class="max-send" onclick="maxReply(document.querySelector('.max-input-field').value)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      
+      mobileMenuBtn.addEventListener('click', function() {
+        if (mobileNav.style.display === 'block') {
+          mobileNav.style.display = 'none';
+        } else {
+          mobileNav.style.display = 'block';
+        }
+      });
+      
+      // Max Chat Widget functionality
+      window.toggleMaxChat = function() {
+        const maxChat = document.getElementById('max-chat');
+        maxChat.classList.toggle('hidden');
+      }
+
+      window.maxReply = function(message) {
+        const messagesContainer = document.getElementById('max-messages');
+        const inputField = document.querySelector('.max-input-field');
+        
+        // Add user message
+        const userMessage = document.createElement('div');
+        userMessage.className = 'message user';
+        userMessage.textContent = message;
+        messagesContainer.appendChild(userMessage);
+        
+        // Clear input field
+        if (inputField) {
+          inputField.value = '';
+        }
+        
+        // Scroll to bottom
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        // Simulate typing delay
+        setTimeout(() => {
+          // Generate Max's response based on user message
+          let response = '';
+          
+          if (message.toLowerCase().includes('deal cycle')) {
+            response = "Our typical enterprise deal cycle runs 45-90 days. It usually starts with a discovery call, followed by a technical demo where our Sales Engineers show customized use cases based on the prospect's CRM data. Then we run a 2-week pilot deployment, handle security/compliance reviews, and move to commercial discussions.";
+          } 
+          else if (message.toLowerCase().includes('team structure')) {
+            response = "Our sales team includes Account Executives, Sales Engineers, and Customer Success. As Sales Engineering Lead, you'd manage a team of 4-6 SEs, working closely with Product and Engineering. You'd be instrumental in bridging the technical and business aspects of our solution and helping to scale our SE function.";
+          }
+          else if (message.toLowerCase().includes('customers')) {
+            response = "We primarily work with mid-market and enterprise B2B companies across technology, financial services, healthcare, and manufacturing. Our sweet spot is companies with 50+ sales reps looking to scale their operations without proportionally increasing headcount. Our solutions integrate with all major CRM platforms.";
+          }
+          else if (message.toLowerCase().includes('apply')) {
+            response = "You can apply by clicking the 'Apply for This Position' button at the bottom of this page. We'll ask for your resume and a brief description of your experience with technical sales and solution architecture. Our recruiting team typically responds within 2-3 business days!";
+          }
+          else {
+            response = "Thanks for your interest in the Sales Engineering Lead role! Would you like to know more about our sales process, team structure, or what makes someone successful in this position?";
+          }
+          
+          // Add Max's response
+          const maxResponse = document.createElement('div');
+          maxResponse.className = 'message max';
+          maxResponse.textContent = response;
+          messagesContainer.appendChild(maxResponse);
+          
+          // Scroll to bottom again
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }, 1000);
+      }
+    });
+  </script>
+</body>
+</html>

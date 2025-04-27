@@ -1,0 +1,31 @@
+AI/ML Engineer
+Location: Remote (U.S. or Global)
+Department: Product & Engineering
+About the Role:
+ApexSalesAI is looking for a results-driven AI/ML Engineer to help build the next generation of AI-powered sales enablement tools. You will be responsible for developing machine learning models that drive predictive analytics, intelligent automation, and real-time decision support across our platform. We are seeking someone with deep technical expertise, creativity, and a passion for delivering high-impact AI solutions at scale.
+Key Responsibilities:
+•	Design, build, and deploy scalable machine learning models for sales optimization, lead scoring, opportunity forecasting, and customer insights.
+•	Collaborate with software engineers, data scientists, and product teams to integrate models into production systems.
+•	Optimize and fine-tune models for performance, accuracy, and scalability in real-world enterprise environments.
+•	Maintain and expand model training pipelines, data ingestion workflows, and model monitoring systems.
+•	Stay ahead of the curve on AI/ML research and recommend practical innovations for our product roadmap.
+•	Contribute to model explainability, bias detection, and responsible AI practices.
+Requirements:
+•	Bachelor’s or Master’s degree in Computer Science, Engineering, Mathematics, or related field.
+•	3–5+ years of experience building and deploying ML models in production.
+•	Proficiency in Python, TensorFlow, PyTorch, scikit-learn, and related ML frameworks.
+•	Strong background in supervised and unsupervised learning, classification, regression, and clustering algorithms.
+•	Experience with MLOps, model serving, and cloud infrastructure (AWS, Azure, or GCP).
+•	Excellent communication and collaboration skills in a remote-first environment.
+Preferred Qualifications:
+•	Experience working with B2B sales, CRM systems, or revenue operations data.
+•	Exposure to LLM fine-tuning, prompt engineering, or generative AI models.
+•	Familiarity with enterprise SaaS platforms and APIs.
+
+Important Notes for All Positions:
+•	Work environment: Fully remote. ApexSalesAI operates as a distributed-first team across multiple time zones.
+•	Equipment: We provide company-issued laptops, access to leading AI/ML tools, and stipends for home office setups.
+•	Culture: We value autonomy, curiosity, integrity, and impact. We are builders and challengers at heart.
+•	Equal Opportunity Employer: We are committed to building a diverse and inclusive team.
+
+
