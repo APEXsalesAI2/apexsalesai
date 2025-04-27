@@ -3,106 +3,1477 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>APEXsalesAI | Become a Reseller Partner</title>
-  <meta name="description" content="Partner with APEXsalesAI to deliver cutting-edge AI automation. Become a reseller and help businesses scale smarter with our GTM platform." />
-  <meta name="keywords" content="AI reseller program, partner with APEXsalesAI, sales automation partner, GTM reseller, SaaS reseller opportunity" />
-  <meta name="author" content="APEXsalesAI" />
-
-  <link rel="icon" href="/images/favicon.ico" />
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <link rel="manifest" href="/images/site.webmanifest" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/menu.js"></script>
+  <title>Partner Ecosystem | ApexSalesAI</title>
+  <meta name="description" content="Join ApexSalesAI's elite reseller program and deliver next-generation AI sales and support solutions to your clients. Exceptional margins, seamless onboarding, and dedicated partner success." />
+  <meta name="keywords" content="AI reseller program, ApexSalesAI partner, AI sales channel, technology reseller opportunity, SaaS reseller program, AI partner program" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      font-size: 16px; 
+      line-height: 1.6; 
+      color: #e2e8f0; 
+      background-color: #0d1321;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4 { 
+      color: #fff; 
+      line-height: 1.2; 
+      margin-bottom: 1rem;
+    }
+    
+    p { 
+      color: #cbd5e0; 
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    ul, li {
+      list-style: none;
+      color: #cbd5e0;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: rgba(13, 19, 33, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 0;
+    }
+    
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      height: 50px;
+      width: auto;
+    }
+    
+    .nav-menu {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-item {
+      margin: 0 0.75rem;
+    }
+    
+    .nav-link {
+      color: #e2e8f0;
+      font-weight: 600;
+      padding: 0.5rem 0;
+      transition: color 0.2s ease;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      color: #00c2cb;
+    }
+    
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Hero section */
+    .hero {
+      padding: 8rem 0 6rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #ffffff, #00c2cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    /* Button styles */
+    .btn {
+      display: inline-block;
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      margin: 0.5rem;
+      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 194, 203, 0.3);
+    }
+    
+    .btn:hover {
+      background-color: #00a8b3;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 194, 203, 0.4);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      color: #00c2cb;
+      border: 2px solid #00c2cb;
+    }
+    
+    .btn-outline:hover {
+      background-color: rgba(0, 194, 203, 0.1);
+      box-shadow: 0 8px 20px rgba(0, 194, 203, 0.2);
+    }
+    
+    /* Section styling */
+    section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    section h2 {
+      font-size: 2.25rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    section p.section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      font-size: 1.125rem;
+    }
+    
+    /* Partner benefits section */
+    .partner-benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .benefit-card {
+      background: rgba(26, 32, 44, 0.6);
+      border: 1px solid rgba(0, 194, 203, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(0, 194, 203, 0.5);
+    }
+    
+    .benefit-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #00c2cb, #005f6b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    
+    .benefit-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    
+    /* Financial benefits section */
+    .financial-section {
+      background-color: #1a202c;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .financial-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at right bottom, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .revenue-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .revenue-card {
+      background-color: rgba(45, 55, 72, 0.6);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .revenue-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .revenue-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #00c2cb;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+    
+    .revenue-label {
+      color: #a0aec0;
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+    
+    .revenue-detail {
+      color: #cbd5e0;
+      font-size: 0.875rem;
+    }
+    
+    /* Partner tiers section */
+    .tiers-section {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .tiers-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at left top, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .tier-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .tier-card {
+      background-color: rgba(26, 32, 44, 0.6);
+      border: 1px solid rgba(0, 194, 203, 0.1);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .tier-card.featured {
+      background-color: rgba(0, 194, 203, 0.05);
+      border: 1px solid rgba(0, 194, 203, 0.3);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05);
+    }
+    
+    .tier-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: 1rem;
+      right: -2.5rem;
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 3rem;
+      transform: rotate(45deg);
+    }
+    
+    .tier-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .tier-card.featured:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+    
+    .tier-name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    
+    .tier-card.featured .tier-name {
+      color: #00c2cb;
+    }
+    
+    .tier-price {
+      font-size: 1.125rem;
+      color: #a0aec0;
+      margin-bottom: 2rem;
+    }
+    
+    .tier-features {
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    
+    .tier-feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: #cbd5e0;
+    }
+    
+    .tier-feature svg {
+      margin-right: 0.75rem;
+      color: #00c2cb;
+      flex-shrink: 0;
+      font-size: 1.25rem;
+    }
+    
+    /* Process section */
+    .process-section {
+      background-color: #1a202c;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .process-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+    
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 2.5rem;
+      right: -1rem;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, rgba(0, 194, 203, 0.5), rgba(0, 194, 203, 0.1));
+      z-index: 0;
+    }
+    
+    .step-number {
+      width: 5rem;
+      height: 5rem;
+      background: linear-gradient(135deg, #00c2cb, #005f6b);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 auto 1.5rem;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 5px 15px rgba(0, 194, 203, 0.3);
+    }
+    
+    .step-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    /* Testimonials section */
+    .testimonials-section {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonials-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at left center, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .testimonial-container {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      position: relative;
+    }
+    
+    .testimonial-card {
+      background-color: rgba(26, 32, 44, 0.6);
+      border: 1px solid rgba(0, 194, 203, 0.2);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      font-size: 6rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+      color: rgba(0, 194, 203, 0.2);
+      z-index: 0;
+    }
+    
+    .testimonial-content {
+      position: relative;
+      z-index: 1;
+      font-size: 1.125rem;
+      font-style: italic;
+      margin-bottom: 2rem;
+      color: #e2e8f0;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-avatar {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      background-color: #2d3748;
+      margin-right: 1rem;
+      overflow: hidden;
+    }
+    
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .author-info h4 {
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .author-info p {
+      font-size: 0.875rem;
+      color: #a0aec0;
+      margin-bottom: 0;
+    }
+    
+    .testimonial-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    
+    .testimonial-dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background-color: rgba(0, 194, 203, 0.2);
+      margin: 0 0.375rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .testimonial-dot.active {
+      background-color: #00c2cb;
+    }
+    
+    /* FAQ section */
+    .faq-section {
+      background-color: #1a202c;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .faq-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at right top, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .faq-container {
+      max-width: 900px;
+      margin: 3rem auto 0;
+    }
+    
+    .faq-item {
+      background-color: rgba(45, 55, 72, 0.4);
+      border: 1px solid rgba(0, 194, 203, 0.1);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: 1.5rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+    
+    .faq-question:hover {
+      background-color: rgba(45, 55, 72, 0.6);
+    }
+    
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: #00c2cb;
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      padding: 0 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+    }
+    
+    .faq-item.active .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      max-height: 500px;
+    }
+    
+    /* CTA section */
+    .cta-section {
+      padding: 6rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+    
+    .cta-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .cta-heading {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #ffffff, #00c2cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    
+    .cta-description {
+      font-size: 1.25rem;
+      color: #e2e8f0;
+      margin-bottom: 2rem;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    /* Partner brands section */
+    .partners-section {
+      padding-top: 0;
+    }
+    
+    .partners-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .partners-title {
+      text-align: center;
+      font-size: 1.25rem;
+      color: #a0aec0;
+      margin-bottom: 2rem;
+    }
+    
+    .partner-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    
+    .partner-logo {
+      height: 2.5rem;
+      opacity: 0.7;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .partner-logo:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: rgba(13, 19, 33, 0.8);
+      padding: 3rem 0;
+      margin-top: 5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+    
+    .footer-brand img {
+      height: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-brand p {
+      color: #a0aec0;
+      margin-bottom: 2rem;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .social-link {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: rgba(0, 194, 203, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00c2cb;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background-color: rgba(0, 194, 203, 0.2);
+      transform: translateY(-3px);
+    }
+    
+    .footer-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: #a0aec0;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: #00c2cb;
+    }
+    
+    .copyright {
+      text-align: center;
+      color: #718096;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .copyright a {
+      color: #a0aec0;
+      transition: color 0.3s ease;
+    }
+    
+    .copyright a:hover {
+      color: #00c2cb;
+    }
+    
+    /* Max AI Widget */
+    #max-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    #max-button {
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,194,203,0.4);
+      transition: all 0.3s;
+    }
+    
+    #max-button:hover {
+      background-color: #00a8b3;
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .partner-benefits,
+      .revenue-cards,
+      .tier-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+      
+      .process-step:nth-child(2)::after {
+        display: none;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0d1321;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .nav-menu.active {
+        display: flex;
+      }
+      
+      .nav-item {
+        margin: 0.5rem 0;
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+      
+      .partner-benefits,
+      .revenue-cards,
+      .tier-cards {
+        grid-template-columns: 1fr;
+      }
+      
+      .tier-card.featured {
+        transform: scale(1);
+      }
+      
+      .tier-card.featured:hover {
+        transform: translateY(-10px);
+      }
+      
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+      
+      .process-step::after {
+        display: none;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    /* Animation classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animation-delay-1 {
+      animation-delay: 0.2s;
+    }
+    
+    .animation-delay-2 {
+      animation-delay: 0.4s;
+    }
+    
+    .animation-delay-3 {
+      animation-delay: 0.6s;
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 194, 203, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(0, 194, 203, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 194, 203, 0);
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo-group">
-        <img src="images/apex-logo.webp" alt="Apex Logo" class="nav-logo" />
-        <span class="brand-name">APEXsalesAI</span>
-      </div>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="nav-overlay" onclick="toggleMenu()"></div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="platform.html">Platform</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="demo.html">Demo</a></li>
-        <li><a href="reseller.html" class="active">Reseller</a></li>
-        <li><a href="onboarding.html">Onboarding</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <a href="index.html">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
+      </a>
+      
+      <button class="nav-toggle" id="navToggle">
+        <span>☰</span>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="platform.html" class="nav-link">Platform</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="consulting.html" class="nav-link">Consulting</a></li>
+        <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
+        <li class="nav-item"><a href="reseller.html" class="nav-link active">Reseller</a></li>
+        <li class="nav-item"><a href="onboarding.html" class="nav-link">Onboarding</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-content container">
-      <h1 class="hero-title">Partner With Us</h1>
-      <p class="hero-subtitle">Deliver the future of sales execution to your clients.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1 class="fade-in">Partner Ecosystem Program</h1>
+      <p class="fade-in animation-delay-1">Join the elite network of technology partners delivering next-generation AI sales and support solutions with industry-leading margins and support.</p>
+      <div class="fade-in animation-delay-2">
+        <a href="#partner-tiers" class="btn">Explore Program Tiers</a>
+        <a href="#application" class="btn btn-outline">Apply Now</a>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <h2>Reseller Opportunity</h2>
-        <div class="module-grid">
-          <div class="module-card">
-            <h3>🤝 White-Labeled Agents</h3>
-            <p>Offer clients AI agents under your brand — fully managed, fully integrated.</p>
+  <!-- Partner Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <h2>Why Partner With ApexSalesAI?</h2>
+      <p class="section-intro">Our partner program is designed to maximize your success with exceptional margins, seamless onboarding, and dedicated partner enablement.</p>
+      
+      <div class="partner-benefits">
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>Industry-Leading Margins</h3>
+          <p>Earn up to 40% margins on initial deals and 25% on renewals, with performance tiers that reward your success with increasing benefits.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🏷️</div>
+          <h3>White-Label Flexibility</h3>
+          <p>Offer our platform under your brand, with complete control over pricing and positioning while we handle the backend infrastructure.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🚀</div>
+          <h3>Rapid Deployment</h3>
+          <p>Get clients live in days, not months, with our pre-built AI agents and integration connectors that require minimal technical resources.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">📚</div>
+          <h3>Comprehensive Enablement</h3>
+          <p>Access partner playbooks, sales battlecards, custom demos, and certification programs to quickly ramp your team to success.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">👨‍💼</div>
+          <h3>Dedicated Partner Success</h3>
+          <p>Work with a dedicated Partner Success Manager who helps you develop go-to-market strategies and close deals faster.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>High-Growth Category</h3>
+          <p>Position yourself at the forefront of the AI revolution with solutions that address critical revenue challenges across industries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Benefits Section -->
+  <section class="financial-section">
+    <div class="container">
+      <h2>The Financial Opportunity</h2>
+      <p class="section-intro">Build a high-margin, recurring revenue stream with multiple monetization paths</p>
+      
+      <div class="revenue-cards">
+        <div class="revenue-card">
+          <div class="revenue-number">40%</div>
+          <div class="revenue-label">First-Year Margins</div>
+          <p class="revenue-detail">Earn industry-leading margins on initial sales across all tiers of our partner program</p>
+        </div>
+        
+        <div class="revenue-card">
+          <div class="revenue-number">25%</div>
+          <div class="revenue-label">Renewal Margins</div>
+          <p class="revenue-detail">Secure long-term passive income with high margins on customer renewals</p>
+        </div>
+        
+        <div class="revenue-card">
+          <div class="revenue-number">15%</div>
+          <div class="revenue-label">Services Referral</div>
+          <p class="revenue-detail">Earn additional revenue by referring consulting and professional services</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Tiers Section -->
+  <section id="partner-tiers" class="tiers-section">
+    <div class="container">
+      <h2>Partner Program Tiers</h2>
+      <p class="section-intro">Choose the partnership level that aligns with your business goals and capabilities</p>
+      
+      <div class="tier-cards">
+        <div class="tier-card">
+          <h3 class="tier-name">Authorized</h3>
+          <p class="tier-price">Entry-level partnership with minimal requirements</p>
+          
+          <div class="tier-features">
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>25% margin on initial deals</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>15% margin on renewals</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Online partner portal access</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Self-service enablement resources</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Email-based partner support</span>
+            </div>
           </div>
-          <div class="module-card">
-            <h3>⚙️ Turnkey Execution</h3>
-            <p>Rapid deployment of campaigns, workflows, and onboarding — ready in days, not months.</p>
+          
+          <a href="#application" class="btn btn-outline">Apply Now</a>
+        </div>
+        
+        <div class="tier-card featured">
+          <h3 class="tier-name">Gold</h3>
+          <p class="tier-price">Mid-tier partnership for growing partners</p>
+          
+          <div class="tier-features">
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>35% margin on initial deals</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>20% margin on renewals</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Shared Partner Success Manager</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>White-label platform capabilities</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Co-marketing opportunities</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Priority technical support</span>
+            </div>
           </div>
-          <div class="module-card">
-            <h3>💸 Revenue You Control</h3>
-            <p>Keep your margins. We handle the backend. You own the relationship.</p>
+          
+          <a href="#application" class="btn pulse">Apply Now</a>
+        </div>
+        
+        <div class="tier-card">
+          <h3 class="tier-name">Platinum</h3>
+          <p class="tier-price">Elite partnership for high-volume resellers</p>
+          
+          <div class="tier-features">
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>40% margin on initial deals</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>25% margin on renewals</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Dedicated Partner Success Manager</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Joint business planning</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Early access to new features</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Custom integration development</span>
+            </div>
+            <div class="tier-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Executive sponsor relationship</span>
+            </div>
           </div>
-          <div class="module-card">
-            <h3>📈 Dedicated Support</h3>
-            <p>Access partner playbooks, go-to-market materials, and our enablement team.</p>
+          
+          <a href="#application" class="btn btn-outline">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Onboarding Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <h2>Simple 4-Step Onboarding</h2>
+      <p class="section-intro">We've streamlined the partner onboarding process to get you selling quickly</p>
+      
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Apply</h3>
+          <p>Complete our simple partner application form to help us understand your business and goals.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Train</h3>
+          <p>Complete our online certification program to build expertise in our platform and solutions.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Launch</h3>
+          <p>Develop your go-to-market strategy with assistance from our Partner Success team.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Grow</h3>
+          <p>Scale your business with ongoing enablement, co-marketing, and dedicated support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>What Our Partners Say</h2>
+      <p class="section-intro">Join the growing network of successful ApexSalesAI partners</p>
+      
+      <div class="testimonial-container">
+        <div class="testimonial-card">
+          <p class="testimonial-content">ApexSalesAI's partner program has transformed our business. The margins are exceptional, but what really sets them apart is the partner enablement. Their team consistently goes above and beyond to ensure our success with hands-on support for every deal.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="/images/partners/michael-testimonial.jpg" alt="Michael Chen">
+            </div>
+            <div class="author-info">
+              <h4>Michael Chen</h4>
+              <p>CEO, TechForward Solutions</p>
+            </div>
           </div>
         </div>
-        <a href="contact.html" class="cta-button pulse">Become a Partner</a>
+        
+        <div class="testimonial-dots">
+          <div class="testimonial-dot active"></div>
+          <div class="testimonial-dot"></div>
+          <div class="testimonial-dot"></div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section callout">
-      <div class="container">
-        <h2>Why APEXsalesAI?</h2>
-        <p>Our modular, autonomous platform allows you to go to market faster with zero technical overhead. We'll handle the AI — you deliver results.</p>
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-intro">Get answers to common questions about our partner program</p>
+      
+      <div class="faq-container">
+        <div class="faq-item active">
+          <div class="faq-question">What are the requirements to become a partner?</div>
+          <div class="faq-answer">
+            <p>Our partner program is designed to be accessible to a variety of technology providers. Basic requirements include an established business with a focus on B2B technology solutions, a dedicated sales team, and a commitment to completing our certification program. Higher tiers have additional requirements including revenue commitments and dedicated technical resources.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">How long does the onboarding process take?</div>
+          <div class="faq-answer">
+            <p>Most partners complete our onboarding process within 2-3 weeks. This includes the application review (1-2 business days), partnership agreement completion (dependent on your legal team), and certification training (typically 5-10 hours). Our goal is to get you selling as quickly as possible while ensuring you have the knowledge and resources to be successful.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Can we white-label the ApexSalesAI platform?</div>
+          <div class="faq-answer">
+            <p>Yes, Gold and Platinum partners have white-labeling capabilities. This includes the ability to customize the platform interface with your branding, use your own domain, and present the solution as part of your technology stack. We provide comprehensive white-labeling guidelines and support to ensure a seamless brand experience for your clients.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">What kind of partner support do you provide?</div>
+          <div class="faq-answer">
+            <p>Our partner support varies by tier but includes resources such as a dedicated Partner Portal with sales and marketing materials, regular product updates, technical documentation, and training resources. Gold and Platinum partners receive dedicated Partner Success Managers who provide strategic guidance, deal support, and assistance with client implementations. All partners have access to our technical support team for client-specific questions.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">How are partner payments handled?</div>
+          <div class="faq-answer">
+            <p>We offer flexible payment models based on your preference. Most partners choose our monthly commission structure where we manage the billing relationship with the end client and pay you your margin monthly. For white-label partners, we also offer a wholesale model where you purchase licenses at the discounted partner rate and handle client billing directly. Payments are processed within 30 days of the end of each month.</p>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section cta-bottom">
-      <div class="container">
-        <h2>Built for Scale. Ready for Resellers.</h2>
-        <p>Join the GTM revolution. Let’s co-sell, co-brand, and grow together.</p>
-        <a href="contact.html" class="cta-button pulse">Talk to Partner Enablement</a>
+  <!-- Application CTA Section -->
+  <section id="application" class="cta-section">
+    <div class="cta-container">
+      <h2 class="cta-heading">Ready to Join Our Partner Ecosystem?</h2>
+      <p class="cta-description">Apply today and start transforming your clients' revenue operations with cutting-edge AI technology.</p>
+      <div class="cta-buttons">
+        <a href="contact.html?partner=application" class="btn pulse">Apply Now</a>
+        <a href="contact.html?partner=call" class="btn btn-outline">Schedule a Partner Call</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <p class="container">&copy; 2025 APEXsalesAI. All rights reserved.</p>
+  <!-- Partner Logos Section -->
+  <section class="partners-section">
+    <div class="partners-container">
+      <h3 class="partners-title">Trusted by Leading Technology Partners</h3>
+      <div class="partner-logos">
+        <img src="/images/partners/techforward-logo.png" alt="TechForward Solutions" class="partner-logo">
+        <img src="/images/partners/nexus-logo.png" alt="Nexus Technologies" class="partner-logo">
+        <img src="/images/partners/zenith-logo.png" alt="Zenith Systems" class="partner-logo">
+        <img src="/images/partners/quantum-logo.png" alt="Quantum Digital" class="partner-logo">
+        <img src="/images/partners/pulse-logo.png" alt="Pulse Innovations" class="partner-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="/images/apex-logo-white.png" alt="ApexSalesAI">
+          <p>Transforming revenue operations with intelligent AI agents for sales and support teams.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Youtube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-title">Company</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-title">Products</h3>
+          <ul>
+            <li><a href="platform.html">Platform</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="demo.html">Request Demo</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-title">Resources</h3>
+          <ul>
+            <li><a href="reseller.html">Partner Program</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="webinars.html">Webinars</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 ApexSalesAI. All rights reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      </div>
+    </div>
   </footer>
 
+  <!-- Max AI Widget -->
+  <div id="max-widget">
+    <button id="max-button" onclick="toggleMaxChat()">🤖 Chat with Max</button>
+  </div>
+
+  <!-- Scripts -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById('navLinks');
-      const toggle = document.querySelector('.menu-toggle');
-      const overlay = document.querySelector('.nav-overlay');
-      menu.classList.toggle('open');
-      toggle.classList.toggle('open');
-      overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+        });
+      }
+      
+      // FAQ accordion functionality
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        
+        question.addEventListener('click', () => {
+          // Toggle active class on the clicked item
+          item.classList.toggle('active');
+          
+          // Close other items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+              otherItem.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+    
+    // Simple Max chat widget functionality
+    function toggleMaxChat() {
+      alert("Max AI Chat is ready to help! This is a simplified version for demonstration. The full chat experience would provide partner-specific information and assistance.");
     }
+    
+    // Simple fade-in animation on scroll
+    document.addEventListener('scroll', function() {
+      const elements = document.querySelectorAll('.benefit-card, .revenue-card, .tier-card, .process-step');
+      
+      elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+        
+        // Check if element is in viewport
+        if(position.top < window.innerHeight && position.bottom >= 0) {
+          element.classList.add('fade-in');
+        }
+      });
+    });
   </script>
 </body>
 </html>
