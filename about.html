@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | ApexSalesAI</title>
   <meta name="description" content="Learn about ApexSalesAI, our mission to transform revenue operations, and the team behind our intelligent AI agents." />
-  <meta name="keywords" content="ApexSalesAI, ApexSupportAI, AI sales automation, AI customer support, ApexOpsAI" />
+  <meta name="keywords" content="ApexSalesAI, ApexSupportAI, AI sales automation, AI customer support, ApexOpsAI, enterprise AI solutions" />
   <!-- Open Graph -->
   <meta property="og:title" content="About | ApexSalesAI" />
   <meta property="og:description" content="Learn about ApexSalesAI, our mission to transform revenue operations through intelligent AI agents." />
@@ -21,163 +21,322 @@
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <!-- Fonts and Styles -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ApexSalesAI",
+      "url": "https://www.apexsalesai.com",
+      "logo": "https://www.apexsalesai.com/images/apex-logo-white.png",
+      "description": "AI-powered sales and support platform for enterprise teams",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Tim Bryant",
+          "jobTitle": "Chief Executive Officer"
+        },
+        {
+          "@type": "Person",
+          "name": "Richard Chang",
+          "jobTitle": "Chief Information Officer"
+        }
+      ]
+    }
+  </script>
+  <!-- Inline Styles -->
   <style>
-    /* Base styles */
-    body {
-      font-family: 'Inter', sans-serif;
+    /* Base typography */
+    body { 
+      font-family: 'Inter', sans-serif; 
+      font-size: 16px; 
+      line-height: 1.6; 
+      color: #e2e8f0; 
       margin: 0;
       padding: 0;
       background-color: #0d1321;
-      color: #e2e8f0;
-      line-height: 1.6;
     }
     
+    h1, h2, h3, h4 { 
+      color: #fff; 
+      line-height: 1.2; 
+      margin-top: 0;
+    }
+    
+    p, ul, li { 
+      color: #cbd5e0; 
+      margin-bottom: 1rem;
+    }
+
+    /* Container */
     .container {
+      width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 1rem;
     }
-    
-    /* Navigation */
+
+    /* Navbar */
     .navbar {
-      background-color: #0d1321;
-      padding: 20px 0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(13, 19, 33, 0.95);
+      backdrop-filter: blur(5px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .nav-container {
+    .navbar img.logo { 
+      height: 60px; 
+      width: auto; 
+    }
+    
+    .navbar-container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
     
-    .logo img {
-      height: 40px;
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
     }
     
-    .nav-links {
+    .desktop-nav ul {
       display: flex;
       list-style: none;
+      margin: 0;
+      padding: 0;
     }
     
-    .nav-links li {
-      margin: 0 15px;
+    .desktop-nav li {
+      margin: 0 0.75rem;
     }
     
-    .nav-links a {
+    .desktop-nav a {
       color: #e2e8f0;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-weight: 600;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
     }
     
-    .nav-links a:hover, .nav-links a.active {
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
       color: #00c2cb;
     }
     
-    /* Hero section */
-    .hero {
-      position: relative;
-      padding: 100px 0;
-      text-align: center;
-      overflow: hidden;
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0.5rem;
     }
     
-    .hero-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .mobile-nav {
+      display: none;
       width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    
-    .hero-bg-circle {
-      position: absolute;
-      background-color: #005f6b;
-      border-radius: 50%;
-      opacity: 0.3;
-    }
-    
-    .circle-1 {
-      width: 800px;
-      height: 800px;
-      left: -200px;
-      top: -200px;
-    }
-    
-    .circle-2 {
-      width: 600px;
-      height: 600px;
-      right: -100px;
-      bottom: -100px;
-    }
-    
-    .hero-content h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-    
-    .hero-content p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 40px;
-      color: #a0aec0;
-    }
-    
-    /* Main content */
-    .content-section {
-      padding: 80px 0;
-    }
-    
-    .section-heading {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 40px;
+      padding: 1rem 0;
       text-align: center;
+      background-color: rgba(13, 19, 33, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    /* About specific styles */
-    .about-content {
-      margin-bottom: 60px;
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem 0;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
     }
     
-    .about-content h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ffffff;
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #00c2cb;
     }
     
-    .about-content p {
-      margin-bottom: 20px;
+    /* Show mobile menu on smaller screens */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .navbar img.logo {
+        height: 40px;
+      }
+    }
+
+    /* CTA buttons */
+    .cta { 
+      background-color: #00c2cb; 
+      color: #1a202c; 
+      font-weight: 600; 
+      padding: .75rem 1.5rem; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      transition: transform .2s ease, background-color .2s ease;
+      display: inline-block;
+      margin: 0.5rem;
+      border: none;
+      cursor: pointer;
     }
     
+    .cta:hover { 
+      transform: translateY(-2px); 
+      background-color: #00a8b3; 
+    }
+
+    /* Hero section */
+    .hero { 
+      position: relative; 
+      overflow: hidden;
+      padding: 6rem 0;
+    }
+    
+    .hero-bg { 
+      position: absolute; 
+      inset: 0; 
+      pointer-events: none; 
+    }
+    
+    .hero-bg svg { 
+      width: 100%; 
+      height: 100%; 
+    }
+    
+    .hero-bg circle { 
+      opacity: .15; 
+      animation: float 8s ease-in-out infinite; 
+    }
+    
+    .hero-bg circle:nth-child(2) { 
+      animation-duration: 12s; 
+    }
+    
+    @keyframes float { 
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); } 
+    }
+    
+    .hero-title { 
+      font-size: 2.5rem; 
+      font-weight: 800; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    @media(min-width: 768px) { 
+      .hero-title { 
+        font-size: 3.5rem; 
+      } 
+    }
+    
+    .hero-subtitle { 
+      font-size: 1.125rem; 
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Section headings */
+    section {
+      padding: 5rem 0;
+    }
+    
+    section h2 { 
+      font-size: 2rem; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    @media(min-width: 768px) { 
+      section h2 { 
+        font-size: 2.25rem; 
+      } 
+    }
+
+    /* Grid layout */
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+    
+    @media (min-width: 768px) {
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Feature boxes */
+    .feature-box {
+      background-color: #2d3748;
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    footer a {
+      color: #00c2cb;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.2s ease;
+    }
+    
+    footer a:hover {
+      color: #00a8b3;
+    }
+    
+    /* Leadership section */
     .leadership-section {
       background-color: #1a202c;
-      padding: 80px 0;
+      padding: 5rem 0;
     }
     
     .leader-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      gap: 2rem;
+      margin-top: 2rem;
     }
     
     .leader-card {
       background-color: #2d3748;
-      border-radius: 10px;
-      padding: 30px;
+      border-radius: 12px;
+      padding: 2rem;
       text-align: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
     
     .leader-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     }
     
     .leader-card img {
@@ -186,109 +345,68 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #00c2cb;
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
     }
     
     .leader-card h3 {
-      margin: 0 0 5px;
+      margin: 0 0 0.5rem;
       font-size: 1.5rem;
     }
     
     .leader-card .title {
       color: #00c2cb;
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
       font-weight: 500;
     }
     
     .social-link {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 1rem;
       color: #00c2cb;
     }
     
+    .social-link svg {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.2s;
+    }
+    
+    .social-link:hover svg {
+      transform: scale(1.2);
+    }
+    
     /* Values section */
-    .values-section {
-      padding: 80px 0;
+    .values-section, .join-us-section {
+      padding: 5rem 0;
     }
     
     .values-list, .join-us-list {
-      list-style-type: disc;
-      padding-left: 20px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
     
     .values-list li, .join-us-list li {
-      margin-bottom: 10px;
+      background-color: #1a202c;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      border-left: 4px solid #00c2cb;
+    }
+    
+    .values-list li:before, .join-us-list li:before {
+      content: "✓";
+      color: #00c2cb;
+      margin-right: 1rem;
+      font-weight: bold;
     }
     
     /* Careers section */
     .careers-section {
       background-color: #1a202c;
-      padding: 80px 0;
-    }
-    
-    .roles-list {
-      margin: 40px 0;
-    }
-    
-    /* CTA section */
-    .cta-section {
-      text-align: center;
-      padding: 100px 0;
-    }
-    
-    .cta-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    
-    .cta-section p {
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #a0aec0;
-    }
-    
-    .btn {
-      display: inline-block;
-      background-color: #00c2cb;
-      color: #0d1321;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 12px 30px;
-      border-radius: 8px;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-    
-    .btn:hover {
-      background-color: #00a8b3;
-      transform: translateY(-3px);
-    }
-    
-    /* Footer */
-    footer {
-      background-color: #0d1321;
-      padding: 40px 0;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    footer p {
-      color: #718096;
-      margin-bottom: 15px;
-    }
-    
-    footer a {
-      color: #00c2cb;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    
-    /* Utility classes */
-    .text-center {
-      text-align: center;
-    }
-    
-    .mt-6 {
-      margin-top: 30px;
+      padding: 5rem 0;
     }
     
     /* Role tags */
@@ -296,78 +414,125 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 40px 0;
+      margin: 2.5rem 0;
     }
     
     .role-tag {
       background-color: rgba(0, 194, 203, 0.1);
       color: #00c2cb;
-      padding: 8px 16px;
-      border-radius: 20px;
-      margin: 5px;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      margin: 0.5rem;
       font-size: 0.9rem;
+      transition: background-color 0.3s, transform 0.3s;
     }
     
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      
-      .hero-content h1 {
-        font-size: 2.5rem;
-      }
-      
-      .section-heading {
-        font-size: 2rem;
-      }
-      
-      .leadership-section, .values-section, .careers-section, .cta-section {
-        padding: 60px 0;
-      }
+    .role-tag:hover {
+      background-color: rgba(0, 194, 203, 0.2);
+      transform: translateY(-3px);
     }
+    
+    /* CTA section */
+    .cta-section {
+      text-align: center;
+      padding: 5rem 0;
+    }
+    
+    /* Utility classes */
+    .text-center { text-align: center; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .mb-12 { margin-bottom: 3rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-10 { margin-top: 2.5rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .max-w-2xl { max-width: 42rem; }
+    .bg-gray-700 { background-color: #2d3748; }
+    .bg-gray-800 { background-color: #1a202c; }
+    .bg-gray-900 { background-color: #0d1321; }
+    .text-gray-300 { color: #d1d5db; }
+    .text-gray-400 { color: #9ca3af; }
+    .text-gray-500 { color: #6b7280; }
+    .text-white { color: #ffffff; }
+    .text-teal-400 { color: #00c2cb; }
   </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">
-        <img src="/images/apex-logo-white.png" alt="ApexSalesAI">
+    <div class="container navbar-container">
+      <a href="index.html" aria-label="ApexSalesAI Home">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="platform.html">Platform</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="consulting.html">Consulting</a></li>
-        <li><a href="demo.html">Demo</a></li>
-        <li><a href="reseller.html">Reseller</a></li>
-        <li><a href="onboarding.html">Onboarding</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      
+      <!-- Desktop Navigation -->
+      <div class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="consulting.html">Consulting</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="reseller.html">Reseller</a></li>
+          <li><a href="onboarding.html">Onboarding</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Mobile Navigation Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="platform.html">Platform</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="demo.html">Demo</a>
+      <a href="reseller.html">Reseller</a>
+      <a href="onboarding.html">Onboarding</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-bg-circle circle-1"></div>
-      <div class="hero-bg-circle circle-2"></div>
+  <!-- Hero -->
+  <header class="hero relative text-center text-white" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="200" cy="200" r="150" fill="#00c2cb" />
+        <circle cx="600" cy="150" r="120" fill="#005f6b" />
+      </svg>
     </div>
-    <div class="container">
-      <div class="hero-content">
-        <h1>About ApexSalesAI</h1>
-        <p>Pioneering the future of intelligent revenue operations through AI-powered sales and support agents.</p>
-      </div>
+    <div class="container mx-auto py-24 px-4 relative z-10">
+      <h1 class="hero-title">About ApexSalesAI</h1>
+      <p class="hero-subtitle">Pioneering the future of intelligent revenue operations through AI-powered sales and support agents.</p>
     </div>
+  </header>
+
+  <!-- Company Mission Section -->
+  <section class="container mx-auto py-20 px-4 text-center">
+    <h2 class="text-white mb-10">Our Mission</h2>
+    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">At ApexSalesAI, we're redefining revenue operations by creating autonomous AI agents that handle the entire sales and support lifecycle. We believe that human talent should be focused on high-value tasks and meaningful customer interactions, not repetitive workflows.</p>
+    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Our platform enables enterprise teams to automate outreach, qualification, follow-up, and support at scale — creating predictable pipeline and exceptional customer experiences without expanding headcount.</p>
   </section>
 
   <!-- Leadership Section -->
   <section class="leadership-section">
-    <div class="container">
-      <h2 class="section-heading">Our Leadership</h2>
+    <div class="container mx-auto px-4">
+      <h2 class="text-white text-center mb-10">Our Leadership</h2>
       <div class="leader-cards">
         <!-- CEO -->
         <div class="leader-card">
@@ -400,36 +565,49 @@
 
   <!-- Values Section -->
   <section class="values-section">
-    <div class="container">
-      <h2 class="section-heading">Our Values</h2>
-      <div class="about-content text-center">
-        <ul class="values-list">
-          <li>Obsess over customer success</li>
-          <li>Move fast, learn faster</li>
-          <li>Think big, start small</li>
-          <li>Embrace transparency</li>
-          <li>Challenge assumptions</li>
-          <li>Security and privacy as foundations</li>
-        </ul>
+    <div class="container mx-auto px-4">
+      <h2 class="text-white text-center mb-10">Our Values</h2>
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <ul class="values-list">
+            <li>Obsess over customer success</li>
+            <li>Move fast, learn faster</li>
+            <li>Think big, start small</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="values-list">
+            <li>Embrace transparency</li>
+            <li>Challenge assumptions</li>
+            <li>Security and privacy as foundations</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Join Us Section -->
   <section class="careers-section">
-    <div class="container">
-      <h2 class="section-heading">Why Join Us</h2>
-      <div class="about-content text-center">
-        <ul class="join-us-list">
-          <li>Work on cutting-edge AI technology that solves real business problems</li>
-          <li>Collaborate with experts in machine learning, sales, and customer experience</li>
-          <li>Flexible, remote-first work environment</li>
-          <li>Competitive compensation</li>
-          <li>Make a tangible impact on revenue operations worldwide</li>
-        </ul>
+    <div class="container mx-auto px-4">
+      <h2 class="text-white text-center mb-10">Why Join Us</h2>
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <ul class="join-us-list">
+            <li>Work on cutting-edge AI technology that solves real business problems</li>
+            <li>Collaborate with experts in machine learning, sales, and customer experience</li>
+            <li>Flexible, remote-first work environment</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="join-us-list">
+            <li>Competitive compensation</li>
+            <li>Make a tangible impact on revenue operations worldwide</li>
+            <li>Continuous learning and growth opportunities</li>
+          </ul>
+        </div>
       </div>
       
-      <h3 class="text-center mt-6">We're Looking For</h3>
+      <h3 class="text-white text-center mt-10 mb-6">We're Looking For</h3>
       <div class="role-tags">
         <div class="role-tag">AI/ML Engineers</div>
         <div class="role-tag">Security Specialists</div>
@@ -445,47 +623,73 @@
         <div class="role-tag">Customer Success</div>
       </div>
       
-      <div class="text-center">
-        <a href="careers.html" class="btn">View Open Positions</a>
+      <div class="text-center mt-10">
+        <a href="careers.html" class="cta">View Open Positions</a>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Transform Your Revenue Operations?</h2>
-      <p>Book a personalized demo to see how ApexAI can help your team sell smarter and support faster.</p>
-      <a href="demo.html" class="btn">Schedule Your Demo</a>
+  <section class="text-center py-20 px-4 bg-gray-900">
+    <div class="container mx-auto">
+      <h2 class="text-white text-3xl font-bold mb-4">Ready to Transform Your Revenue Operations?</h2>
+      <p class="text-gray-400 mb-8">Book a personalized demo to see how ApexAI can help your team sell smarter and support faster.</p>
+      <a href="demo.html" class="cta">Schedule Your Demo</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
+  <footer class="bg-gray-900 py-8">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
       <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-      <div>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
+      <div class="mt-4">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Use</a> | 
         <a href="sitemap.xml">Sitemap</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Highlight active navigation item
     document.addEventListener('DOMContentLoaded', function() {
-      const currentPage = window.location.pathname.split('/').pop();
-      const navLinks = document.querySelectorAll('.nav-links a');
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
       
-      navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPage || 
-           (currentPage === '' && href === 'index.html') || 
-           (currentPage === '/' && href === 'index.html')) {
-          link.classList.add('active');
-        }
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileNav.classList.toggle('menu-open');
       });
+      
+      // Handle responsive grid for smaller screens
+      function handleResponsiveGrids() {
+        const gridElements = document.querySelectorAll('.grid');
+        
+        if (window.innerWidth < 768) {
+          gridElements.forEach(grid => {
+            if (grid.classList.contains('grid-cols-2')) {
+              grid.classList.remove('grid-cols-2');
+            }
+            if (grid.classList.contains('grid-cols-3')) {
+              grid.classList.remove('grid-cols-3');
+            }
+          });
+        } else {
+          gridElements.forEach(grid => {
+            if (grid.classList.contains('grid') && !grid.classList.contains('grid-cols-2') && !grid.classList.contains('grid-cols-3')) {
+              // Determine which columns class to add based on the container
+              if (grid.closest('.values-section') || grid.closest('.careers-section')) {
+                grid.classList.add('grid-cols-2');
+              } else {
+                grid.classList.add('grid-cols-3');
+              }
+            }
+          });
+        }
+      }
+      
+      // Initial call and event listener for resize
+      handleResponsiveGrids();
+      window.addEventListener('resize', handleResponsiveGrids);
     });
   </script>
 </body>
