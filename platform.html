@@ -21,9 +21,8 @@
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <!-- Fonts and Styles -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css">
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
     {
@@ -40,6 +39,345 @@
       "description": "AI-powered sales and support platform for enterprise teams"
     }
   </script>
+  <!-- Inline Styles (to ensure consistent styling) -->
+  <style>
+    /* Base typography */
+    body { 
+      font-family: 'Inter', sans-serif; 
+      font-size: 16px; 
+      line-height: 1.6; 
+      color: #e2e8f0; 
+      margin: 0;
+      padding: 0;
+      background-color: #0d1321;
+    }
+    
+    h1, h2, h3, h4 { 
+      color: #fff; 
+      line-height: 1.2; 
+      margin-top: 0;
+    }
+    
+    p, ul, li { 
+      color: #cbd5e0; 
+      margin-bottom: 1rem;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(13, 19, 33, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar img.logo { 
+      height: 60px; 
+      width: auto; 
+    }
+    
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
+    }
+    
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .desktop-nav li {
+      margin: 0 0.75rem;
+    }
+    
+    .desktop-nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
+    }
+    
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-nav {
+      display: none;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      background-color: rgba(13, 19, 33, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem 0;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Show mobile menu on smaller screens */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .navbar img.logo {
+        height: 40px;
+      }
+    }
+
+    /* CTA buttons */
+    .cta { 
+      background-color: #00c2cb; 
+      color: #1a202c; 
+      font-weight: 600; 
+      padding: .75rem 1.5rem; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      transition: transform .2s ease, background-color .2s ease;
+      display: inline-block;
+      margin: 0.5rem;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .cta:hover { 
+      transform: translateY(-2px); 
+      background-color: #00a8b3; 
+    }
+
+    /* Hero section */
+    .hero { 
+      position: relative; 
+      overflow: hidden;
+      padding: 6rem 0;
+    }
+    
+    .hero-bg { 
+      position: absolute; 
+      inset: 0; 
+      pointer-events: none; 
+    }
+    
+    .hero-bg svg { 
+      width: 100%; 
+      height: 100%; 
+    }
+    
+    .hero-bg circle { 
+      opacity: .15; 
+      animation: float 8s ease-in-out infinite; 
+    }
+    
+    .hero-bg circle:nth-child(2) { 
+      animation-duration: 12s; 
+    }
+    
+    @keyframes float { 
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); } 
+    }
+    
+    .hero-title { 
+      font-size: 2.5rem; 
+      font-weight: 800; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    @media(min-width: 768px) { 
+      .hero-title { 
+        font-size: 3.5rem; 
+      } 
+    }
+    
+    .hero-subtitle { 
+      font-size: 1.125rem; 
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Module cards */
+    .module-card { 
+      background-color: #1a202c; 
+      padding: 2rem; 
+      border-radius: 12px; 
+      transition: transform .2s ease, box-shadow .2s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .module-card:hover { 
+      transform: translateY(-5px) scale(1.02); 
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .5); 
+    }
+    
+    .module-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .module-card ul {
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+    
+    .module-card .cta {
+      margin-top: auto;
+    }
+
+    /* Section headings */
+    section {
+      padding: 5rem 0;
+    }
+    
+    section h2 { 
+      font-size: 2rem; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    @media(min-width: 768px) { 
+      section h2 { 
+        font-size: 2.25rem; 
+      } 
+    }
+
+    /* Grid layout */
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+    
+    @media (min-width: 768px) {
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Feature boxes */
+    .feature-box {
+      background-color: #2d3748;
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    footer a {
+      color: #00c2cb;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.2s ease;
+    }
+    
+    footer a:hover {
+      color: #00a8b3;
+    }
+    
+    /* Utility classes */
+    .text-center { text-align: center; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .mb-12 { margin-bottom: 3rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-10 { margin-top: 2.5rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .max-w-2xl { max-width: 42rem; }
+    .bg-gray-700 { background-color: #2d3748; }
+    .bg-gray-800 { background-color: #1a202c; }
+    .bg-gray-900 { background-color: #0d1321; }
+    .text-gray-300 { color: #d1d5db; }
+    .text-gray-400 { color: #9ca3af; }
+    .text-gray-500 { color: #6b7280; }
+    .text-white { color: #ffffff; }
+    .text-teal-400 { color: #00c2cb; }
+    .text-sm { font-size: 0.875rem; }
+    .text-base { font-size: 1rem; }
+    .text-3xl { font-size: 1.875rem; }
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+    .p-4 { padding: 1rem; }
+    .p-6 { padding: 1.5rem; }
+    .relative { position: relative; }
+    .z-10 { z-index: 10; }
+    .list-disc { list-style-type: disc; }
+    .list-inside { list-style-position: inside; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .flex-col { flex-direction: column; }
+    .w-full { width: 100%; }
+    .active { color: #00c2cb; }
+    .menu-open { display: block; }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
