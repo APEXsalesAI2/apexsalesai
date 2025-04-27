@@ -6,6 +6,7 @@
   <title>Pricing | ApexSalesAI - Intelligent AI Agents for Enterprise Sales & Support</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* Base styles */
     :root {
       --primary: #00c2cb;
       --primary-dark: #00a8b3;
@@ -40,14 +41,9 @@
     
     /* Navigation */
     .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
       background-color: rgba(13, 19, 33, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
       padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
     }
     
     .navbar-container {
@@ -73,7 +69,6 @@
       color: var(--text);
       text-decoration: none;
       font-weight: 600;
-      position: relative;
       padding: 0.5rem 0;
       transition: color 0.3s ease;
     }
@@ -82,105 +77,15 @@
       color: var(--primary);
     }
     
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--primary);
-      transition: width 0.3s ease;
-    }
-    
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-    
     .nav-links a.active {
       color: var(--primary);
     }
     
-    .nav-links a.active::after {
-      width: 100%;
-    }
-    
-    /* Mobile nav toggle */
-    .mobile-nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--text);
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    
-    @media (max-width: 768px) {
-      .mobile-nav-toggle {
-        display: block;
-      }
-      
-      .nav-links {
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        flex-direction: column;
-        background-color: rgba(13, 19, 33, 0.98);
-        width: 80%;
-        height: calc(100vh - 80px);
-        padding: 2rem;
-        transition: right 0.3s ease;
-      }
-      
-      .nav-links.active {
-        right: 0;
-      }
-      
-      .nav-links li {
-        margin: 1.5rem 0;
-      }
-    }
-    
     /* Hero Section */
     .hero {
-      position: relative;
       padding: 8rem 0 6rem;
-      overflow: hidden;
       text-align: center;
-    }
-    
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 70% 30%, rgba(0, 194, 203, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: -1;
-    }
-    
-    .hero-circle {
-      position: absolute;
-      border-radius: 50%;
-      background-color: var(--primary);
-      filter: blur(80px);
-      opacity: 0.1;
-      z-index: -1;
-    }
-    
-    .hero-circle-1 {
-      width: 400px;
-      height: 400px;
-      top: 20%;
-      left: 10%;
-    }
-    
-    .hero-circle-2 {
-      width: 300px;
-      height: 300px;
-      bottom: 10%;
-      right: 15%;
+      position: relative;
     }
     
     .hero-title {
@@ -191,7 +96,6 @@
       background: linear-gradient(to right, #ffffff, var(--primary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: fadeIn 0.8s ease;
     }
     
     .hero-subtitle {
@@ -199,18 +103,6 @@
       max-width: 800px;
       margin: 0 auto 3rem;
       color: var(--text-light);
-      animation: fadeIn 1s ease 0.2s both;
-    }
-    
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
     
     /* Buttons */
@@ -251,28 +143,9 @@
       box-shadow: 0 8px 20px rgba(0, 194, 203, 0.2);
     }
     
-    .hero-buttons {
-      animation: fadeIn 1.2s ease 0.4s both;
-    }
-    
-    .hero-buttons .btn {
-      margin: 0 0.5rem;
-    }
-    
     /* Pricing Section */
     .pricing-section {
       padding: 8rem 0;
-      position: relative;
-    }
-    
-    .pricing-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 30% 50%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: -1;
     }
     
     .section-heading {
@@ -294,65 +167,6 @@
       color: var(--text-dimmed);
     }
     
-    /* Pricing Toggle */
-    .pricing-toggle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 4rem;
-    }
-    
-    .toggle-label {
-      font-size: 1.125rem;
-      font-weight: 600;
-      cursor: pointer;
-      margin: 0 1rem;
-      transition: color 0.3s ease;
-      color: var(--text-dimmed);
-    }
-    
-    .toggle-label.active {
-      color: var(--primary);
-    }
-    
-    .toggle-switch {
-      position: relative;
-      width: 60px;
-      height: 32px;
-      background-color: rgba(26, 32, 44, 0.8);
-      border-radius: 16px;
-      padding: 2px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    
-    .toggle-switch::after {
-      content: '';
-      position: absolute;
-      width: 28px;
-      height: 28px;
-      background-color: var(--primary);
-      border-radius: 50%;
-      top: 2px;
-      left: 2px;
-      transition: transform 0.3s ease;
-    }
-    
-    .toggle-switch.annual::after {
-      transform: translateX(28px);
-    }
-    
-    .savings-badge {
-      background-color: rgba(0, 194, 203, 0.1);
-      border: 1px solid var(--primary);
-      color: var(--primary);
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      margin-left: 0.5rem;
-    }
-    
     /* Pricing Cards */
     .pricing-grid {
       display: grid;
@@ -367,24 +181,9 @@
       padding: 3rem;
       transition: all 0.4s ease;
       position: relative;
-      z-index: 1;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .pricing-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom right, rgba(0, 194, 203, 0.1), transparent);
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.4s ease;
     }
     
     .pricing-card:hover {
@@ -393,40 +192,11 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
     
-    .pricing-card:hover::before {
-      opacity: 1;
-    }
-    
-    .popular-tag {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      background-color: var(--primary);
-      color: var(--secondary);
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      z-index: 2;
-    }
-    
-    .pricing-header {
-      margin-bottom: 2rem;
-    }
-    
     .pricing-title {
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: #fff;
-    }
-    
-    .pricing-description {
-      color: var(--text-dimmed);
-    }
-    
-    .pricing-price-wrapper {
-      margin-bottom: 2rem;
     }
     
     .pricing-price {
@@ -446,12 +216,6 @@
       color: var(--text-dimmed);
     }
     
-    .pricing-period {
-      color: var(--text-dimmed);
-      font-size: 0.875rem;
-      margin-top: 0.5rem;
-    }
-    
     .pricing-features {
       list-style: none;
       margin-bottom: 2.5rem;
@@ -468,180 +232,11 @@
       color: var(--primary);
       margin-right: 1rem;
       font-size: 1.25rem;
-      flex-shrink: 0;
     }
     
-    .pricing-card.popular {
-      border-color: var(--primary);
-      transform: scale(1.05);
-      z-index: 2;
-    }
-    
-    .pricing-card.popular:hover {
-      transform: translateY(-15px) scale(1.05);
-    }
-    
-    @media (max-width: 992px) {
-      .pricing-card.popular {
-        transform: scale(1);
-      }
-      
-      .pricing-card.popular:hover {
-        transform: translateY(-15px);
-      }
-    }
-    
-    /* Call To Action section */
-    .cta-section {
-      padding: 8rem 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .cta-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    
-    .cta-circle {
-      position: absolute;
-      border-radius: 50%;
-      background-color: var(--primary);
-      filter: blur(80px);
-      opacity: 0.1;
-    }
-    
-    .cta-circle-1 {
-      width: 500px;
-      height: 500px;
-      top: -250px;
-      left: -100px;
-    }
-    
-    .cta-circle-2 {
-      width: 400px;
-      height: 400px;
-      bottom: -200px;
-      right: -100px;
-    }
-    
-    .cta-heading {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(to right, #ffffff, var(--primary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .cta-text {
-      font-size: 1.25rem;
-      max-width: 700px;
-      margin: 0 auto 3rem;
-      color: var(--text-light);
-    }
-    
-    /* Comparison Table */
-    .compare-section {
-      padding: 8rem 0;
-      position: relative;
-    }
-    
-    .compare-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 70% 50%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: -1;
-    }
-    
-    .table-wrapper {
-      margin-top: 4rem;
-      overflow-x: auto;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: var(--bg-card);
-    }
-    
-    .compare-table th,
-    .compare-table td {
-      padding: 1.5rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .compare-table th {
-      background-color: rgba(26, 32, 44, 0.8);
-      font-weight: 700;
-      color: #fff;
-      font-size: 1.125rem;
-    }
-    
-    .compare-table th:first-child {
-      text-align: left;
-      border-top-left-radius: 16px;
-    }
-    
-    .compare-table th:last-child {
-      border-top-right-radius: 16px;
-    }
-    
-    .compare-table tr:last-child td:first-child {
-      border-bottom-left-radius: 16px;
-    }
-    
-    .compare-table tr:last-child td:last-child {
-      border-bottom-right-radius: 16px;
-    }
-    
-    .compare-table td:first-child {
-      text-align: left;
-      font-weight: 600;
-      color: #fff;
-    }
-    
-    .compare-table tr:hover {
-      background-color: rgba(26, 32, 44, 0.8);
-    }
-    
-    .feature-available {
-      color: var(--primary);
-      font-size: 1.5rem;
-    }
-    
-    .feature-unavailable {
-      color: #718096;
-      font-size: 1.5rem;
-    }
-    
-    /* ROI Calculator Section */
+    /* ROI Calculator */
     .calculator-section {
       padding: 8rem 0;
-      position: relative;
-    }
-    
-    .calculator-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 30% 60%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: -1;
     }
     
     .calculator-container {
@@ -651,51 +246,12 @@
       align-items: center;
     }
     
-    @media (max-width: 992px) {
-      .calculator-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-    }
-    
-    .calculator-content h2 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      color: #fff;
-    }
-    
-    .calculator-content p {
-      font-size: 1.125rem;
-      margin-bottom: 1.5rem;
-      color: var(--text-light);
-    }
-    
     .calculator-form {
       background-color: var(--bg-card);
       border-radius: 16px;
       padding: 3rem;
       border: 1px solid var(--border);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .calculator-form::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      background: linear-gradient(to right, var(--primary), var(--primary-dark));
-    }
-    
-    .calculator-form h3 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-bottom: 2.5rem;
-      color: #fff;
     }
     
     .form-group {
@@ -717,13 +273,6 @@
       padding: 1rem 1.25rem;
       font-size: 1rem;
       color: #fff;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .form-input:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 2px rgba(0, 194, 203, 0.2);
     }
     
     .calculator-results {
@@ -739,340 +288,10 @@
       margin-bottom: 1.5rem;
     }
     
-    .result-label {
-      font-weight: 600;
-      color: var(--text-light);
-    }
-    
     .result-value {
       font-weight: 700;
       color: var(--primary);
       font-size: 1.25rem;
-    }
-    
-    .total-roi {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px dashed rgba(255, 255, 255, 0.2);
-    }
-    
-    .total-roi .result-value {
-      font-size: 1.75rem;
-    }
-    
-    /* Footer */
-    footer {
-      background-color: rgba(13, 19, 33, 0.98);
-      padding: 5rem 0 2rem;
-      border-top: 1px solid var(--border);
-    }
-    
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 4rem;
-      margin-bottom: 4rem;
-    }
-    
-    @media (max-width: 992px) {
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-    }
-    
-    .footer-logo {
-      width: 180px;
-      margin-bottom: 1.5rem;
-    }
-    
-    .footer-about {
-      margin-bottom: 1.5rem;
-      color: var(--text-dimmed);
-    }
-    
-    .footer-social {
-      display: flex;
-      gap: 1rem;
-    }
-    
-    .footer-social a {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: var(--text);
-      border-radius: 50%;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      text-decoration: none;
-    }
-    
-    .footer-social a:hover {
-      background-color: var(--primary);
-      color: var(--secondary);
-    }
-    
-    .footer-heading {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-    
-    .footer-links {
-      list-style: none;
-    }
-    
-    .footer-links li {
-      margin-bottom: 0.75rem;
-    }
-    
-    .footer-links a {
-      color: var(--text-dimmed);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .footer-links a:hover {
-      color: var(--primary);
-    }
-    
-    .footer-contact {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    
-    .footer-contact-icon {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: var(--primary);
-      border-radius: 50%;
-      margin-right: 1rem;
-    }
-    
-    .footer-contact-text {
-      color: var(--text-dimmed);
-    }
-    
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-    
-    @media (max-width: 768px) {
-      .footer-bottom {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-      }
-    }
-    
-    .footer-copyright {
-      color: var(--text-dimmed);
-    }
-    
-    .footer-legal {
-      display: flex;
-      gap: 1.5rem;
-    }
-    
-    .footer-legal a {
-      color: var(--text-dimmed);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .footer-legal a:hover {
-      color: var(--primary);
-    }
-    
-    /* Chat widget */
-    .chat-widget {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 100;
-    }
-    
-    .chat-button {
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--primary);
-      color: var(--secondary);
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0, 194, 203, 0.4);
-      transition: all 0.3s ease;
-    }
-    
-    .chat-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 194, 203, 0.5);
-    }
-    
-    .chat-button svg {
-      width: 28px;
-      height: 28px;
-    }
-    
-    .chat-panel {
-      position: absolute;
-      bottom: calc(100% + 1rem);
-      right: 0;
-      width: 350px;
-      background-color: rgba(13, 19, 33, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 16px;
-      border: 1px solid rgba(0, 194, 203, 0.2);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-      overflow: hidden;
-      display: none;
-    }
-    
-    .chat-panel.active {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .chat-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      background-color: var(--primary);
-      color: var(--secondary);
-    }
-    
-    .chat-title {
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-    }
-    
-    .chat-title svg {
-      width: 20px;
-      height: 20px;
-      margin-right: 0.5rem;
-    }
-    
-    .chat-close {
-      background: none;
-      border: none;
-      color: var(--secondary);
-      cursor: pointer;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      transition: background-color 0.3s ease;
-    }
-    
-    .chat-close:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
-    
-    .chat-messages {
-      height: 300px;
-      overflow-y: auto;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    .chat-message {
-      max-width: 80%;
-      padding: 1rem;
-      border-radius: 16px;
-      line-height: 1.4;
-    }
-    
-    .chat-message.bot {
-      align-self: flex-start;
-      background-color: rgba(26, 32, 44, 0.8);
-      border-bottom-left-radius: 4px;
-    }
-    
-    .chat-message.user {
-      align-self: flex-end;
-      background-color: var(--primary);
-      color: var(--secondary);
-      border-bottom-right-radius: 4px;
-    }
-    
-    .chat-options {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 0 1.5rem 1.5rem;
-    }
-    
-    .chat-option {
-      padding: 1rem;
-      border-radius: 8px;
-      background-color: rgba(26, 32, 44, 0.8);
-      border: 1px solid var(--border);
-      color: var(--text);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-align: left;
-    }
-    
-    .chat-option:hover {
-      border-color: var(--primary);
-      background-color: rgba(0, 194, 203, 0.1);
-      transform: translateY(-2px);
-    }
-    
-    /* Responsive fixes */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 3rem;
-      }
-      
-      .section-heading h2 {
-        font-size: 2.5rem;
-      }
-      
-      .calculator-content h2 {
-        font-size: 2.5rem;
-      }
-      
-      .cta-heading {
-        font-size: 2.5rem;
-      }
-      
-      .pricing-card {
-        padding: 2rem;
-      }
-      
-      .calculator-form {
-        padding: 2rem;
-      }
     }
   </style>
 </head>
@@ -1081,22 +300,7 @@
   <nav class="navbar">
     <div class="container navbar-container">
       <a href="index.html">
-        <svg width="200" height="60" viewBox="0 0 200 60">
-          <defs>
-            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#00c2cb" />
-              <stop offset="100%" stop-color="#00a8b3" />
-            </linearGradient>
-          </defs>
-          <!-- Brain Circuit Icon -->
-          <g transform="translate(0, 5)">
-            <path fill="url(#logo-gradient)" d="M37.5 2.5C41.5 2.5 45 6 45 10C45 14 41.5 17.5 37.5 17.5C33.5 17.5 30 14 30 10C30 6 33.5 2.5 37.5 2.5ZM60 22.5C64 22.5 67.5 26 67.5 30C67.5 34 64 37.5 60 37.5C56 37.5 52.5 34 52.5 30C52.5 26 56 22.5 60 22.5ZM15 22.5C19 22.5 22.5 26 22.5 30C22.5 34 19 37.5 15 37.5C11 37.5 7.5 34 7.5 30C7.5 26 11 22.5 15 22.5ZM30 10L45 10L45 20L30 20L30 10ZM15 37.5L37.5 37.5L37.5 47.5L15 47.5L15 37.5ZM37.5 37.5L60 37.5L60 47.5L37.5 47.5L37.5 37.5Z"/>
-          </g>
-          <!-- APEX text -->
-          <text x="80" y="30" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#ffffff">APEX</text>
-          <!-- SALESAI text -->
-          <text x="85" y="45" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#ffffff">SALESAI</text>
-        </svg>
+        <img src="logo.png" alt="ApexSalesAI" class="logo">
       </a>
       
       <ul class="nav-links">
@@ -1104,64 +308,47 @@
         <li><a href="about.html">About</a></li>
         <li><a href="platform.html">Platform</a></li>
         <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="onboarding.html">Onboarding</a></li>
+        <li><a href="reseller.html">Reseller</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      
-      <button class="mobile-nav-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-circle hero-circle-1"></div>
-    <div class="hero-circle hero-circle-2"></div>
-    
     <div class="container">
       <h1 class="hero-title">Transparent Pricing.<br>Exceptional Value.</h1>
       <p class="hero-subtitle">Choose the perfect plan for your business with our straightforward pricing. No hidden fees, no surprises—just powerful AI agents ready to transform your sales and support operations.</p>
       
-      <div class="hero-buttons">
+      <div>
         <a href="#pricing" class="btn btn-primary">See Our Plans</a>
         <a href="demo.html" class="btn btn-outline">Book a Demo</a>
       </div>
     </div>
   </section>
-
-  <!-- Pricing Section -->
+<!-- Pricing Section -->
   <section id="pricing" class="pricing-section">
-    <div class="pricing-bg"></div>
-    
     <div class="container">
       <div class="section-heading">
         <h2>Choose Your Perfect Plan</h2>
         <p>Scale your AI capabilities with flexible pricing that grows with your business.</p>
       </div>
       
-      <div class="pricing-toggle">
-        <span class="toggle-label active" id="monthlyOption">Monthly</span>
-        <div class="toggle-switch" id="pricingToggle"></div>
-        <span class="toggle-label" id="annualOption">Annual <span class="savings-badge">Save 20%</span></span>
-      </div>
-      
       <div class="pricing-grid">
         <!-- Starter Plan -->
-        <div class="pricing-card" id="starterCard">
-          <div class="pricing-header">
+        <div class="pricing-card">
+          <div>
             <h3 class="pricing-title">Starter</h3>
-            <p class="pricing-description">Perfect for small teams starting to integrate AI into their processes.</p>
+            <p>Perfect for small teams starting to integrate AI into their processes.</p>
           </div>
           
-          <div class="pricing-price-wrapper">
-            <div class="pricing-price monthly">$799<span class="price-unit">/agent/mo</span></div>
-            <div class="pricing-price annual">$639<span class="price-unit">/agent/mo</span></div>
-            <p class="pricing-period">Billed monthly</p>
-          </div>
+          <div class="pricing-price monthly">$799<span class="price-unit">/agent/mo</span></div>
+          <div class="pricing-price annual">$639<span class="price-unit">/agent/mo</span></div>
+          <p>Billed monthly</p>
           
           <ul class="pricing-features">
             <li class="pricing-feature">
@@ -1190,19 +377,15 @@
         </div>
         
         <!-- Professional Plan -->
-        <div class="pricing-card popular" id="professionalCard">
-          <div class="popular-tag">Most Popular</div>
-          
-          <div class="pricing-header">
+        <div class="pricing-card">
+          <div>
             <h3 class="pricing-title">Professional</h3>
-            <p class="pricing-description">Ideal for businesses scaling their operations with advanced AI capabilities.</p>
+            <p>Ideal for businesses scaling their operations with advanced AI capabilities.</p>
           </div>
           
-          <div class="pricing-price-wrapper">
-            <div class="pricing-price monthly">$1,200<span class="price-unit">/agent/mo</span></div>
-            <div class="pricing-price annual">$960<span class="price-unit">/agent/mo</span></div>
-            <p class="pricing-period">Billed monthly</p>
-          </div>
+          <div class="pricing-price monthly">$1,200<span class="price-unit">/agent/mo</span></div>
+          <div class="pricing-price annual">$960<span class="price-unit">/agent/mo</span></div>
+          <p>Billed monthly</p>
           
           <ul class="pricing-features">
             <li class="pricing-feature">
@@ -1225,27 +408,21 @@
               <span class="feature-icon">✓</span>
               <span>API access and integrations</span>
             </li>
-            <li class="pricing-feature">
-              <span class="feature-icon">✓</span>
-              <span>Priority onboarding</span>
-            </li>
           </ul>
           
           <a href="contact.html" class="btn btn-primary">Choose Professional</a>
         </div>
         
         <!-- Enterprise Plan -->
-        <div class="pricing-card" id="enterpriseCard">
-          <div class="pricing-header">
+        <div class="pricing-card">
+          <div>
             <h3 class="pricing-title">Enterprise</h3>
-            <p class="pricing-description">For large organizations needing a comprehensive, fully customizable AI solution.</p>
+            <p>For large organizations needing a comprehensive, fully customizable AI solution.</p>
           </div>
           
-          <div class="pricing-price-wrapper">
-            <div class="pricing-price monthly">$2,950<span class="price-unit">/agent/mo</span></div>
-            <div class="pricing-price annual">$2,360<span class="price-unit">/agent/mo</span></div>
-            <p class="pricing-period">Billed monthly</p>
-          </div>
+          <div class="pricing-price monthly">$2,950<span class="price-unit">/agent/mo</span></div>
+          <div class="pricing-price annual">$2,360<span class="price-unit">/agent/mo</span></div>
+          <p>Billed monthly</p>
           
           <ul class="pricing-features">
             <li class="pricing-feature">
@@ -1272,10 +449,6 @@
               <span class="feature-icon">✓</span>
               <span>On-premise deployment options</span>
             </li>
-            <li class="pricing-feature">
-              <span class="feature-icon">✓</span>
-              <span>VIP onboarding & training</span>
-            </li>
           </ul>
           
           <a href="contact.html" class="btn btn-primary">Contact Sales</a>
@@ -1283,112 +456,19 @@
       </div>
     </div>
   </section>
-
-  <!-- Comparison Table Section -->
-  <section class="compare-section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Compare Plans</h2>
-        <p>Find the right fit for your business needs with our detailed feature comparison.</p>
-      </div>
-      
-      <div class="table-wrapper">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th>Features</th>
-              <th>Starter</th>
-              <th>Professional</th>
-              <th>Enterprise</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>AI Agents</td>
-              <td>Up to 2</td>
-              <td>Up to 5</td>
-              <td>Unlimited</td>
-            </tr>
-            <tr>
-              <td>Monthly Interactions</td>
-              <td>1,000/agent</td>
-              <td>5,000/agent</td>
-              <td>Unlimited</td>
-            </tr>
-            <tr>
-              <td>Multi-Channel Support</td>
-              <td>Basic</td>
-              <td>Advanced</td>
-              <td>Full Suite</td>
-            </tr>
-            <tr>
-              <td>Custom Integrations</td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-available">✓</span></td>
-              <td><span class="feature-available">✓</span></td>
-            </tr>
-            <tr>
-              <td>Conversation Analytics</td>
-              <td>Basic</td>
-              <td>Advanced</td>
-              <td>Enterprise</td>
-            </tr>
-            <tr>
-              <td>Lead Scoring</td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-available">✓</span></td>
-              <td><span class="feature-available">✓</span></td>
-            </tr>
-            <tr>
-              <td>API Access</td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-available">✓</span></td>
-              <td><span class="feature-available">✓</span></td>
-            </tr>
-            <tr>
-              <td>Dedicated Account Manager</td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-available">✓</span></td>
-            </tr>
-            <tr>
-              <td>SLA Guarantees</td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-available">✓</span></td>
-            </tr>
-            <tr>
-              <td>Custom AI Training</td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-available">✓</span></td>
-            </tr>
-            <tr>
-              <td>White Labeling</td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-available">✓</span></td>
-            </tr>
-            <tr>
-              <td>On-Premise Deployment</td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-unavailable">✕</span></td>
-              <td><span class="feature-available">✓</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROI Calculator Section -->
+<!-- ROI Calculator Section -->
   <section class="calculator-section">
     <div class="container">
+      <div class="section-heading">
+        <h2>Calculate Your ROI</h2>
+        <p>See how ApexSalesAI can deliver measurable value to your business</p>
+      </div>
+      
       <div class="calculator-container">
-        <div class="calculator-content">
-          <h2>Calculate Your<br>Return on Investment</h2>
+        <div>
+          <h3>Return on Investment</h3>
           <p>Discover how ApexSalesAI can improve your bottom line. Our AI agents drive measurable results by automating repetitive tasks, accelerating sales cycles, and enhancing customer support.</p>
-          <p>Use our calculator to see your potential savings and revenue impact based on your specific business metrics.</p>
+          <p>Use our calculator to see your potential savings based on your specific business metrics.</p>
         </div>
         
         <div class="calculator-form">
@@ -1416,22 +496,22 @@
           
           <div class="calculator-results">
             <div class="result-item">
-              <span class="result-label">Time saved (annual hours)</span>
+              <span>Time saved (annual hours)</span>
               <span class="result-value" id="timeSaved">6,240</span>
             </div>
             
             <div class="result-item">
-              <span class="result-label">Labor cost savings</span>
+              <span>Labor cost savings</span>
               <span class="result-value" id="laborSavings">$225,000</span>
             </div>
             
             <div class="result-item">
-              <span class="result-label">Annual AI agent cost</span>
+              <span>Annual AI agent cost</span>
               <span class="result-value" id="agentCost">$43,200</span>
             </div>
             
-            <div class="result-item total-roi">
-              <span class="result-label">Net annual savings</span>
+            <div class="result-item">
+              <span>Net annual savings</span>
               <span class="result-value" id="netSavings">$181,800</span>
             </div>
           </div>
@@ -1440,142 +520,65 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-bg">
-      <div class="cta-circle cta-circle-1"></div>
-      <div class="cta-circle cta-circle-2"></div>
-    </div>
-    
-    <div class="container">
-      <h2 class="cta-heading">Ready to Transform Your Business?</h2>
-      <p class="cta-text">Start with a plan that fits your needs and scale as you grow. No long-term commitments, cancel anytime.</p>
-      <div>
-        <a href="contact.html" class="btn btn-primary">Get Started Now</a>
-        <a href="demo.html" class="btn btn-outline">Schedule a Demo</a>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <svg width="180" height="60" viewBox="0 0 200 60">
-            <defs>
-              <linearGradient id="footer-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#00c2cb" />
-                <stop offset="100%" stop-color="#00a8b3" />
-              </linearGradient>
-            </defs>
-            <!-- Brain Circuit Icon -->
-            <g transform="translate(0, 5)">
-              <path fill="url(#footer-gradient)" d="M37.5 2.5C41.5 2.5 45 6 45 10C45 14 41.5 17.5 37.5 17.5C33.5 17.5 30 14 30 10C30 6 33.5 2.5 37.5 2.5ZM60 22.5C64 22.5 67.5 26 67.5 30C67.5 34 64 37.5 60 37.5C56 37.5 52.5 34 52.5 30C52.5 26 56 22.5 60 22.5ZM15 22.5C19 22.5 22.5 26 22.5 30C22.5 34 19 37.5 15 37.5C11 37.5 7.5 34 7.5 30C7.5 26 11 22.5 15 22.5ZM30 10L45 10L45 20L30 20L30 10ZM15 37.5L37.5 37.5L37.5 47.5L15 47.5L15 37.5ZM37.5 37.5L60 37.5L60 47.5L37.5 47.5L37.5 37.5Z"/>
-            </g>
-            <!-- APEX text -->
-            <text x="80" y="30" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#ffffff">APEX</text>
-            <!-- SALESAI text -->
-            <text x="85" y="45" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#ffffff">SALESAI</text>
-          </svg>
-          
-          <p class="footer-about">Intelligent AI agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
-          
-          <div class="footer-social">
-            <a href="#" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-            <a href="#" aria-label="Twitter">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-            </a>
-          </div>
-        </div>
-        
-        <div>
-          <h4 class="footer-heading">Company</h4>
-          <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="footer-heading">Product</h4>
-          <ul class="footer-links">
-            <li><a href="platform.html">Platform</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="demo.html">Request Demo</a></li>
-            <li><a href="documentation.html">Documentation</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="footer-heading">Contact</h4>
-          <div class="footer-contact">
-            <div class="footer-contact-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </div>
-            <div class="footer-contact-text">+1 (800) 123-4567</div>
-          </div>
-          <div class="footer-contact">
-            <div class="footer-contact-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </div>
-            <div class="footer-contact-text">info@apexsalesai.com</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2025 ApexSalesAI. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-        </div>
+    <div class="container" style="padding: 2rem 0; text-align: center;">
+      <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
+      <div style="margin-top: 1rem;">
+        <a href="privacy.html" style="color: #00c2cb; margin: 0 10px;">Privacy Policy</a>
+        <a href="terms.html" style="color: #00c2cb; margin: 0 10px;">Terms of Service</a>
       </div>
     </div>
   </footer>
 
-  <!-- Chat Widget -->
-  <div class="chat-widget">
-    <button class="chat-button" id="chatButton" aria-label="Chat with Max">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-    </button>
-    
-    <div class="chat-panel" id="chatPanel">
-      <div class="chat-header">
-        <div class="chat-title">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          Chat with Max
-        </div>
-        <button class="chat-close" id="chatClose" aria-label="Close chat">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      
-      <div class="chat-messages" id="chatMessages">
-        <div class="chat-message bot">👋 Hi, I'm Max — Your Pricing Assistant!</div>
-        <div class="chat-message bot">💬 How can I help with your pricing questions today?</div>
-      </div>
-      
-      <div class="chat-options">
-        <button class="chat-option" onclick="maxReply('Compare Plans')">Compare Plans</button>
-        <button class="chat-option" onclick="maxReply('Custom Pricing')">Custom Pricing</button>
-        <button class="chat-option" onclick="maxReply('ROI Calculator')">ROI Calculator</button>
-        <button class="chat-option" onclick="maxReply('Talk to Sales')">Talk to Sales</button>
-      </div>
-    </div>
-  </div>
-
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Mobile menu toggle
-      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-      const navLinks = document.querySelector('.nav-links');
+      // ROI Calculator
+      const employeeCount = document.getElementById('employeeCount');
+      const averageSalary = document.getElementById('averageSalary');
+      const repetitiveTasksPercent = document.getElementById('repetitiveTasksPercent');
+      const agentCount = document.getElementById('agentCount');
       
-      if (mobileNavToggle) {
-        mobileNavToggle.addEventListener('click', function() {
-          navLinks.classList.toggle('active');
+      const timeSaved = document.getElementById('timeSaved');
+      const laborSavings = document.getElementById('laborSavings');
+      const agentCost = document.getElementById('agentCost');
+      const netSavings = document.getElementById('netSavings');
+      
+      function calculateROI() {
+        // Get input values
+        const employees = parseInt(employeeCount.value) || 0;
+        const salary = parseInt(averageSalary.value) || 0;
+        const taskPercent = parseInt(repetitiveTasksPercent.value) || 0;
+        const agents = parseInt(agentCount.value) || 0;
+        
+        // Calculate time saved (assuming 2080 working hours per year)
+        const totalHoursSaved = employees * 2080 * (taskPercent / 100);
+        timeSaved.textContent = Math.round(totalHoursSaved).toLocaleString();
+        
+        // Calculate labor savings
+        const totalLaborSavings = employees * salary * (taskPercent / 100);
+        laborSavings.textContent = '$' + Math.round(totalLaborSavings).toLocaleString();
+        
+        // Calculate agent cost (using Professional plan as default, annual pricing)
+        const totalAgentCost = agents * (960 * 12); // $960/month for Professional plan
+        agentCost.textContent = '$' + Math.round(totalAgentCost).toLocaleString();
+        
+        // Calculate net savings
+        const totalNetSavings = totalLaborSavings - totalAgentCost;
+        netSavings.textContent = '$' + Math.round(totalNetSavings).toLocaleString();
+      }
+      
+      // Add event listeners to calculator inputs
+      if (employeeCount && averageSalary && repetitiveTasksPercent && agentCount) {
+        [employeeCount, averageSalary, repetitiveTasksPercent, agentCount].forEach(input => {
+          input.addEventListener('input', calculateROI);
+        });
+        
+        // Calculate initial values
+        calculateROI();
+      }
+    });
+  </script>
+</body>
+</html>
