@@ -1428,7 +1428,7 @@
         <div class="demo-form">
           <h3>Book Your Demo</h3>
           
-          <form id="demoForm">
+          <form id="demoForm" onsubmit="return submitDemoForm(event)">
             <div class="form-group">
               <label for="name" class="form-label">Full Name*</label>
               <input type="text" id="name" name="name" class="form-input" required>
@@ -1491,7 +1491,17 @@
               <label for="consent" class="form-checkbox-label">I agree to receive communications from ApexSalesAI. I understand I can unsubscribe at any time. View our <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a>.</label>
             </div>
             
-            <button type="submit" class="cta" style="width: 100%;">Schedule My Demo</button>
+            <button type="submit" id="submitButton" class="cta" style="width: 100%;">Schedule My Demo</button>
+            
+            <div id="formSuccess" style="display: none; text-align: center; margin-top: 20px; padding: 15px; background-color: rgba(0, 194, 203, 0.1); border-radius: 8px;">
+              <p style="color: var(--primary); font-weight: 600; margin-bottom: 10px;">Thank you for scheduling a demo!</p>
+              <p style="color: var(--text-light); margin-bottom: 0;">Your request has been sent to our team. We'll be in touch with you shortly to confirm the details.</p>
+            </div>
+            
+            <div id="formError" style="display: none; text-align: center; margin-top: 20px; padding: 15px; background-color: rgba(255, 92, 92, 0.1); border-radius: 8px;">
+              <p style="color: #ff5c5c; font-weight: 600; margin-bottom: 10px;">Something went wrong</p>
+              <p style="color: var(--text-light); margin-bottom: 0;">We encountered an issue while submitting your request. Please try again or contact us directly at support@apexsalesai.com.</p>
+            </div>
           </form>
         </div>
       </div>
@@ -1775,6 +1785,119 @@
         chatMessages.scrollTop = chatMessages.scrollHeight;
       }
     });
+    
+    // Demo Form Submission
+    window.submitDemoForm = function(event) {
+      event.preventDefault();
+      
+      // Get the submit button and disable it to prevent multiple submissions
+      const submitButton = document.getElementById('submitButton');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+      
+      // Get all form data
+      const formData = new FormData(document.getElementById('demoForm'));
+      
+      // Convert formData to an object for easier manipulation
+      const formObject = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+      
+      // Create the email body with formatted content
+      const emailBody = `
+        Demo Request from ApexSalesAI Website
+        =====================================
+        
+        Contact Information:
+        - Name: ${formObject.name}
+        - Email: ${formObject.email}
+        - Company: ${formObject.company}
+        - Job Title: ${formObject.jobTitle}
+        - Phone: ${formObject.phone || 'Not provided'}
+        
+        Business Information:
+        - Sales Team Size: ${formObject.teamSize}
+        - Industry: ${formObject.industry}
+        
+        Message:
+        ${formObject.message || 'No specific message provided.'}
+        
+        Marketing Consent: ${formObject.consent ? 'Yes' : 'No'}
+        
+        Submitted on: ${new Date().toLocaleString()}
+      `;
+      
+      // Simple email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formObject.email)) {
+        document.getElementById('formError').style.display = 'block';
+        document.getElementById('formError').querySelector('p:last-child').textContent = 'Please enter a valid email address.';
+        submitButton.disabled = false;
+        submitButton.textContent = 'Schedule My Demo';
+        return false;
+      }
+      
+      // Create email submission data
+      const emailData = {
+        to: 'support@apexsalesai.com',
+        subject: `Demo Request from ${formObject.name} at ${formObject.company}`,
+        body: emailBody
+      };
+      
+      // In a real implementation, you would use a server-side API to send this email
+      // This simulation uses a timeout to simulate an API call
+      setTimeout(function() {
+        try {
+          // Simulate successful email sending
+          console.log('Email data would be sent to:', emailData);
+          
+          // Show success message
+          document.getElementById('demoForm').reset();
+          document.getElementById('formSuccess').style.display = 'block';
+          document.getElementById('formError').style.display = 'none';
+          document.getElementById('submitButton').style.display = 'none';
+          
+          // Scroll to the success message
+          document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth' });
+          
+          // In a real implementation, you would use something like:
+          /*
+          fetch('/api/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(emailData)
+          })
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('demoForm').reset();
+            document.getElementById('formSuccess').style.display = 'block';
+            document.getElementById('formError').style.display = 'none';
+          })
+          .catch(error => {
+            document.getElementById('formError').style.display = 'block';
+            console.error('Error:', error);
+          })
+          .finally(() => {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Schedule My Demo';
+          });
+          */
+          
+        } catch (error) {
+          // Show error message
+          document.getElementById('formError').style.display = 'block';
+          document.getElementById('formSuccess').style.display = 'none';
+          submitButton.disabled = false;
+          submitButton.textContent = 'Schedule My Demo';
+          console.error('Error:', error);
+        }
+      }, 1500); // Simulate network delay
+      
+      return false;
+    }
   </script>
 </body>
 </html>24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
