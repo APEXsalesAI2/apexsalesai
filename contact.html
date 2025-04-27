@@ -99,4 +99,33 @@
       </div>
     </div>
   </div>
+// Add this script to the bottom of the page, just before the closing </body> tag
+document.addEventListener('DOMContentLoaded', function() {
+  // FAQ accordion functionality
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+    
+    // Initialize height for CSS transitions
+    content.style.maxHeight = '0px';
+    
+    header.addEventListener('click', function() {
+      // Toggle active class
+      item.classList.toggle('active');
+      
+      // Update max-height for smooth animation
+      if (item.classList.contains('active')) {
+        // Set max-height to scrollHeight to allow content to expand
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.paddingBottom = '1.25rem';
+      } else {
+        // Collapse the content
+        content.style.maxHeight = '0px';
+        content.style.paddingBottom = '0';
+      }
+    });
+  });
+});
 </section>
