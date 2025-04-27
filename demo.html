@@ -1,144 +1,1617 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Demo | ApexSalesAI</title>
-  <meta name="description" content="Book a personalized demo with Max, your AI sales partner. Discover how ApexSalesAI can transform your revenue execution strategy." />
-  <meta name="keywords" content="ApexSalesAI demo, AI sales demo, autonomous sales agent demo, AI GTM execution, Max AI agent demo" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Demo | ApexSalesAI - Experience AI-Powered Revenue Execution</title>
+  <meta name="description" content="Schedule a personalized demo with Max, your AI sales partner. Discover how ApexSalesAI can transform your revenue execution strategy with autonomous sales agents." />
+  <meta name="keywords" content="AI sales demo, autonomous sales agent, AI GTM execution, Max AI agent demo, sales automation demo, AI sales assistant, enterprise sales AI" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Book a Demo | ApexSalesAI" />
-  <meta property="og:description" content="Experience a smarter way to execute sales. Book your demo with Max, powered by ApexSalesAI." />
+  <meta property="og:title" content="Book a Demo | ApexSalesAI - AI-Powered Revenue Execution" />
+  <meta property="og:description" content="Experience a smarter way to execute sales. Book your demo with Max, powered by ApexSalesAI's autonomous agent technology." />
   <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
   <meta property="og:url" content="https://www.apexsalesai.com/demo.html" />
   <meta property="og:type" content="website" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Book a Demo | ApexSalesAI" />
-  <meta name="twitter:description" content="Experience ApexSalesAI in action. Book your AI-powered sales execution demo." />
+  <meta name="twitter:title" content="Book a Demo | ApexSalesAI - AI Sales Execution" />
+  <meta name="twitter:description" content="Experience ApexSalesAI in action. Book your AI-powered sales execution demo today." />
   <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
   <meta name="twitter:site" content="@apexsalesai" />
   <!-- Structured Data (SEO JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "ApexSalesAI Demo",
     "description": "Book a live demo with Max, the AI sales execution agent from ApexSalesAI.",
-    "brand": "ApexSalesAI",
+    "provider": {
+      "@type": "Organization",
+      "name": "ApexSalesAI",
+      "sameAs": [
+        "https://www.linkedin.com/company/apexsalesai",
+        "https://twitter.com/apexsalesai"
+      ]
+    },
     "offers": {
       "@type": "Offer",
       "url": "https://www.apexsalesai.com/demo.html",
       "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
+      "priceCurrency": "USD"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ApexSalesAI",
+    "url": "https://www.apexsalesai.com",
+    "logo": "https://www.apexsalesai.com/images/apex-logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-123-4567",
+      "contactType": "sales",
+      "availableLanguage": ["English"]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/apexsalesai",
+      "https://twitter.com/apexsalesai"
+    ]
   }
   </script>
   <!-- Favicon -->
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <!-- Styles -->
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Base styles */
+    :root {
+      --primary: #00c2cb;
+      --primary-dark: #00a8b3;
+      --secondary: #052438;
+      --bg-dark: #0d1321;
+      --bg-card: rgba(26, 32, 44, 0.5);
+      --text: #e2e8f0;
+      --text-light: #cbd5e0;
+      --text-dimmed: #a0aec0;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      font-size: 16px; 
+      line-height: 1.6; 
+      color: #e2e8f0; 
+      margin: 0;
+      padding: 0;
+      background-color: #0d1321;
+    }
+    
+    h1, h2, h3, h4 { 
+      color: #fff; 
+      line-height: 1.2; 
+      margin-top: 0;
+    }
+    
+    p, ul, li { 
+      color: #cbd5e0; 
+      margin-bottom: 1rem;
+    }
+    
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(13, 19, 33, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar img.logo { 
+      height: 60px; 
+      width: auto; 
+    }
+    
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
+    }
+    
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .desktop-nav li {
+      margin: 0 0.75rem;
+    }
+    
+    .desktop-nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
+    }
+    
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-nav {
+      display: none;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      background-color: rgba(13, 19, 33, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem 0;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Show mobile menu on smaller screens */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .navbar img.logo {
+        height: 40px;
+      }
+    }
+
+    /* Hero section */
+    .hero { 
+      position: relative; 
+      overflow: hidden;
+      padding: 6rem 0;
+      text-align: center;
+      background-color: #052438;
+      background-image: radial-gradient(circle at 50% 50%, rgba(0, 194, 203, 0.1) 0%, rgba(5, 36, 56, 0) 70%);
+    }
+    
+    .hero-bg { 
+      position: absolute; 
+      inset: 0; 
+      pointer-events: none; 
+    }
+    
+    .hero-bg svg { 
+      width: 100%; 
+      height: 100%; 
+    }
+    
+    .hero-bg circle { 
+      opacity: .15; 
+      animation: float 8s ease-in-out infinite; 
+    }
+    
+    .hero-bg circle:nth-child(2) { 
+      animation-duration: 12s; 
+    }
+    
+    @keyframes float { 
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); } 
+    }
+    
+    .hero-title { 
+      font-size: 2.5rem; 
+      font-weight: 800; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    @media(min-width: 768px) { 
+      .hero-title { 
+        font-size: 3.5rem; 
+      } 
+    }
+    
+    .hero-subtitle { 
+      font-size: 1.125rem; 
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* CTA buttons */
+    .cta { 
+      background-color: #00c2cb; 
+      color: #1a202c; 
+      font-weight: 600; 
+      padding: .75rem 1.5rem; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      transition: transform .2s ease, background-color .2s ease;
+      display: inline-block;
+      margin: 0.5rem;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .cta:hover { 
+      transform: translateY(-2px); 
+      background-color: #00a8b3; 
+    }
+
+    .cta-outline {
+      background-color: transparent;
+      color: #00c2cb;
+      border: 2px solid #00c2cb;
+      box-shadow: 0 5px 15px rgba(0, 194, 203, 0.1);
+    }
+    
+    .cta-outline:hover {
+      background-color: rgba(0, 194, 203, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 194, 203, 0.2);
+    }
+
+    /* Features section */
+    .features-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .section-heading {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-heading h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    
+    .section-heading p {
+      font-size: 1.125rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-dimmed);
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .feature-card {
+      background-color: #1a202c;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      height: 100%;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(0, 194, 203, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .feature-icon {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-description {
+      color: var(--text-dimmed);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    /* Demo form section */
+    .demo-form-section {
+      padding: 5rem 0;
+      background-color: #052438;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    @media (max-width: 992px) {
+      .demo-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+    
+    .demo-content h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    
+    .demo-content p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .demo-content ul {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .demo-content li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    
+    .demo-content li svg {
+      color: var(--primary);
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+    
+    .demo-form {
+      background-color: #1a202c;
+      border-radius: 12px;
+      padding: 2.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .demo-form h3 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background-color: rgba(13, 19, 33, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      color: #ffffff;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23cbd5e0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 16px;
+      padding-right: 2.5rem;
+    }
+    
+    .form-checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-checkbox {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(13, 19, 33, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      margin-right: 0.75rem;
+      position: relative;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    
+    .form-checkbox:checked {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+    
+    .form-checkbox:checked::after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      border: solid #1a202c;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      top: 3px;
+      left: 7px;
+    }
+    
+    .form-checkbox-label {
+      font-size: 0.875rem;
+      color: var(--text-dimmed);
+    }
+
+    /* Testimonials section */
+    .testimonials-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    
+    .testimonial-card {
+      background-color: #1a202c;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .testimonial-quote {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .testimonial-quote::before {
+      content: '"';
+      font-size: 4rem;
+      color: rgba(0, 194, 203, 0.2);
+      position: absolute;
+      top: -1.5rem;
+      left: -0.5rem;
+      z-index: -1;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1a202c;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-right: 1rem;
+    }
+    
+    .testimonial-info h4 {
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .testimonial-info p {
+      font-size: 0.875rem;
+      color: var(--text-dimmed);
+      margin-bottom: 0;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .faq-question {
+      background-color: #1a202c;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    
+    .faq-question:hover {
+      border-color: rgba(0, 194, 203, 0.3);
+    }
+    
+    .faq-question-button {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 1.5rem;
+      color: #ffffff;
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-question-button svg {
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-question.active .faq-question-button svg {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--text-dimmed);
+    }
+    
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .faq-question:not(.active) .faq-answer {
+      display: none;
+    }
+
+    /* CTA section */
+    .cta-section {
+      padding: 5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background-color: #052438;
+    }
+    
+    .cta-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    
+    .cta-heading {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #ffffff, var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    
+    .cta-text {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Demo process section */
+    .process-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .process-step {
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    .step-number {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: rgba(0, 194, 203, 0.1);
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1.5rem;
+    }
+    
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .step-description {
+      color: var(--text-dimmed);
+    }
+    
+    .step-connect {
+      display: none;
+    }
+    
+    @media (min-width: 768px) {
+      .step-connect {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(0, 194, 203, 0.3);
+        position: absolute;
+        top: 30px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+      }
+      
+      .process-step {
+        position: relative;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgba(13, 19, 33, 0.98);
+      padding: 4rem 0 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    .footer-logo {
+      width: 180px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-about {
+      margin-bottom: 1.5rem;
+      color: var(--text-dimmed);
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      border-radius: 50%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .footer-social a:hover {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+    
+    .footer-heading {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: var(--text-dimmed);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-contact-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--primary);
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    
+    .footer-contact-text {
+      color: var(--text-dimmed);
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+    
+    .footer-copyright {
+      color: var(--text-dimmed);
+    }
+    
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .footer-legal a {
+      color: var(--text-dimmed);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-legal a:hover {
+      color: var(--primary);
+    }
+
+    /* Max Chat Widget */
+    #max-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    #max-button {
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,194,203,0.4);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    #max-button:hover {
+      background-color: #00a8b3;
+      transform: translateY(-3px);
+    }
+
+    #max-button svg {
+      margin-right: 8px;
+    }
+
+    #max-chat {
+      width: 350px;
+      height: 450px;
+      background: #0d1321;
+      border: 2px solid #00c2cb;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 20px rgba(0,194,203,0.4);
+      position: absolute;
+      bottom: 80px;
+      right: 0;
+    }
+
+    #max-chat.hidden {
+      display: none;
+    }
+
+    .max-header {
+      background: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .max-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .max-title svg {
+      margin-right: 8px;
+    }
+
+    .max-close {
+      background: none;
+      border: none;
+      color: #0d1321;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .max-messages {
+      background: #0d1321;
+      color: #e2e8f0;
+      padding: 15px;
+      flex-grow: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      margin-bottom: 15px;
+      max-width: 80%;
+    }
+
+    .message.max {
+      background: #1a202c;
+      padding: 12px;
+      border-radius: 12px 12px 12px 0;
+      align-self: flex-start;
+    }
+
+    .message.user {
+      background: #00c2cb;
+      color: #0d1321;
+      padding: 12px;
+      border-radius: 12px 12px 0 12px;
+      align-self: flex-end;
+    }
+
+    .chat-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chat-option {
+      background: none;
+      border: 1px solid #00c2cb;
+      color: #00c2cb;
+      padding: 8px 12px;
+      width: 100%;
+      text-align: left;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .chat-option:hover {
+      background: rgba(0,194,203,0.1);
+      transform: translateY(-2px);
+    }
+
+    .max-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .max-input-field {
+      flex-grow: 1;
+      background-color: rgba(26, 32, 44, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 10px 15px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .max-input-field:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .max-send {
+      background-color: var(--primary);
+      color: #0d1321;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .max-send:hover {
+      background-color: var(--primary-dark);
+    }
+
+    /* Animation classes */
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .menu-open {
+      display: block;
+    }
+
+    /* Video demo section */
+    .video-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    .video-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background-color: #1a202c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(5, 36, 56, 0.3), rgba(5, 36, 56, 0.7));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .video-overlay:hover {
+      background: linear-gradient(to bottom, rgba(5, 36, 56, 0.4), rgba(5, 36, 56, 0.8));
+    }
+    
+    .play-button {
+      width: 80px;
+      height: 80px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 15px rgba(0, 194, 203, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .play-button::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 0 15px 25px;
+      border-color: transparent transparent transparent #0d1321;
+      margin-left: 5px;
+    }
+    
+    .video-overlay:hover .play-button {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 194, 203, 0.6);
+    }
+    
+  </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="navbar-container container">
-    <a href="index.html"><img src="/images/apex-logo-white.png" alt="ApexSalesAI Logo" class="logo" /></a>
-    <div class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="platform.html">Platform</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="demo.html" class="active">Demo</a></li>
-        <li><a href="reseller.html">Reseller</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" aria-label="ApexSalesAI Home">
+        <img src="/images/apex-logo.png" alt="ApexSalesAI" class="logo">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="consulting.html">Consulting</a></li>
+          <li><a href="demo.html" class="active">Demo</a></li>
+          <li><a href="reseller.html">Reseller</a></li>
+          <li><a href="onboarding.html">Onboarding</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Mobile Navigation Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
-  </div>
-</nav>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="platform.html">Platform</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="demo.html" class="active">Demo</a>
+      <a href="reseller.html">Reseller</a>
+      <a href="onboarding.html">Onboarding</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-<!-- Hero Section -->
-<header class="hero">
-  <div class="container hero-content">
-    <h1 class="hero-title">Book a Live Demo with Max</h1>
-    <p class="hero-subtitle">Experience first-hand how ApexSalesAI powers smarter, faster revenue execution with real AI agents — not just dashboards.</p>
-  </div>
-</header>
-
-<!-- Main Content -->
-<main>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Demo | ApexSalesAI</title>
-  <meta name="description" content="Book a personalized demo with Max, your AI sales partner. Discover how ApexSalesAI can transform your revenue execution strategy." />
-  <meta name="keywords" content="ApexSalesAI demo, AI sales demo, autonomous sales agent demo, AI GTM execution, Max AI agent demo" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-<!-- Hero Section -->
-<header class="hero">
-  <div class="container hero-content">
-    <h1 class="hero-title">Book a Live Demo with Max</h1>
-    <p class="hero-subtitle">Experience first-hand how ApexSalesAI powers smarter, faster revenue execution with real AI agents — not just dashboards.</p>
-    <a href="contact.html" class="cta-button">Schedule Demo</a>
-  </div>
-</header>
-
-<!-- Main Content -->
-<main class="features-section">
-  <div class="container">
-    <h2>Meet Max: Your AI Sales Partner</h2>
-    <p>Max isn’t just an assistant. Max is an autonomous revenue engine, trained to accelerate pipeline creation, prioritize qualified leads, handle objections, and trigger workflows—all in real-time, all personalized to your brand and your customers.</p>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>Autonomous Prospecting</h3>
-        <p>Max identifies, researches, and initiates outreach to prospects 24/7—so your pipeline grows even when your team sleeps.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Smart Deal Progression</h3>
-        <p>Max monitors buyer signals, follows up automatically, escalates at the right moments, and alerts your human reps when it's time to close.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Personalized Conversations</h3>
-        <p>Max customizes outreach sequences, follow-ups, and meeting requests based on prospect persona, history, and stage—without ever sounding robotic.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Seamless CRM Sync</h3>
-        <p>All Max interactions log automatically into Salesforce, HubSpot, or your CRM—no more missed notes, no more manual entry errors.</p>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="200" cy="200" r="150" fill="#00c2cb" />
+        <circle cx="600" cy="150" r="120" fill="#005f6b" />
+      </svg>
+    </div>
+    <div class="container">
+      <h1 class="hero-title">Experience Max in Action</h1>
+      <p class="hero-subtitle">See how our autonomous AI sales agent can transform your revenue execution strategy with a personalized, interactive demo tailored to your business needs.</p>
+      <div>
+        <a href="#demo-form" class="cta">Schedule Your Demo Now</a>
+        <a href="#video-preview" class="cta-outline">Watch Preview</a>
       </div>
     </div>
+  </header>
 
-    <div class="cta-section">
-      <h2>Ready to See Max in Action?</h2>
-      <p>Schedule your personalized ApexSalesAI demo and experience how AI execution changes the game—forever.</p>
-      <a href="contact.html" class="cta-button">Book Demo with Max</a>
+  <!-- Video Preview Section -->
+  <section id="video-preview" class="video-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>See Max at Work</h2>
+        <p>Get a sneak peek of how Max identifies opportunities, engages prospects, and handles objections—all autonomously.</p>
+      </div>
+      
+      <div class="video-container">
+        <div class="video-placeholder">
+          <img src="/api/placeholder/800/450" alt="ApexSalesAI Demo Video Preview" />
+          <div class="video-overlay">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</main>
+  </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="sitemap.xml">Sitemap</a>
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What You'll Experience in Your Demo</h2>
+        <p>Our personalized demonstrations showcase how Max becomes an integral part of your revenue team.</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card animate-fade-in">
+          <div class="feature-icon">🔍</div>
+          <h3 class="feature-title">Intelligent Prospecting</h3>
+          <p class="feature-description">Watch Max analyze your ideal customer profile, research prospects, and initiate personalized outreach campaigns—all while you focus on strategy.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card animate-fade-in">
+          <div class="feature-icon">💬</div>
+          <h3 class="feature-title">Natural Conversations</h3>
+          <p class="feature-description">Experience how Max engages in human-like conversations across email, chat, and messaging platforms, adjusting tone and messaging to match prospect personas.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card animate-fade-in">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Real-time Deal Progression</h3>
+          <p class="feature-description">See Max's sophisticated follow-up sequences in action, including how it identifies buying signals and automatically progresses prospects through your pipeline.</p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="feature-card animate-fade-in">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">CRM Integration</h3>
+          <p class="feature-description">Watch how Max automatically logs interactions, updates deal status, and provides actionable insights in your existing CRM environment.</p>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="feature-card animate-fade-in">
+          <div class="feature-icon">🤝</div>
+          <h3 class="feature-title">Human Handoff</h3>
+          <p class="feature-description">Experience Max's intelligent escalation process when human intervention is optimal, ensuring your sales team steps in at exactly the right moment.</p>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="feature-card animate-fade-in">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title">Multi-channel Orchestration</h3>
+          <p class="feature-description">See how Max coordinates outreach across email, LinkedIn, SMS, and other channels, creating a cohesive buyer experience that never feels spammy.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-</body>
-</html>
+  <!-- Demo Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Your Demo Journey</h2>
+        <p>Our interactive demo process is designed to show you exactly how Max would work in your specific business context.</p>
+      </div>
+      
+      <div class="process-steps">
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-connect"></div>
+          <h3 class="step-title">Schedule</h3>
+          <p class="step-description">Book a time that works for your team using our simple scheduling tool.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-connect"></div>
+          <h3 class="step-title">Customize</h3>
+          <p class="step-description">Share your business context so we can tailor the demo to your specific industry and use case.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-connect"></div>
+          <h3 class="step-title">Experience</h3>
+          <p class="step-description">Join our interactive demo session where you'll see Max in action in scenarios relevant to your business.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Plan</h3>
+          <p class="step-description">Discuss implementation options and create your custom deployment roadmap with our team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What Our Customers Say</h2>
+        <p>Hear from companies that have transformed their sales process with Max.</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">After implementing Max, our SDR team's productivity increased by 300%. Max handles all the initial prospecting and follow-ups, allowing our human reps to focus on high-value conversations that actually close deals.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SL</div>
+            <div class="testimonial-info">
+              <h4>Sarah Landry</h4>
+              <p>VP of Sales, TechVantage Solutions</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">The demo blew us away. We saw Max identify prospects, personalize outreach, and handle objections better than most of our human SDRs. Within six weeks of deployment, our pipeline grew by 78%.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MB</div>
+            <div class="testimonial-info">
+              <h4>Michael Brenner</h4>
+              <p>CRO, GlobalFinance</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">What impressed me most was the seamless CRM integration. Max updates everything in real-time, provides incredible analytics, and our team finally has accurate data without the manual entry. The ROI was visible within the first month.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div class="testimonial-info">
+              <h4>Aisha Khan</h4>
+              <p>Sales Operations Director, NexusHealth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Form Section -->
+  <section id="demo-form" class="demo-form-section">
+    <div class="container">
+      <div class="demo-grid">
+        <div class="demo-content">
+          <h2>Schedule Your Personalized Demo</h2>
+          <p>Experience firsthand how Max can transform your sales execution strategy. Our team will walk you through a customized demonstration relevant to your industry and specific business challenges.</p>
+          
+          <ul>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>30-minute interactive demonstration</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Customized to your industry and use case</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Q&A with a solution architect</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Personalized implementation proposal</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="demo-form">
+          <h3>Book Your Demo</h3>
+          
+          <form id="demoForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name*</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Business Email*</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="company" class="form-label">Company*</label>
+              <input type="text" id="company" name="company" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="jobTitle" class="form-label">Job Title*</label>
+              <input type="text" id="jobTitle" name="jobTitle" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="teamSize" class="form-label">Sales Team Size*</label>
+              <select id="teamSize" name="teamSize" class="form-select" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="1-10">1-10 employees</option>
+                <option value="11-50">11-50 employees</option>
+                <option value="51-200">51-200 employees</option>
+                <option value="201-500">201-500 employees</option>
+                <option value="501+">501+ employees</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="industry" class="form-label">Industry*</label>
+              <select id="industry" name="industry" class="form-select" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="SaaS">SaaS</option>
+                <option value="Financial Services">Financial Services</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Retail">Retail</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">What specific challenges would you like to address?</label>
+              <textarea id="message" name="message" class="form-textarea"></textarea>
+            </div>
+            
+            <div class="form-checkbox-group">
+              <input type="checkbox" id="consent" name="consent" class="form-checkbox" required>
+              <label for="consent" class="form-checkbox-label">I agree to receive communications from ApexSalesAI. I understand I can unsubscribe at any time. View our <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a>.</label>
+            </div>
+            
+            <button type="submit" class="cta" style="width: 100%;">Schedule My Demo</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Get answers to common questions about our demo process and technology.</p>
+      </div>
+      
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-question active">
+          <button class="faq-question-button">
+            <span>How long does a typical demo session last?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our standard demo sessions are scheduled for 30 minutes, with an additional 15 minutes for Q&A. For enterprise clients or more complex use cases, we can arrange extended sessions of up to 60 minutes to ensure we cover all aspects of our solution relevant to your business.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ 2 -->
+        <div class="faq-question">
+          <button class="faq-question-button">
+            <span>Who should attend the demo from our company?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>We recommend including decision-makers from sales leadership, sales operations, and revenue operations. For technical integrations, it can be helpful to have a representative from your IT or CRM administration team. The more stakeholders who can experience Max firsthand, the more valuable the session will be.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ 3 -->
+        <div class="faq-question">
+          <button class="faq-question-button">
+            <span>Can you customize the demo for our specific industry?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! We tailor every demo to your industry, target market, and specific use cases. Prior to your demo, we'll gather information about your sales process, typical objections, and customer journey to show Max working in scenarios that closely match your real-world environment.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ 4 -->
+        <div class="faq-question">
+          <button class="faq-question-button">
+            <span>How quickly can Max be implemented after the demo?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>For standard deployments with common CRM integrations (Salesforce, HubSpot), implementation typically takes 2-3 weeks. Enterprise deployments with custom integrations or complex workflows may take 4-6 weeks. Following your demo, we'll provide a detailed implementation timeline specific to your requirements.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ 5 -->
+        <div class="faq-question">
+          <button class="faq-question-button">
+            <span>What CRM systems does Max integrate with?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Max integrates natively with Salesforce, HubSpot, Pipedrive, Zoho CRM, Microsoft Dynamics, and SugarCRM. We also offer custom API integrations for other CRM systems. During the demo, we can show you exactly how Max works with your specific CRM environment.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ 6 -->
+        <div class="faq-question">
+          <button class="faq-question-button">
+            <span>Is there a trial period available after the demo?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we offer a 30-day pilot program that includes full implementation and training. During this period, you'll experience Max working with your actual data and prospects. The pilot includes all features of our Professional plan and can be upgraded to an Enterprise pilot if needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-heading">Ready to Transform Your Sales Execution?</h2>
+      <p class="cta-text">Join the companies using Max to accelerate pipeline growth, improve conversion rates, and scale revenue operations efficiently.</p>
+      <div>
+        <a href="#demo-form" class="cta">Book Your Demo Now</a>
+        <a href="pricing.html" class="cta-outline">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="/images/apex-logo.png" alt="ApexSalesAI" class="footer-logo">
+          
+          <p class="footer-about">Intelligent AI agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
+          
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg"
