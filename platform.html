@@ -1,97 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Platform | ApexSalesAI</title>
+  <meta name="description" content="Discover the ApexOpsAI execution engine - powering intelligent agents that drive revenue and elevate customer interactions for enterprise teams." />
+  <meta name="keywords" content="ApexSalesAI platform, ApexOpsAI engine, ApexSalesAI agents, ApexSupportAI agents, AI sales automation, AI customer support" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Platform | ApexSalesAI" />
+  <meta property="og:description" content="Discover the AI-powered platform that's revolutionizing sales and support operations for enterprise teams." />
+  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta property="og:url" content="https://www.apexsalesai.com/platform.html" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Platform | ApexSalesAI" />
+  <meta name="twitter:description" content="Discover the AI-powered platform that's revolutionizing sales and support operations for enterprise teams." />
+  <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta name="twitter:site" content="@apexsalesai" />
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css">
-</head>
-
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ApexSalesAI Platform",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "AI-powered sales and support platform for enterprise teams"
+    }
+  </script>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="container navbar-container">
-    <a href="index.html"><img src="/images/apex-logo-white.png" alt="ApexSalesAI Logo" class="logo"></a>
-    <div class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="platform.html" class="active">Platform</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="consulting.html">Consulting</a></li>
-        <li><a href="reseller.html">Reseller</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" aria-label="ApexSalesAI Home">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="platform.html" class="active">Platform</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="consulting.html">Consulting</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="reseller.html">Reseller</a></li>
+          <li><a href="onboarding.html">Onboarding</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Mobile Navigation Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
-  </div>
-</nav>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="platform.html" class="active">Platform</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="demo.html">Demo</a>
+      <a href="reseller.html">Reseller</a>
+      <a href="onboarding.html">Onboarding</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container hero-content">
-    <h1>ApexOpsAI: The Future of Sales and Support Execution</h1>
-    <p>Purpose-built AI agents to accelerate revenue, boost customer satisfaction, and automate frontline operations.</p>
-    <a href="demo.html" class="cta-button">Schedule a Demo</a>
-  </div>
-</section>
-
-<!-- Features Section -->
-<section class="features-section">
-  <div class="container">
-    <h2 class="section-title">What Powers ApexSalesAI?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>ApexSalesAI Agents</h3>
-        <p>24/7 smart prospecting, automated outreach, real-time CRM updates — so your sales team can focus on closing deals, not chasing tasks.</p>
-      </div>
-      <div class="feature-card">
-        <h3>ApexSupportAI Agents</h3>
-        <p>Always-on customer support with instant resolutions, ticket automation, CSAT tracking, and escalation management without the backlog.</p>
-      </div>
-      <div class="feature-card">
-        <h3>ApexOpsAI Execution Engine</h3>
-        <p>Our proprietary AI execution layer, driving intelligent workflows, opportunity management, and pipeline acceleration from a single hub.</p>
-      </div>
-      <div class="feature-card">
-        <h3>CRM and System Integrations</h3>
-        <p>Seamlessly connects with Salesforce, HubSpot, Microsoft 365, Slack, and more — Apex meets your team where they work, not the other way around.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Security and Compliance Built-In</h3>
-        <p>Enterprise-grade security, encryption, audit trails, HIPAA-readiness — trusted by industries where precision and protection are mandatory.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Real-Time Data and Analytics</h3>
-        <p>Instant visibility into agent performance, pipeline health, customer interactions, and key KPIs through our ApexInsights Dashboard.</p>
+  <!-- Hero -->
+  <header class="hero relative text-center text-white" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="200" cy="200" r="150" fill="#00c2cb" />
+        <circle cx="600" cy="150" r="120" fill="#005f6b" />
+      </svg>
+    </div>
+    <div class="container mx-auto py-24 px-4 relative z-10">
+      <h1 class="hero-title">ApexOpsAI: The Future of<br>Sales and Support Execution</h1>
+      <p class="hero-subtitle">Purpose-built AI agents to accelerate revenue, boost customer satisfaction, and automate frontline operations.</p>
+      <div>
+        <a href="demo.html" class="cta">Schedule a Demo</a>
+        <a href="#platform-details" class="cta" onclick="scrollToSection('platform-details')">Explore Features</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- CTA Section -->
-<section class="cta-section">
-  <div class="container">
-    <h2>Ready to Elevate Your Revenue and Support Operations?</h2>
-    <p>Let's build your future execution engine — powered by Apex.</p>
-    <a href="demo.html" class="cta-button">Schedule Your Demo</a>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="sitemap.xml">Sitemap</a>
+  <!-- Platform Overview -->
+  <section id="platform-details" class="container mx-auto py-20 px-4">
+    <h2 class="text-white text-center mb-10">What Powers ApexSalesAI?</h2>
+    <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Our proprietary ApexOpsAI engine combines the latest in machine learning, natural language processing, and decision intelligence to create autonomous agents that transform how teams sell and support.</p>
+    
+    <div class="grid grid-cols-3 gap-8 mb-16">
+      <div class="feature-box">
+        <h4 class="text-white mb-2">Contextual Intelligence</h4>
+        <p class="text-gray-300">Our agents understand nuanced business conversations, detecting intent and sentiment to provide personalized interactions at scale.</p>
+      </div>
+      <div class="feature-box">
+        <h4 class="text-white mb-2">Autonomous Workflow</h4>
+        <p class="text-gray-300">From initial contact to deal closure, our AI can independently manage entire workflows while knowing when to engage human experts.</p>
+      </div>
+      <div class="feature-box">
+        <h4 class="text-white mb-2">Enterprise Integration</h4>
+        <p class="text-gray-300">Seamlessly connects with your existing tech stack including CRM, email, knowledge bases, and communication platforms.</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
+  <!-- ApexSalesAI Agents -->
+  <section id="sales" class="bg-gray-800 py-20 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-white text-center mb-10">ApexSalesAI Agents</h2>
+      <div class="grid grid-cols-3 gap-8">
+        <div class="module-card">
+          <h3>Lead Generation</h3>
+          <p>AI-powered prospecting that identifies high-intent buyers before competitors can reach them.</p>
+          <ul class="list-disc list-inside mb-6">
+            <li>Intelligent lead scoring</li>
+            <li>Buying signal detection</li>
+            <li>Automated outreach sequences</li>
+            <li>Multi-channel engagement</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <h3>Deal Intelligence</h3>
+          <p>Transform your pipeline with AI that predicts outcomes and prescribes winning actions.</p>
+          <ul class="list-disc list-inside mb-6">
+            <li>Win probability forecasting</li>
+            <li>Deal risk monitoring</li>
+            <li>Competitive intelligence</li>
+            <li>Next-best-action guidance</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <h3>Sales Automation</h3>
+          <p>24/7 smart prospecting, automated outreach, real-time CRM updates — so your sales team can focus on closing deals, not chasing tasks.</p>
+          <ul class="list-disc list-inside mb-6">
+            <li>Meeting scheduling</li>
+            <li>Follow-up management</li>
+            <li>Administrative task elimination</li>
+            <li>Performance analytics</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="demo.html" class="cta">Schedule a Sales Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ApexSupportAI Agents -->
+  <section id="support" class="py-20 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-white text-center mb-10">ApexSupportAI Agents</h2>
+      <div class="grid grid-cols-3 gap-8">
+        <div class="module-card">
+          <h3>Customer Resolution</h3>
+          <p>Provide instant, accurate responses to customer inquiries with contextual understanding.</p>
+          <ul class="list-disc list-inside mb-6">
+            <li>24/7 support availability</li>
+            <li>Natural language understanding</li>
+            <li>Multi-language support</li>
+            <li>Contextual memory</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <h3>Knowledge Operations</h3>
+          <p>Leverage your existing knowledge base with AI that learns and improves over time.</p>
+          <ul class="list-disc list-inside mb-6">
+            <li>Automatic knowledge indexing</li>
+            <li>Content gap analysis</li>
+            <li>Self-learning capabilities</li>
+            <li>Knowledge suggestion engine</li>
+          </ul>
+        </div>
+        <div class="module-card">
+          <h3>Ticket Management</h3>
+          <p>Intelligent routing, prioritization, and resolution tracking for unprecedented efficiency.</p>
+          <ul class="list-disc list-inside mb-6">
+            <li>Smart escalation protocols</li>
+            <li>SLA compliance monitoring</li>
+            <li>Automated follow-ups</li>
+            <li>CSAT & NPS optimization</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="demo.html" class="cta">Schedule a Support Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enterprise Integration -->
+  <section class="bg-gray-800 py-20 px-4">
+    <div class="container mx-auto text-center">
+      <h2 class="text-white mb-10">Enterprise-Grade Integration</h2>
+      <p class="text-gray-300 mb-12 max-w-2xl mx-auto">ApexAI seamlessly connects with your existing technology ecosystem, requiring minimal IT resources while providing maximum security.</p>
+      
+      <div class="grid grid-cols-3 gap-8">
+        <div class="feature-box">
+          <h4 class="text-white mb-2">CRM Integration</h4>
+          <p class="text-gray-300">Native connections with Salesforce, HubSpot, Microsoft Dynamics, and other leading CRMs with bi-directional data flow.</p>
+        </div>
+        <div class="feature-box">
+          <h4 class="text-white mb-2">Communication Stack</h4>
+          <p class="text-gray-300">Works with your email (Gmail, Outlook), messaging (Slack, Teams), and telephony systems for omnichannel engagement.</p>
+        </div>
+        <div class="feature-box">
+          <h4 class="text-white mb-2">Security & Compliance</h4>
+          <p class="text-gray-300">SOC 2 Type II certified, GDPR compliant, and equipped with enterprise-grade data encryption and access controls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="text-center py-20 px-4 bg-gray-900">
+    <div class="container mx-auto">
+      <h2 class="text-white text-3xl font-bold mb-4">Ready to Transform Your Revenue Operations?</h2>
+      <p class="text-gray-400 mb-8">Book a personalized demo to see how ApexAI can help your team sell smarter and support faster.</p>
+      <a href="demo.html" class="cta">Schedule Your Demo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Use</a> | 
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileNav.classList.toggle('menu-open');
+      });
+      
+      // Handle responsive grid for smaller screens
+      function handleResponsiveGrids() {
+        const gridElements = document.querySelectorAll('.grid');
+        
+        if (window.innerWidth < 768) {
+          gridElements.forEach(grid => {
+            if (grid.classList.contains('grid-cols-3')) {
+              grid.classList.remove('grid-cols-3');
+            }
+          });
+        } else {
+          gridElements.forEach(grid => {
+            if (!grid.classList.contains('grid-cols-3')) {
+              grid.classList.add('grid-cols-3');
+            }
+          });
+        }
+      }
+      
+      // Initial call and event listener for resize
+      handleResponsiveGrids();
+      window.addEventListener('resize', handleResponsiveGrids);
+    });
+    
+    // Smooth scrolling for anchor links
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
