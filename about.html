@@ -884,6 +884,29 @@ document.addEventListener('DOMContentLoaded', function() {
     careersLink.setAttribute('href', 'careers.html');
   }
 });
+// This is JavaScript code to replace the links in the about.html page
+// Add this script to the bottom of the about.html file, just before the closing </body> tag
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Fix job links to connect to the correct files in the careers folder
+  const jobCards = document.querySelectorAll('.job-card');
+  
+  jobCards.forEach(card => {
+    const jobTitle = card.querySelector('.job-title').textContent;
+    const link = card.querySelector('.cta');
+    
+    // Update link href based on job title
+    if (jobTitle.includes('AI/ML Engineer')) {
+      link.setAttribute('href', 'careers/AIML-Engineer.html');
+    } else if (jobTitle.includes('NLP Specialist')) {
+      link.setAttribute('href', 'careers/NLP-Specialist.html');
+    } else if (jobTitle.includes('Sales Engineering Lead')) {
+      link.setAttribute('href', 'careers/Sales-Engineering-Lead.html');
+    } else if (jobTitle.includes('AI Ethics Researcher')) {
+      link.setAttribute('href', 'careers/AI-Ethics-Researcher.html');
+    }
+  });
+});
 <body>
   <!-- Navigation -->
   <nav class="navbar">
