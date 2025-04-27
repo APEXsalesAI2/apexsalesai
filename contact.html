@@ -1,131 +1,676 @@
-<!-- Updated FAQ Section with detailed responses -->
-<section class="faq-section">
-  <div class="container mx-auto px-4">
-    <h2 class="text-white text-center mb-10">Frequently Asked Questions</h2>
-    <p class="text-center mb-8">Find quick answers to common questions about ApexSalesAI</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ApexSalesAI</title>
+  <meta name="description" content="Get in touch with ApexSalesAI to learn how our AI-powered agents can transform your sales and support operations. Connect with our team today." />
+  <meta name="keywords" content="contact ApexSalesAI, AI sales automation, AI customer support, enterprise AI solutions, sales automation demo" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | ApexSalesAI" />
+  <meta property="og:description" content="Connect with our team to learn how ApexSalesAI can transform your revenue operations." />
+  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta property="og:url" content="https://www.apexsalesai.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | ApexSalesAI" />
+  <meta name="twitter:description" content="Connect with our team to learn how ApexSalesAI can transform your revenue operations." />
+  <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta name="twitter:site" content="@apexsalesai" />
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ApexSalesAI",
+      "url": "https://www.apexsalesai.com",
+      "logo": "https://www.apexsalesai.com/images/apex-logo-white.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-555-APEX",
+        "contactType": "sales",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://twitter.com/apexsalesai",
+        "https://www.linkedin.com/company/apexsalesai"
+      ]
+    }
+  </script>
+  <!-- Inline Styles -->
+  <style>
+    /* Base typography */
+    body { 
+      font-family: 'Inter', sans-serif; 
+      font-size: 16px; 
+      line-height: 1.6; 
+      color: #e2e8f0; 
+      margin: 0;
+      padding: 0;
+      background-color: #0d1321;
+    }
     
-    <div class="accordion">
-      <div class="accordion-item">
-        <div class="accordion-header">How quickly can we implement ApexSalesAI?</div>
-        <div class="accordion-content">
-          <p>Most clients are fully operational within 2-4 weeks, depending on the complexity of your existing systems and integration requirements. Our implementation team follows a proven methodology:</p>
-          <ol style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: decimal;">
-            <li>Initial consultation and requirements gathering (2-3 days)</li>
-            <li>System integration and configuration (1-2 weeks)</li>
-            <li>Agent training and customization (3-5 days)</li>
-            <li>User onboarding and training (2-3 days)</li>
-            <li>Go-live with ongoing optimization (continuous)</li>
-          </ol>
-          <p style="margin-top: 1rem;">Our implementation team will work with you to create a customized onboarding plan tailored to your specific needs and timeline requirements.</p>
-        </div>
+    h1, h2, h3, h4 { 
+      color: #fff; 
+      line-height: 1.2; 
+      margin-top: 0;
+    }
+    
+    p, ul, li { 
+      color: #cbd5e0; 
+      margin-bottom: 1rem;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(13, 19, 33, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar img.logo { 
+      height: 60px; 
+      width: auto; 
+    }
+    
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
+    }
+    
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .desktop-nav li {
+      margin: 0 0.75rem;
+    }
+    
+    .desktop-nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+      padding: 0.5rem 0;
+    }
+    
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-nav {
+      display: none;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      background-color: rgba(13, 19, 33, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem 0;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Show mobile menu on smaller screens */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .navbar img.logo {
+        height: 40px;
+      }
+    }
+
+    /* CTA buttons */
+    .cta { 
+      background-color: #00c2cb; 
+      color: #1a202c; 
+      font-weight: 600; 
+      padding: .75rem 1.5rem; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      transition: transform .2s ease, background-color .2s ease;
+      display: inline-block;
+      margin: 0.5rem;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .cta:hover { 
+      transform: translateY(-2px); 
+      background-color: #00a8b3; 
+    }
+
+    /* Hero section */
+    .hero { 
+      position: relative; 
+      overflow: hidden;
+      padding: 6rem 0;
+    }
+    
+    .hero-bg { 
+      position: absolute; 
+      inset: 0; 
+      pointer-events: none; 
+    }
+    
+    .hero-bg svg { 
+      width: 100%; 
+      height: 100%; 
+    }
+    
+    .hero-bg circle { 
+      opacity: .15; 
+      animation: float 8s ease-in-out infinite; 
+    }
+    
+    .hero-bg circle:nth-child(2) { 
+      animation-duration: 12s; 
+    }
+    
+    @keyframes float { 
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); } 
+    }
+    
+    .hero-title { 
+      font-size: 2.5rem; 
+      font-weight: 800; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    @media(min-width: 768px) { 
+      .hero-title { 
+        font-size: 3.5rem; 
+      } 
+    }
+    
+    .hero-subtitle { 
+      font-size: 1.125rem; 
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Contact specific styles */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .contact-form {
+      background-color: #1a202c;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(13, 19, 33, 0.7);
+      color: white;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: #00c2cb;
+    }
+    
+    .form-textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .contact-info {
+      background-color: #1a202c;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .contact-item {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .contact-icon {
+      color: #00c2cb;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .contact-details h3 {
+      margin-bottom: 0.5rem;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(0, 194, 203, 0.1);
+      color: #00c2cb;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    
+    .social-link:hover {
+      background-color: rgba(0, 194, 203, 0.2);
+      transform: translateY(-3px);
+    }
+    
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    /* Map container */
+    .map-container {
+      margin-top: 3rem;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 400px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    
+    /* FAQ section */
+    .faq-section {
+      margin-top: 4rem;
+    }
+    
+    .accordion {
+      margin-top: 2rem;
+    }
+    
+    .accordion-item {
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #1a202c;
+    }
+    
+    .accordion-header {
+      padding: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    
+    .accordion-header:hover {
+      background-color: #2d3748;
+    }
+    
+    .accordion-header::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: #00c2cb;
+      transition: transform 0.3s;
+    }
+    
+    .accordion-item.active .accordion-header::after {
+      transform: rotate(45deg);
+    }
+    
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1.25rem;
+    }
+    
+    .accordion-item.active .accordion-content {
+      max-height: 200px;
+      padding-bottom: 1.25rem;
+    }
+
+    /* Section headings */
+    section {
+      padding: 5rem 0;
+    }
+    
+    section h2 { 
+      font-size: 2rem; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    @media(min-width: 768px) { 
+      section h2 { 
+        font-size: 2.25rem; 
+      } 
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    footer a {
+      color: #00c2cb;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.2s ease;
+    }
+    
+    footer a:hover {
+      color: #00a8b3;
+    }
+    
+    /* Utility classes */
+    .text-center { text-align: center; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .mb-12 { margin-bottom: 3rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-10 { margin-top: 2.5rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .max-w-2xl { max-width: 42rem; }
+    .bg-gray-700 { background-color: #2d3748; }
+    .bg-gray-800 { background-color: #1a202c; }
+    .bg-gray-900 { background-color: #0d1321; }
+    .text-gray-300 { color: #d1d5db; }
+    .text-gray-400 { color: #9ca3af; }
+    .text-gray-500 { color: #6b7280; }
+    .text-white { color: #ffffff; }
+    .text-teal-400 { color: #00c2cb; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" aria-label="ApexSalesAI Home">
+        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="consulting.html">Consulting</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="reseller.html">Reseller</a></li>
+          <li><a href="onboarding.html">Onboarding</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
       </div>
       
-      <div class="accordion-item">
-        <div class="accordion-header">Does ApexSalesAI integrate with our existing CRM?</div>
-        <div class="accordion-content">
-          <p>Yes, ApexSalesAI integrates seamlessly with all major CRM platforms including:</p>
-          <ul style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: disc;">
-            <li>Salesforce (Sales Cloud, Service Cloud, Marketing Cloud)</li>
-            <li>HubSpot (Sales Hub, Service Hub, Marketing Hub)</li>
-            <li>Microsoft Dynamics 365</li>
-            <li>Zoho CRM</li>
-            <li>Pipedrive</li>
-            <li>SugarCRM</li>
-            <li>And many others</li>
-          </ul>
-          <p style="margin-top: 1rem;">We also offer custom API integration for proprietary systems and can connect with your existing tech stack through our flexible connector framework. Our integration specialists will work with your IT team to ensure smooth data flow between all systems.</p>
-        </div>
+      <!-- Mobile Navigation Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="platform.html">Platform</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="demo.html">Demo</a>
+      <a href="reseller.html">Reseller</a>
+      <a href="onboarding.html">Onboarding</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero relative text-center text-white" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="200" cy="200" r="150" fill="#00c2cb" />
+        <circle cx="600" cy="150" r="120" fill="#005f6b" />
+      </svg>
+    </div>
+    <div class="container mx-auto py-24 px-4 relative z-10">
+      <h1 class="hero-title">Get in Touch</h1>
+      <p class="hero-subtitle">Connect with our team to learn how ApexSalesAI can transform your revenue operations.</p>
+    </div>
+  </header>
+
+  <!-- Contact Content -->
+  <section class="container mx-auto px-4 py-20">
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+        
+        <form id="contactForm" action="#" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="company" class="form-label">Company</label>
+            <input type="text" id="company" name="company" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="interest" class="form-label">I'm interested in:</label>
+            <select id="interest" name="interest" class="form-select" required>
+              <option value="">Select an option</option>
+              <option value="sales">ApexSalesAI</option>
+              <option value="support">ApexSupportAI</option>
+              <option value="consulting">Consulting Services</option>
+              <option value="reseller">Reseller Program</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-textarea" required></textarea>
+          </div>
+          
+          <button type="submit" class="cta">Send Message</button>
+        </form>
       </div>
       
-      <div class="accordion-item">
-        <div class="accordion-header">How do you ensure data security and compliance?</div>
-        <div class="accordion-content">
-          <p>ApexSalesAI prioritizes security and compliance at every level of our platform. We maintain:</p>
-          <ul style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: disc;">
-            <li><strong>SOC 2 Type II certification:</strong> Independently verified controls for security, availability, processing integrity, confidentiality, and privacy</li>
-            <li><strong>GDPR compliance:</strong> Full data subject rights management, data protection impact assessments, and appropriate legal bases for processing</li>
-            <li><strong>Enterprise-grade encryption:</strong> AES-256 encryption for data at rest and TLS 1.3 for data in transit</li>
-            <li><strong>Robust access controls:</strong> Role-based access control (RBAC), multi-factor authentication (MFA), and detailed audit logging</li>
-            <li><strong>Regular security assessments:</strong> Penetration testing, vulnerability scanning, and code reviews</li>
-            <li><strong>Secure cloud infrastructure:</strong> Hosted in SOC 2 compliant data centers with 99.9% uptime</li>
-          </ul>
-          <p style="margin-top: 1rem;">We also offer data residency options for clients with specific geographic requirements and can provide additional security documentation upon request under NDA.</p>
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Reach out to us directly or schedule a call with our team.</p>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <div class="contact-details">
+            <h3>Phone</h3>
+            <p>Sales: <a href="tel:+18005552798">+1 (800) 555-APEX</a></p>
+            <p>Support: <a href="tel:+18005552799">+1 (800) 555-2799</a></p>
+          </div>
         </div>
-      </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">What kind of ROI can we expect from ApexSalesAI?</div>
-        <div class="accordion-content">
-          <p>While results vary by industry and use case, our clients typically see significant ROI across multiple dimensions:</p>
-          <ul style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: disc;">
-            <li><strong>Sales productivity:</strong> 30-40% increase in sales rep capacity through automation of routine tasks</li>
-            <li><strong>Lead qualification:</strong> 25-35% improvement in lead quality through AI-powered scoring and prioritization</li>
-            <li><strong>Pipeline velocity:</strong> 20-30% reduction in sales cycle length</li>
-            <li><strong>Customer support:</strong> 40-60% reduction in ticket resolution time</li>
-            <li><strong>Cost efficiency:</strong> 15-25% reduction in customer acquisition costs</li>
-          </ul>
-          <p style="margin-top: 1rem;">We work closely with clients to establish clear KPIs aligned with your business objectives and provide regular reporting on ROI metrics. Most clients achieve positive ROI within 3-6 months of implementation. Our client success team can share detailed case studies from your specific industry during the consultation process.</p>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <p>Sales: <a href="mailto:sales@apexsalesai.com">sales@apexsalesai.com</a></p>
+            <p>Support: <a href="mailto:support@apexsalesai.com">support@apexsalesai.com</a></p>
+            <p>Partner Program: <a href="mailto:partners@apexsalesai.com">partners@apexsalesai.com</a></p>
+          </div>
         </div>
-      </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">How does AI agent training work?</div>
-        <div class="accordion-content">
-          <p>ApexSalesAI agents undergo a comprehensive training process to ensure they represent your brand effectively:</p>
-          <ol style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: decimal;">
-            <li><strong>Knowledge base integration:</strong> We ingest your product documentation, sales scripts, FAQs, and support knowledge base</li>
-            <li><strong>Conversation analysis:</strong> Our system analyzes successful sales and support interactions from your existing data</li>
-            <li><strong>Workflow mapping:</strong> We configure agents to follow your specific business processes and playbooks</li>
-            <li><strong>Supervised learning:</strong> Initial interactions are closely monitored with human feedback</li>
-            <li><strong>Continuous improvement:</strong> Agents learn from ongoing interactions and feedback to improve performance</li>
-          </ol>
-          <p style="margin-top: 1rem;">The training process typically takes 2-3 weeks, with agents becoming increasingly effective over time as they learn from real-world interactions. Our platform includes a management dashboard where you can review agent performance, provide feedback, and adjust settings as needed.</p>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div class="contact-details">
+            <h3>Address</h3>
+            <p>ApexSalesAI Headquarters<br>
+            101 Innovation Drive, Suite 500<br>
+            San Francisco, CA 94105<br>
+            United States</p>
+          </div>
         </div>
-      </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">Do we need technical resources to manage ApexSalesAI?</div>
-        <div class="accordion-content">
-          <p>No, ApexSalesAI is designed to be managed by business users without technical expertise. Our platform features:</p>
-          <ul style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: disc;">
-            <li>Intuitive web-based control panel for agent management</li>
-            <li>No-code workflow builder for creating and modifying agent behaviors</li>
-            <li>Simple integration tools with step-by-step wizards</li>
-            <li>Visual analytics dashboards accessible to non-technical users</li>
-            <li>Natural language configuration for agent responses and actions</li>
-          </ul>
-          <p style="margin-top: 1rem;">While IT involvement may be helpful during initial integration with existing systems, day-to-day management is typically handled by sales operations, marketing, or customer success teams. We provide comprehensive training for your team and offer ongoing support through our customer success managers. For clients requiring additional assistance, we offer managed service options where our team handles all aspects of platform management.</p>
+        
+        <div class="social-links">
+          <a href="https://twitter.com/apexsalesai" class="social-link" target="_blank" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 9.99 9.99 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/apexsalesai" class="social-link" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-// Add this script to the bottom of the page, just before the closing </body> tag
-document.addEventListener('DOMContentLoaded', function() {
-  // FAQ accordion functionality
-  const accordionItems = document.querySelectorAll('.accordion-item');
-  
-  accordionItems.forEach(item => {
-    const header = item.querySelector('.accordion-header');
-    const content = item.querySelector('.accordion-content');
     
-    // Initialize height for CSS transitions
-    content.style.maxHeight = '0px';
+    <!-- Map -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0475782270144!2d-122.4023234!3d37.791654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ3JzMwLjAiTiAxMjLCsDI0JzA4LjQiVw!5e0!3m2!1sen!2sus!4v1619456723264!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </div>
     
-    header.addEventListener('click', function() {
-      // Toggle active class
-      item.classList.toggle('active');
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <h2 class="text-center">Frequently Asked Questions</h2>
+      <p class="text-center mb-8">Find quick answers to common questions about ApexSalesAI</p>
       
-      // Update max-height for smooth animation
-      if (item.classList.contains('active')) {
-        // Set max-height to scrollHeight to allow content to expand
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.paddingBottom = '1.25rem';
-      } else {
-        // Collapse the content
-        content.style.maxHeight = '0px';
-        content.style.paddingBottom = '0';
-      }
-    });
-  });
-});
-</section>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">How quickly can we implement ApexSalesAI?</div>
+          <div class="accordion-content">
+            <p>Most clients are fully operational within 2-4 weeks, depending on the complexity of your existing systems and integration requirements. Our implementation team will work with you to create a customized onboarding plan.</p>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <div class="accordion-header">Does ApexSalesAI integrate with our existing CRM?</div>
+          <div class="accordion-content">
+            <p>Yes, ApexSalesAI integrates with all major CRM platforms including Salesforce, HubSpot, Microsoft Dynamics, and others. We also offer custom API integration for proprietary systems.</p>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <div class="accordion-header">How do you ensure data security and compliance?</div>
+          <div class="accordion-content">
+            <p>ApexSalesAI is SOC 2 Type II certified and GDPR compliant. We implement industry-leading encryption, access controls, and security protocols. Our platform is hosted in secure, enterprise-grade cloud environments with 99.9% uptime.</p>
+          </div
