@@ -6,202 +6,430 @@
   <title>Strategic AI Consulting | ApexSalesAI</title>
   <meta name="description" content="Transform your revenue operations with ApexSalesAI's strategic consulting services. Our AI experts design custom solutions to accelerate growth and optimize your GTM strategy." />
   <meta name="keywords" content="AI consulting, sales strategy, GTM optimization, revenue operations consulting, ApexSalesAI consulting, enterprise AI implementation" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Strategic AI Consulting | ApexSalesAI" />
-  <meta property="og:description" content="Transform your revenue operations with ApexSalesAI's strategic consulting services." />
-  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
-  <meta property="og:url" content="https://www.apexsalesai.com/consulting.html" />
-  <meta property="og:type" content="website" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Strategic AI Consulting | ApexSalesAI" />
-  <meta name="twitter:description" content="Transform your revenue operations with ApexSalesAI's strategic consulting services." />
-  <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
-  <meta name="twitter:site" content="@apexsalesai" />
-  <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico" />
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <!-- Inline Styles -->
   <style>
-    /* Base typography */
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body { 
       font-family: 'Inter', sans-serif; 
       font-size: 16px; 
       line-height: 1.6; 
       color: #e2e8f0; 
-      margin: 0;
-      padding: 0;
       background-color: #0d1321;
+      overflow-x: hidden;
     }
     
     h1, h2, h3, h4 { 
       color: #fff; 
       line-height: 1.2; 
-      margin-top: 0;
+      margin-bottom: 1rem;
     }
     
-    p, ul, li { 
+    p { 
       color: #cbd5e0; 
       margin-bottom: 1rem;
     }
-
-    /* Container */
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    ul, li {
+      list-style: none;
+      color: #cbd5e0;
+    }
+    
     .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
-
-    /* Navbar */
-    .navbar {
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    
+    /* Navigation */
+    nav {
       background-color: rgba(13, 19, 33, 0.95);
       backdrop-filter: blur(5px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 0;
     }
     
-    .navbar img.logo { 
-      height: 60px; 
-      width: auto; 
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     
-    .navbar-container {
+    .logo {
+      height: 50px;
+      width: auto;
+    }
+    
+    .nav-menu {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-item {
+      margin: 0 0.75rem;
+    }
+    
+    .nav-link {
+      color: #e2e8f0;
+      font-weight: 600;
+      padding: 0.5rem 0;
+      transition: color 0.2s ease;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      color: #00c2cb;
+    }
+    
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Hero section */
+    .hero {
+      padding: 8rem 0 6rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    /* Button styles */
+    .btn {
+      display: inline-block;
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      margin: 0.5rem;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    
+    .btn:hover {
+      background-color: #00a8b3;
+      transform: translateY(-2px);
+    }
+    
+    /* Section styling */
+    section {
+      padding: 5rem 0;
+    }
+    
+    section h2 {
+      font-size: 2.25rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    section p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+    
+    /* Stats section */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #00c2cb;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    
+    .stat-label {
+      color: #a0aec0;
+    }
+    
+    /* Expertise cards */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .expertise-card {
+      background-color: rgba(0, 194, 203, 0.05);
+      border: 1px solid rgba(0, 194, 203, 0.2);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .expertise-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 194, 203, 0.08);
+    }
+    
+    .expertise-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #00c2cb;
+    }
+    
+    .expertise-card h3 {
+      color: #00c2cb;
+      margin-bottom: 1rem;
+    }
+    
+    /* Methodology section */
+    .methodology-section {
+      background-color: #1a202c;
+    }
+    
+    .methodology-steps {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .methodology-step {
+      display: flex;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .step-number {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background-color: #00c2cb;
+      color: #0d1321;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-right: 1.5rem;
+      position: relative;
+      z-index: 1;
     }
-
-    /* Responsive adjustments */
+    
+    .step-content h3 {
+      margin-bottom: 0.5rem;
+    }
+    
+    .step-line {
+      position: absolute;
+      top: 50px;
+      left: 25px;
+      bottom: -50px;
+      width: 2px;
+      background-color: rgba(0, 194, 203, 0.3);
+      z-index: 0;
+    }
+    
+    .methodology-step:last-child .step-line {
+      display: none;
+    }
+    
+    /* CTA section */
+    .cta-section {
+      text-align: center;
+      padding: 6rem 0;
+      background-color: #1a202c;
+      position: relative;
+    }
+    
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    .cta-section h2 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #ffffff, #00c2cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .cta-section p {
+      position: relative;
+      z-index: 1;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #0d1321;
+      padding: 2rem 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    footer p {
+      color: #6b7280;
+      margin-bottom: 1rem;
+    }
+    
+    footer a {
+      color: #00c2cb;
+      margin: 0 0.5rem;
+      transition: color 0.2s ease;
+    }
+    
+    footer a:hover {
+      color: #00a8b3;
+    }
+    
+    /* Max AI Widget */
+    #max-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    #max-button {
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,194,203,0.4);
+      transition: all 0.3s;
+    }
+    
+    #max-button:hover {
+      background-color: #00a8b3;
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive styles */
     @media (max-width: 768px) {
-      .expertise-grid,
-      .consultant-cards {
-        grid-template-columns: 1fr;
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0d1321;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .nav-menu.active {
+        display: flex;
+      }
+      
+      .nav-item {
+        margin: 0.5rem 0;
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
       }
       
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
       }
       
-      .case-study-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .case-results {
-        margin-top: 1rem;
-      }
-      
-      .service-timeline {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .service-timeline::before {
-        display: none;
-      }
-      
-      .timeline-point {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-      }
-      
-      .timeline-marker {
-        margin: 0 1rem 0 0;
-      }
-      
-      .timeline-label {
-        text-align: left;
-        margin: 0;
-        max-width: none;
-      }
-      
-      #max-chat {
-        width: 280px;
-        height: 350px;
-        bottom: 80px;
-        right: 10px;
-      }
-      
-      #max-button {
-        padding: 12px 16px;
-        font-size: 14px;
-        right: 10px;
-        bottom: 20px;
+      .expertise-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container navbar-container">
-      <a href="index.html" aria-label="ApexSalesAI Home">
+  <nav>
+    <div class="container nav-container">
+      <a href="index.html">
         <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
       </a>
       
-      <!-- Desktop Navigation -->
-      <div class="desktop-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="platform.html">Platform</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="consulting.html" class="active">Consulting</a></li>
-          <li><a href="demo.html">Demo</a></li>
-          <li><a href="reseller.html">Reseller</a></li>
-          <li><a href="onboarding.html">Onboarding</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      
-      <!-- Mobile Navigation Button -->
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+      <button class="nav-toggle" id="navToggle">
+        <span>☰</span>
       </button>
-    </div>
-    
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="platform.html">Platform</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="consulting.html" class="active">Consulting</a>
-      <a href="demo.html">Demo</a>
-      <a href="reseller.html">Reseller</a>
-      <a href="onboarding.html">Onboarding</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="platform.html" class="nav-link">Platform</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="consulting.html" class="nav-link active">Consulting</a></li>
+        <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
+        <li class="nav-item"><a href="reseller.html" class="nav-link">Reseller</a></li>
+        <li class="nav-item"><a href="onboarding.html" class="nav-link">Onboarding</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero relative text-center text-white" id="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
-        <circle cx="200" cy="200" r="150" fill="#00c2cb" />
-        <circle cx="600" cy="150" r="120" fill="#005f6b" />
-      </svg>
-    </div>
-    <div class="container mx-auto py-24 px-4 relative z-10">
-      <h1 class="hero-title">Strategic AI Consulting</h1>
-      <p class="hero-subtitle">Transform your go-to-market operations with AI-driven strategies customized for your business objectives.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Strategic AI Consulting</h1>
+      <p>Transform your go-to-market operations with AI-driven strategies customized for your business objectives.</p>
       <div>
-        <a href="#services" class="cta">Explore Services</a>
-        <a href="contact.html" class="cta">Request Consultation</a>
+        <a href="#expertise" class="btn">Explore Services</a>
+        <a href="contact.html" class="btn">Request Consultation</a>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- Stats Section -->
   <section class="stats-section">
@@ -230,11 +458,11 @@
     </div>
   </section>
 
-  <!-- Our Approach Section -->
-  <section class="approach-section">
+  <!-- Expertise Section -->
+  <section id="expertise" class="expertise-section">
     <div class="container">
-      <h2 class="text-center">Our Strategic Approach</h2>
-      <p class="text-center mb-12">We combine deep AI expertise with proven go-to-market strategies to transform how your business drives revenue</p>
+      <h2>Our Strategic Approach</h2>
+      <p>We combine deep AI expertise with proven go-to-market strategies to transform how your business drives revenue</p>
       
       <div class="expertise-grid">
         <div class="expertise-card">
@@ -277,10 +505,10 @@
   </section>
 
   <!-- Methodology Section -->
-  <section class="methodologies-section">
+  <section class="methodology-section">
     <div class="container">
-      <h2 class="text-center">Our Proven Methodology</h2>
-      <p class="text-center mb-8">A systematic approach to implementing AI in your revenue operations</p>
+      <h2>Our Proven Methodology</h2>
+      <p>A systematic approach to implementing AI in your revenue operations</p>
       
       <div class="methodology-steps">
         <div class="methodology-step">
@@ -330,499 +558,20 @@
     </div>
   </section>
 
-  <!-- Case Studies Section -->
-  <section class="case-studies-section">
-    <div class="container">
-      <h2 class="text-center">Client Success Stories</h2>
-      <p class="text-center mb-8">Real results from organizations that transformed their operations with our guidance</p>
-      
-      <div class="case-study-slider">
-        <div class="case-study-track" id="caseStudyTrack">
-          <!-- Case Study 1 -->
-          <div class="case-study-slide">
-            <div class="case-study-card">
-              <div class="case-study-header">
-                <div class="case-study-company">
-                  <div class="case-company-logo">TG</div>
-                  <div class="case-company-info">
-                    <h3>TechGrowth Inc.</h3>
-                    <p>Enterprise SaaS Company</p>
-                  </div>
-                </div>
-                <div class="case-results">
-                  +187% Pipeline Growth
-                </div>
-              </div>
-              <div class="case-study-content">
-                <p>TechGrowth was struggling with lengthy sales cycles and inconsistent outbound performance despite a strong product. Our team implemented a comprehensive AI strategy that transformed their approach to prospect identification and engagement.</p>
-                
-                <div class="case-study-stats">
-                  <div class="case-stat">
-                    <div class="case-stat-number">42%</div>
-                    <div class="case-stat-label">Reduction in Sales Cycle</div>
-                  </div>
-                  <div class="case-stat">
-                    <div class="case-stat-number">3.5x</div>
-                    <div class="case-stat-label">Increase in Meetings Booked</div>
-                  </div>
-                  <div class="case-stat">
-                    <div class="case-stat-number">$8.2M</div>
-                    <div class="case-stat-label">Additional Annual Revenue</div>
-                  </div>
-                </div>
-                
-                <p>"ApexSalesAI's consultants completely transformed how we approach our market. Their AI implementation strategy yielded results faster than we thought possible, and their team was exceptional at every step." — Sarah Chen, CRO</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Case Study 2 -->
-          <div class="case-study-slide">
-            <div class="case-study-card">
-              <div class="case-study-header">
-                <div class="case-study-company">
-                  <div class="case-company-logo">FC</div>
-                  <div class="case-company-info">
-                    <h3>FinCore</h3>
-                    <p>Financial Services Provider</p>
-                  </div>
-                </div>
-                <div class="case-results">
-                  65% Support Cost Reduction
-                </div>
-              </div>
-              <div class="case-study-content">
-                <p>FinCore needed to scale customer support operations without adding headcount while improving response times and satisfaction scores. Our consulting team designed and implemented an AI agent strategy that revolutionized their support operations.</p>
-                
-                <div class="case-study-stats">
-                  <div class="case-stat">
-                    <div class="case-stat-number">94%</div>
-                    <div class="case-stat-label">First-Contact Resolution</div>
-                  </div>
-                  <div class="case-stat">
-                    <div class="case-stat-number">3.2min</div>
-                    <div class="case-stat-label">Average Response Time</div>
-                  </div>
-                  <div class="case-stat">
-                    <div class="case-stat-number">+28pt</div>
-                    <div class="case-stat-label">NPS Improvement</div>
-                  </div>
-                </div>
-                
-                <p>"The ApexSalesAI consulting team helped us completely reimagine our customer support model. We're now able to provide 24/7 personalized support at a fraction of our previous costs." — Michael Rivera, VP of Customer Success</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Case Study 3 -->
-          <div class="case-study-slide">
-            <div class="case-study-card">
-              <div class="case-study-header">
-                <div class="case-study-company">
-                  <div class="case-company-logo">HW</div>
-                  <div class="case-company-info">
-                    <h3>HealthWise</h3>
-                    <p>Healthcare Technology Provider</p>
-                  </div>
-                </div>
-                <div class="case-results">
-                  +204% Qualified Leads
-                </div>
-              </div>
-              <div class="case-study-content">
-                <p>HealthWise faced challenges penetrating new market segments due to complex buying committees and regulatory requirements. Our consulting team created an AI-powered GTM strategy that significantly improved targeting and conversion rates.</p>
-                
-                <div class="case-study-stats">
-                  <div class="case-stat">
-                    <div class="case-stat-number">52%</div>
-                    <div class="case-stat-label">Increase in Win Rate</div>
-                  </div>
-                  <div class="case-stat">
-                    <div class="case-stat-number">5.7x</div>
-                    <div class="case-stat-label">ROI on Marketing Spend</div>
-                  </div>
-                  <div class="case-stat">
-                    <div class="case-stat-number">38%</div>
-                    <div class="case-stat-label">Expansion Revenue Growth</div>
-                  </div>
-                </div>
-                
-                <p>"ApexSalesAI's consultants truly understood the unique challenges of our industry. Their guidance helped us leverage AI to navigate complex sales cycles with remarkable results." — Jennifer Thompson, CEO</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="slider-controls">
-          <div class="slider-dot active" onclick="changeSlide(0)"></div>
-          <div class="slider-dot" onclick="changeSlide(1)"></div>
-          <div class="slider-dot" onclick="changeSlide(2)"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Team Section -->
-  <section class="consultants-section">
-    <div class="container">
-      <h2 class="text-center">Meet Our Expert Consultants</h2>
-      <p class="text-center mb-8">World-class AI strategists and revenue operations specialists</p>
-      
-      <div class="consultant-cards">
-        <!-- Consultant 1 -->
-        <div class="consultant-card">
-          <img src="/images/consultants/consultant-1.jpg" alt="Alex Rodriguez" class="consultant-img">
-          <div class="consultant-info">
-            <h3>Alex Rodriguez</h3>
-            <div class="consultant-title">Principal AI Strategist</div>
-            <p class="consultant-bio">Former Head of AI at Salesforce with 15+ years of experience implementing intelligent systems across enterprise sales organizations.</p>
-            <div class="consultant-links">
-              <a href="#" class="consultant-link">LinkedIn</a>
-              <a href="#" class="consultant-link">Bio</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Consultant 2 -->
-        <div class="consultant-card">
-          <img src="/images/consultants/consultant-2.jpg" alt="Maya Patel" class="consultant-img">
-          <div class="consultant-info">
-            <h3>Maya Patel</h3>
-            <div class="consultant-title">Revenue Operations Director</div>
-            <p class="consultant-bio">Expert in streamlining complex sales processes and designing scalable GTM motions for high-growth companies.</p>
-            <div class="consultant-links">
-              <a href="#" class="consultant-link">LinkedIn</a>
-              <a href="#" class="consultant-link">Bio</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Consultant 3 -->
-        <div class="consultant-card">
-          <img src="/images/consultants/consultant-3.jpg" alt="David Chen" class="consultant-img">
-          <div class="consultant-info">
-            <h3>David Chen, Ph.D.</h3>
-            <div class="consultant-title">ML Implementation Lead</div>
-            <p class="consultant-bio">Machine learning scientist specializing in NLP models for sales intelligence and conversational AI applications.</p>
-            <div class="consultant-links">
-              <a href="#" class="consultant-link">LinkedIn</a>
-              <a href="#" class="consultant-link">Bio</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services-section">
-    <div class="container">
-      <h2 class="text-center">Our Consulting Services</h2>
-      <p class="text-center mb-8">Tailored engagement models to address your specific needs</p>
-      
-      <div class="service-tabs">
-        <button class="service-tab active" onclick="showService('strategy')">AI Strategy</button>
-        <button class="service-tab" onclick="showService('implementation')">Implementation</button>
-        <button class="service-tab" onclick="showService('optimization')">Optimization</button>
-        <button class="service-tab" onclick="showService('training')">Training & Enablement</button>
-      </div>
-      
-      <!-- AI Strategy Service -->
-      <div id="strategy-content" class="service-content active">
-        <div class="service-details">
-          <h3>AI Strategy Consulting</h3>
-          <p>Develop a comprehensive roadmap for integrating AI into your sales and support operations to drive measurable business outcomes.</p>
-          
-          <div class="service-features">
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Opportunity assessment and prioritization</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Technology stack evaluation</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Data readiness assessment</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>ROI modeling and business case development</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Phased implementation roadmap</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Organization alignment strategy</div>
-            </div>
-          </div>
-          
-          <div class="service-timeline">
-            <div class="timeline-point">
-              <div class="timeline-marker">1</div>
-              <div class="timeline-label">Discovery Workshops</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">2</div>
-              <div class="timeline-label">Capability Assessment</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">3</div>
-              <div class="timeline-label">Opportunity Mapping</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">4</div>
-              <div class="timeline-label">Strategic Roadmap</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Implementation Service -->
-      <div id="implementation-content" class="service-content">
-        <div class="service-details">
-          <h3>AI Implementation</h3>
-          <p>End-to-end execution of your AI strategy with a focus on rapid time-to-value and measurable results.</p>
-          
-          <div class="service-features">
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Pilot program design and execution</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Custom AI agent development</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>System integration and data flow setup</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Process redesign and workflow automation</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>CRM and tech stack optimization</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Change management and adoption programs</div>
-            </div>
-          </div>
-          
-          <div class="service-timeline">
-            <div class="timeline-point">
-              <div class="timeline-marker">1</div>
-              <div class="timeline-label">Solution Design</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">2</div>
-              <div class="timeline-label">Pilot Deployment</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">3</div>
-              <div class="timeline-label">Testing & Refinement</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">4</div>
-              <div class="timeline-label">Full-Scale Launch</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Optimization Service -->
-      <div id="optimization-content" class="service-content">
-        <div class="service-details">
-          <h3>AI Optimization</h3>
-          <p>Enhance the performance of your existing AI systems to maximize ROI and competitive advantage.</p>
-          
-          <div class="service-features">
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Performance assessment and benchmarking</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Model fine-tuning and enhancement</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Process automation expansion</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Advanced analytics implementation</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Bottleneck identification and resolution</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>ROI measurement and reporting</div>
-            </div>
-          </div>
-          
-          <div class="service-timeline">
-            <div class="timeline-point">
-              <div class="timeline-marker">1</div>
-              <div class="timeline-label">Performance Audit</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">2</div>
-              <div class="timeline-label">Optimization Plan</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">3</div>
-              <div class="timeline-label">Enhancement Implementation</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">4</div>
-              <div class="timeline-label">Results Verification</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Training Service -->
-      <div id="training-content" class="service-content">
-        <div class="service-details">
-          <h3>Training & Enablement</h3>
-          <p>Empower your team with the skills and knowledge to thrive in an AI-augmented environment.</p>
-          
-          <div class="service-features">
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>AI literacy and awareness programs</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Role-specific training curricula</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>AI agent management workshops</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Hands-on technical training</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Leadership coaching for AI transformation</div>
-            </div>
-            <div class="service-feature">
-              <div class="service-feature-icon">✓</div>
-              <div>Certification and continuous learning</div>
-            </div>
-          </div>
-          
-          <div class="service-timeline">
-            <div class="timeline-point">
-              <div class="timeline-marker">1</div>
-              <div class="timeline-label">Skills Assessment</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">2</div>
-              <div class="timeline-label">Training Design</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">3</div>
-              <div class="timeline-label">Knowledge Transfer</div>
-            </div>
-            <div class="timeline-point">
-              <div class="timeline-marker">4</div>
-              <div class="timeline-label">Capability Validation</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="container mx-auto px-4">
-      <h2 class="text-white text-center mb-10">Frequently Asked Questions</h2>
-      <p class="text-center mb-8">Common questions about our consulting services</p>
-      
-      <div class="accordion">
-        <div class="accordion-item">
-          <div class="accordion-header">How do you measure the success of consulting engagements?</div>
-          <div class="accordion-content">
-            <p>Every consulting engagement begins with clearly defined success metrics aligned with your business objectives. We establish baseline measurements and track progress against specific KPIs throughout the engagement, including:</p>
-            <ul style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: disc;">
-              <li><strong>Revenue impact:</strong> Pipeline growth, win rate improvements, deal size increases</li>
-              <li><strong>Operational efficiency:</strong> Time saved, cost reductions, productivity gains</li>
-              <li><strong>Customer experience:</strong> Satisfaction scores, response times, resolution rates</li>
-              <li><strong>ROI measurements:</strong> Direct financial return on AI investments</li>
-            </ul>
-            <p style="margin-top: 1rem;">We provide regular reporting on these metrics throughout the engagement and a comprehensive impact assessment at completion to quantify the value delivered.</p>
-          </div>
-        </div>
-        
-        <div class="accordion-item">
-          <div class="accordion-header">What makes your consulting approach different?</div>
-          <div class="accordion-content">
-            <p>Our consulting approach is distinguished by three key differentiators:</p>
-            <ul style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: disc;">
-              <li><strong>AI-native expertise:</strong> Unlike traditional consultancies retrofitting AI to existing methodologies, our team has built AI-first approaches to revenue operations from the ground up.</li>
-              <li><strong>Implementation focus:</strong> We measure success not by the quality of recommendations alone, but by the tangible results of implemented solutions. Our consultants stay engaged through execution and optimization.</li>
-              <li><strong>Cross-functional expertise:</strong> Our team combines specialists in AI technology, sales operations, and change management to address all dimensions of successful transformation.</li>
-            </ul>
-            <p style="margin-top: 1rem;">This holistic approach allows us to deliver solutions that are technically sound, operationally viable, and rapidly adopted by your organization.</p>
-          </div>
-        </div>
-        
-        <div class="accordion-item">
-          <div class="accordion-header">How long does a typical consulting engagement last?</div>
-          <div class="accordion-content">
-            <p>The duration of our consulting engagements varies based on project scope, organizational complexity, and implementation requirements:</p>
-            <ul style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: disc;">
-              <li><strong>Strategic assessment:</strong> 2-4 weeks</li>
-              <li><strong>Pilot implementation:</strong> 4-8 weeks</li>
-              <li><strong>Full-scale deployment:</strong> 3-6 months</li>
-              <li><strong>Ongoing optimization:</strong> Quarterly engagements</li>
-            </ul>
-            <p style="margin-top: 1rem;">We structure engagements to deliver value incrementally, with clear milestones and success criteria at each phase. This approach allows for quick wins while building toward transformational outcomes.</p>
-          </div>
-        </div>
-        
-        <div class="accordion-item">
-          <div class="accordion-header">Do we need technical AI expertise on our team to work with you?</div>
-          <div class="accordion-content">
-            <p>No, you don't need in-house AI expertise to benefit from our consulting services. We design our engagements to accommodate all levels of technical readiness:</p>
-            <ul style="margin-left: 1.5rem; margin-top: 1rem; list-style-type: disc;">
-              <li>For organizations without technical AI resources, we provide end-to-end management of the implementation and can help you identify whether and when to build internal capabilities.</li>
-              <li>For teams with some technical expertise, we supplement your capabilities and accelerate your initiatives while transferring knowledge throughout the engagement.</li>
-              <li>For organizations with mature AI functions, we offer specialized guidance on revenue-specific applications and integration with business operations.</li>
-            </ul>
-            <p style="margin-top: 1rem;">Our methodology includes comprehensive knowledge transfer and training to ensure your team can effectively manage and evolve the solutions we implement together.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
+  <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <h2 class="cta-heading">Ready to Transform Your Revenue Operations?</h2>
-      <p class="cta-text">Schedule a complimentary consultation with our strategic AI advisors to explore how we can help you achieve breakthrough performance.</p>
-      <a href="contact.html" class="cta">Request Your Consultation</a>
+      <h2>Ready to Transform Your Revenue Operations?</h2>
+      <p>Schedule a complimentary consultation with our strategic AI advisors to explore how we can help you achieve breakthrough performance.</p>
+      <a href="contact.html" class="btn">Request Your Consultation</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 py-8">
-    <div class="container mx-auto text-center text-gray-500 text-sm">
+  <footer>
+    <div class="container">
       <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-      <div class="mt-4">
+      <div>
         <a href="privacy.html">Privacy Policy</a> | 
         <a href="terms.html">Terms of Use</a> | 
         <a href="sitemap.xml">Sitemap</a>
@@ -830,1130 +579,28 @@
     </div>
   </footer>
 
-  <!-- Max AI Assistant Widget -->
+  <!-- Max AI Widget -->
   <div id="max-widget">
     <button id="max-button" onclick="toggleMaxChat()">🤖 Chat with Max</button>
-    
-    <div id="max-chat" class="hidden">
-      <div class="max-header">
-        <span>Max • ApexSalesAI</span>
-        <button onclick="toggleMaxChat()">✖️</button>
-      </div>
-      <div class="max-messages" id="max-messages">
-        <div class="message max">👋 Hi, I'm Max — ApexSalesAI's Digital Sales Partner!</div>
-        <div class="message max">💬 How can I help you today?</div>
-        <button class="chat-option" onclick="maxReply('Learn about Consulting')">Learn about Consulting</button>
-        <button class="chat-option" onclick="maxReply('View Client Case Studies')">View Client Case Studies</button>
-        <button class="chat-option" onclick="maxReply('Meet Our Consultants')">Meet Our Consultants</button>
-        <button class="chat-option" onclick="maxReply('Talk to a Consultant')">Talk to a Consultant</button>
-      </div>
-      <div class="max-input">
-        <input type="text" id="user-message" placeholder="Type your question here..." onkeydown="if(event.key==='Enter')sendUserMessage()">
-        <button onclick="sendUserMessage()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 
   <script>
     // Mobile menu toggle
     document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileNav = document.getElementById('mobileNav');
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
       
-      if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-          mobileNav.classList.toggle('menu-open');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
         });
       }
-      
-      // Initialize FAQ accordion
-      const accordionItems = document.querySelectorAll('.accordion-item');
-      
-      accordionItems.forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        const content = item.querySelector('.accordion-content');
-        
-        // Initialize height for CSS transitions
-        content.style.maxHeight = '0px';
-        
-        header.addEventListener('click', function() {
-          // Toggle active class
-          item.classList.toggle('active');
-          
-          // Update max-height for smooth animation
-          if (item.classList.contains('active')) {
-            // Set max-height to scrollHeight to allow content to expand
-            content.style.maxHeight = content.scrollHeight + 'px';
-            content.style.paddingBottom = '1.25rem';
-          } else {
-            // Collapse the content
-            content.style.maxHeight = '0px';
-            content.style.paddingBottom = '0';
-          }
-        });
-      });
-      
-      // Case study slider functionality
-      window.currentSlide = 0;
     });
-    
-    // Case study slider
-    function changeSlide(index) {
-      const track = document.getElementById('caseStudyTrack');
-      const dots = document.querySelectorAll('.slider-dot');
-      
-      // Update track position
-      track.style.transform = `translateX(-${index * 100}%)`;
-      
-      // Update active dot
-      dots.forEach((dot, i) => {
-        if (i === index) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-      
-      window.currentSlide = index;
-    }
-    
-    // Service tabs
-    function showService(serviceId) {
-      // Hide all service contents
-      const serviceContents = document.querySelectorAll('.service-content');
-      serviceContents.forEach(content => {
-        content.classList.remove('active');
-      });
-      
-      // Show selected service content
-      document.getElementById(`${serviceId}-content`).classList.add('active');
-      
-      // Update active tab
-      const serviceTabs = document.querySelectorAll('.service-tab');
-      serviceTabs.forEach(tab => {
-        tab.classList.remove('active');
-      });
-      
-      // Find and activate the clicked tab
-      event.target.classList.add('active');
-    }
     
     // Max chat widget functionality
     function toggleMaxChat() {
-      document.getElementById('max-chat').classList.toggle('hidden');
-    }
-    
-    function maxReply(option) {
-      const messages = document.getElementById('max-messages');
-      const userDiv = document.createElement('div');
-      userDiv.className = 'message user';
-      userDiv.innerText = option;
-      messages.appendChild(userDiv);
-      
-      setTimeout(() => {
-        const maxDiv = document.createElement('div');
-        maxDiv.className = 'message max';
-        
-        if (option === 'Learn about Consulting') {
-          maxDiv.innerHTML = "Our consulting services help organizations implement AI across their revenue operations. We offer:<br><br>• Strategic assessments<br>• Implementation support<br>• Process optimization<br>• Team enablement<br><br>Would you like to learn about a specific service area?";
-        } else if (option === 'View Client Case Studies') {
-          maxDiv.innerHTML = "We've helped companies across industries achieve remarkable results. For example, TechGrowth Inc. saw a 187% pipeline growth after implementing our AI strategy.<br><br>You can <a href='#' style='color:#00c2cb;'>view all our case studies here</a> or I can tell you about a specific industry.";
-        } else if (option === 'Meet Our Consultants') {
-          maxDiv.innerHTML = "Our team includes experts in AI, revenue operations, and change management. Our consultants average 15+ years of experience implementing transformative solutions.<br><br>Would you like to <a href='#' style='color:#00c2cb;'>schedule time with a specific consultant</a>?";
-        } else if (option === 'Talk to a Consultant') {
-          maxDiv.innerHTML = "I'd be happy to connect you with one of our strategic consultants! You can either:<br><br>• <a href='contact.html' style='color:#00c2cb;'>Schedule a consultation</a><br>• Call us directly at (800) 555-APEX<br>• Email consulting@apexsalesai.com<br><br>What's the best way to reach you?";
-        } else {
-          maxDiv.innerHTML = "I'll help you with that! Let me connect you with the right resource about " + option + ".";
-        }
-        
-        messages.appendChild(maxDiv);
-        messages.scrollTop = messages.scrollHeight;
-      }, 600);
-      
-      messages.scrollTop = messages.scrollHeight;
-    }
-    
-    function sendUserMessage() {
-      const userInput = document.getElementById('user-message');
-      const message = userInput.value.trim();
-      
-      if (message === '') return;
-      
-      const messages = document.getElementById('max-messages');
-      const userDiv = document.createElement('div');
-      userDiv.className = 'message user';
-      userDiv.innerText = message;
-      messages.appendChild(userDiv);
-      
-      userInput.value = '';
-      
-      setTimeout(() => {
-        const maxDiv = document.createElement('div');
-        maxDiv.className = 'message max';
-        maxDiv.innerHTML = "Thanks for your message! To give you the most accurate information about our consulting services, I'd recommend exploring one of these topics:";
-        messages.appendChild(maxDiv);
-        
-        // Show options again after custom message
-        setTimeout(() => {
-          const options = ['Learn about Consulting', 'View Client Case Studies', 'Meet Our Consultants', 'Talk to a Consultant'];
-          
-          options.forEach(option => {
-            const button = document.createElement('button');
-            button.className = 'chat-option';
-            button.innerText = option;
-            button.onclick = function() { maxReply(option); };
-            messages.appendChild(button);
-          });
-          
-          messages.scrollTop = messages.scrollHeight;
-        }, 500);
-      }, 800);
-      
-      messages.scrollTop = messages.scrollHeight;
+      alert('Max AI Chat is ready to help! This is a simplified version for demonstration.');
     }
   </script>
 </body>
-</html> flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    /* Desktop Navigation */
-    .desktop-nav {
-      display: flex;
-    }
-    
-    .desktop-nav ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .desktop-nav li {
-      margin: 0 0.75rem;
-    }
-    
-    .desktop-nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s ease;
-      padding: 0.5rem 0;
-    }
-    
-    .desktop-nav a:hover,
-    .desktop-nav a.active {
-      color: #00c2cb;
-    }
-    
-    /* Mobile Navigation */
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: #ffffff;
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-    
-    .mobile-nav {
-      display: none;
-      width: 100%;
-      padding: 1rem 0;
-      text-align: center;
-      background-color: rgba(13, 19, 33, 0.98);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .mobile-nav a {
-      display: block;
-      padding: 0.75rem 0;
-      color: #e2e8f0;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    
-    .mobile-nav a:hover,
-    .mobile-nav a.active {
-      color: #00c2cb;
-    }
-    
-    /* Show mobile menu on smaller screens */
-    @media (max-width: 768px) {
-      .desktop-nav {
-        display: none;
-      }
-      
-      .mobile-menu-btn {
-        display: block;
-      }
-      
-      .navbar img.logo {
-        height: 40px;
-      }
-    }
-
-    /* CTA buttons */
-    .cta { 
-      background-color: #00c2cb; 
-      color: #1a202c; 
-      font-weight: 600; 
-      padding: .75rem 1.5rem; 
-      border-radius: 8px; 
-      text-decoration: none; 
-      transition: transform .2s ease, background-color .2s ease;
-      display: inline-block;
-      margin: 0.5rem;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .cta:hover { 
-      transform: translateY(-2px); 
-      background-color: #00a8b3; 
-    }
-
-    /* Hero section */
-    .hero { 
-      position: relative; 
-      overflow: hidden;
-      padding: 6rem 0;
-    }
-    
-    .hero-bg { 
-      position: absolute; 
-      inset: 0; 
-      pointer-events: none; 
-    }
-    
-    .hero-bg svg { 
-      width: 100%; 
-      height: 100%; 
-    }
-    
-    .hero-bg circle { 
-      opacity: .15; 
-      animation: float 8s ease-in-out infinite; 
-    }
-    
-    .hero-bg circle:nth-child(2) { 
-      animation-duration: 12s; 
-    }
-    
-    @keyframes float { 
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-30px); } 
-    }
-    
-    .hero-title { 
-      font-size: 2.5rem; 
-      font-weight: 800; 
-      margin-bottom: 1.5rem; 
-    }
-    
-    @media(min-width: 768px) { 
-      .hero-title { 
-        font-size: 3.5rem; 
-      } 
-    }
-    
-    .hero-subtitle { 
-      font-size: 1.125rem; 
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Section headings */
-    section {
-      padding: 5rem 0;
-    }
-    
-    section h2 { 
-      font-size: 2rem; 
-      margin-bottom: 1.5rem; 
-    }
-    
-    @media(min-width: 768px) { 
-      section h2 { 
-        font-size: 2.25rem; 
-      } 
-    }
-
-    /* Footer */
-    footer {
-      padding: 2rem 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    footer a {
-      color: #00c2cb;
-      text-decoration: none;
-      margin: 0 0.5rem;
-      transition: color 0.2s ease;
-    }
-    
-    footer a:hover {
-      color: #00a8b3;
-    }
-    
-    /* Consulting-specific styles */
-    .approach-section {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .approach-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 70%;
-      height: 100%;
-      background: radial-gradient(circle at right top, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: 0;
-      pointer-events: none;
-    }
-    
-    .methodologies-section {
-      background-color: #1a202c;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .methodologies-section::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 70%;
-      height: 100%;
-      background: radial-gradient(circle at left bottom, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: 0;
-      pointer-events: none;
-    }
-    
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    
-    .expertise-card {
-      background-color: rgba(0, 194, 203, 0.05);
-      border: 1px solid rgba(0, 194, 203, 0.2);
-      padding: 2rem;
-      border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .expertise-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-      background-color: rgba(0, 194, 203, 0.08);
-    }
-    
-    .expertise-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #00c2cb;
-    }
-    
-    .expertise-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #00c2cb;
-      opacity: 0.8;
-    }
-    
-    .methodology-steps {
-      counter-reset: step;
-      margin: 3rem 0;
-    }
-    
-    .methodology-step {
-      display: flex;
-      margin-bottom: 3rem;
-      position: relative;
-    }
-    
-    .step-number {
-      flex-shrink: 0;
-      width: 50px;
-      height: 50px;
-      background-color: #00c2cb;
-      color: #0d1321;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.5rem;
-      margin-right: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .step-content {
-      padding-top: 0.5rem;
-    }
-    
-    .step-content h3 {
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-    
-    .step-line {
-      position: absolute;
-      top: 50px;
-      left: 25px;
-      bottom: -50px;
-      width: 2px;
-      background-color: rgba(0, 194, 203, 0.3);
-      z-index: 0;
-    }
-    
-    .methodology-step:last-child .step-line {
-      display: none;
-    }
-    
-    /* Case Studies */
-    .case-studies-section {
-      padding-bottom: 7rem;
-    }
-    
-    .case-study-slider {
-      overflow: hidden;
-      margin-top: 3rem;
-      position: relative;
-    }
-    
-    .case-study-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-    
-    .case-study-slide {
-      min-width: 100%;
-      padding: 0 1rem;
-      box-sizing: border-box;
-    }
-    
-    .case-study-card {
-      background-color: #1a202c;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-    
-    .case-study-header {
-      background-color: rgba(0, 194, 203, 0.1);
-      padding: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .case-study-company {
-      display: flex;
-      align-items: center;
-    }
-    
-    .case-company-logo {
-      width: 60px;
-      height: 60px;
-      background-color: #fff;
-      border-radius: 8px;
-      margin-right: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.5rem;
-      color: #1a202c;
-    }
-    
-    .case-company-info h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.25rem;
-    }
-    
-    .case-company-info p {
-      font-size: 0.875rem;
-      margin-bottom: 0;
-      opacity: 0.8;
-    }
-    
-    .case-results {
-      display: flex;
-      align-items: center;
-      color: #00c2cb;
-      font-weight: 700;
-    }
-    
-    .case-study-content {
-      padding: 1.5rem;
-    }
-    
-    .case-study-stats {
-      display: flex;
-      justify-content: space-between;
-      margin: 1.5rem 0;
-      flex-wrap: wrap;
-    }
-    
-    .case-stat {
-      text-align: center;
-      flex: 1;
-      min-width: 120px;
-      margin-bottom: 1rem;
-    }
-    
-    .case-stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #00c2cb;
-      margin-bottom: 0.5rem;
-      line-height: 1;
-    }
-    
-    .case-stat-label {
-      font-size: 0.875rem;
-      color: #a0aec0;
-    }
-    
-    .slider-controls {
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    
-    .slider-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.2);
-      margin: 0 0.5rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    
-    .slider-dot.active {
-      background-color: #00c2cb;
-    }
-    
-    /* Team section */
-    .consultants-section {
-      background-color: #1a202c;
-      padding: 7rem 0;
-    }
-    
-    .consultant-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    
-    .consultant-card {
-      background-color: #2d3748;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .consultant-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    }
-    
-    .consultant-img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-    
-    .consultant-info {
-      padding: 1.5rem;
-    }
-    
-    .consultant-info h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.25rem;
-    }
-    
-    .consultant-title {
-      color: #00c2cb;
-      font-size: 0.875rem;
-      margin-bottom: 1rem;
-    }
-    
-    .consultant-bio {
-      font-size: 0.875rem;
-      color: #a0aec0;
-      margin-bottom: 1.5rem;
-    }
-    
-    .consultant-links {
-      display: flex;
-    }
-    
-    .consultant-link {
-      margin-right: 1rem;
-      color: #00c2cb;
-      text-decoration: none;
-      font-size: 0.875rem;
-      transition: color 0.2s ease;
-    }
-    
-    .consultant-link:hover {
-      color: #fff;
-    }
-    
-    /* Engagement types */
-    .services-section {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .services-section::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: 0;
-      pointer-events: none;
-    }
-    
-    .service-tabs {
-      display: flex;
-      overflow-x: auto;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .service-tab {
-      padding: 1rem 1.5rem;
-      background: none;
-      border: none;
-      color: #a0aec0;
-      font-weight: 600;
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-    
-    .service-tab.active {
-      color: #00c2cb;
-      border-bottom-color: #00c2cb;
-    }
-    
-    .service-tab:hover:not(.active) {
-      color: #fff;
-      border-bottom-color: rgba(255, 255, 255, 0.2);
-    }
-    
-    .service-content {
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-    
-    .service-content.active {
-      display: block;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    
-    .service-details {
-      background-color: rgba(45, 55, 72, 0.5);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border: 1px solid rgba(0, 194, 203, 0.1);
-    }
-    
-    .service-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    
-    .service-feature {
-      display: flex;
-      align-items: flex-start;
-    }
-    
-    .service-feature-icon {
-      margin-right: 1rem;
-      color: #00c2cb;
-      font-size: 1.25rem;
-    }
-    
-    .service-timeline {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 3rem;
-      position: relative;
-    }
-    
-    .service-timeline::before {
-      content: '';
-      position: absolute;
-      top: 15px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: rgba(0, 194, 203, 0.2);
-      z-index: 0;
-    }
-    
-    .timeline-point {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      flex: 1;
-    }
-    
-    .timeline-marker {
-      width: 30px;
-      height: 30px;
-      background-color: #1a202c;
-      border: 2px solid #00c2cb;
-      border-radius: 50%;
-      margin: 0 auto 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #00c2cb;
-      font-weight: 700;
-      font-size: 0.875rem;
-    }
-    
-    .timeline-label {
-      font-size: 0.875rem;
-      color: #a0aec0;
-      max-width: 120px;
-      margin: 0 auto;
-    }
-    
-    /* Call to action section */
-    .cta-section {
-      background-color: #1a202c;
-      padding: 6rem 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: 0;
-      pointer-events: none;
-    }
-    
-    .cta-heading {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(to right, #ffffff, #00c2cb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-    }
-    
-    .cta-text {
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      font-size: 1.125rem;
-    }
-    
-    /* Stats counter section */
-    .stats-section {
-      text-align: center;
-      padding: 5rem 0;
-    }
-    
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    
-    @media (max-width: 768px) {
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    .stat-item {
-      position: relative;
-    }
-    
-    .stat-number {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #00c2cb;
-      margin-bottom: 0.5rem;
-      line-height: 1;
-    }
-    
-    .stat-label {
-      font-size: 1rem;
-      color: #a0aec0;
-    }
-    
-    /* FAQ section */
-    .faq-section {
-      margin-top: 4rem;
-    }
-
-    .accordion {
-      margin-top: 2rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .accordion-item {
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      overflow: hidden;
-      background-color: #1a202c;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .accordion-item:hover {
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    }
-
-    .accordion-header {
-      padding: 1.25rem;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 600;
-      transition: background-color 0.3s;
-      user-select: none;
-    }
-
-    .accordion-header:hover {
-      background-color: #2d3748;
-    }
-
-    .accordion-header::after {
-      content: "+";
-      font-size: 1.5rem;
-      color: #00c2cb;
-      transition: transform 0.3s;
-    }
-
-    .accordion-item.active .accordion-header::after {
-      transform: rotate(45deg);
-    }
-
-    .accordion-content {
-      overflow: hidden;
-      transition: max-height 0.5s ease, padding 0.3s ease;
-      padding: 0 1.25rem;
-      max-height: 0;
-    }
-
-    .accordion-item.active .accordion-content {
-      /* Max height will be set dynamically with JavaScript */
-      padding-bottom: 1.25rem;
-    }
-
-    .accordion-content p {
-      margin-bottom: 1rem;
-      color: #cbd5e0;
-    }
-
-    .accordion-content ul, 
-    .accordion-content ol {
-      color: #cbd5e0;
-      margin-bottom: 1rem;
-    }
-
-    .accordion-content strong {
-      color: #00c2cb;
-      font-weight: 600;
-    }
-
-    /* Max AI Chat Widget Styles */
-    #max-widget {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      font-family: 'Inter', sans-serif;
-    }
-
-    #max-button {
-      background-color: #00c2cb;
-      color: #0d1321;
-      font-weight: 700;
-      border: none;
-      border-radius: 50px;
-      padding: 15px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,194,203,0.4);
-      transition: all 0.3s;
-    }
-
-    #max-button:hover {
-      background-color: #00a8b3;
-      transform: translateY(-3px);
-    }
-
-    #max-chat {
-      width: 320px;
-      height: 400px;
-      background: #0d1321;
-      border: 2px solid #00c2cb;
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    #max-chat.hidden {
-      display: none;
-    }
-
-    .max-header {
-      background: #00c2cb;
-      color: #0d1321;
-      font-weight: 700;
-      padding: 12px 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .max-header button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 0;
-      color: #0d1321;
-    }
-
-    .max-messages {
-      background: #0d1321;
-      color: #e2e8f0;
-      padding: 16px;
-      flex-grow: 1;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .message {
-      margin-bottom: 10px;
-      padding: 10px 12px;
-      border-radius: 10px;
-      max-width: 80%;
-      animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .message.max {
-      background: #1a202c;
-      align-self: flex-start;
-      border-bottom-left-radius: 2px;
-    }
-
-    .message.user {
-      background: #00c2cb;
-      color: #0d1321;
-      align-self: flex-end;
-      border-bottom-right-radius: 2px;
-    }
-
-    .chat-option {
-      background: none;
-      border: 1px solid #00c2cb;
-      color: #00c2cb;
-      padding: 8px 10px;
-      margin-top: 5px;
-      width: 100%;
-      text-align: left;
-      border-radius: 6px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .chat-option:hover {
-      background: rgba(0,194,203,0.1);
-      transform: translateY(-2px);
-    }
-
-    .max-input {
-      display: flex;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 10px;
-    }
-
-    .max-input input {
-      flex-grow: 1;
-      background: #1a202c;
-      border: none;
-      padding: 10px 12px;
-      border-radius: 6px;
-      color: #e2e8f0;
-      font-size: 14px;
-    }
-
-    .max-input input:focus {
-      outline: none;
-      box-shadow: 0 0 0 2px rgba(0,194,203,0.3);
-    }
-
-    .max-input button {
-      background: #00c2cb;
-      color: #0d1321;
-      border: none;
-      margin-left: 8px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display:
+</html>
