@@ -852,61 +852,6 @@
     .text-teal-400 { color: #00c2cb; }
   </style>
 </head>
-document.addEventListener('DOMContentLoaded', function() {
-  // Fix job links to prevent 404 errors
-  const jobLinks = document.querySelectorAll('.job-card .cta');
-  
-  jobLinks.forEach(link => {
-    // Get the job title
-    const jobTitle = link.closest('.job-card').querySelector('.job-title').textContent;
-    
-    // Create appropriate filenames based on job titles
-    let filename;
-    if (jobTitle.includes('AI/ML Engineer')) {
-      filename = 'careers/AIML-Engineer.html';
-    } else if (jobTitle.includes('NLP Specialist')) {
-      filename = 'careers/NLP-Specialist.html';
-    } else if (jobTitle.includes('Sales Engineering Lead')) {
-      filename = 'careers/Sales-Engineering-Lead.html';
-    } else if (jobTitle.includes('AI Ethics Researcher')) {
-      filename = 'careers/AI-Ethics-Researcher.html';
-    } else {
-      filename = 'careers.html'; // Default fallback
-    }
-    
-    // Update the link href
-    link.setAttribute('href', filename);
-  });
-  
-  // Fix the "View All Positions" link
-  const careersLink = document.querySelector('a[href="careers.html"]');
-  if (careersLink) {
-    careersLink.setAttribute('href', 'careers.html');
-  }
-});
-// This is JavaScript code to replace the links in the about.html page
-// Add this script to the bottom of the about.html file, just before the closing </body> tag
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Fix job links to connect to the correct files in the careers folder
-  const jobCards = document.querySelectorAll('.job-card');
-  
-  jobCards.forEach(card => {
-    const jobTitle = card.querySelector('.job-title').textContent;
-    const link = card.querySelector('.cta');
-    
-    // Update link href based on job title
-    if (jobTitle.includes('AI/ML Engineer')) {
-      link.setAttribute('href', 'careers/AIML-Engineer.html');
-    } else if (jobTitle.includes('NLP Specialist')) {
-      link.setAttribute('href', 'careers/NLP-Specialist.html');
-    } else if (jobTitle.includes('Sales Engineering Lead')) {
-      link.setAttribute('href', 'careers/Sales-Engineering-Lead.html');
-    } else if (jobTitle.includes('AI Ethics Researcher')) {
-      link.setAttribute('href', 'careers/AI-Ethics-Researcher.html');
-    }
-  });
-});
 <body>
   <!-- Navigation -->
   <nav class="navbar">
@@ -1048,7 +993,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <h3 class="job-title">Senior AI/ML Engineer</h3>
           <span class="job-type">Full-time • Remote</span>
           <p class="job-description">Lead the development of our next-generation conversational AI models. You'll architect and implement sophisticated NLP systems that power our autonomous sales agents.</p>
-          <a href="careers/ai-ml-engineer.html" class="cta">Learn More</a>
+          <a href="careers/AIML-Engineer.html" class="cta">Learn More</a>
         </div>
         
         <!-- Job 2 -->
@@ -1056,7 +1001,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <h3 class="job-title">NLP Specialist</h3>
           <span class="job-type">Full-time • Remote</span>
           <p class="job-description">Enhance our language understanding capabilities to help our AI agents handle complex sales conversations, objection handling, and nuanced customer interactions.</p>
-          <a href="careers/nlp-specialist.html" class="cta">Learn More</a>
+          <a href="careers/NLP-Specialist.html" class="cta">Learn More</a>
         </div>
         
         <!-- Job 3 -->
@@ -1064,7 +1009,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <h3 class="job-title">Sales Engineering Lead</h3>
           <span class="job-type">Full-time • Hybrid</span>
           <p class="job-description">Bridge the gap between our AI technology and enterprise sales processes. You'll work with customers to customize and deploy our AI agents in complex sales environments.</p>
-          <a href="careers/sales-engineering-lead.html" class="cta">Learn More</a>
+          <a href="careers/Sales-Engineering-Lead.html" class="cta">Learn More</a>
         </div>
         
         <!-- Job 4 -->
@@ -1072,7 +1017,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <h3 class="job-title">AI Ethics Researcher</h3>
           <span class="job-type">Full-time • Remote</span>
           <p class="job-description">Help us build responsible AI by developing frameworks and guidelines for ethical AI deployment in sales contexts, focusing on transparency, fairness, and user trust.</p>
-          <a href="careers/ai-ethics-researcher.html" class="cta">Learn More</a>
+          <a href="careers/AI-Ethics-Researcher.html" class="cta">Learn More</a>
         </div>
       </div>
       
