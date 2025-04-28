@@ -1,18 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strategic AI Consulting | ApexSalesAI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategic AI Consulting | ApexSalesAI - Enterprise AI Implementation</title>
   <meta name="description" content="Transform your revenue operations with ApexSalesAI's strategic consulting services. Our AI experts design custom solutions to accelerate growth and optimize your GTM strategy." />
-  <meta name="keywords" content="AI consulting, sales strategy, GTM optimization, revenue operations consulting, ApexSalesAI consulting, enterprise AI implementation" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta name="keywords" content="AI consulting, sales strategy, GTM optimization, revenue operations consulting, enterprise AI implementation, sales transformation, AI-driven strategy" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Strategic AI Consulting | ApexSalesAI - Enterprise AI Implementation" />
+  <meta property="og:description" content="Partner with ApexSalesAI's expert consultants to transform your revenue operations with enterprise-grade AI solutions tailored to your business." />
+  <meta property="og:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta property="og:url" content="https://www.apexsalesai.com/consulting.html" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Strategic AI Consulting | ApexSalesAI" />
+  <meta name="twitter:description" content="Transform your GTM strategy with our AI consulting services. Expert-led implementation for enterprise results." />
+  <meta name="twitter:image" content="https://www.apexsalesai.com/images/social-preview.png" />
+  <meta name="twitter:site" content="@apexsalesai" />
+  <!-- Structured Data (SEO JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ApexSalesAI Strategic AI Consulting",
+    "description": "Expert AI consulting services to transform your revenue operations with cutting-edge AI implementation.",
+    "provider": {
+      "@type": "Organization",
+      "name": "ApexSalesAI",
+      "sameAs": [
+        "https://www.linkedin.com/company/apexsalesai",
+        "https://twitter.com/apexsalesai"
+      ]
+    },
+    "serviceType": "AI Consulting Services",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Enterprise Sales Organizations"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.apexsalesai.com/consulting.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ApexSalesAI",
+    "url": "https://www.apexsalesai.com",
+    "logo": "https://www.apexsalesai.com/images/apex-logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-123-4567",
+      "contactType": "sales",
+      "availableLanguage": ["English"]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/apexsalesai",
+      "https://twitter.com/apexsalesai"
+    ]
+  }
+  </script>
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     /* Base styles */
+    :root {
+      --primary: #00c2cb;
+      --primary-dark: #00a8b3;
+      --secondary: #052438;
+      --bg-dark: #0d1321;
+      --bg-card: rgba(26, 32, 44, 0.5);
+      --text: #e2e8f0;
+      --text-light: #cbd5e0;
+      --text-dimmed: #a0aec0;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
     
     body { 
@@ -20,154 +93,254 @@
       font-size: 16px; 
       line-height: 1.6; 
       color: #e2e8f0; 
+      margin: 0;
+      padding: 0;
       background-color: #0d1321;
-      overflow-x: hidden;
     }
     
     h1, h2, h3, h4 { 
       color: #fff; 
       line-height: 1.2; 
-      margin-bottom: 1rem;
+      margin-top: 0;
     }
     
-    p { 
+    p, ul, li { 
       color: #cbd5e0; 
       margin-bottom: 1rem;
     }
     
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    
-    ul, li {
-      list-style: none;
-      color: #cbd5e0;
-    }
-    
+    /* Container */
     .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1rem;
     }
-    
-    /* Navigation */
-    nav {
-      background-color: rgba(13, 19, 33, 0.95);
-      backdrop-filter: blur(5px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      padding: 1rem 0;
+      background-color: rgba(13, 19, 33, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .nav-container {
+    .navbar img.logo { 
+      height: 60px; 
+      width: auto; 
+    }
+    
+    .navbar-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     
-    .logo {
-      height: 50px;
-      width: auto;
-    }
-    
-    .nav-menu {
+    /* Desktop Navigation */
+    .desktop-nav {
       display: flex;
-      align-items: center;
     }
     
-    .nav-item {
+    .desktop-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .desktop-nav li {
       margin: 0 0.75rem;
     }
     
-    .nav-link {
+    .desktop-nav a {
       color: #e2e8f0;
+      text-decoration: none;
       font-weight: 600;
-      padding: 0.5rem 0;
       transition: color 0.2s ease;
+      padding: 0.5rem 0;
     }
     
-    .nav-link:hover,
-    .nav-link.active {
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
       color: #00c2cb;
     }
     
-    .nav-toggle {
+    /* Mobile Navigation */
+    .mobile-menu-btn {
       display: none;
-      background: transparent;
+      background: none;
       border: none;
-      color: #fff;
-      font-size: 1.5rem;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    
+    .mobile-nav {
+      display: none;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      background-color: rgba(13, 19, 33, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-nav a {
+      display: block;
+      padding: 0.75rem 0;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #00c2cb;
+    }
+    
+    /* Show mobile menu on smaller screens */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .navbar img.logo {
+        height: 40px;
+      }
+    }
+
+    /* Hero section */
+    .hero { 
+      position: relative; 
+      overflow: hidden;
+      padding: 6rem 0;
+      text-align: center;
+      background-color: #052438;
+      background-image: radial-gradient(circle at 50% 50%, rgba(0, 194, 203, 0.1) 0%, rgba(5, 36, 56, 0) 70%);
+    }
+    
+    .hero-bg { 
+      position: absolute; 
+      inset: 0; 
+      pointer-events: none; 
+    }
+    
+    .hero-bg svg { 
+      width: 100%; 
+      height: 100%; 
+    }
+    
+    .hero-bg circle { 
+      opacity: .15; 
+      animation: float 8s ease-in-out infinite; 
+    }
+    
+    .hero-bg circle:nth-child(2) { 
+      animation-duration: 12s; 
+    }
+    
+    @keyframes float { 
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); } 
+    }
+    
+    .hero-title { 
+      font-size: 2.5rem; 
+      font-weight: 800; 
+      margin-bottom: 1.5rem; 
+    }
+    
+    @media(min-width: 768px) { 
+      .hero-title { 
+        font-size: 3.5rem; 
+      } 
+    }
+    
+    .hero-subtitle { 
+      font-size: 1.125rem; 
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* CTA buttons */
+    .cta { 
+      background-color: #00c2cb; 
+      color: #1a202c; 
+      font-weight: 600; 
+      padding: .75rem 1.5rem; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      transition: transform .2s ease, background-color .2s ease;
+      display: inline-block;
+      margin: 0.5rem;
+      border: none;
       cursor: pointer;
     }
     
-    /* Hero section */
-    .hero {
-      padding: 8rem 0 6rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    .cta:hover { 
+      transform: translateY(-2px); 
+      background-color: #00a8b3; 
+    }
+
+    .cta-outline {
+      background-color: transparent;
+      color: #00c2cb;
+      border: 2px solid #00c2cb;
+      box-shadow: 0 5px 15px rgba(0, 194, 203, 0.1);
     }
     
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-    }
-    
-    .hero p {
-      font-size: 1.25rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-    
-    /* Button styles */
-    .btn {
-      display: inline-block;
-      background-color: #00c2cb;
-      color: #0d1321;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      margin: 0.5rem;
-      transition: transform 0.2s ease, background-color 0.2s ease;
-    }
-    
-    .btn:hover {
-      background-color: #00a8b3;
+    .cta-outline:hover {
+      background-color: rgba(0, 194, 203, 0.1);
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 194, 203, 0.2);
     }
-    
-    /* Section styling */
-    section {
-      padding: 5rem 0;
-    }
-    
-    section h2 {
-      font-size: 2.25rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    
-    section p {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 3rem;
-    }
-    
+
     /* Stats section */
+    .stats-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
     }
     
+    @media (max-width: 992px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
     .stat-item {
       text-align: center;
+      padding: 2rem;
+      background-color: rgba(26, 32, 44, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(0, 194, 203, 0.3);
     }
     
     .stat-number {
@@ -179,428 +352,1267 @@
     }
     
     .stat-label {
-      color: #a0aec0;
+      color: #fff;
+      font-weight: 600;
     }
     
-    /* Expertise cards */
-    .expertise-grid {
+    .stat-description {
+      color: var(--text-dimmed);
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* Section Headings */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-heading h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    
+    .section-heading p {
+      font-size: 1.125rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-dimmed);
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
     }
     
-    .expertise-card {
-      background-color: rgba(0, 194, 203, 0.05);
-      border: 1px solid rgba(0, 194, 203, 0.2);
-      padding: 2rem;
+    .service-card {
+      background-color: rgba(26, 32, 44, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 2.5rem 2rem;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
     
-    .expertise-card:hover {
+    .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-      background-color: rgba(0, 194, 203, 0.08);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(0, 194, 203, 0.3);
     }
     
-    .expertise-icon {
+    .service-icon {
       font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    
+    .service-title {
+      font-size: 1.5rem;
+      font-weight: 700;
       margin-bottom: 1rem;
-      color: #00c2cb;
+      color: #fff;
     }
     
-    .expertise-card h3 {
-      color: #00c2cb;
-      margin-bottom: 1rem;
+    .service-description {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
     }
     
-    /* Methodology section */
-    .methodology-section {
-      background-color: #1a202c;
+    .service-features {
+      list-style: none;
+      margin-bottom: 2rem;
     }
     
-    .methodology-steps {
-      max-width: 800px;
+    .service-features li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      color: var(--text-dimmed);
+    }
+    
+    .service-features li:before {
+      content: "→";
+      color: var(--primary);
+      margin-right: 0.75rem;
+      font-weight: bold;
+    }
+
+    /* Process Section */
+    .process-section {
+      padding: 5rem 0;
+      background-color: rgba(5, 36, 56, 0.5);
+      position: relative;
+    }
+    
+    .process-steps {
+      max-width: 900px;
       margin: 0 auto;
     }
     
-    .methodology-step {
+    .process-step {
       display: flex;
-      margin-bottom: 3rem;
+      align-items: flex-start;
+      margin-bottom: 3.5rem;
       position: relative;
+      padding-left: 2rem;
+    }
+    
+    .process-step:last-child {
+      margin-bottom: 0;
     }
     
     .step-number {
       flex-shrink: 0;
-      width: 50px;
-      height: 50px;
-      background-color: #00c2cb;
-      color: #0d1321;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(0, 194, 203, 0.1);
+      border: 2px solid var(--primary);
+      color: var(--primary);
       border-radius: 50%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      font-weight: 700;
+      align-items: center;
       font-size: 1.5rem;
-      margin-right: 1.5rem;
+      font-weight: 700;
+      margin-right: 2rem;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
     
-    .step-content h3 {
-      margin-bottom: 0.5rem;
+    .step-content {
+      flex-grow: 1;
     }
     
-    .step-line {
-      position: absolute;
-      top: 50px;
-      left: 25px;
-      bottom: -50px;
-      width: 2px;
-      background-color: rgba(0, 194, 203, 0.3);
-      z-index: 0;
+    .step-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
     }
     
-    .methodology-step:last-child .step-line {
-      display: none;
+    .step-description {
+      color: var(--text-light);
     }
     
-    /* CTA section */
-    .cta-section {
-      text-align: center;
-      padding: 6rem 0;
-      background-color: #1a202c;
-      position: relative;
-    }
-    
-    .cta-section::before {
-      content: '';
+    .process-line {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center, rgba(0, 194, 203, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
-      z-index: 0;
-      pointer-events: none;
+      bottom: 0;
+      left: 2.625rem;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary) 0%, rgba(0, 194, 203, 0.3) 100%);
+      z-index: 1;
     }
     
-    .cta-section h2 {
+    .process-step:last-child .process-line {
+      display: none;
+    }
+
+    /* Partner Program Section */
+    .partner-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .partner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    @media (max-width: 992px) {
+      .partner-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .partner-content h2 {
       font-size: 2.5rem;
-      background: linear-gradient(to right, #ffffff, #00c2cb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
+      font-weight: 800;
       margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
     }
     
-    .cta-section p {
-      position: relative;
-      z-index: 1;
-      font-size: 1.25rem;
+    .partner-content p {
+      margin-bottom: 1.5rem;
+    }
+    
+    .partner-benefits {
       margin-bottom: 2rem;
     }
     
-    /* Footer */
-    footer {
-      background-color: #0d1321;
-      padding: 2rem 0;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    footer p {
-      color: #6b7280;
+    .partner-benefit {
+      display: flex;
+      align-items: center;
       margin-bottom: 1rem;
     }
     
-    footer a {
-      color: #00c2cb;
-      margin: 0 0.5rem;
-      transition: color 0.2s ease;
+    .partner-benefit-icon {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 194, 203, 0.1);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--primary);
+      margin-right: 1rem;
+      flex-shrink: 0;
     }
     
-    footer a:hover {
-      color: #00a8b3;
+    .partner-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
     }
     
-    /* Max AI Widget */
+    .partner-card {
+      background: linear-gradient(135deg, rgba(26, 32, 44, 0.8) 0%, rgba(13, 19, 33, 0.8) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(0, 194, 203, 0.3);
+    }
+    
+    .partner-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .partner-card p {
+      font-size: 0.9rem;
+      color: var(--text-dimmed);
+      margin-bottom: 0;
+    }
+
+    /* Team Section */
+    .team-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .team-card {
+      background-color: rgba(26, 32, 44, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(0, 194, 203, 0.3);
+    }
+    
+    .team-image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      background-color: #1a202c;
+    }
+    
+    .team-info {
+      padding: 1.5rem;
+    }
+    
+    .team-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .team-title {
+      color: var(--primary);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .team-bio {
+      color: var(--text-dimmed);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .team-social {
+      display: flex;
+      gap: 0.75rem;
+    }
+    
+    .team-social a {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      border-radius: 50%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .team-social a:hover {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+
+    /* Case Studies Section */
+    .case-studies-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+    
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+    }
+    
+    @media (max-width: 576px) {
+      .case-studies-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .case-study-card {
+      background-color: rgba(26, 32, 44, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .case-study-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(0, 194, 203, 0.3);
+    }
+    
+    .case-study-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #1a202c;
+    }
+    
+    .case-study-content {
+      padding: 2rem;
+    }
+    
+    .case-study-industry {
+      display: inline-block;
+      background-color: rgba(0, 194, 203, 0.1);
+      color: var(--primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .case-study-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .case-study-metrics {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .case-study-metric {
+      flex: 1;
+    }
+    
+    .metric-value {
+      color: var(--primary);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      line-height: 1;
+    }
+    
+    .metric-label {
+      color: var(--text-dimmed);
+      font-size: 0.75rem;
+    }
+    
+    .case-study-description {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    /* CTA section */
+    .cta-section {
+      padding: 5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background-color: #052438;
+    }
+    
+    .cta-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    
+    .cta-heading {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #ffffff, var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    
+    .cta-text {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgba(13, 19, 33, 0.98);
+      padding: 4rem 0 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    .footer-logo {
+      width: 180px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-about {
+      margin-bottom: 1.5rem;
+      color: var(--text-dimmed);
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      border-radius: 50%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .footer-social a:hover {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+    
+    .footer-heading {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: var(--text-dimmed);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-contact-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--primary);
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    
+    .footer-contact-text {
+      color: var(--text-dimmed);
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+    
+    .footer-copyright {
+      color: var(--text-dimmed);
+    }
+    
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .footer-legal a {
+      color: var(--text-dimmed);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-legal a:hover {
+      color: var(--primary);
+    }
+
+    /* Max Chat Widget */
     #max-widget {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 1000;
+      z-index: 9999;
     }
-    
+
     #max-button {
       background-color: #00c2cb;
       color: #0d1321;
       font-weight: 700;
       border: none;
       border-radius: 50px;
-      padding: 12px 20px;
+      padding: 15px 20px;
       font-size: 16px;
       cursor: pointer;
       box-shadow: 0 4px 15px rgba(0,194,203,0.4);
       transition: all 0.3s;
+      display: flex;
+      align-items: center;
     }
-    
+
     #max-button:hover {
       background-color: #00a8b3;
       transform: translateY(-3px);
     }
-    
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #0d1321;
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    #max-button svg {
+      margin-right: 8px;
+    }
+
+    #max-chat {
+      width: 350px;
+      height: 450px;
+      background: #0d1321;
+      border: 2px solid #00c2cb;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 20px rgba(0,194,203,0.4);
+      position: absolute;
+      bottom: 80px;
+      right: 0;
+    }
+
+    #max-chat.hidden {
+      display: none;
+    }
+
+    .max-header {
+      background: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .max-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .max-title svg {
+      margin-right: 8px;
+    }
+
+    .max-close {
+      background: none;
+      border: none;
+      color: #0d1321;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .max-messages {
+      background: #0d1321;
+      color: #e2e8f0;
+      padding: 15px;
+      flex-grow: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      margin-bottom: 15px;
+      max-width: 80%;
+    }
+
+    .message.max {
+      background: #1a202c;
+      padding: 12px;
+      border-radius: 12px 12px 12px 0;
+      align-self: flex-start;
+    }
+
+    .message.user {
+      background: #00c2cb;
+      color: #0d1321;
+      padding: 12px;
+      border-radius: 12px 12px 0 12px;
+      align-self: flex-end;
+    }
+
+    .chat-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chat-option {
+      background: none;
+      border: 1px solid #00c2cb;
+      color: #00c2cb;
+      padding: 8px 12px;
+      width: 100%;
+      text-align: left;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .chat-option:hover {
+      background: rgba(0,194,203,0.1);
+      transform: translateY(-2px);
+    }
+
+    .max-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .max-input-field {
+      flex-grow: 1;
+      background-color: rgba(26, 32, 44, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 10px 15px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .max-input-field:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .max-send {
+      background-color: var(--primary);
+      color: #0d1321;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .max-send:hover {
+      background-color: var(--primary-dark);
+    }
+
+    /* Animation classes */
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-      
-      .nav-menu.active {
-        display: flex;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      
-      .nav-item {
-        margin: 0.5rem 0;
-      }
-      
-      .nav-toggle {
-        display: block;
-      }
-      
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .expertise-grid {
-        grid-template-columns: 1fr;
-      }
+    }
+
+    .menu-open {
+      display: block;
     }
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <nav>
-    <div class="container nav-container">
-      <a href="index.html">
-        <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="logo">
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" aria-label="ApexSalesAI Home">
+        <img src="/images/apex-logo.png" alt="ApexSalesAI" class="logo">
       </a>
       
-      <button class="nav-toggle" id="navToggle">
-        <span>☰</span>
-      </button>
+      <!-- Desktop Navigation -->
+      <div class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="consulting.html" class="active">Consulting</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="reseller.html">Reseller</a></li>
+          <li><a href="onboarding.html">Onboarding</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
       
-      <ul class="nav-menu" id="navMenu">
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="platform.html" class="nav-link">Platform</a></li>
-        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="consulting.html" class="nav-link active">Consulting</a></li>
-        <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
-        <li class="nav-item"><a href="reseller.html" class="nav-link">Reseller</a></li>
-        <li class="nav-item"><a href="onboarding.html" class="nav-link">Onboarding</a></li>
-        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
+      <!-- Mobile Navigation Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="platform.html">Platform</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="consulting.html" class="active">Consulting</a>
+      <a href="demo.html">Demo</a>
+      <a href="reseller.html">Reseller</a>
+      <a href="onboarding.html">Onboarding</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="200" cy="200" r="150" fill="#00c2cb" />
+        <circle cx="600" cy="150" r="120" fill="#005f6b" />
+      </svg>
+    </div>
     <div class="container">
-      <h1>Strategic AI Consulting</h1>
-      <p>Transform your go-to-market operations with AI-driven strategies customized for your business objectives.</p>
+      <h1 class="hero-title">Your AI Transformation Partner</h1>
+      <p class="hero-subtitle">We put your business objectives first, delivering tailored AI strategies and implementation services that solve your unique challenges and drive measurable ROI.</p>
       <div>
-        <a href="#expertise" class="btn">Explore Services</a>
-        <a href="contact.html" class="btn">Request Consultation</a>
+        <a href="#services" class="cta">Explore Services</a>
+        <a href="#contact-form" class="cta-outline">Request Consultation</a>
       </div>
     </div>
-  </section>
+  </header>
 
   <!-- Stats Section -->
   <section class="stats-section">
     <div class="container">
-      <h2>Our Clients See Tangible Results</h2>
-      <p>ApexSalesAI consulting delivers measurable business impact across industries</p>
+      <div class="section-heading">
+        <h2>Enterprise Results Delivered</h2>
+        <p>Our AI implementation consultants have helped organizations across industries achieve measurable business outcomes</p>
+      </div>
       
       <div class="stats-grid">
-        <div class="stat-item">
+        <div class="stat-item animate-fade-in">
           <div class="stat-number">47%</div>
-          <div class="stat-label">Average Pipeline Growth</div>
+          <div class="stat-label">Pipeline Growth</div>
+          <div class="stat-description">Average increase in qualified opportunities across clients within 90 days</div>
         </div>
-        <div class="stat-item">
+        
+        <div class="stat-item animate-fade-in">
           <div class="stat-number">3.2x</div>
           <div class="stat-label">ROI on AI Investment</div>
+          <div class="stat-description">Average return within first year of implementation</div>
         </div>
-        <div class="stat-item">
+        
+        <div class="stat-item animate-fade-in">
           <div class="stat-number">68%</div>
           <div class="stat-label">Improved Lead Quality</div>
+          <div class="stat-description">Average increase in lead-to-opportunity conversion rates</div>
         </div>
-        <div class="stat-item">
+        
+        <div class="stat-item animate-fade-in">
           <div class="stat-number">$4.6M</div>
-          <div class="stat-label">Avg. Annual Revenue Lift</div>
+          <div class="stat-label">Annual Revenue Lift</div>
+          <div class="stat-description">Average incremental revenue generated for enterprise clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Professional Services Portfolio</h2>
+        <p>Comprehensive AI consulting and implementation services designed to transform your revenue operations</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🔍</div>
+          <h3 class="service-title">GTM Diagnostic Assessment</h3>
+          <p class="service-description">A comprehensive analysis of your current sales and marketing ecosystem to identify inefficiencies, bottlenecks, and growth opportunities for AI augmentation.</p>
+          <ul class="service-features">
+            <li>Current-state workflow mapping and analysis</li>
+            <li>Technology stack assessment and integration planning</li>
+            <li>AI readiness evaluation and gap analysis</li>
+            <li>Competitive intelligence and benchmark reporting</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Schedule Assessment</a>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">⚙️</div>
+          <h3 class="service-title">AI Strategy & Roadmap</h3>
+          <p class="service-description">Develop a tailored AI implementation strategy with a practical roadmap that aligns with your business objectives and customer engagement models.</p>
+          <ul class="service-features">
+            <li>AI capability maturity modeling</li>
+            <li>Custom implementation roadmap development</li>
+            <li>Business case modeling and ROI projections</li>
+            <li>Change management and adoption planning</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Request Strategy Session</a>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🧠</div>
+          <h3 class="service-title">Custom AI Solution Development</h3>
+          <p class="service-description">Design and build tailored AI solutions that address your specific business challenges, integrating seamlessly with your existing technology ecosystem.</p>
+          <ul class="service-features">
+            <li>Custom algorithm development and training</li>
+            <li>Integration with enterprise systems (CRM, ERP, Marketing)</li>
+            <li>Natural language processing model optimization</li>
+            <li>Predictive analytics implementation</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Discuss Requirements</a>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🔄</div>
+          <h3 class="service-title">Sales Process Automation</h3>
+          <p class="service-description">Implement intelligent workflows that eliminate low-value tasks and accelerate sales cycles with precision, increasing team productivity and customer engagement.</p>
+          <ul class="service-features">
+            <li>Prospect research and engagement automation</li>
+            <li>Meeting scheduling and preparation workflows</li>
+            <li>Proposal generation and contract management</li>
+            <li>Follow-up sequence optimization</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Explore Automation</a>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">📊</div>
+          <h3 class="service-title">Advanced Analytics & Insights</h3>
+          <p class="service-description">Deploy sophisticated analytics capabilities that transform your data into actionable intelligence for strategic decision-making and revenue optimization.</p>
+          <ul class="service-features">
+            <li>Customer behavior analysis and segmentation</li>
+            <li>Predictive deal scoring and forecast modeling</li>
+            <li>Pipeline analysis and opportunity prioritization</li>
+            <li>Custom dashboard development and KPI tracking</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Get Analytics Proposal</a>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🤝</div>
+          <h3 class="service-title">Change Management & Enablement</h3>
+          <p class="service-description">Guide your team through the cultural and operational transformation required to excel in an AI-augmented environment with comprehensive enablement programs.</p>
+          <ul class="service-features">
+            <li>Role-based training and skill development</li>
+            <li>Process documentation and best practice guides</li>
+            <li>Change readiness assessment and adoption measurement</li>
+            <li>Executive coaching and leadership alignment</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Plan Transformation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Implementation Methodology</h2>
+        <p>A systematic, proven approach to implementing AI solutions in your revenue operations</p>
+      </div>
+      
+      <div class="process-steps">
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="process-line"></div>
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Discovery & Assessment</h3>
+            <p class="step-description">We conduct a comprehensive analysis of your current GTM motion, tech stack, and team capabilities to identify high-impact opportunities for AI integration. Our assessment includes workflow mapping, data quality evaluation, and stakeholder interviews to ensure we understand your unique challenges and objectives.</p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="process-line"></div>
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Strategy Development</h3>
+            <p class="step-description">Our team designs a tailored roadmap for AI transformation, prioritizing quick wins and long-term strategic initiatives. We develop a detailed business case with ROI projections, integration requirements, and a phased implementation plan aligned with your organization's readiness and objectives.</p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="process-line"></div>
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Pilot Implementation</h3>
+            <p class="step-description">We execute targeted AI deployments in controlled environments to validate hypotheses and demonstrate value. This phase includes configuration of algorithms, integration with existing systems, data migration where necessary, and thorough testing to ensure performance meets expectations before broader deployment.</p>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="process-line"></div>
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3 class="step-title">Scale & Optimization</h3>
+            <p class="step-description">Based on pilot outcomes, we scale successful implementations across your organization while continuously refining performance. This phase includes expanded deployment, advanced configuration, integration with additional systems, and establishment of monitoring frameworks to track KPIs and ROI.</p>
+          </div>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3 class="step-title">Capability Building & Governance</h3>
+            <p class="step-description">We empower your team with the skills and knowledge to maintain and evolve your AI capabilities long after our engagement ends. This includes comprehensive training programs, documentation, governance frameworks, and ongoing support to ensure sustainable success and continuous optimization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Program Section -->
+  <section class="partner-section">
+    <div class="container">
+      <div class="partner-grid">
+        <div class="partner-content">
+          <h2>Strategic Partner Program</h2>
+          <p>Join our exclusive network of technology and consulting partners to deliver integrated AI solutions that drive transformative business outcomes for your clients.</p>
+          
+          <div class="partner-benefits">
+            <div class="partner-benefit">
+              <div class="partner-benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>Revenue Share Opportunities</strong> - Earn competitive commissions on referred client engagements and implementations
+              </div>
+            </div>
+            
+            <div class="partner-benefit">
+              <div class="partner-benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>Co-branded Solutions</strong> - Develop joint offerings leveraging our AI platform with your specialized expertise
+              </div>
+            </div>
+            
+            <div class="partner-benefit">
+              <div class="partner-benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>Technical Certification</strong> - Access comprehensive training programs to become certified implementation specialists
+              </div>
+            </div>
+            
+            <div class="partner-benefit">
+              <div class="partner-benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>Marketing Support</strong> - Leverage co-marketing initiatives, demand generation campaigns, and joint PR opportunities
+              </div>
+            </div>
+          </div>
+          
+          <a href="partner-program.html" class="cta">Learn More About Partnership</a>
+        </div>
+        
+        <div class="partner-cards">
+          <div class="partner-card">
+            <h3>Technology Partners</h3>
+            <p>For CRM providers, marketing platforms, data analytics companies, and complementary AI solution providers looking to create integrated offerings.</p>
+          </div>
+          
+          <div class="partner-card">
+            <h3>Consulting Partners</h3>
+            <p>For strategy firms, systems integrators, and boutique consultancies seeking to expand their digital transformation capabilities.</p>
+          </div>
+          
+          <div class="partner-card">
+            <h3>Implementation Partners</h3>
+            <p>For professional services firms specializing in sales operations, CRM administration, and revenue technology implementation.</p>
+          </div>
+          
+          <div class="partner-card">
+            <h3>Reseller Partners</h3>
+            <p>For solution providers and value-added resellers looking to expand their portfolio with cutting-edge AI sales solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Solutions Section -->
+  <section class="solutions-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Industry-Specific Solutions</h2>
+        <p>Tailored AI implementation strategies designed for your unique industry challenges and objectives</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Enterprise Solutions -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🏢</div>
+          <h3 class="service-title">Enterprise Solutions</h3>
+          <p class="service-description">Custom AI implementation strategies for enterprise organizations looking to transform revenue operations at scale while integrating with complex legacy systems.</p>
+          <ul class="service-features">
+            <li>Enterprise-wide AI transformation roadmaps</li>
+            <li>Complex systems integration with legacy platforms</li>
+            <li>Multi-division implementation coordination</li>
+            <li>Executive-level change management support</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Request Enterprise Consultation</a>
+        </div>
+        
+        <!-- Government & Public Sector -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🏛️</div>
+          <h3 class="service-title">Government & Public Sector</h3>
+          <p class="service-description">Specialized AI implementations for government agencies and public institutions focused on efficiency, compliance, and citizen engagement.</p>
+          <ul class="service-features">
+            <li>Compliance-focused AI deployment frameworks</li>
+            <li>Privacy-preserving data utilization strategies</li>
+            <li>Public service optimization solutions</li>
+            <li>Citizen engagement enhancement platforms</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Explore Public Sector Solutions</a>
+        </div>
+        
+        <!-- Non-Profit Organizations -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🤲</div>
+          <h3 class="service-title">Non-Profit Organizations</h3>
+          <p class="service-description">Cost-effective AI solutions for non-profits seeking to maximize donor engagement, optimize resource allocation, and increase community impact.</p>
+          <ul class="service-features">
+            <li>Donor identification and engagement automation</li>
+            <li>Grant application optimization tools</li>
+            <li>Community outreach enhancement strategies</li>
+            <li>Resource allocation optimization solutions</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Discover Non-Profit Options</a>
+        </div>
+        
+        <!-- SMB Growth Accelerators -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">📈</div>
+          <h3 class="service-title">SMB Growth Accelerators</h3>
+          <p class="service-description">Affordable, scalable AI implementation packages designed specifically for small and medium businesses looking to compete with larger enterprises.</p>
+          <ul class="service-features">
+            <li>Rapid deployment AI sales solutions</li>
+            <li>Cost-effective implementation approaches</li>
+            <li>Staged rollout plans with minimal disruption</li>
+            <li>Growth-focused ROI measurement systems</li>
+          </ul>
+          <a href="#contact-form" class="cta-outline" style="width: 100%; text-align: center;">Accelerate Your Business</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Expertise Section -->
-  <section id="expertise" class="expertise-section">
+  <section class="team-section">
     <div class="container">
-      <h2>Our Strategic Approach</h2>
-      <p>We combine deep AI expertise with proven go-to-market strategies to transform how your business drives revenue</p>
+      <div class="section-heading">
+        <h2>World-Class AI Expertise at Your Service</h2>
+        <p>Our consulting team brings together elite talent and specialized expertise to solve your most complex business challenges</p>
+      </div>
       
-      <div class="expertise-grid">
-        <div class="expertise-card">
-          <div class="expertise-icon">🔍</div>
-          <h3>GTM Diagnostics</h3>
-          <p>We analyze your current sales and marketing ecosystem to identify inefficiencies, bottlenecks, and growth opportunities for AI augmentation.</p>
+      <div class="services-grid">
+        <!-- Expertise 1 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🧠</div>
+          <h3 class="service-title">AI & Machine Learning Specialists</h3>
+          <p class="service-description">Our team includes PhDs in machine learning, former research scientists from leading AI labs, and experienced AI implementation specialists who stay at the cutting edge of artificial intelligence advancements.</p>
+          <ul class="service-features">
+            <li>Natural language processing expertise</li>
+            <li>Predictive analytics model development</li>
+            <li>Neural network architecture design</li>
+            <li>Algorithm optimization for business outcomes</li>
+          </ul>
         </div>
         
-        <div class="expertise-card">
-          <div class="expertise-icon">⚙️</div>
-          <h3>AI-Native Operating Models</h3>
-          <p>Build scalable organizational structures that leverage AI as a force multiplier across all customer-facing functions.</p>
+        <!-- Expertise 2 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">📊</div>
+          <h3 class="service-title">Revenue Operations Strategists</h3>
+          <p class="service-description">Former sales and revenue operations leaders from Fortune 500 companies who understand the unique challenges of driving revenue growth and optimizing customer acquisition strategies.</p>
+          <ul class="service-features">
+            <li>Sales process reengineering specialists</li>
+            <li>GTM strategy optimization experts</li>
+            <li>Sales enablement program designers</li>
+            <li>Revenue forecasting model developers</li>
+          </ul>
         </div>
         
-        <div class="expertise-card">
-          <div class="expertise-icon">🧠</div>
-          <h3>Machine Learning Strategy</h3>
-          <p>Craft adaptive systems that continuously optimize based on your business objectives and customer interactions.</p>
+        <!-- Expertise 3 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🔄</div>
+          <h3 class="service-title">Digital Transformation Consultants</h3>
+          <p class="service-description">Seasoned transformation leaders with extensive experience guiding organizations through complex technology implementations and cultural change initiatives across diverse industries.</p>
+          <ul class="service-features">
+            <li>Business process redesign specialists</li>
+            <li>Change management certified practitioners</li>
+            <li>Technology adoption acceleration experts</li>
+            <li>Cultural transformation facilitators</li>
+          </ul>
         </div>
         
-        <div class="expertise-card">
-          <div class="expertise-icon">🔄</div>
-          <h3>Process Automation</h3>
-          <p>Implement intelligent workflows that eliminate low-value tasks and accelerate sales cycles with precision.</p>
-        </div>
-        
-        <div class="expertise-card">
-          <div class="expertise-icon">📊</div>
-          <h3>Predictive Analytics</h3>
-          <p>Deploy forecasting models that help you anticipate market shifts and customer behavior changes before competition.</p>
-        </div>
-        
-        <div class="expertise-card">
-          <div class="expertise-icon">🤝</div>
-          <h3>Change Management</h3>
-          <p>Guide your team through the cultural transformation required to excel in an AI-augmented environment.</p>
+        <!-- Expertise 4 -->
+        <div class="service-card animate-fade-in">
+          <div class="service-icon">🔌</div>
+          <h3 class="service-title">Enterprise Integration Engineers</h3>
+          <p class="service-description">Technical architects and systems engineers specializing in complex enterprise integrations, data migration, and secure API implementation for seamless technology ecosystems.</p>
+          <ul class="service-features">
+            <li>CRM integration specialists</li>
+            <li>API development and optimization experts</li>
+            <li>Data migration and transformation architects</li>
+            <li>Security and compliance engineers</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Methodology Section -->
-  <section class="methodology-section">
-    <div class="container">
-      <h2>Our Proven Methodology</h2>
-      <p>A systematic approach to implementing AI in your revenue operations</p>
-      
-      <div class="methodology-steps">
-        <div class="methodology-step">
-          <div class="step-number">1</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h3>Discovery & Assessment</h3>
-            <p>We analyze your current GTM motion, tech stack, and team capabilities to identify high-impact opportunities for AI integration.</p>
-          </div>
-        </div>
-        
-        <div class="methodology-step">
-          <div class="step-number">2</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h3>Strategy Development</h3>
-            <p>Our team designs a tailored roadmap for AI transformation, prioritizing quick wins and long-term strategic initiatives.</p>
-          </div>
-        </div>
-        
-        <div class="methodology-step">
-          <div class="step-number">3</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h3>Pilot Implementation</h3>
-            <p>We execute targeted AI deployments in controlled environments to validate hypotheses and demonstrate value.</p>
-          </div>
-        </div>
-        
-        <div class="methodology-step">
-          <div class="step-number">4</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h3>Scale & Optimization</h3>
-            <p>Based on pilot outcomes, we scale successful implementations across your organization while continuously refining performance.</p>
-          </div>
-        </div>
-        
-        <div class="methodology-step">
-          <div class="step-number">5</div>
-          <div class="step-content">
-            <h3>Capability Building</h3>
-            <p>We empower your team with the skills and knowledge to maintain and evolve your AI capabilities long after our engagement ends.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Transform Your Revenue Operations?</h2>
-      <p>Schedule a complimentary consultation with our strategic AI advisors to explore how we can help you achieve breakthrough performance.</p>
-      <a href="contact.html" class="btn">Request Your Consultation</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 ApexSalesAI. All rights reserved.</p>
-      <div>
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="terms.html">Terms of Use</a> | 
-        <a href="sitemap.xml">Sitemap</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Max AI Widget -->
-  <div id="max-widget">
-    <button id="max-button" onclick="toggleMaxChat()">🤖 Chat with Max</button>
-  </div>
-
-  <script>
-    // Mobile menu toggle
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.getElementById('navToggle');
-      const navMenu = document.getElementById('navMenu');
-      
-      if (navToggle) {
-        navToggle.addEventListener('click', function() {
-          navMenu.classList.toggle('active');
-        });
-      }
-    });
-    
-    // Max chat widget functionality
-    function toggleMaxChat() {
-      alert('Max AI Chat is ready to help! This is a simplified version for demonstration.');
-    }
-  </script>
-</body>
-</html>
