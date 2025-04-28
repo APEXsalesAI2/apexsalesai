@@ -235,6 +235,7 @@
       position: relative; 
       overflow: hidden;
       padding: 6rem 0;
+      text-align: center;
     }
     
     .hero-bg { 
@@ -311,6 +312,8 @@
       margin-bottom: 6rem;
       position: relative;
       z-index: 1;
+      opacity: 1; /* Ensure visibility */
+      transform: translateY(0); /* Reset transform */
     }
     
     .process-step:last-child {
@@ -404,6 +407,8 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      opacity: 1; /* Ensure visibility */
+      transform: translateY(0); /* Reset transform */
     }
     
     .feature-card:hover {
@@ -482,6 +487,8 @@
       position: relative;
       z-index: 1;
       flex: 1;
+      opacity: 1; /* Ensure visibility */
+      transform: translateY(0); /* Reset transform */
     }
     
     .timeline-marker {
@@ -533,6 +540,8 @@
       border-radius: 12px;
       padding: 2.5rem 2rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 1; /* Ensure visibility */
+      transform: translateY(0); /* Reset transform */
     }
     
     .support-card:hover {
@@ -575,6 +584,8 @@
       max-width: 900px;
       margin: 4rem auto 0;
       position: relative;
+      opacity: 1; /* Ensure visibility */
+      transform: translateY(0); /* Reset transform */
     }
     
     .testimonial-card::before {
@@ -982,117 +993,6 @@
 
     .max-send:hover {
       background-color: var(--primary-dark);
-    }
-    
-    /* Animation classes */
-    .process-step, .feature-card, .support-card {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .process-step.animate, .feature-card.animate, .support-card.animate {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Add staggered animation delay for process steps */
-    .process-step:nth-child(2) {
-      transition-delay: 0.1s;
-    }
-
-    .process-step:nth-child(3) {
-      transition-delay: 0.2s;
-    }
-
-    .process-step:nth-child(4) {
-      transition-delay: 0.3s;
-    }
-
-    .process-step:nth-child(5) {
-      transition-delay: 0.4s;
-    }
-
-    /* Add staggered animation delay for feature cards */
-    .feature-card:nth-child(1) {
-      transition-delay: 0.1s;
-    }
-
-    .feature-card:nth-child(2) {
-      transition-delay: 0.2s;
-    }
-
-    .feature-card:nth-child(3) {
-      transition-delay: 0.3s;
-    }
-
-    .feature-card:nth-child(4) {
-      transition-delay: 0.1s;
-    }
-
-    .feature-card:nth-child(5) {
-      transition-delay: 0.2s;
-    }
-
-    .feature-card:nth-child(6) {
-      transition-delay: 0.3s;
-    }
-
-    /* Add staggered animation delay for support cards */
-    .support-card:nth-child(1) {
-      transition-delay: 0.1s;
-    }
-
-    .support-card:nth-child(2) {
-      transition-delay: 0.2s;
-    }
-
-    .support-card:nth-child(3) {
-      transition-delay: 0.3s;
-    }
-
-    /* Add animation for timeline elements */
-    .timeline-point {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .timeline-point.animate {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .timeline-point:nth-child(1) {
-      transition-delay: 0.1s;
-    }
-
-    .timeline-point:nth-child(2) {
-      transition-delay: 0.2s;
-    }
-
-    .timeline-point:nth-child(3) {
-      transition-delay: 0.3s;
-    }
-
-    .timeline-point:nth-child(4) {
-      transition-delay: 0.4s;
-    }
-
-    .timeline-point:nth-child(5) {
-      transition-delay: 0.5s;
-    }
-
-    /* Add animation for testimonial card */
-    .testimonial-card {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .testimonial-card.animate {
-      opacity: 1;
-      transform: translateY(0);
     }
     
     /* Responsive adjustments */
@@ -1620,35 +1520,6 @@
           }
         });
       });
-      
-      // Add animation on scroll
-      const animateElements = document.querySelectorAll('.process-step, .feature-card, .support-card, .timeline-point, .testimonial-card');
-      
-      // Simple function to check if element is in viewport
-      function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
-          rect.bottom >= 0
-        );
-      }
-      
-      // Add animation class when elements come into view
-      function animateOnScroll() {
-        animateElements.forEach(element => {
-          if (isInViewport(element) && !element.classList.contains('animate')) {
-            element.classList.add('animate');
-          }
-        });
-      }
-      
-      // Run on scroll and on load
-      window.addEventListener('scroll', animateOnScroll);
-      
-      // Run after a small delay to ensure all elements are properly loaded
-      setTimeout(function() {
-        animateOnScroll();
-      }, 300);
     });
 
     // Max AI Chat Widget functionality
@@ -1725,6 +1596,20 @@
               maxReply(message);
               this.value = '';
             }
+          }
+        });
+      }
+      
+      // Max send button click event
+      const maxSendButton = document.querySelector('.max-send');
+      if (maxSendButton) {
+        maxSendButton.addEventListener('click', function() {
+          const inputField = document.querySelector('.max-input-field');
+          const message = inputField.value.trim();
+          
+          if (message) {
+            maxReply(message);
+            inputField.value = '';
           }
         });
       }
