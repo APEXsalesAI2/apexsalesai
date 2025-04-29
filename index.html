@@ -23,22 +23,6 @@
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "ApexSalesAI",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "Autonomous AI agents designed to drive revenue and elevate customer interactions"
-    }
-  </script>
   <style>
     /* Base typography */
     :root {
@@ -51,6 +35,9 @@
       --text-light: #cbd5e0;
       --text-dimmed: #a0aec0;
       --border: rgba(255, 255, 255, 0.1);
+      --success: #4caf50;
+      --warning: #ff9800;
+      --danger: #f44336;
     }
     
     body { 
@@ -298,6 +285,168 @@
       margin-top: auto;
     }
 
+    /* NEW - Metrics section */
+    .metrics-section {
+      padding: 4rem 0;
+      background-color: #1a202c;
+      text-align: center;
+    }
+    
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .metric-card {
+      background: linear-gradient(135deg, rgba(0, 194, 203, 0.1) 0%, rgba(5, 36, 56, 0.1) 100%);
+      border: 1px solid rgba(0, 194, 203, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .metric-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(0, 194, 203, 0.5);
+    }
+    
+    .metric-value {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    
+    .metric-label {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    
+    .timeframe {
+      font-size: 0.875rem;
+      color: var(--text-dimmed);
+    }
+
+    /* NEW - Trusted by section */
+    .trusted-section {
+      padding: 4rem 0;
+      text-align: center;
+    }
+    
+    .trusted-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    
+    .trusted-logo {
+      height: 2.5rem;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+      filter: grayscale(100%) brightness(200%);
+    }
+    
+    .trusted-logo:hover {
+      opacity: 0.9;
+      filter: grayscale(0%) brightness(100%);
+    }
+
+    /* NEW - Interactive Demo */
+    .demo-section {
+      padding: 5rem 0;
+      background-color: #1a202c;
+    }
+    
+    .interactive-demo {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(13, 19, 33, 0.7);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 194, 203, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .demo-header {
+      background-color: rgba(0, 194, 203, 0.1);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 194, 203, 0.2);
+    }
+    
+    .demo-title {
+      font-weight: 600;
+      margin-left: 0.75rem;
+      color: var(--primary);
+    }
+    
+    .demo-chat {
+      padding: 1.5rem;
+      min-height: 300px;
+    }
+    
+    .chat-message {
+      margin-bottom: 1.5rem;
+      max-width: 80%;
+      padding: 1rem;
+      border-radius: 12px;
+      line-height: 1.5;
+    }
+    
+    .chat-message.ai {
+      background-color: rgba(0, 194, 203, 0.1);
+      border-left: 3px solid var(--primary);
+      margin-right: auto;
+    }
+    
+    .chat-message.human {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-right: 3px solid rgba(255, 255, 255, 0.3);
+      margin-left: auto;
+      text-align: right;
+    }
+    
+    .chat-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    
+    .chat-options button {
+      background-color: rgba(0, 194, 203, 0.1);
+      color: white;
+      border: 1px solid rgba(0, 194, 203, 0.3);
+      border-radius: 50px;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .chat-options button:hover {
+      background-color: rgba(0, 194, 203, 0.2);
+      border-color: rgba(0, 194, 203, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Problem/Solution/Outcome Labels */
     .problem-label {
       display: inline-block;
       background-color: rgba(255, 82, 82, 0.1);
@@ -333,6 +482,7 @@
       margin-top: 0.75rem;
     }
 
+    /* Case study */
     .case-study {
       margin-top: 1rem;
       padding: 0.75rem;
@@ -352,286 +502,40 @@
       opacity: 0.5;
     }
 
-    /* Section headings */
-    section {
-      padding: 5rem 0;
-    }
-    
-    section h2 { 
-      font-size: 2rem; 
-      margin-bottom: 1.5rem; 
-    }
-    
-    @media(min-width: 768px) { 
-      section h2 { 
-        font-size: 2.25rem; 
-      } 
-    }
-
-    /* Grid layout */
-    .grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: 1fr;
-    }
-    
-    @media (min-width: 768px) {
-      .grid-cols-3 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    /* Feature boxes */
-    .feature-box {
-      background-color: #1a202c;
-      padding: 1.5rem;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .feature-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    }
-
-    .feature-icon {
-      position: absolute;
-      top: -20px;
-      right: -20px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: rgba(0, 194, 203, 0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      opacity: 0.2;
-      transition: all 0.3s ease;
-    }
-
-    .feature-box:hover .feature-icon {
-      opacity: 0.4;
-      transform: scale(1.1);
-    }
-
-    .feature-claim {
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      line-height: 1.4;
-    }
-
-    .feature-metric {
-      display: inline-block;
-      background-color: rgba(0, 194, 203, 0.1);
-      color: #e2e8f0;
-      padding: 0.5rem 0.75rem;
-      border-radius: 4px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .feature-metric strong {
-      color: var(--primary);
-    }
-
-    .feature-pain {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.9rem;
-      color: #9ca3af;
-    }
-
-    .feature-anim {
-      height: 60px;
-      margin: 1rem 0;
-      background-color: rgba(255, 255, 255, 0.03);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .feature-anim-graph {
-      width: 100%;
-      height: 40px;
-      position: relative;
-    }
-
-    .feature-anim-graph::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60%;
-      height: 2px;
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .feature-anim-graph::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 60%;
-      width: 40%;
-      height: 2px;
-      background-color: var(--primary);
-      transform-origin: left;
-      animation: graphGrow 4s infinite;
-    }
-
-    @keyframes graphGrow {
-      0%, 30% { transform: scaleY(1); }
-      40%, 100% { transform: scaleY(15); }
-    }
-
-    .feature-anim-calendar {
-      width: 40px;
-      height: 40px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .feature-anim-calendar::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 25%;
-      background-color: var(--primary);
-    }
-
-    .feature-anim-calendar::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(13, 19, 33, 0.4);
-      animation: calendarFlip 3s infinite;
-      transform-origin: bottom;
-    }
-
-    @keyframes calendarFlip {
-      0%, 20% { transform: translateY(0); }
-      30%, 100% { transform: translateY(-100%); }
-    }
-
-    .feature-anim-calculator {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .feature-anim-calculator span {
-      font-family: monospace;
-      color: var(--primary);
-      opacity: 0;
-      font-size: 1.2rem;
-      animation: calcNumbers 6s infinite;
-    }
-
-    @keyframes calcNumbers {
-      0%, 10% { opacity: 0; content: '$0'; }
-      15% { opacity: 1; content: '$0'; }
-      20% { content: '$4,250'; }
-      25% { content: '$9,720'; }
-      30% { content: '$15,840'; }
-      35% { content: '$24,350'; }
-      40%, 100% { content: '$38,900'; }
-    }
-
-    /* Persona CTA section */
-    .persona-cta-section {
-      padding: 4rem 0;
-      background-color: #052438;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .persona-cta-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .persona-cta-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .persona-card {
-      background-color: rgba(26, 32, 44, 0.5);
-      border-radius: 12px;
-      padding: 2rem;
+    /* CTA section */
+    .cta-section {
       text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 5rem 0;
+      background-color: var(--bg-dark);
       position: relative;
       overflow: hidden;
     }
 
-    .persona-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-      border-color: rgba(0, 194, 203, 0.3);
-    }
-
-    .persona-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #fff;
-    }
-
-    .persona-description {
-      margin-bottom: 1.5rem;
-      color: #a0aec0;
-    }
-
-    .persona-tag {
+    .cta-section::before {
+      content: '';
       position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 0.75rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      background-color: rgba(0, 194, 203, 0.1);
-      color: var(--primary);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 194, 203, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
     }
-
-    .persona-card:nth-child(2) .persona-tag {
-      background-color: rgba(236, 72, 153, 0.1);
-      color: #ec4899;
-    }
-
-    .persona-card:nth-child(3) .persona-tag {
-      background-color: rgba(250, 204, 21, 0.1);
-      color: #facc15;
-    }
-
-    .limited-offer {
+    
+    .cta-heading {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #ffffff, #00c2cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       display: inline-block;
-      margin-top: 0.5rem;
-      font-size: 0.8rem;
-      color: #ec4899;
-      font-weight: 600;
+    }
+    
+    .cta-text {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
     }
 
     /* Footer */
@@ -669,7 +573,7 @@
     
     .footer-about {
       margin-bottom: 1.5rem;
-      color: #a0aec0;
+      color: var(--text-dimmed);
     }
     
     .footer-social {
@@ -684,15 +588,15 @@
       justify-content: center;
       align-items: center;
       background-color: rgba(255, 255, 255, 0.1);
-      color: #e2e8f0;
+      color: var(--text);
       border-radius: 50%;
       transition: background-color 0.3s ease, color 0.3s ease;
       text-decoration: none;
     }
     
     .footer-social a:hover {
-      background-color: #00c2cb;
-      color: #0d1321;
+      background-color: var(--primary);
+      color: var(--secondary);
     }
     
     .footer-heading {
@@ -711,13 +615,13 @@
     }
     
     .footer-links a {
-      color: #a0aec0;
+      color: var(--text-dimmed);
       text-decoration: none;
       transition: color 0.3s ease;
     }
     
     .footer-links a:hover {
-      color: #00c2cb;
+      color: var(--primary);
     }
     
     .footer-contact {
@@ -733,13 +637,13 @@
       justify-content: center;
       align-items: center;
       background-color: rgba(255, 255, 255, 0.1);
-      color: #00c2cb;
+      color: var(--primary);
       border-radius: 50%;
       margin-right: 1rem;
     }
     
     .footer-contact-text {
-      color: #a0aec0;
+      color: var(--text-dimmed);
     }
     
     .footer-bottom {
@@ -759,7 +663,7 @@
     }
     
     .footer-copyright {
-      color: #a0aec0;
+      color: var(--text-dimmed);
     }
     
     .footer-legal {
@@ -768,199 +672,213 @@
     }
     
     .footer-legal a {
-      color: #a0aec0;
+      color: var(--text-dimmed);
       text-decoration: none;
       transition: color 0.3s ease;
     }
     
     .footer-legal a:hover {
+      color: var(--primary);
+    }
+
+    /* Max Chat Widget */
+    #max-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    #max-button {
+      background-color: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,194,203,0.4);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    #max-button:hover {
+      background-color: #00a8b3;
+      transform: translateY(-3px);
+    }
+
+    #max-button svg {
+      margin-right: 8px;
+    }
+
+    #max-chat {
+      width: 350px;
+      height: 450px;
+      background: #0d1321;
+      border: 2px solid #00c2cb;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 20px rgba(0,194,203,0.4);
+      position: absolute;
+      bottom: 80px;
+      right: 0;
+    }
+
+    #max-chat.hidden {
+      display: none;
+    }
+
+    .max-header {
+      background: #00c2cb;
+      color: #0d1321;
+      font-weight: 700;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .max-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .max-title svg {
+      margin-right: 8px;
+    }
+
+    .max-close {
+      background: none;
+      border: none;
+      color: #0d1321;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .max-messages {
+      background: #0d1321;
+      color: #e2e8f0;
+      padding: 15px;
+      flex-grow: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      margin-bottom: 15px;
+      max-width: 80%;
+    }
+
+    .message.max {
+      background: #1a202c;
+      padding: 12px;
+      border-radius: 12px 12px 12px 0;
+      align-self: flex-start;
+    }
+
+    .message.user {
+      background: #00c2cb;
+      color: #0d1321;
+      padding: 12px;
+      border-radius: 12px 12px 0 12px;
+      align-self: flex-end;
+    }
+
+    .chat-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chat-option {
+      background: none;
+      border: 1px solid #00c2cb;
       color: #00c2cb;
+      padding: 8px 12px;
+      width: 100%;
+      text-align: left;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .chat-option:hover {
+      background: rgba(0,194,203,0.1);
+      transform: translateY(-2px);
+    }
+
+    .max-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .max-input-field {
+      flex-grow: 1;
+      background-color: rgba(26, 32, 44, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 10px 15px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .max-input-field:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .max-send {
+      background-color: var(--primary);
+      color: #0d1321;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .max-send:hover {
+      background-color: var(--primary-dark);
     }
     
-    /* Utility classes */
-    .text-center { text-align: center; }
-    .mb-2 { margin-bottom: 0.5rem; }
-    .mb-4 { margin-bottom: 1rem; }
-    .mb-6 { margin-bottom: 1.5rem; }
-    .mb-8 { margin-bottom: 2rem; }
-    .mb-10 { margin-bottom: 2.5rem; }
-    .mb-12 { margin-bottom: 3rem; }
-    .mt-4 { margin-top: 1rem; }
-    .mt-6 { margin-top: 1.5rem; }
-    .mx-auto { margin-left: auto; margin-right: auto; }
-    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-    .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
-    .px-4 { padding-left: 1rem; padding-right: 1rem; }
-    .max-w-2xl { max-width: 42rem; }
-    .bg-gray-700 { background-color: #2d3748; }
-    .bg-gray-800 { background-color: #1a202c; }
-    .bg-gray-900 { background-color: #0d1321; }
-    .text-gray-300 { color: #d1d5db; }
-    .text-gray-400 { color: #9ca3af; }
-    .text-gray-500 { color: #6b7280; }
-    .text-white { color: #ffffff; }
-    .text-teal-400 { color: #00c2cb; }
-    .text-sm { font-size: 0.875rem; }
-    .text-base { font-size: 1rem; }
-    .text-3xl { font-size: 1.875rem; }
-    .font-semibold { font-weight: 600; }
-    .font-bold { font-weight: 700; }
-    .p-4 { padding: 1rem; }
-    .p-6 { padding: 1.5rem; }
-    .relative { position: relative; }
-    .z-10 { z-index: 10; }
-    .list-disc { list-style-type: disc; }
-    .list-inside { list-style-position: inside; }
-    .flex { display: flex; }
-    .items-center { align-items: center; }
-    .justify-between { justify-content: space-between; }
-    .justify-center { justify-content: center; }
-    .flex-col { flex-direction: column; }
-    .w-full { width: 100%; }
-    .active { color: #00c2cb; }
-    .menu-open { display: block; }
+    /* Animation classes */
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .menu-open {
+      display: block;
+    }
   </style>
 </head>
-<!-- Max AI Assistant Widget -->
-<div id="max-widget">
-  <button id="max-button" onclick="toggleMaxChat()">🤖 Chat with Max</button>
-  
-  <div id="max-chat" class="hidden">
-    <div class="max-header">
-      <span>Max • ApexSalesAI</span>
-      <button onclick="toggleMaxChat()">✖️</button>
-    </div>
-    <div class="max-messages" id="max-messages">
-      <div class="message max">👋 Hi, I'm Max — ApexSalesAI's Digital Sales Partner!</div>
-      <div class="message max">💬 How can I help you today?</div>
-      <button class="chat-option" onclick="maxReply('Learn about AI Agents')">Learn about AI Agents</button>
-      <button class="chat-option" onclick="maxReply('View Pricing Plans')">View Pricing Plans</button>
-      <button class="chat-option" onclick="maxReply('Schedule a Demo')">Schedule a Demo</button>
-      <button class="chat-option" onclick="maxReply('Talk to a Real Person')">Talk to a Real Person</button>
-    </div>
-  </div>
-</div>
-
-<!-- Max Widget Styles -->
-<style>
-#max-widget {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-
-#max-button {
-  background-color: #00c2cb;
-  color: #0d1321;
-  font-weight: 700;
-  border: none;
-  border-radius: 50px;
-  padding: 15px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,194,203,0.4);
-  transition: all 0.3s;
-}
-
-#max-button:hover {
-  background-color: #00a8b3;
-}
-
-#max-chat {
-  width: 300px;
-  height: auto;
-  max-height: 450px;
-  background: #0d1321;
-  border: 2px solid #00c2cb;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 8px 20px rgba(0,194,203,0.4);
-}
-
-#max-chat.hidden {
-  display: none;
-}
-
-.max-header {
-  background: #00c2cb;
-  color: #0d1321;
-  font-weight: 700;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.max-messages {
-  background: #0d1321;
-  color: #e2e8f0;
-  padding: 10px;
-  flex-grow: 1;
-  overflow-y: auto;
-}
-
-.message {
-  margin-bottom: 10px;
-}
-
-.message.max {
-  background: #1a202c;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.chat-option {
-  background: none;
-  border: 1px solid #00c2cb;
-  color: #00c2cb;
-  padding: 8px 10px;
-  margin-top: 5px;
-  width: 100%;
-  text-align: left;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.chat-option:hover {
-  background: rgba(0,194,203,0.1);
-}
-</style>
-
-<!-- Max Widget Script -->
-<script>
-function toggleMaxChat() {
-  document.getElementById('max-chat').classList.toggle('hidden');
-}
-
-function maxReply(option) {
-  const messages = document.getElementById('max-messages');
-  let reply = '';
-  if (option === 'Learn about AI Agents') {
-    reply = "🤖 Our AI Agents don't just assist—they execute. They automate outreach, qualification, follow-ups, and support ticket resolution autonomously. Companies using ApexSalesAI see 40% more meetings booked without adding headcount.";
-  } else if (option === 'View Pricing Plans') {
-    reply = "💵 Our pricing starts at $1,200/month for ApexSalesAI and $950/month for ApexSupportAI. We also offer enterprise packages with custom implementation. Would you like me to share more details?";
-  } else if (option === 'Schedule a Demo') {
-    reply = "📅 Great choice! I'd be happy to set up a personalized demo for you. You can book directly at demo.apexsalesai.com or tell me about your business needs and I'll have a specialist reach out.";
-  } else if (option === 'Talk to a Real Person') {
-    reply = "👤 No problem! Would you prefer to speak with someone from our sales team or technical support? I can connect you with the right person right away.";
-  }
-  
-  const newMessage = document.createElement('div');
-  newMessage.className = 'message max';
-  newMessage.innerText = reply;
-  messages.appendChild(newMessage);
-  
-  messages.scrollTop = messages.scrollHeight;
-}
-</script>
-
 <body>
   <!-- Navigation -->
   <nav class="navbar">
@@ -1017,15 +935,58 @@ function maxReply(option) {
       </svg>
     </div>
     <div class="container mx-auto py-24 px-4 relative z-10">
-      <h1 id="rotating-headline" class="hero-title">AI That Doesn't Just Assist —<br/>It Executes.</h1>
-      <p class="hero-subtitle">ApexsalesAI turns insights into outcomes with autonomous agents that drive revenue, elevate customer experiences, and deliver measurable ROI.</p>
+      <h1 id="rotating-headline" class="hero-title">Boost Pipeline by 40%<br/>Without Adding Headcount</h1>
+      <p class="hero-subtitle">ApexSalesAI turns insights into outcomes with autonomous agents that drive revenue, elevate customer experiences, and deliver measurable ROI.</p>
       <div>
         <a href="demo.html" class="cta">Schedule a Demo</a>
-        <a href="platform.html" class="cta">Explore Platform</a>
+        <a href="platform.html" class="cta-outline">Explore Platform</a>
       </div>
-      <p class="mt-6 text-sm text-gray-400">Trusted by forward-thinking companies across industries</p>
     </div>
   </header>
+
+  <!-- Metrics Section - NEW -->
+  <section class="metrics-section">
+    <div class="container">
+      <h2>Real Results, Delivered</h2>
+      <p>Our customers consistently achieve exceptional business outcomes with ApexSalesAI</p>
+      
+      <div class="metrics-grid">
+        <div class="metric-card animate-fade-in">
+          <div class="metric-value">47%</div>
+          <div class="metric-label">Pipeline Growth</div>
+          <div class="timeframe">within 90 days</div>
+        </div>
+        
+        <div class="metric-card animate-fade-in">
+          <div class="metric-value">67%</div>
+          <div class="metric-label">Faster Response Time</div>
+          <div class="timeframe">for customer inquiries</div>
+        </div>
+        
+        <div class="metric-card animate-fade-in">
+          <div class="metric-value">3.2x</div>
+          <div class="metric-label">ROI on AI Investment</div>
+          <div class="timeframe">within first year</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By Section - NEW -->
+  <section class="trusted-section">
+    <div class="container">
+      <h2>Trusted by Industry Leaders</h2>
+      
+      <div class="trusted-logos">
+        <!-- Placeholder logos - replace with actual client logos -->
+        <img src="/api/placeholder/120/40" alt="Client Logo" class="trusted-logo">
+        <img src="/api/placeholder/120/40" alt="Client Logo" class="trusted-logo">
+        <img src="/api/placeholder/120/40" alt="Client Logo" class="trusted-logo">
+        <img src="/api/placeholder/120/40" alt="Client Logo" class="trusted-logo">
+        <img src="/api/placeholder/120/40" alt="Client Logo" class="trusted-logo">
+      </div>
+    </div>
+  </section>
 
   <!-- Products Overview -->
   <section id="products" class="container mx-auto py-20 px-4">
@@ -1087,6 +1048,38 @@ function maxReply(option) {
     </div>
   </section>
 
+  <!-- Interactive Demo Section - NEW -->
+  <section class="demo-section">
+    <div class="container">
+      <h2 class="text-center">Experience Max in Action</h2>
+      <p class="text-center mb-6">Get a feel for how our AI agents work through this interactive demo</p>
+      
+      <div class="interactive-demo">
+        <div class="demo-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c2cb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+          <div class="demo-title">Max - ApexSalesAI Agent</div>
+        </div>
+        
+        <div class="demo-chat" id="demo-chat">
+          <div class="chat-message ai">
+            Hi there, I'm Max! I can autonomously find leads, qualify prospects, and book meetings for your team. How can I help your sales team today?
+          </div>
+          
+          <div class="chat-options">
+            <button onclick="showResponse('lead-generation')">How do you find leads?</button>
+            <button onclick="showResponse('qualification')">How do you qualify prospects?</button>
+            <button onclick="showResponse('booking')">How do you book meetings?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Why ApexSalesAI -->
   <section id="why-apex" class="bg-gray-800 py-20 px-4">
     <div class="container mx-auto text-center">
@@ -1131,31 +1124,14 @@ function maxReply(option) {
     </div>
   </section>
 
-  <!-- Persona CTA Section -->
-  <section class="persona-cta-section">
+  <!-- CTA Section -->
+  <section class="cta-section">
     <div class="container">
-      <div class="persona-cta-container">
-        <div class="persona-card">
-          <div class="persona-tag">Sales Leaders</div>
-          <h3 class="persona-title">Double Your Pipeline in 30 Days</h3>
-          <p class="persona-description">See how ApexSalesAI can amplify your team's effectiveness without adding headcount or complexity.</p>
-          <a href="demo.html?persona=sales" class="cta">Book Sales Demo</a>
-          <p class="limited-offer">Limited spots for May rollout!</p>
-        </div>
-        
-        <div class="persona-card">
-          <div class="persona-tag">Support Leaders</div>
-          <h3 class="persona-title">Cut Resolution Time by 65%</h3>
-          <p class="persona-description">Calculate how much time and budget you'll save with AI-powered ticket resolution.</p>
-          <a href="demo.html?persona=support" class="cta">Schedule ROI Assessment</a>
-        </div>
-        
-        <div class="persona-card">
-          <div class="persona-tag">Business Leaders</div>
-          <h3 class="persona-title">Stay Ahead of Competitors</h3>
-          <p class="persona-description">Don't let competitors outpace you. Our AI execution engine is being adopted by industry leaders.</p>
-          <a href="demo.html?persona=executive" class="cta">Executive Briefing</a>
-        </div>
+      <h2 class="cta-heading">Ready to Transform Your Business?</h2>
+      <p class="cta-text">Join forward-thinking companies that are increasing pipeline, boosting customer satisfaction, and scaling without adding headcount.</p>
+      <div>
+        <a href="demo.html" class="cta">Schedule Your Demo</a>
+        <a href="contact.html" class="cta-outline">Talk to an Expert</a>
       </div>
     </div>
   </section>
@@ -1171,7 +1147,298 @@ function maxReply(option) {
           
           <div class="footer-social">
             <a href="#" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="footer-contact-text">info@apexsalesai.com</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 ApexSalesAI. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Max AI Chat Widget -->
+  <div id="max-widget">
+    <button id="max-button" onclick="toggleMaxChat()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+      </svg>
+      Chat with Max
+    </button>
+    
+    <div id="max-chat" class="hidden">
+      <div class="max-header">
+        <div class="max-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+          Max • ApexSalesAI
+        </div>
+        <button class="max-close" onclick="toggleMaxChat()">×</button>
+      </div>
+      <div class="max-messages" id="max-messages">
+        <div class="message max">👋 Hi there! I'm Max, your AI assistant!</div>
+        <div class="message max">I can help you learn more about how our AI-powered platform can transform your revenue operations. What would you like to know?</div>
+        <div class="chat-options">
+          <button class="chat-option" onclick="maxReply('How does ApexSalesAI work?')">How does ApexSalesAI work?</button>
+          <button class="chat-option" onclick="maxReply('What results can I expect?')">What results can I expect?</button>
+          <button class="chat-option" onclick="maxReply('How much does it cost?')">How much does it cost?</button>
+          <button class="chat-option" onclick="maxReply('Schedule a demo')">Schedule a demo</button>
+        </div>
+      </div>
+      <div class="max-input">
+        <input type="text" class="max-input-field" placeholder="Type your message..." onkeypress="if(event.key === 'Enter') maxReply(this.value)">
+        <button class="max-send" onclick="maxReply(document.querySelector('.max-input-field').value)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileNav.classList.toggle('menu-open');
+      });
+      
+      // Rotating headline effect
+      const headlines = [
+        "Boost Pipeline by 40%<br/>Without Adding Headcount",
+        "Reduce Response Time by 67%<br/>While Improving CSAT by 42%",
+        "Transform Revenue Operations<br/>With Autonomous AI Agents"
+      ];
+      
+      const headlineEl = document.getElementById('rotating-headline');
+      let currentIndex = 0;
+      
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % headlines.length;
+        headlineEl.innerHTML = headlines[currentIndex];
+      }, 5000);
+      
+      // Handle responsive grid for smaller screens
+      function handleResponsiveGrids() {
+        const gridElements = document.querySelectorAll('.grid');
+        
+        if (window.innerWidth < 768) {
+          gridElements.forEach(grid => {
+            if (grid.classList.contains('grid-cols-3')) {
+              grid.classList.remove('grid-cols-3');
+            }
+          });
+        } else {
+          gridElements.forEach(grid => {
+            if (!grid.classList.contains('grid-cols-3')) {
+              grid.classList.add('grid-cols-3');
+            }
+          });
+        }
+      }
+      
+      // Initial call and event listener for resize
+      handleResponsiveGrids();
+      window.addEventListener('resize', handleResponsiveGrids);
+    });
+    
+    // Smooth scrolling for anchor links
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Max AI Chat Widget functionality
+    function toggleMaxChat() {
+      document.getElementById('max-chat').classList.toggle('hidden');
+    }
+
+    function maxReply(option) {
+      const chatMessages = document.getElementById('max-messages');
+      
+      // Create and add the user message
+      const userMessage = document.createElement('div');
+      userMessage.className = 'message user';
+      userMessage.textContent = option;
+      chatMessages.appendChild(userMessage);
+      
+      // Determine the bot's reply based on the selected option
+      let replyText = '';
+      
+      if (option === 'How does ApexSalesAI work?') {
+        replyText = "ApexSalesAI uses autonomous AI agents to handle routine sales and support tasks 24/7. Our technology can find leads, qualify prospects, book meetings, and handle most customer inquiries without human intervention. When human expertise is needed, we seamlessly escalate to your team at exactly the right moment.";
+      } else if (option === 'What results can I expect?') {
+        replyText = "Our customers typically see a 40% increase in sales pipeline within 90 days, a 67% reduction in response time for customer inquiries, and a 42% increase in customer satisfaction scores. The average ROI is 3.2x within the first year, with many customers breaking even in the first quarter.";
+      } else if (option === 'How much does it cost?') {
+        replyText = "Our pricing starts at $799/agent/month for our Starter plan. Most customers choose our Professional plan at $1,200/agent/month. We also offer Enterprise plans for larger organizations with advanced needs. Would you like me to explain the different plans in more detail?";
+      } else if (option === 'Schedule a demo') {
+        replyText = "I'd be happy to help you schedule a personalized demo! You can either book directly on our calendar at demo.apexsalesai.com or I can collect your information and have our team reach out to you. Which would you prefer?";
+      } else {
+        replyText = "Thanks for your message! I'd be happy to help you learn more about how ApexSalesAI can transform your revenue operations. Is there something specific you'd like to know about our platform, pricing, or the results our customers are seeing?";
+      }
+      
+      // Add a small delay to simulate typing
+      setTimeout(() => {
+        // Create and add the bot message
+        const botMessage = document.createElement('div');
+        botMessage.className = 'message max';
+        botMessage.textContent = replyText;
+        chatMessages.appendChild(botMessage);
+        
+        // Scroll to the newest message
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 800);
+      
+      // Scroll to the user message immediately
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      
+      // Clear the input field
+      document.querySelector('.max-input-field').value = '';
+    }
+    
+    // Interactive demo functionality
+    function showResponse(type) {
+      const demoChat = document.getElementById('demo-chat');
+      const humanMessage = document.createElement('div');
+      humanMessage.className = 'chat-message human';
+      
+      let humanText = '';
+      let responseText = '';
+      
+      if (type === 'lead-generation') {
+        humanText = "How do you find leads?";
+        responseText = "I use a combination of methods to find leads. I analyze your ideal customer profile, then search across multiple data sources including LinkedIn, company websites, and industry databases to identify matching prospects. I can also monitor buying signals like relevant job postings, funding news, or technology changes that indicate a good fit for your solution. All of this happens autonomously, 24/7.";
+      } else if (type === 'qualification') {
+        humanText = "How do you qualify prospects?";
+        responseText = "I qualify prospects by engaging them in natural conversations through email or chat. I ask questions to assess their needs, budget, authority, timeline, and fit with your solution. My natural language processing can understand nuanced responses and adapt the conversation accordingly. I can recognize buying signals and objections, and I score leads based on your specific qualification criteria.";
+      } else if (type === 'booking') {
+        humanText = "How do you book meetings?";
+        responseText = "Once I've qualified a prospect, I handle the entire meeting scheduling process. I suggest available times from your calendar, negotiate alternatives if needed, send calendar invites, and add context notes for your team. I also send personalized reminders to reduce no-shows and can even help prepare your team with prospect insights before the meeting.";
+      }
+      
+      humanMessage.textContent = humanText;
+      demoChat.appendChild(humanMessage);
+      
+      // Simulate response delay
+      setTimeout(() => {
+        const aiMessage = document.createElement('div');
+        aiMessage.className = 'chat-message ai';
+        aiMessage.textContent = responseText;
+        demoChat.appendChild(aiMessage);
+        
+        // Add new options
+        const chatOptions = document.createElement('div');
+        chatOptions.className = 'chat-options';
+        
+        const options = [
+          {type: 'lead-generation', text: 'How do you find leads?'},
+          {type: 'qualification', text: 'How do you qualify prospects?'},
+          {type: 'booking', text: 'How do you book meetings?'}
+        ];
+        
+        // Filter out the current option
+        const filteredOptions = options.filter(option => option.type !== type);
+        
+        // Add "Tell me more" option
+        const tellMoreButton = document.createElement('button');
+        tellMoreButton.textContent = `Tell me more about ${type === 'lead-generation' ? 'lead finding' : type === 'qualification' ? 'qualification' : 'meeting booking'}`;
+        tellMoreButton.onclick = function() {
+          showMoreInfo(type);
+        };
+        chatOptions.appendChild(tellMoreButton);
+        
+        // Add remaining options
+        filteredOptions.forEach(option => {
+          const button = document.createElement('button');
+          button.textContent = option.text;
+          button.onclick = function() {
+            showResponse(option.type);
+          };
+          chatOptions.appendChild(button);
+        });
+        
+        // Add "Schedule demo" option
+        const demoButton = document.createElement('button');
+        demoButton.textContent = "Schedule a full demo";
+        demoButton.onclick = function() {
+          window.location.href = "demo.html";
+        };
+        chatOptions.appendChild(demoButton);
+        
+        demoChat.appendChild(chatOptions);
+        
+        // Scroll to bottom
+        demoChat.scrollTop = demoChat.scrollHeight;
+      }, 1000);
+    }
+    
+    function showMoreInfo(type) {
+      const demoChat = document.getElementById('demo-chat');
+      const humanMessage = document.createElement('div');
+      humanMessage.className = 'chat-message human';
+      
+      let humanText = '';
+      let responseText = '';
+      
+      if (type === 'lead-generation') {
+        humanText = "Tell me more about lead finding";
+        responseText = "Unlike basic lead scrapers, I'm continuously learning what works for your specific business. I analyze conversion patterns to refine your ideal customer profile over time. I also prioritize leads based on intent signals and engagement likelihood. For example, when a prospect visits your pricing page or downloads a whitepaper, I can immediately engage them while their interest is high, resulting in 3.4x higher conversion rates compared to delayed outreach.";
+      } else if (type === 'qualification') {
+        humanText = "Tell me more about qualification";
+        responseText = "My qualification process goes beyond simple BANT questions. I can understand complex buying scenarios, multiple stakeholders, and competitive situations. I'm trained to recognize buying intent signals in language that humans might miss. I also adapt my qualification approach based on industry, role, and communication style. Our customers report that leads qualified by Max convert to opportunities at a 42% higher rate than those qualified by junior sales reps.";
+      } else if (type === 'booking') {
+        humanText = "Tell me more about meeting booking";
+        responseText = "My meeting booking capabilities include intelligent availability management. I can prioritize high-value prospects for prime meeting slots, suggest optimal meeting durations based on the prospect's role and needs, and even coordinate multi-stakeholder meetings. I can also provide pre-meeting briefings to your sales team with all relevant context, qualification notes, and suggested talking points. This comprehensive approach has reduced no-show rates by 68% for our customers.";
+      }
+      
+      humanMessage.textContent = humanText;
+      demoChat.appendChild(humanMessage);
+      
+      // Simulate response delay
+      setTimeout(() => {
+        const aiMessage = document.createElement('div');
+        aiMessage.className = 'chat-message ai';
+        aiMessage.textContent = responseText;
+        demoChat.appendChild(aiMessage);
+        
+        // Add "Schedule demo" option only
+        const chatOptions = document.createElement('div');
+        chatOptions.className = 'chat-options';
+        
+        const demoButton = document.createElement('button');
+        demoButton.textContent = "Schedule a full demo";
+        demoButton.onclick = function() {
+          window.location.href = "demo.html";
+        };
+        chatOptions.appendChild(demoButton);
+        
+        demoChat.appendChild(chatOptions);
+        
+        // Scroll to bottom
+        demoChat.scrollTop = demoChat.scrollHeight;
+      }, 1000);
+    }
+  </script>
+</body>
+</html>-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             </a>
             <a href="#" aria-label="Twitter">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
@@ -1209,94 +1476,4 @@ function maxReply(option) {
           </div>
           <div class="footer-contact">
             <div class="footer-contact-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </div>
-            <div class="footer-contact-text">info@apexsalesai.com</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2025 ApexSalesAI. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-          <a href="sitemap.xml">Sitemap</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Mobile menu toggle
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileNav = document.getElementById('mobileNav');
-      
-      mobileMenuBtn.addEventListener('click', function() {
-        mobileNav.classList.toggle('menu-open');
-      });
-      
-      // Rotating headline effect
-      const headlines = [
-        "AI That Doesn't Just Assist —<br/>It Executes.",
-        "From Conversation to Conversion.<br/>From Inquiry to Resolution.",
-        "Your Tireless Revenue Team<br/>That Works While You Sleep."
-      ];
-      
-      const headlineEl = document.getElementById('rotating-headline');
-      let currentIndex = 0;
-      
-      setInterval(() => {
-        currentIndex = (currentIndex + 1) % headlines.length;
-        headlineEl.innerHTML = headlines[currentIndex];
-      }, 5000);
-      
-      // Feature animations
-      const featureAnimCalculator = document.querySelector('.feature-anim-calculator span');
-      if (featureAnimCalculator) {
-        const values = ['$0', '$4,250', '$9,720', '$15,840', '$24,350', '$38,900'];
-        let valueIndex = 0;
-        
-        setTimeout(() => {
-          featureAnimCalculator.style.opacity = '1';
-          setInterval(() => {
-            if (valueIndex < values.length) {
-              featureAnimCalculator.textContent = values[valueIndex];
-              valueIndex++;
-            }
-          }, 800);
-        }, 1000);
-      }
-      
-      // Handle responsive grid for smaller screens
-      function handleResponsiveGrids() {
-        const gridElements = document.querySelectorAll('.grid');
-        
-        if (window.innerWidth < 768) {
-          gridElements.forEach(grid => {
-            if (grid.classList.contains('grid-cols-3')) {
-              grid.classList.remove('grid-cols-3');
-            }
-          });
-        } else {
-          gridElements.forEach(grid => {
-            if (!grid.classList.contains('grid-cols-3')) {
-              grid.classList.add('grid-cols-3');
-            }
-          });
-        }
-      }
-      
-      // Initial call and event listener for resize
-      handleResponsiveGrids();
-      window.addEventListener('resize', handleResponsiveGrids);
-    });
-    
-    // Smooth scrolling for anchor links
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
-</body>
-</html>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke
