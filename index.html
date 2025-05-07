@@ -23,9 +23,9 @@
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <!-- Botpress Chat Widget Script -->
-  <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/05/06/05/20250506051043-1TC1W944.js"></script>
+  <!-- Botpress Chat Widget Script - Updated -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/79611e1b-98f0-49de-b18b-85e9973276c1/webchat/config.js" defer></script>
 <style>
     /* Base typography */
     :root {
@@ -1009,15 +1009,15 @@
       color: var(--primary);
     }
 
-    /* Max Chat Widget */
-    #max-widget {
+    /* Max Chat Widget - Updated to match site style */
+    #bp-web-widget-container {
+      z-index: 9999;
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 9999;
     }
 
-    #max-button {
+    .bp-widget-button {
       background-color: #00c2cb;
       color: #0d1321;
       font-weight: 700;
@@ -1032,159 +1032,13 @@
       align-items: center;
     }
 
-    #max-button:hover {
+    .bp-widget-button:hover {
       background-color: #00a8b3;
       transform: translateY(-3px);
     }
 
-    #max-button svg {
+    .bp-widget-button svg {
       margin-right: 8px;
-    }
-
-    #max-chat {
-      width: 350px;
-      height: 450px;
-      background: #0d1321;
-      border: 2px solid #00c2cb;
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 8px 20px rgba(0,194,203,0.4);
-      position: absolute;
-      bottom: 80px;
-      right: 0;
-    }
-
-    #max-chat.hidden {
-      display: none;
-    }
-
-    .max-header {
-      background: #00c2cb;
-      color: #0d1321;
-      font-weight: 700;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .max-title {
-      display: flex;
-      align-items: center;
-    }
-
-    .max-title svg {
-      margin-right: 8px;
-    }
-
-    .max-close {
-      background: none;
-      border: none;
-      color: #0d1321;
-      font-size: 1.5rem;
-      cursor: pointer;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>
-<style>
-    .max-messages {
-      background: #0d1321;
-      color: #e2e8f0;
-      padding: 15px;
-      flex-grow: 1;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .message {
-      margin-bottom: 15px;
-      max-width: 80%;
-    }
-
-    .message.max {
-      background: #1a202c;
-      padding: 12px;
-      border-radius: 12px 12px 12px 0;
-      align-self: flex-start;
-    }
-
-    .message.user {
-      background: #00c2cb;
-      color: #0d1321;
-      padding: 12px;
-      border-radius: 12px 12px 0 12px;
-      align-self: flex-end;
-    }
-
-    .chat-options {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .chat-option {
-      background: none;
-      border: 1px solid #00c2cb;
-      color: #00c2cb;
-      padding: 8px 12px;
-      width: 100%;
-      text-align: left;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .chat-option:hover {
-      background: rgba(0,194,203,0.1);
-      transform: translateY(-2px);
-    }
-
-    .max-input {
-      display: flex;
-      padding: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .max-input-field {
-      flex-grow: 1;
-      background-color: rgba(26, 32, 44, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 10px 15px;
-      color: #ffffff;
-      font-size: 14px;
-    }
-
-    .max-input-field:focus {
-      outline: none;
-      border-color: var(--primary);
-    }
-
-    .max-send {
-      background-color: var(--primary);
-      color: #0d1321;
-      border: none;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .max-send:hover {
-      background-color: var(--primary-dark);
     }
 
     /* Animation classes */
@@ -1225,7 +1079,6 @@
       animation-delay: 0.5s;
     }
   </style>
-</head>
 <style>
     /* What is ApexSalesAI Section */
     .what-is-section {
@@ -1471,120 +1324,6 @@
       color: var(--text-dimmed);
       margin-bottom: 0;
     }
-
-    .dashboard-metrics {
-      margin-top: 4rem;
-    }
-
-    .dashboard-metrics h3 {
-      font-size: 1.75rem;
-      margin-bottom: 2rem;
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .metrics-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .metric-item {
-      background-color: rgba(26, 32, 44, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 1.5rem;
-      display: flex;
-      align-items: center;
-    }
-
-    .metric-icon {
-      width: 48px;
-      height: 48px;
-      background-color: rgba(0, 194, 203, 0.1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 1rem;
-      color: #00c2cb;
-      font-size: 1.25rem;
-    }
-
-    .metric-info {
-      flex-grow: 1;
-    }
-
-    .metric-info h4 {
-      font-size: 1.125rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .metric-info p {
-      color: var(--text-dimmed);
-      margin-bottom: 0;
-      font-size: 0.9rem;
-    }
-
-    .dashboard-features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 992px) {
-      .dashboard-features {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 576px) {
-      .dashboard-features {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .dashboard-feature {
-      background-color: rgba(26, 32, 44, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .dashboard-feature:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      border-color: rgba(0, 194, 203, 0.3);
-    }
-
-    .dashboard-feature-icon {
-      width: 50px;
-      height: 50px;
-      background-color: rgba(0, 194, 203, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin: 0 auto 1rem;
-    }
-
-    .dashboard-feature h4 {
-      font-size: 1.125rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .dashboard-feature p {
-      font-size: 0.9rem;
-      color: var(--text-dimmed);
-    }
   </style>
 <style>
     /* Metrics section */
@@ -1658,236 +1397,6 @@
       font-size: 0.95rem;
     }
 
-    /* Comparison section */
-    .comparison-section {
-      padding: 8rem 0;
-      background-color: var(--bg-darker);
-      position: relative;
-    }
-
-    .comparison-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 70% 30%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-      pointer-events: none;
-    }
-
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-top: 4rem;
-    }
-
-    @media (max-width: 1080px) {
-      .comparison-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .comparison-card {
-      background-color: rgba(26, 32, 44, 0.6);
-      border-radius: 12px;
-      padding: 3rem;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .comparison-card.apex {
-      border: 1px solid rgba(0, 194, 203, 0.3);
-    }
-
-    .comparison-card.traditional {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .comparison-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .comparison-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 1.5rem;
-      flex-shrink: 0;
-    }
-
-    .comparison-icon.apex {
-      background-color: rgba(0, 194, 203, 0.1);
-      color: #00c2cb;
-    }
-
-    .comparison-icon.traditional {
-      background-color: rgba(255, 255, 255, 0.05);
-      color: #a0aec0;
-    }
-
-    .comparison-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      line-height: 1.3;
-    }
-
-    .comparison-title.apex {
-      color: #00c2cb;
-    }
-
-    .comparison-title.traditional {
-      color: #a0aec0;
-    }
-
-    .comparison-description {
-      font-size: 1.125rem;
-      margin-bottom: 2rem;
-    }
-
-    .comparison-features {
-      margin-bottom: 2rem;
-      flex-grow: 1;
-    }
-
-    .comparison-feature {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1.25rem;
-    }
-
-    .comparison-feature-icon {
-      color: #00c2cb;
-      margin-right: 1rem;
-      flex-shrink: 0;
-    }
-
-    .comparison-feature-icon.traditional {
-      color: #a0aec0;
-    }
-
-    .comparison-cta {
-      margin-top: auto;
-      align-self: flex-start;
-    }
-
-    /* Testimonial section */
-    .testimonial-section {
-      padding: 8rem 0;
-      position: relative;
-    }
-
-    .testimonial-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 50% 50%, rgba(0, 194, 203, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
-      pointer-events: none;
-    }
-
-    .testimonial-container {
-      max-width: 1000px;
-      margin: 4rem auto 0;
-    }
-
-    .testimonial-card {
-      background-color: rgba(26, 32, 44, 0.6);
-      border: 1px solid rgba(0, 194, 203, 0.2);
-      border-radius: 12px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .testimonial-card::before {
-      content: '"';
-      position: absolute;
-      top: 2rem;
-      left: 2rem;
-      font-size: 6rem;
-      line-height: 1;
-      font-family: Georgia, serif;
-      color: rgba(0, 194, 203, 0.1);
-      z-index: -1;
-    }
-
-    .testimonial-content {
-      font-size: 1.25rem;
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .testimonial-avatar {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background-color: #2d3748;
-      margin-right: 1rem;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      color: #00c2cb;
-    }
-
-    .testimonial-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .testimonial-info h4 {
-      font-size: 1.125rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .testimonial-info p {
-      font-size: 0.875rem;
-      color: #a0aec0;
-      margin-bottom: 0;
-    }
-
-    .testimonial-dots {
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-
-    .testimonial-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: rgba(0, 194, 203, 0.2);
-      margin: 0 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .testimonial-dot.active {
-      background-color: #00c2cb;
-    }
-
     /* CTA section */
     .cta-section {
       padding: 8rem 0;
@@ -1925,7 +1434,7 @@
       color: var(--text-light);
     }
 
-    /* Trusted brands section */
+    /* Brands section */
     .brands-section {
       padding: 5rem 0;
       text-align: center;
@@ -2007,8 +1516,7 @@
       <a href="contact.html">Contact</a>
     </div>
   </nav>
-
-  <!-- Hero -->
+<!-- Hero -->
   <section class="hero" id="hero">
     <div class="hero-bg" aria-hidden="true">
       <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
@@ -2043,7 +1551,8 @@
             </div>
           </div>
         </div>
-<div class="hero-demo animate-fade-in animation-delay-5">
+
+        <div class="hero-demo animate-fade-in animation-delay-5">
           <div class="demo-header">
             <div class="demo-title">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2219,21 +1728,7 @@
               <span class="industry-stat-label">Order Volume Growth</span>
             </div>
             <div class="industry-stat">
-              <span class="industry-stat-value">28%</span>
-              <span class="industry-stat-label">Process Efficiency</span>
-            </div>
-          </div>
-          <a href="industries/manufacturing.html" class="industry-link">
-            Explore Manufacturing Solutions
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+              <span class="industry-stat-value">28%
 <!-- Retail Industry -->
         <div class="industry-card animate-fade-in">
           <div class="industry-icon">🛍️</div>
@@ -2329,6 +1824,9 @@
             </svg>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
 <!-- What is ApexSalesAI Section -->
   <section class="what-is-section" id="what-is">
     <div class="container">
@@ -2526,32 +2024,6 @@
           </div>
         </div>
         
-        <div class="dashboard-features">
-          <div class="dashboard-feature">
-            <div class="dashboard-feature-icon">📊</div>
-            <h4>Role-Based Views</h4>
-            <p>Customized dashboards for every leadership role</p>
-          </div>
-          
-          <div class="dashboard-feature">
-            <div class="dashboard-feature-icon">🔄</div>
-            <h4>Real-Time Updates</h4>
-            <p>Live metrics with instant visibility</p>
-          </div>
-          
-          <div class="dashboard-feature">
-            <div class="dashboard-feature-icon">📱</div>
-            <h4>Mobile Optimized</h4>
-            <p>Access insights from anywhere</p>
-          </div>
-          
-          <div class="dashboard-feature">
-            <div class="dashboard-feature-icon">📈</div>
-            <h4>Trend Analysis</h4>
-            <p>Visualize performance over time</p>
-          </div>
-        </div>
-        
         <div style="text-align: center; margin-top: 3rem;">
           <a href="executive-dashboard.html" class="cta">Explore Executive Dashboard</a>
         </div>
@@ -2605,139 +2077,6 @@
       </div>
     </div>
   </section>
-<!-- Comparison section -->
-  <section class="comparison-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Beyond Traditional Sales Tools</h2>
-        <p class="section-subtitle">Discover how ApexSalesAI's autonomous agents outperform conventional sales technologies.</p>
-      </div>
-      
-      <div class="comparison-grid">
-        <div class="comparison-card apex">
-          <div class="comparison-header">
-            <div class="comparison-icon apex">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                <line x1="12" y1="22.08" x2="12" y2="12"></line>
-              </svg>
-            </div>
-            <h3 class="comparison-title apex">ApexSalesAI Autonomous Agents</h3>
-          </div>
-          
-          <p class="comparison-description">AI agents that think, decide, and act independently to drive revenue—without requiring constant human oversight.</p>
-          
-          <div class="comparison-features">
-            <div class="comparison-feature">
-              <div class="comparison-feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <div>Fully autonomous execution of multi-channel outreach with zero human input required</div>
-            </div>
-            
-            <div class="comparison-feature">
-              <div class="comparison-feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <div>Predictive intelligence that identifies opportunities before they're visible to humans</div>
-            </div>
-            
-            <div class="comparison-feature">
-              <div class="comparison-feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <div>Human-like conversations that adapt to each prospect's unique communication style</div>
-            </div>
-            
-            <div class="comparison-feature">
-              <div class="comparison-feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <div>Continuous self-improvement with every interaction, getting smarter daily</div>
-            </div>
-          </div>
-          
-          <div class="comparison-cta">
-            <a href="platform.html" class="cta">Experience Autonomous Revenue</a>
-          </div>
-        </div>
-        
-        <div class="comparison-card traditional">
-          <div class="comparison-header">
-            <div class="comparison-icon traditional">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
-            </div>
-            <h3 class="comparison-title traditional">Traditional Sales Tools</h3>
-          </div>
-          
-          <p class="comparison-description">Passive systems that analyze data and provide suggestions but require constant human management to deliver value.</p>
-          
-          <div class="comparison-features">
-            <div class="comparison-feature">
-              <div class="comparison-feature-icon traditional">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </div>
-              <div>Requires human reps to manually execute each step of outreach and follow-up</div>
-            </div>
-            
-            <div class="comparison-feature">
-              <div class="comparison-feature-icon traditional">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </div>
-              <div>Reactive analytics that only show what's already happened, not what will happen</div>
-            </div>
-            
-            <div class="comparison-feature">
-              <div class="comparison-feature-icon traditional">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </div>
-              <div>Template-based communications that feel robotic and impersonal to prospects</div>
-            </div>
-            
-            <div class="comparison-feature">
-              <div class="comparison-feature-icon traditional">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </div>
-              <div>Static capabilities that require manual updates and configuration changes</div>
-            </div>
-          </div>
-          
-          <div class="comparison-cta">
-            <a href="comparison.html" class="cta cta-outline">See Why Companies Are Switching</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 <!-- Testimonial section -->
   <section class="testimonial-section">
     <div class="container">
@@ -2769,8 +2108,7 @@
       </div>
     </div>
   </section>
-
-  <!-- CTA section -->
+<!-- CTA section -->
   <section class="cta-section">
     <div class="container">
       <h2 class="cta-heading">Ready to Transform Your Revenue Operations?</h2>
@@ -2816,7 +2154,67 @@
       </div>
     </div>
   </section>
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+<!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="/images/apex-logo-white.png" alt="ApexSalesAI" class="footer-logo">
+          
+          <p class="footer-about">Intelligent AI agents designed to drive revenue and elevate every customer interaction — built on the ApexOpsAI execution engine.</p>
+          
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Product</h4>
+          <ul class="footer-links">
+            <li><a href="platform.html">Platform</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="demo.html">Request Demo</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="footer-contact-text">+1 (800) 123-4567</div>
+          </div>
+          <div class="footer-contact">
+            <div class="footer-contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
             </div>
             <div class="footer-contact-text">info@apexsalesai.com</div>
           </div>
@@ -2833,52 +2231,6 @@
       </div>
     </div>
   </footer>
-<!-- Max AI Chat Widget -->
-  <div id="max-widget">
-    <button id="max-button" onclick="toggleMaxChat()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-        <line x1="9" y1="9" x2="9.01" y2="9"></line>
-        <line x1="15" y1="9" x2="15.01" y2="9"></line>
-      </svg>
-      Chat with Max
-    </button>
-    
-    <div id="max-chat" class="hidden">
-      <div class="max-header">
-        <div class="max-title">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-            <line x1="9" y1="9" x2="9.01" y2="9"></line>
-            <line x1="15" y1="9" x2="15.01" y2="9"></line>
-          </svg>
-          Max • ApexSalesAI
-        </div>
-        <button class="max-close" onclick="toggleMaxChat()">×</button>
-      </div>
-      <div class="max-messages" id="max-messages">
-        <div class="message max">👋 Hi there! I'm Max, your AI demo assistant!</div>
-        <div class="message max">I can help you learn more about our personalized demos and schedule one for your team. What would you like to know?</div>
-        <div class="chat-options">
-          <button class="chat-option" onclick="maxReply('Demo Questions')">Demo Questions</button>
-          <button class="chat-option" onclick="maxReply('Schedule Now')">Schedule Now</button>
-          <button class="chat-option" onclick="maxReply('Features')">Features</button>
-          <button class="chat-option" onclick="maxReply('Pricing')">Pricing</button>
-        </div>
-      </div>
-      <div class="max-input">
-        <input type="text" class="max-input-field" placeholder="Type your message..." onkeypress="if(event.key === 'Enter') maxReply(this.value)">
-        <button class="max-send" onclick="maxReply(document.querySelector('.max-input-field').value)">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
 <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -2892,59 +2244,28 @@
         });
       }
       
-      // Max Chat Widget functionality
-      window.toggleMaxChat = function() {
-        const maxChat = document.getElementById('max-chat');
-        if (maxChat) {
-          maxChat.classList.toggle('hidden');
-        }
-      }
-
-      window.maxReply = function(option) {
-        const chatMessages = document.getElementById('max-messages');
-        if (!chatMessages || !option || option.trim() === '') return;
-        
-        // Create and add the user message
-        const userMessage = document.createElement('div');
-        userMessage.className = 'message user';
-        userMessage.textContent = option;
-        chatMessages.appendChild(userMessage);
-        
-        // Determine the bot's reply based on the selected option
-        let replyText = '';
-        
-        if (option === 'Demo Questions') {
-          replyText = "I'd be happy to answer questions about our demo process! We typically schedule 30-minute interactive sessions customized to your industry. What would you like to know?";
-        } else if (option === 'Schedule Now') {
-          replyText = "Great! You can use the form on our demo page to schedule your personalized demo, or I can collect your information and have our team contact you directly. Would you prefer to use the form or have someone reach out?";
-        } else if (option === 'Features') {
-          replyText = "Our demos showcase Max's full capabilities, including intelligent prospecting, natural conversations, multi-channel orchestration, CRM integration, and our unique human handoff process. Which feature are you most interested in seeing?";
-        } else if (option === 'Pricing') {
-          replyText = "We offer flexible pricing starting at $799/agent/month for our Starter plan. Our Professional plan ($1,200/agent/month) is our most popular option. Would you like me to explain our pricing structure in more detail?";
-        } else {
-          replyText = "Thanks for your message. I'd be happy to help with that. Can you provide more details so I can assist you better?";
-        }
-        
-        // Clear the input field
-        const inputField = document.querySelector('.max-input-field');
-        if (inputField) {
-          inputField.value = '';
-        }
-        
-        // Add a small delay to simulate typing
-        setTimeout(() => {
-          // Create and add the bot message
-          const botMessage = document.createElement('div');
-          botMessage.className = 'message max';
-          botMessage.textContent = replyText;
-          chatMessages.appendChild(botMessage);
-          
-          // Scroll to the newest message
-          chatMessages.scrollTop = chatMessages.scrollHeight;
-        }, 800);
-        
-        // Scroll to the user message immediately
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+      // Dashboard tabs
+      const dashboardTabs = document.querySelectorAll('.dashboard-tab');
+      
+      if (dashboardTabs.length > 0) {
+        dashboardTabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            // Remove active class from all tabs
+            dashboardTabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Here you would typically change the dashboard content
+            // For now, we're just updating the image source for demonstration
+            const tabId = this.getAttribute('data-tab');
+            const dashboardImage = document.querySelector('.dashboard-preview-image');
+            
+            if (dashboardImage) {
+              dashboardImage.src = `/images/${tabId}-dashboard.png`;
+            }
+          });
+        });
       }
       
       // Hero Demo Animation
@@ -3000,6 +2321,34 @@
           }
         });
       }
+
+      // Initialize Botpress widget configuration
+      window.botpressWebChat.init({
+        botId: "your-bot-id-here", // Replace with your actual Bot ID
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "your-client-id-here", // Replace with your actual Client ID
+        botName: "Max",
+        avatarUrl: "/images/max-avatar.png",
+        botConversationDescription: "ApexSalesAI Assistant",
+        useSessionStorage: true,
+        showConversationsButton: false,
+        enableTranscriptDownload: false,
+        stylesheet: "https://www.apexsalesai.com/css/bot-chat.css",
+        containerWidth: '400px',
+        layoutWidth: '400px',
+        hideWidget: false,
+        disableAnimations: false,
+        closeOnEscape: true,
+        showTimestamp: true,
+        enableConversationDeletion: false,
+        customButtons: [
+          {
+            label: 'Schedule Demo',
+            handler: () => window.location.href = '/demo.html'
+          }
+        ]
+      });
     });
   </script>
 </body>
