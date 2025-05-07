@@ -24,8 +24,33 @@
   <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <!-- Botpress Chat Widget Script - Updated -->
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script src="https://mediafiles.botpress.cloud/79611e1b-98f0-49de-b18b-85e9973276c1/webchat/config.js" defer></script>
+<!-- Botpress Chat Widget Script - Updated -->
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    window.botpressWebChat.init({
+      botId: "086e1515-f61c-449b-9429-04bb34de3106", 
+      hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+      messagingUrl: "https://messaging.botpress.cloud",
+      clientId: "086e1515-f61c-449b-9429-04bb34de3106",
+      botName: "Max",
+      avatarUrl: "/images/max-avatar.png",
+      botConversationDescription: "Your autonomous sales AI assistant from ApexSalesAI. Max helps visitors learn about our solutions, schedule demos, and get personalized industry recommendations.",
+      useSessionStorage: true,
+      showConversationsButton: false,
+      enableTranscriptDownload: false,
+      containerWidth: '400px',
+      layoutWidth: '400px',
+      hideWidget: false,
+      disableAnimations: false,
+      closeOnEscape: true,
+      showTimestamp: true,
+      enableConversationDeletion: false,
+      theme: 'default',
+      themeColor: '#00c2cb'
+    });
+  });
+</script>
 <style>
     /* Base typography */
     :root {
@@ -1078,6 +1103,51 @@
     .animation-delay-5 {
       animation-delay: 0.5s;
     }
+/* Botpress specific styling */
+.bp-widget {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 20px rgba(0,194,203,0.4) !important;
+  border: 1px solid rgba(0, 194, 203, 0.3) !important;
+}
+
+.bp-widget-header {
+  background-color: #00c2cb !important;
+  color: #0d1321 !important;
+}
+
+.bp-widget-footer {
+  background-color: #1a202c !important;
+  border-top: 1px solid rgba(0, 194, 203, 0.2) !important;
+}
+
+.bp-widget-composer input {
+  background-color: rgba(26, 32, 44, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.bp-widget-bot-message {
+  background-color: rgba(26, 32, 44, 0.8) !important;
+  color: #e2e8f0 !important;
+}
+
+.bp-widget-user-message {
+  background-color: rgba(0, 194, 203, 0.1) !important;
+  border: 1px solid rgba(0, 194, 203, 0.3) !important;
+  color: #e2e8f0 !important;
+}
+
+.bp-widget-button {
+  background-color: #00c2cb !important;
+  color: #0d1321 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px rgba(0,194,203,0.4) !important;
+}
+
+.bp-widget-button:hover {
+  background-color: #00a8b3 !important;
+  transform: translateY(-3px) !important;
+}
   </style>
 <style>
     /* What is ApexSalesAI Section */
@@ -1724,8 +1794,8 @@
           <p class="industry-description">Streamline complex distribution channels and optimize supply chain relationships with AI agents that provide real-time inventory insights and automate order processing.</p>
           <div class="industry-stats">
             <div class="industry-stat">
-              <span class="industry-stat-value">36%</span>
-              <span class="industry-stat-label">Order Volume Growth</span>
+              <span class="industry-stat-value">28%</span>
+              <span class="industry-stat-label">Process Efficiency</span>
             </div>
             <div class="industry-stat">
               <span class="industry-stat-value">28%
@@ -2245,25 +2315,34 @@
       }
       
       // Dashboard tabs
-      const dashboardTabs = document.querySelectorAll('.dashboard-tab');
+     // Dashboard tabs
+const dashboardTabs = document.querySelectorAll('.dashboard-tab');
       
-      if (dashboardTabs.length > 0) {
-        dashboardTabs.forEach(tab => {
-          tab.addEventListener('click', function() {
-            // Remove active class from all tabs
-            dashboardTabs.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked tab
-            this.classList.add('active');
-            
-            // Here you would typically change the dashboard content
-            // For now, we're just updating the image source for demonstration
-            const tabId = this.getAttribute('data-tab');
-            const dashboardImage = document.querySelector('.dashboard-preview-image');
-            
-            if (dashboardImage) {
-              dashboardImage.src = `/images/${tabId}-dashboard.png`;
-            }
+if (dashboardTabs.length > 0) {
+  dashboardTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      // Remove active class from all tabs
+      dashboardTabs.forEach(t => t.classList.remove('active'));
+      
+      // Add active class to clicked tab
+      this.classList.add('active');
+      
+      // Change dashboard image based on tab
+      const tabId = this.getAttribute('data-tab');
+      const dashboardImage = document.querySelector('.dashboard-preview-image');
+      
+      if (dashboardImage) {
+        // Use executive-dashboard.png as fallback if specific images don't exist
+        try {
+          dashboardImage.src = `/images/${tabId}-dashboard.png`;
+        } catch(e) {
+          // Fallback to executive dashboard if specific tab image not found
+          dashboardImage.src = `/images/executive-dashboard.png`;
+        }
+      }
+    });
+  });
+}
           });
         });
       }
@@ -2322,34 +2401,7 @@
         });
       }
 
-      // Initialize Botpress widget configuration
-      window.botpressWebChat.init({
-        botId: "your-bot-id-here", // Replace with your actual Bot ID
-        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
-        messagingUrl: "https://messaging.botpress.cloud",
-        clientId: "your-client-id-here", // Replace with your actual Client ID
-        botName: "Max",
-        avatarUrl: "/images/max-avatar.png",
-        botConversationDescription: "ApexSalesAI Assistant",
-        useSessionStorage: true,
-        showConversationsButton: false,
-        enableTranscriptDownload: false,
-        stylesheet: "https://www.apexsalesai.com/css/bot-chat.css",
-        containerWidth: '400px',
-        layoutWidth: '400px',
-        hideWidget: false,
-        disableAnimations: false,
-        closeOnEscape: true,
-        showTimestamp: true,
-        enableConversationDeletion: false,
-        customButtons: [
-          {
-            label: 'Schedule Demo',
-            handler: () => window.location.href = '/demo.html'
-          }
-        ]
-      });
-    });
+      // 
   </script>
 </body>
 </html>
